@@ -1,13 +1,14 @@
 const { Schema, model } = require("mongoose");
 const Joi = require("joi");
 
-const languageSchema = Schema(
+const countrySchema = Schema(
   {
-    lang: {
+    country: {
       type: String,
-      required: [true, "language must be exist"],
+      required: [true, "country must be exist"],
+      //   match: /^[A-Z][a-z]$/,
     },
-    code: {
+    langCode: {
       type: String,
       required: [true, "language code must be exist"],
       match: /^[A-Z]{2}$/,
@@ -17,13 +18,13 @@ const languageSchema = Schema(
 );
 
 const joiSchema = Joi.object({
-  lang: Joi.string().required(),
-  code: Joi.string().required(),
+  country: Joi.string().required(),
+  langCode: Joi.string().required(),
 });
 
-const Language = model("language", languageSchema);
+const Country = model("country", countrySchema);
 
 module.exports = {
-  Language,
+  Country,
   joiSchema,
 };

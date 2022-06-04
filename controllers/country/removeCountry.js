@@ -1,19 +1,20 @@
 const { Country } = require("../../models");
 const { NotFound } = require("http-errors");
 
-const updateCoutry = async (req, res) => {
+const removeCountry = async (req, res) => {
   const { id } = req.params;
-  const result = await Country.findByIdAndUpdate(id, req.body, { new: true });
+  const result = await Country.findByIdAndRemove(id);
   if (!result) {
     throw new NotFound("Country not found");
   }
   res.json({
     status: "succes",
     code: 200,
+    message: "contact deleted",
     data: {
       result,
     },
   });
 };
 
-module.exports = updateCoutry;
+module.exports = removeCountry;

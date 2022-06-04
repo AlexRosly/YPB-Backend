@@ -5,7 +5,8 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 dotenv.config();
 
-const languagesRouter = require("./routes/api/languages");
+const languagesRouter = require("./routes/api/languagesApi");
+const countriesRouter = require("./routes/api/countriesApi");
 
 const app = express();
 
@@ -16,6 +17,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/languages", languagesRouter);
+app.use("/api/countries", countriesRouter);
 
 app.use((req, res) => {
   res.status(404).json({ message: "Not found" });
