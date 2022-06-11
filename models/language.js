@@ -12,6 +12,10 @@ const languageSchema = Schema(
       required: [true, "language code must be exist"],
       match: /^[A-Z]{2}$/,
     },
+    countries: {
+      type: Array,
+      required: [true, "countries must be exsist"],
+    },
   },
   { versionKey: false, timestamps: true }
 );
@@ -19,6 +23,7 @@ const languageSchema = Schema(
 const joiSchema = Joi.object({
   lang: Joi.string().required(),
   code: Joi.string().required(),
+  countries: Joi.array().required(),
 });
 
 const Language = model("language", languageSchema);
