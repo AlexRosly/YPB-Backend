@@ -3,8 +3,8 @@ const { NotFound } = require("http-errors");
 
 const removeLanguage = async (req, res) => {
   const { id } = req.params;
-  const result = await Language.findByIdAndRemove(id);
-  if (!result) {
+  const languages = await Language.findByIdAndRemove(id);
+  if (!languages) {
     throw new NotFound("Language not found");
   }
   res.json({
@@ -12,7 +12,7 @@ const removeLanguage = async (req, res) => {
     code: 200,
     message: "contact deleted",
     data: {
-      result,
+      languages,
     },
   });
 };

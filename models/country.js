@@ -3,6 +3,10 @@ const Joi = require("joi");
 
 const countrySchema = Schema(
   {
+    international: {
+      type: String,
+      required: [true, "country must be exist"],
+    },
     country: {
       type: String,
       required: [true, "country must be exist"],
@@ -13,11 +17,12 @@ const countrySchema = Schema(
       required: [true, "language code must be exist"],
       match: /^[A-Z]{2}$/,
     },
-  },
-  { versionKey: false, timestamps: true }
+  }
+  // { versionKey: false, timestamps: true }
 );
 
 const joiSchema = Joi.object({
+  international: Joi.string().required(),
   country: Joi.string().required(),
   langCode: Joi.string().required(),
 });
