@@ -17,6 +17,9 @@ const countrySchema = Schema(
       required: [true, "language code must be exist"],
       match: /^[A-Z]{2}$/,
     },
+    dbLangCode: {
+      type: String,
+    },
   }
   // { versionKey: false, timestamps: true }
 );
@@ -25,6 +28,7 @@ const joiSchema = Joi.object({
   international: Joi.string().required(),
   country: Joi.string().required(),
   langCode: Joi.string().required(),
+  dbLangCode: Joi.string(),
 });
 
 const Country = model("country", countrySchema);
