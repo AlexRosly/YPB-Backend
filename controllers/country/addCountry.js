@@ -4,6 +4,7 @@ const { Language } = require("../../models");
 const addCoutry = async (req, res) => {
   const { langCode } = req.body;
   const dbLangCode = langCode;
+
   const country = await Country.create({
     country: req.body.country,
     international: req.body.international,
@@ -37,7 +38,7 @@ const addCoutry = async (req, res) => {
           { code: languages[i].code },
           { $push: { countries: country } }
         );
-        console.log(addCoutryToLanguage);
+        // console.log(addCoutryToLanguage);
       }
     }
   };
