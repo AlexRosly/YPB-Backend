@@ -15,9 +15,7 @@ const addLanguage = async (req, res) => {
     return arr;
   };
 
-  const countries = await await Country.insertMany(
-    deleteIdCountry(countriesArray)
-  );
+  const countries = await Country.insertMany(deleteIdCountry(countriesArray));
 
   const languages = await Language.create({
     lang: req.body.lang,
