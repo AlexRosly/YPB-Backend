@@ -4,7 +4,7 @@ const { joiSchema } = require("../../models/country");
 const express = require("express");
 const router = express.Router();
 
-router.get("/", ctrlWrapper(ctrl.getAllContries));
+router.get("/", ctrlWrapper(ctrl.getAllCountries));
 
 router.post("/", validation(joiSchema), ctrlWrapper(ctrl.addCoutry));
 

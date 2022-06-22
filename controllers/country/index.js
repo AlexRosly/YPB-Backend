@@ -1,11 +1,11 @@
 const addCoutry = require("./addCountry");
-const getAllContries = require("./getAllCountry");
+const getAllCountries = require("./getAllCountry");
 const updateCoutry = require("./updateCountry");
 const removeCountry = require("./removeCountry");
 
 module.exports = {
   addCoutry,
-  getAllContries,
+  getAllCountries,
   updateCoutry,
   removeCountry,
 };

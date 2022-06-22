@@ -1,18 +1,15 @@
 const { Schema, model } = require("mongoose");
 const Joi = require("joi");
 
-const regionLoc3Schema = Schema(
+const cityLoc2Schema = Schema(
   {
-    region: {
+    city: {
       type: String,
-      required: [true, "region must be exist"],
-    },
-    country: {
-      type: String,
-      required: [true, "country must be exist"],
+      required: [true, "city must be exist"],
     },
     location: {
       type: String,
+      required: [true, "location must be exist"],
     },
     langCode: {
       type: String,
@@ -25,20 +22,26 @@ const regionLoc3Schema = Schema(
     urlAdress: {
       type: String,
     },
+    region: {
+      type: Schema.Types.ObjectId,
+      ref: "regionLoc3",
+      required: true,
+    },
   },
   { versionKey: false, timestamps: true }
 );
 
 const joiSchema = Joi.object({
-  region: Joi.string().required(),
-  country: Joi.string().required(),
+  city: Joi.string().required(),
+  location: Joi.string().required(),
   langCode: Joi.string().required(),
-  dbLangCode: Joi.string(),
+  dbLangCode: Joi.string().required(),
+  urlAdress: Joi.string(),
 });
 
-const Region = model("regionLoc3", regionLoc3Schema);
+const City = model("cityLoc2", cityLoc2Schema);
 
 module.exports = {
-  Region,
+  City,
   joiSchema,
 };

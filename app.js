@@ -8,6 +8,7 @@ dotenv.config();
 const languagesRouter = require("./routes/api/languagesApi");
 const countriesRouter = require("./routes/api/countriesApi");
 const regionLoc3Router = require("./routes/api/regionLoc3Api");
+const cityLoc2Router = require("./routes/api/cityLoc2Api");
 
 const app = express();
 
@@ -19,7 +20,8 @@ app.use(express.json());
 
 app.use("/api/languages", languagesRouter);
 app.use("/api/countries", countriesRouter);
-app.use("api/region", regionLoc3Router);
+app.use("/api/region", regionLoc3Router);
+app.use("/api/city", cityLoc2Router);
 
 app.use((req, res) => {
   res.status(404).json({ message: "Not found" });

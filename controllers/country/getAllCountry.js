@@ -1,6 +1,6 @@
 const { Country } = require("../../models");
 
-const getAllContries = async (req, res) => {
+const getAllCountries = async (req, res) => {
   const result = await Country.find({});
   res.json({
     status: "success",
@@ -11,4 +11,4 @@ const getAllContries = async (req, res) => {
   });
 };
 
-module.exports = getAllContries;
+module.exports = getAllCountries;
