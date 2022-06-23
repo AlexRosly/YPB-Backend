@@ -3,37 +3,55 @@ const Joi = require("joi");
 
 const regionLoc3Schema = Schema(
   {
-    region: {
+    stateName: {
       type: String,
       required: [true, "region must be exist"],
     },
-    country: {
+    stateInternational: {
       type: String,
-      required: [true, "country must be exist"],
+      required: [true, "region must be exist"],
     },
-    location: {
+    stateCode: {
       type: String,
+      required: [true, "state code must be exist"],
     },
+    edited: {
+      type: Number,
+    },
+
+    // country: {
+    //   type: String,
+    //   required: [true, "country must be exist"],
+    // },
+    // location: {
+    //   type: String,
+    // },
     langCode: {
       type: String,
       required: [true, "code must be exist"],
       match: /^[A-Z]{2}$/,
     },
-    dbLangCode: {
+    // dbLangCode: {
+    //   type: String,
+    // },
+    statePhotoURL: {
       type: String,
     },
-    urlAdress: {
-      type: String,
-    },
+    // country: {
+    //   type: Schema.Types.ObjectId,
+    //   ref: "country",
+    //   required: true,
+    // },
   },
   { versionKey: false, timestamps: true }
 );
 
 const joiSchema = Joi.object({
-  region: Joi.string().required(),
-  country: Joi.string().required(),
-  langCode: Joi.string().required(),
-  dbLangCode: Joi.string(),
+  stateName: Joi.string().required(),
+  stateInternational: Joi.string().required(),
+  stateCode: Joi.string().required(),
+  edited: Joi.number(),
+  statePhotoURL: Joi.string(),
 });
 
 const Region = model("regionLoc3", regionLoc3Schema);

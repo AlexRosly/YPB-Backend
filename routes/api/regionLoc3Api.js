@@ -10,4 +10,6 @@ router.post("/", validation(joiSchema), ctrlWrapper(ctrl.addRegionLoc3));
 
 router.put("/:id", validation(joiSchema), ctrlWrapper(ctrl.updateRegionLoc3));
 
+router.delete("/:id", ctrlWrapper(ctrl.removeRegionLoc3));
+
 module.exports = router;
