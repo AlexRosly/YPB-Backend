@@ -1,6 +1,6 @@
 const { districtLoc1: ctrl } = require("../../controllers");
 const { validation, ctrlWrapper } = require("../../middlewares");
-const { joiSchema } = require("../../models/regionLoc3");
+const { joiSchema } = require("../../models/districtLoc1");
 const express = require("express");
 const router = express.Router();
 

@@ -21,9 +21,9 @@ app.use(express.json());
 
 app.use("/api/languages", languagesRouter);
 app.use("/api/countries", countriesRouter);
-app.use("/api/region", regionLoc3Router);
-app.use("/api/city", cityLoc2Router);
-app.use("/api/location/v3", districtLoc1Router);
+app.use("/api/location-state", regionLoc3Router);
+app.use("/api/location-city", cityLoc2Router);
+app.use("/api/location-district", districtLoc1Router);
 
 app.use((req, res) => {
   res.status(404).json({ message: "Not found" });

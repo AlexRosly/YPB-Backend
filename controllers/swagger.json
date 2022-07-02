@@ -1,0 +1,902 @@
+example
+{
+  "states": [
+    {
+      "_id": "12345UAState",
+      "stateName": "Kyiv State",
+      "stateInternational": "Kyiv State",
+      "stateCode": "Kyiv",
+      "statePhotoURL": "https://kyiv.states.ua/photos/kyiv-state.webp",
+      "edited": 0,
+
+      "cities": [
+        {
+          "stateId": "12345UAState",
+          "_id": "12345UACity",
+          "cityName": "Kyiv",
+          "cityInternational": "Kyiv",
+          "cityCode": "KYI",
+          "cityPhotoURL": "https://kyiv.city.ua/photos/kyiv-city.webp",
+          "edited": 0,
+
+          "districts": [
+            {
+              "stateId": "12345UAState",
+              "cityId": "12345UACity",
+              "_id": "12345UADistrict",
+              "districtName": "Kyiv Podil",
+              "districtInternational": "Kyiv Podil",
+              "districtCode": "POD",
+              "districtPhotoURL": "https://kyiv-podil.district.ua/photos/kyiv-podil.webp",
+              "edited": 0
+            }
+          ]
+        },
+
+        {
+          "stateId": "12345UAState",
+          "_id": "12346UACity",
+          "cityName": "Browary",
+          "cityInternational": "Browary",
+          "cityCode": "BR",
+          "cityPhotoURL": "https://browary.city.ua/photos/browary-city.webp",
+          "edited": 0,
+
+          "districts": []
+        }
+      ]
+    }
+  ]
+}
+
+
+/////
+get all state:
+url: "/api/location-state"
+metod: "GET"
+    response 
+    {
+    "status": "success",
+    "code": 200,
+    "data": {
+        "state": [
+            {
+                "cities": [],
+                "_id": "62b6064022102a8ed430b635",
+                "stateName": "Lviv State",
+                "stateInternational": "Lviv State",
+                "stateCode": "Lviv",
+                "edited": 0,
+                "langCode": "EN",
+                "statePhotoURL": "https://lviv.states.ua/photos/lviv-state.webp",
+                "createdAt": "2022-06-24T18:45:20.382Z",
+                "updatedAt": "2022-06-24T18:45:20.382Z"
+            },
+            {
+                "_id": "62b61a27ee6939b612a10cb4",
+                "stateName": "Rivne State",
+                "stateInternational": "Rivne State",
+                "stateCode": "Rivne",
+                "edited": 0,
+                "langCode": "EN",
+                "statePhotoURL": "https://lviv.states.ua/photos/lviv-state.webp",
+                "cities": [],
+                "createdAt": "2022-06-24T20:10:15.974Z",
+                "updatedAt": "2022-06-24T20:10:15.974Z"
+            },
+            {
+                "_id": "62b6f13a2b9117c40b5cc263",
+                "stateName": "TEST3",
+                "stateInternational": "TEST3",
+                "stateCode": "TEST3",
+                "edited": 0,
+                "langCode": "EN",
+                "statePhotoURL": "https://lviv.states.ua/photos/lviv-state.webp",
+                "cities": [],
+                "createdAt": "2022-06-25T11:27:54.661Z",
+                "updatedAt": "2022-06-25T11:27:54.661Z"
+            },
+            {
+                "_id": "62b6fbb1aee108c5160d7089",
+                "stateName": "Kyiv State",
+                "stateInternational": "Kyiv State",
+                "stateCode": "Kyiv",
+                "edited": 0,
+                "langCode": "EN",
+                "statePhotoURL": "https://Kiyv.states.ua/photos/lviv-state.webp",
+                "cities": [
+                    {
+                        "_id": "62ba6b548963ff5c239412e8",
+                        "stateId": "62b6fbb1aee108c5160d7089",
+                        "cityName": "Kyiv2",
+                        "cityInternational": "Kyiv2",
+                        "cityCode": "KYI",
+                        "cityPhotoURL": "https://kyiv.city.ua/photos/kyiv-city.webp",
+                        "edited": 0,
+                        "state": "62b6fbb1aee108c5160d7089",
+                        "districts": [],
+                        "createdAt": "2022-06-28T02:45:40.828Z",
+                        "updatedAt": "2022-06-28T02:45:40.828Z"
+                    },
+                    {
+                        "_id": "62ba6b5c8963ff5c239412eb",
+                        "stateId": "62b6fbb1aee108c5160d7089",
+                        "cityName": "Kyiv3",
+                        "cityInternational": "Kyiv3",
+                        "cityCode": "KYI",
+                        "cityPhotoURL": "https://kyiv.city.ua/photos/kyiv-city.webp",
+                        "edited": 0,
+                        "state": "62b6fbb1aee108c5160d7089",
+                        "districts": [],
+                        "createdAt": "2022-06-28T02:45:48.277Z",
+                        "updatedAt": "2022-06-28T02:45:48.277Z"
+                    },
+                    {
+                        "_id": "62ba6c9b65f42cc961c985ca",
+                        "stateId": "62b6fbb1aee108c5160d7089",
+                        "cityName": "Kyiv4-1",
+                        "cityInternational": "Kyiv4-1",
+                        "cityCode": "KYI-1",
+                        "cityPhotoURL": "https://kyiv.city.ua/photos/kyiv-city.webp",
+                        "edited": 0,
+                        "state": "62b6fbb1aee108c5160d7089",
+                        "districts": [
+                            {
+                                "_id": "62ba6e10f09d22b592636fb1",
+                                "stateId": "62b6fbb1aee108c5160d7089",
+                                "cityId": "62ba6c9b65f42cc961c985ca",
+                                "districtName": "Kyiv TEST2",
+                                "districtInternational": "Kyiv TEST2",
+                                "districtCode": "TEST1",
+                                "districtPhotoURL": "https://kyiv-podil.district.ua/photos/kyiv-podil.webp",
+                                "edited": 0,
+                                "city": "62ba6c9b65f42cc961c985ca",
+                                "__v": 0
+                            },
+                            {
+                                "_id": "62ba6e1ef09d22b592636fb4",
+                                "stateId": "62b6fbb1aee108c5160d7089",
+                                "cityId": "62ba6c9b65f42cc961c985ca",
+                                "districtName": "Kyiv TEST3",
+                                "districtInternational": "Kyiv TEST3",
+                                "districtCode": "TEST1",
+                                "districtPhotoURL": "https://kyiv-podil.district.ua/photos/kyiv-podil.webp",
+                                "edited": 0,
+                                "city": "62ba6c9b65f42cc961c985ca",
+                                "__v": 0
+                            },
+                            {
+                                "_id": "62ba6e25f09d22b592636fb7",
+                                "stateId": "62b6fbb1aee108c5160d7089",
+                                "cityId": "62ba6c9b65f42cc961c985ca",
+                                "districtName": "Kyiv TEST4-1",
+                                "districtInternational": "Kyiv TEST4-1",
+                                "districtCode": "TEST4-1",
+                                "districtPhotoURL": "https://kyiv-podil.district.ua/photos/kyiv-podil.webp",
+                                "edited": 0,
+                                "city": "62ba6c9b65f42cc961c985ca",
+                                "__v": 0
+                            },
+                            {
+                                "_id": "62bb19bf72fac2d16d3578d9",
+                                "stateId": "62b6fbb1aee108c5160d7089",
+                                "cityId": "62ba6c9b65f42cc961c985ca",
+                                "districtName": "Kyiv TEST5",
+                                "districtInternational": "Kyiv TEST5",
+                                "districtCode": "TEST5",
+                                "districtPhotoURL": "https://kyiv-podil.district.ua/photos/kyiv-podil.webp",
+                                "edited": 0,
+                                "city": "62ba6c9b65f42cc961c985ca",
+                                "__v": 0
+                            }
+                        ],
+                        "createdAt": "2022-06-28T02:51:07.117Z",
+                        "updatedAt": "2022-06-28T15:09:52.768Z"
+                    }
+                ],
+                "createdAt": "2022-06-25T12:12:33.676Z",
+                "updatedAt": "2022-06-28T02:51:07.191Z"
+            }
+        ]
+    }
+}
+
+add state:
+url: "/api/location-state"
+metod: "POST"
+request body:
+{
+    "stateName": "Kyiv State",
+    "stateInternational": "Kyiv State",
+    "stateCode": "Kyiv",
+    "statePhotoURL": "https://Kiyv.states.ua/photos/lviv-state.webp",
+    "edited": 0,
+    "langCode": "EN"
+}
+    response 
+    {
+    "status": "success",
+    "code": 201,
+    "data": {
+        "state": {
+            "stateName": "Dnipro State",
+            "stateInternational": "Dnipro State",
+            "stateCode": "Dnipro",
+            "edited": 0,
+            "langCode": "EN",
+            "statePhotoURL": "https://Kiyv.states.ua/photos/lviv-state.webp",
+            "cities": [],
+            "_id": "62bca8965e831ed82f071936",
+            "createdAt": "2022-06-29T19:31:34.593Z",
+            "updatedAt": "2022-06-29T19:31:34.593Z"
+        }
+    }
+}
+
+update state:
+url: "/api/location-state/id"
+metod: "PUT"
+request body:
+{
+    "stateName": "Dnipro State",
+    "stateInternational": "Dnipro State",
+    "stateCode": "Dnipro",
+    "statePhotoURL": "https://Dnipro.states.ua/photos/lviv-state.webp",
+    "edited": 0,
+    "langCode": "EN"
+}
+response 
+{"status": "success",
+    "code": 200,
+    "data": {
+        "result": {
+            "_id": "62bca8965e831ed82f071936",
+            "stateName": "Dnipro State",
+            "stateInternational": "Dnipro State",
+            "stateCode": "Dnipro",
+            "edited": 0,
+            "langCode": "EN",
+            "statePhotoURL": "https://Dnipro.states.ua/photos/lviv-state.webp",
+            "cities": [],
+            "createdAt": "2022-06-29T19:31:34.593Z",
+            "updatedAt": "2022-06-29T19:33:02.092Z"
+        }
+    }
+}
+
+remove state:
+url: "/api/location-state/id"
+metod: "DELETE"
+response
+{
+    "status": "success",
+    "code": 200,
+    "message": "state deleted",
+    "data": {
+        "result": {
+            "_id": "62bca8965e831ed82f071936",
+            "stateName": "Dnipro State",
+            "stateInternational": "Dnipro State",
+            "stateCode": "Dnipro",
+            "edited": 0,
+            "langCode": "EN",
+            "statePhotoURL": "https://Dnipro.states.ua/photos/lviv-state.webp",
+            "cities": [],
+            "createdAt": "2022-06-29T19:31:34.593Z",
+            "updatedAt": "2022-06-29T19:35:48.383Z"
+        }
+    }
+}
+
+get all city:
+url: "/api/location-city"
+metod: "GET"
+    response 
+{
+    "status": "success",
+    "code": 200,
+    "data": {
+        "cities": [
+            {
+                "districts": [],
+                "_id": "62b60b83a20e0cb32cf9d587",
+                "stateId": "62b6fbb1aee108c5160d7089",
+                "cityName": "Kyiv",
+                "cityInternational": "Kyiv",
+                "cityCode": "KYI",
+                "cityPhotoURL": "https://kyiv.city.ua/photos/kyiv-city.webp",
+                "edited": 0,
+                "createdAt": "2022-06-24T19:07:47.962Z",
+                "updatedAt": "2022-06-24T19:07:47.962Z"
+            },
+            {
+                "districts": [],
+                "_id": "62b60e6640bd5871520abcce",
+                "stateId": "62b6fbb1aee108c5160d7089",
+                "cityName": "Irpen",
+                "cityInternational": "Irpen",
+                "cityCode": "IRP",
+                "cityPhotoURL": "https://kyiv.city.ua/photos/kyiv-city.webp",
+                "edited": 0,
+                "createdAt": "2022-06-24T19:20:06.085Z",
+                "updatedAt": "2022-06-24T19:20:06.085Z"
+            },
+            {
+                "districts": [],
+                "_id": "62b60f6d5ba729f75e026931",
+                "stateId": "62b6fbb1aee108c5160d7089",
+                "cityName": "Bucha",
+                "cityInternational": "Bucha",
+                "cityCode": "BCH",
+                "cityPhotoURL": "https://kyiv.city.ua/photos/kyiv-city.webp",
+                "edited": 0,
+                "state": "62b605bdf9f9119e7c6c9b92",
+                "createdAt": "2022-06-24T19:24:29.500Z",
+                "updatedAt": "2022-06-24T19:24:29.500Z"
+            },
+            {
+                "_id": "62b61e84d0b634a059ab0fee",
+                "stateId": "62b6fbb1aee108c5160d7089",
+                "cityName": "Gomel",
+                "cityInternational": "Gomel",
+                "cityCode": "GOM",
+                "cityPhotoURL": "https://kyiv.city.ua/photos/kyiv-city.webp",
+                "edited": 0,
+                "state": "62b605bdf9f9119e7c6c9b92",
+                "districts": [],
+                "createdAt": "2022-06-24T20:28:52.094Z",
+                "updatedAt": "2022-06-24T20:28:52.094Z"
+            },
+            {
+                "_id": "62b6fab5e45159b87a5eb45f",
+                "stateId": "62b6fbb1aee108c5160d7089",
+                "cityName": "Kyiv",
+                "cityInternational": "Kyiv",
+                "cityCode": "KYI",
+                "cityPhotoURL": "https://kyiv.city.ua/photos/kyiv-city.webp",
+                "edited": 0,
+                "state": "62b605bdf9f9119e7c6c9b92",
+                "districts": [],
+                "createdAt": "2022-06-25T12:08:21.756Z",
+                "updatedAt": "2022-06-25T12:08:21.756Z"
+            },
+            {
+                "_id": "62ba6b548963ff5c239412e8",
+                "stateId": "62b6fbb1aee108c5160d7089",
+                "cityName": "Kyiv2",
+                "cityInternational": "Kyiv2",
+                "cityCode": "KYI",
+                "cityPhotoURL": "https://kyiv.city.ua/photos/kyiv-city.webp",
+                "edited": 0,
+                "state": "62b6fbb1aee108c5160d7089",
+                "districts": [],
+                "createdAt": "2022-06-28T02:45:40.828Z",
+                "updatedAt": "2022-06-28T02:45:40.828Z"
+            },
+            {
+                "_id": "62ba6b5c8963ff5c239412eb",
+                "stateId": "62b6fbb1aee108c5160d7089",
+                "cityName": "Kyiv3",
+                "cityInternational": "Kyiv3",
+                "cityCode": "KYI",
+                "cityPhotoURL": "https://kyiv.city.ua/photos/kyiv-city.webp",
+                "edited": 0,
+                "state": "62b6fbb1aee108c5160d7089",
+                "districts": [],
+                "createdAt": "2022-06-28T02:45:48.277Z",
+                "updatedAt": "2022-06-28T02:45:48.277Z"
+            },
+            {
+                "_id": "62ba6c9b65f42cc961c985ca",
+                "stateId": "62b6fbb1aee108c5160d7089",
+                "cityName": "Kyiv4-1",
+                "cityInternational": "Kyiv4-1",
+                "cityCode": "KYI-1",
+                "cityPhotoURL": "https://kyiv.city.ua/photos/kyiv-city.webp",
+                "edited": 0,
+                "state": "62b6fbb1aee108c5160d7089",
+                "districts": [
+                    {
+                        "_id": "62ba6e10f09d22b592636fb1",
+                        "stateId": "62b6fbb1aee108c5160d7089",
+                        "cityId": "62ba6c9b65f42cc961c985ca",
+                        "districtName": "Kyiv TEST2",
+                        "districtInternational": "Kyiv TEST2",
+                        "districtCode": "TEST1",
+                        "districtPhotoURL": "https://kyiv-podil.district.ua/photos/kyiv-podil.webp",
+                        "edited": 0,
+                        "city": "62ba6c9b65f42cc961c985ca",
+                        "__v": 0
+                    },
+                    {
+                        "_id": "62ba6e1ef09d22b592636fb4",
+                        "stateId": "62b6fbb1aee108c5160d7089",
+                        "cityId": "62ba6c9b65f42cc961c985ca",
+                        "districtName": "Kyiv TEST3",
+                        "districtInternational": "Kyiv TEST3",
+                        "districtCode": "TEST1",
+                        "districtPhotoURL": "https://kyiv-podil.district.ua/photos/kyiv-podil.webp",
+                        "edited": 0,
+                        "city": "62ba6c9b65f42cc961c985ca",
+                        "__v": 0
+                    },
+                    {
+                        "_id": "62ba6e25f09d22b592636fb7",
+                        "stateId": "62b6fbb1aee108c5160d7089",
+                        "cityId": "62ba6c9b65f42cc961c985ca",
+                        "districtName": "Kyiv TEST4-1",
+                        "districtInternational": "Kyiv TEST4-1",
+                        "districtCode": "TEST4-1",
+                        "districtPhotoURL": "https://kyiv-podil.district.ua/photos/kyiv-podil.webp",
+                        "edited": 0,
+                        "city": "62ba6c9b65f42cc961c985ca",
+                        "__v": 0
+                    },
+                    {
+                        "_id": "62bb19bf72fac2d16d3578d9",
+                        "stateId": "62b6fbb1aee108c5160d7089",
+                        "cityId": "62ba6c9b65f42cc961c985ca",
+                        "districtName": "Kyiv TEST5",
+                        "districtInternational": "Kyiv TEST5",
+                        "districtCode": "TEST5",
+                        "districtPhotoURL": "https://kyiv-podil.district.ua/photos/kyiv-podil.webp",
+                        "edited": 0,
+                        "city": "62ba6c9b65f42cc961c985ca",
+                        "__v": 0
+                    }
+                ],
+                "createdAt": "2022-06-28T02:51:07.117Z",
+                "updatedAt": "2022-06-28T15:09:52.768Z"
+            }
+        ]
+    }
+}
+
+add city:
+url: "/api/location-city"
+metod: "POST"
+request body:
+{   
+    "stateId": "62b6fbb1aee108c5160d7089",
+    "cityName": "Kyiv5",
+    "cityInternational": "Kyiv5",
+    "cityCode": "KYI-5",
+    "cityPhotoURL": "https://kyiv.city.ua/photos/kyiv-city.webp",
+    "edited": 0
+    }
+response:
+{
+    "status": "success",
+    "code": 201,
+    "data": {
+        "state": [
+            {
+                "cities": [],
+                "_id": "62b6064022102a8ed430b635",
+                "stateName": "Lviv State",
+                "stateInternational": "Lviv State",
+                "stateCode": "Lviv",
+                "edited": 0,
+                "langCode": "EN",
+                "statePhotoURL": "https://lviv.states.ua/photos/lviv-state.webp",
+                "createdAt": "2022-06-24T18:45:20.382Z",
+                "updatedAt": "2022-06-24T18:45:20.382Z"
+            },
+            {
+                "_id": "62b61a27ee6939b612a10cb4",
+                "stateName": "Rivne State",
+                "stateInternational": "Rivne State",
+                "stateCode": "Rivne",
+                "edited": 0,
+                "langCode": "EN",
+                "statePhotoURL": "https://lviv.states.ua/photos/lviv-state.webp",
+                "cities": [],
+                "createdAt": "2022-06-24T20:10:15.974Z",
+                "updatedAt": "2022-06-24T20:10:15.974Z"
+            },
+            {
+                "_id": "62b6f13a2b9117c40b5cc263",
+                "stateName": "TEST3",
+                "stateInternational": "TEST3",
+                "stateCode": "TEST3",
+                "edited": 0,
+                "langCode": "EN",
+                "statePhotoURL": "https://lviv.states.ua/photos/lviv-state.webp",
+                "cities": [],
+                "createdAt": "2022-06-25T11:27:54.661Z",
+                "updatedAt": "2022-06-25T11:27:54.661Z"
+            },
+            {
+                "_id": "62b6fbb1aee108c5160d7089",
+                "stateName": "Kyiv State",
+                "stateInternational": "Kyiv State",
+                "stateCode": "Kyiv",
+                "edited": 0,
+                "langCode": "EN",
+                "statePhotoURL": "https://Kiyv.states.ua/photos/lviv-state.webp",
+                "cities": [
+                    {
+                        "_id": "62ba6b548963ff5c239412e8",
+                        "stateId": "62b6fbb1aee108c5160d7089",
+                        "cityName": "Kyiv2",
+                        "cityInternational": "Kyiv2",
+                        "cityCode": "KYI",
+                        "cityPhotoURL": "https://kyiv.city.ua/photos/kyiv-city.webp",
+                        "edited": 0,
+                        "state": "62b6fbb1aee108c5160d7089",
+                        "districts": [],
+                        "createdAt": "2022-06-28T02:45:40.828Z",
+                        "updatedAt": "2022-06-28T02:45:40.828Z"
+                    },
+                    {
+                        "_id": "62ba6b5c8963ff5c239412eb",
+                        "stateId": "62b6fbb1aee108c5160d7089",
+                        "cityName": "Kyiv3",
+                        "cityInternational": "Kyiv3",
+                        "cityCode": "KYI",
+                        "cityPhotoURL": "https://kyiv.city.ua/photos/kyiv-city.webp",
+                        "edited": 0,
+                        "state": "62b6fbb1aee108c5160d7089",
+                        "districts": [],
+                        "createdAt": "2022-06-28T02:45:48.277Z",
+                        "updatedAt": "2022-06-28T02:45:48.277Z"
+                    },
+                    {
+                        "_id": "62ba6c9b65f42cc961c985ca",
+                        "stateId": "62b6fbb1aee108c5160d7089",
+                        "cityName": "Kyiv4-1",
+                        "cityInternational": "Kyiv4-1",
+                        "cityCode": "KYI-1",
+                        "cityPhotoURL": "https://kyiv.city.ua/photos/kyiv-city.webp",
+                        "edited": 0,
+                        "state": "62b6fbb1aee108c5160d7089",
+                        "districts": [
+                            "62ba6e10f09d22b592636fb1",
+                            "62ba6e1ef09d22b592636fb4",
+                            "62ba6e25f09d22b592636fb7",
+                            "62bb193d72fac2d16d3578d1",
+                            "62bb19bf72fac2d16d3578d9"
+                        ],
+                        "createdAt": "2022-06-28T02:51:07.117Z",
+                        "updatedAt": "2022-06-28T15:09:52.768Z"
+                    },
+                    {
+                        "_id": "62bcaacdc6b5b76afa053da4",
+                        "stateId": "62b6fbb1aee108c5160d7089",
+                        "cityName": "Kyiv5",
+                        "cityInternational": "Kyiv5",
+                        "cityCode": "KYI-5",
+                        "cityPhotoURL": "https://kyiv.city.ua/photos/kyiv-city.webp",
+                        "edited": 0,
+                        "state": "62b6fbb1aee108c5160d7089",
+                        "districts": [],
+                        "createdAt": "2022-06-29T19:41:01.269Z",
+                        "updatedAt": "2022-06-29T19:41:01.269Z"
+                    },
+                    {
+                        "_id": "62bcacd06a23e753ba4a96ab",
+                        "stateId": "62b6fbb1aee108c5160d7089",
+                        "cityName": "Kyiv6",
+                        "cityInternational": "Kyiv6",
+                        "cityCode": "KYI-6",
+                        "cityPhotoURL": "https://kyiv.city.ua/photos/kyiv-city.webp",
+                        "edited": 0,
+                        "state": "62b6fbb1aee108c5160d7089",
+                        "districts": [],
+                        "createdAt": "2022-06-29T19:49:36.844Z",
+                        "updatedAt": "2022-06-29T19:49:36.844Z"
+                    },
+                    {
+                        "_id": "62bcad0e443fa2d707ab851b",
+                        "stateId": "62b6fbb1aee108c5160d7089",
+                        "cityName": "Kyiv7",
+                        "cityInternational": "Kyiv7",
+                        "cityCode": "KYI-7",
+                        "cityPhotoURL": "https://kyiv.city.ua/photos/kyiv-city.webp",
+                        "edited": 0,
+                        "state": "62b6fbb1aee108c5160d7089",
+                        "districts": [],
+                        "createdAt": "2022-06-29T19:50:38.352Z",
+                        "updatedAt": "2022-06-29T19:50:38.352Z"
+                    }
+                ],
+                "createdAt": "2022-06-25T12:12:33.676Z",
+                "updatedAt": "2022-06-29T19:50:38.614Z"
+            }
+        ]
+    }
+}
+
+update city:
+url: "/api/location-city/id"
+metod: "PUT"
+request body:
+{   
+    "stateId": "62b6fbb1aee108c5160d7089",
+    "cityName": "Kyiv7-1",
+    "cityInternational": "Kyiv7-1",
+    "cityCode": "KYI-7-1",
+    "cityPhotoURL": "https://kyiv.city.ua/photos/kyiv-city.webp",
+    "edited": 0
+    }
+response:
+{
+    "status": "success",
+    "code": 200,
+    "data": {
+        "state": [
+            {
+                "cities": [],
+                "_id": "62b6064022102a8ed430b635",
+                "stateName": "Lviv State",
+                "stateInternational": "Lviv State",
+                "stateCode": "Lviv",
+                "edited": 0,
+                "langCode": "EN",
+                "statePhotoURL": "https://lviv.states.ua/photos/lviv-state.webp",
+                "createdAt": "2022-06-24T18:45:20.382Z",
+                "updatedAt": "2022-06-24T18:45:20.382Z"
+            },
+            {
+                "_id": "62b61a27ee6939b612a10cb4",
+                "stateName": "Rivne State",
+                "stateInternational": "Rivne State",
+                "stateCode": "Rivne",
+                "edited": 0,
+                "langCode": "EN",
+                "statePhotoURL": "https://lviv.states.ua/photos/lviv-state.webp",
+                "cities": [],
+                "createdAt": "2022-06-24T20:10:15.974Z",
+                "updatedAt": "2022-06-24T20:10:15.974Z"
+            },
+            {
+                "_id": "62b6f13a2b9117c40b5cc263",
+                "stateName": "TEST3",
+                "stateInternational": "TEST3",
+                "stateCode": "TEST3",
+                "edited": 0,
+                "langCode": "EN",
+                "statePhotoURL": "https://lviv.states.ua/photos/lviv-state.webp",
+                "cities": [],
+                "createdAt": "2022-06-25T11:27:54.661Z",
+                "updatedAt": "2022-06-25T11:27:54.661Z"
+            },
+            {
+                "_id": "62b6fbb1aee108c5160d7089",
+                "stateName": "Kyiv State",
+                "stateInternational": "Kyiv State",
+                "stateCode": "Kyiv",
+                "edited": 0,
+                "langCode": "EN",
+                "statePhotoURL": "https://Kiyv.states.ua/photos/lviv-state.webp",
+                "cities": [
+                    {
+                        "_id": "62ba6b548963ff5c239412e8",
+                        "stateId": "62b6fbb1aee108c5160d7089",
+                        "cityName": "Kyiv2",
+                        "cityInternational": "Kyiv2",
+                        "cityCode": "KYI",
+                        "cityPhotoURL": "https://kyiv.city.ua/photos/kyiv-city.webp",
+                        "edited": 0,
+                        "state": "62b6fbb1aee108c5160d7089",
+                        "districts": [],
+                        "createdAt": "2022-06-28T02:45:40.828Z",
+                        "updatedAt": "2022-06-28T02:45:40.828Z"
+                    },
+                    {
+                        "_id": "62ba6b5c8963ff5c239412eb",
+                        "stateId": "62b6fbb1aee108c5160d7089",
+                        "cityName": "Kyiv3",
+                        "cityInternational": "Kyiv3",
+                        "cityCode": "KYI",
+                        "cityPhotoURL": "https://kyiv.city.ua/photos/kyiv-city.webp",
+                        "edited": 0,
+                        "state": "62b6fbb1aee108c5160d7089",
+                        "districts": [],
+                        "createdAt": "2022-06-28T02:45:48.277Z",
+                        "updatedAt": "2022-06-28T02:45:48.277Z"
+                    },
+                    {
+                        "_id": "62ba6c9b65f42cc961c985ca",
+                        "stateId": "62b6fbb1aee108c5160d7089",
+                        "cityName": "Kyiv4-1",
+                        "cityInternational": "Kyiv4-1",
+                        "cityCode": "KYI-1",
+                        "cityPhotoURL": "https://kyiv.city.ua/photos/kyiv-city.webp",
+                        "edited": 0,
+                        "state": "62b6fbb1aee108c5160d7089",
+                        "districts": [
+                            "62ba6e10f09d22b592636fb1",
+                            "62ba6e1ef09d22b592636fb4",
+                            "62ba6e25f09d22b592636fb7",
+                            "62bb193d72fac2d16d3578d1",
+                            "62bb19bf72fac2d16d3578d9"
+                        ],
+                        "createdAt": "2022-06-28T02:51:07.117Z",
+                        "updatedAt": "2022-06-28T15:09:52.768Z"
+                    },
+                    {
+                        "_id": "62bcaacdc6b5b76afa053da4",
+                        "stateId": "62b6fbb1aee108c5160d7089",
+                        "cityName": "Kyiv5",
+                        "cityInternational": "Kyiv5",
+                        "cityCode": "KYI-5",
+                        "cityPhotoURL": "https://kyiv.city.ua/photos/kyiv-city.webp",
+                        "edited": 0,
+                        "state": "62b6fbb1aee108c5160d7089",
+                        "districts": [],
+                        "createdAt": "2022-06-29T19:41:01.269Z",
+                        "updatedAt": "2022-06-29T19:41:01.269Z"
+                    },
+                    {
+                        "_id": "62bcacd06a23e753ba4a96ab",
+                        "stateId": "62b6fbb1aee108c5160d7089",
+                        "cityName": "Kyiv6",
+                        "cityInternational": "Kyiv6",
+                        "cityCode": "KYI-6",
+                        "cityPhotoURL": "https://kyiv.city.ua/photos/kyiv-city.webp",
+                        "edited": 0,
+                        "state": "62b6fbb1aee108c5160d7089",
+                        "districts": [],
+                        "createdAt": "2022-06-29T19:49:36.844Z",
+                        "updatedAt": "2022-06-29T19:49:36.844Z"
+                    },
+                    {
+                        "_id": "62bcad0e443fa2d707ab851b",
+                        "stateId": "62b6fbb1aee108c5160d7089",
+                        "cityName": "Kyiv7-2",
+                        "cityInternational": "Kyiv7-2",
+                        "cityCode": "KYI-7-2",
+                        "cityPhotoURL": "https://kyiv.city.ua/photos/kyiv-city.webp",
+                        "edited": 0,
+                        "state": "62b6fbb1aee108c5160d7089",
+                        "districts": [],
+                        "createdAt": "2022-06-29T19:50:38.352Z",
+                        "updatedAt": "2022-06-29T19:56:12.734Z"
+                    }
+                ],
+                "createdAt": "2022-06-25T12:12:33.676Z",
+                "updatedAt": "2022-06-29T19:50:38.614Z"
+            }
+        ]
+    }
+}
+
+remove city:
+url: "/api/location-city/id"
+metod: "DELETE"
+response
+{
+    "status": "success",
+    "code": 200,
+    "message": "city deleted",
+    "data": {
+        "state": [
+            {
+                "cities": [],
+                "_id": "62b6064022102a8ed430b635",
+                "stateName": "Lviv State",
+                "stateInternational": "Lviv State",
+                "stateCode": "Lviv",
+                "edited": 0,
+                "langCode": "EN",
+                "statePhotoURL": "https://lviv.states.ua/photos/lviv-state.webp",
+                "createdAt": "2022-06-24T18:45:20.382Z",
+                "updatedAt": "2022-06-24T18:45:20.382Z"
+            },
+            {
+                "_id": "62b61a27ee6939b612a10cb4",
+                "stateName": "Rivne State",
+                "stateInternational": "Rivne State",
+                "stateCode": "Rivne",
+                "edited": 0,
+                "langCode": "EN",
+                "statePhotoURL": "https://lviv.states.ua/photos/lviv-state.webp",
+                "cities": [],
+                "createdAt": "2022-06-24T20:10:15.974Z",
+                "updatedAt": "2022-06-24T20:10:15.974Z"
+            },
+            {
+                "_id": "62b6f13a2b9117c40b5cc263",
+                "stateName": "TEST3",
+                "stateInternational": "TEST3",
+                "stateCode": "TEST3",
+                "edited": 0,
+                "langCode": "EN",
+                "statePhotoURL": "https://lviv.states.ua/photos/lviv-state.webp",
+                "cities": [],
+                "createdAt": "2022-06-25T11:27:54.661Z",
+                "updatedAt": "2022-06-25T11:27:54.661Z"
+            },
+            {
+                "_id": "62b6fbb1aee108c5160d7089",
+                "stateName": "Kyiv State",
+                "stateInternational": "Kyiv State",
+                "stateCode": "Kyiv",
+                "edited": 0,
+                "langCode": "EN",
+                "statePhotoURL": "https://Kiyv.states.ua/photos/lviv-state.webp",
+                "cities": [
+                    {
+                        "_id": "62ba6b548963ff5c239412e8",
+                        "stateId": "62b6fbb1aee108c5160d7089",
+                        "cityName": "Kyiv2",
+                        "cityInternational": "Kyiv2",
+                        "cityCode": "KYI",
+                        "cityPhotoURL": "https://kyiv.city.ua/photos/kyiv-city.webp",
+                        "edited": 0,
+                        "state": "62b6fbb1aee108c5160d7089",
+                        "districts": [],
+                        "createdAt": "2022-06-28T02:45:40.828Z",
+                        "updatedAt": "2022-06-28T02:45:40.828Z"
+                    },
+                    {
+                        "_id": "62ba6b5c8963ff5c239412eb",
+                        "stateId": "62b6fbb1aee108c5160d7089",
+                        "cityName": "Kyiv3",
+                        "cityInternational": "Kyiv3",
+                        "cityCode": "KYI",
+                        "cityPhotoURL": "https://kyiv.city.ua/photos/kyiv-city.webp",
+                        "edited": 0,
+                        "state": "62b6fbb1aee108c5160d7089",
+                        "districts": [],
+                        "createdAt": "2022-06-28T02:45:48.277Z",
+                        "updatedAt": "2022-06-28T02:45:48.277Z"
+                    },
+                    {
+                        "_id": "62ba6c9b65f42cc961c985ca",
+                        "stateId": "62b6fbb1aee108c5160d7089",
+                        "cityName": "Kyiv4-1",
+                        "cityInternational": "Kyiv4-1",
+                        "cityCode": "KYI-1",
+                        "cityPhotoURL": "https://kyiv.city.ua/photos/kyiv-city.webp",
+                        "edited": 0,
+                        "state": "62b6fbb1aee108c5160d7089",
+                        "districts": [
+                            "62ba6e10f09d22b592636fb1",
+                            "62ba6e1ef09d22b592636fb4",
+                            "62ba6e25f09d22b592636fb7",
+                            "62bb193d72fac2d16d3578d1",
+                            "62bb19bf72fac2d16d3578d9"
+                        ],
+                        "createdAt": "2022-06-28T02:51:07.117Z",
+                        "updatedAt": "2022-06-28T15:09:52.768Z"
+                    },
+                    {
+                        "_id": "62bcaacdc6b5b76afa053da4",
+                        "stateId": "62b6fbb1aee108c5160d7089",
+                        "cityName": "Kyiv5",
+                        "cityInternational": "Kyiv5",
+                        "cityCode": "KYI-5",
+                        "cityPhotoURL": "https://kyiv.city.ua/photos/kyiv-city.webp",
+                        "edited": 0,
+                        "state": "62b6fbb1aee108c5160d7089",
+                        "districts": [],
+                        "createdAt": "2022-06-29T19:41:01.269Z",
+                        "updatedAt": "2022-06-29T19:41:01.269Z"
+                    },
+                    {
+                        "_id": "62bcacd06a23e753ba4a96ab",
+                        "stateId": "62b6fbb1aee108c5160d7089",
+                        "cityName": "Kyiv6",
+                        "cityInternational": "Kyiv6",
+                        "cityCode": "KYI-6",
+                        "cityPhotoURL": "https://kyiv.city.ua/photos/kyiv-city.webp",
+                        "edited": 0,
+                        "state": "62b6fbb1aee108c5160d7089",
+                        "districts": [],
+                        "createdAt": "2022-06-29T19:49:36.844Z",
+                        "updatedAt": "2022-06-29T19:49:36.844Z"
+                    }
+                ],
+                "createdAt": "2022-06-25T12:12:33.676Z",
+                "updatedAt": "2022-06-29T19:50:38.614Z"
+            }
+        ]
+    }
+}
+
+get all district:
+url: "/api/location-district"
+metod: "GET"
+response

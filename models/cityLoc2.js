@@ -3,40 +3,58 @@ const Joi = require("joi");
 
 const cityLoc2Schema = Schema(
   {
-    city: {
+    stateId: {
       type: String,
-      required: [true, "city must be exist"],
+      require: [true, "state Id must be exist"],
     },
-    location: {
+    cityName: {
       type: String,
-      required: [true, "location must be exist"],
+      required: [true, "city Name must be exist"],
     },
-    langCode: {
+    cityInternational: {
       type: String,
-      required: [true, "code must be exist"],
-      match: /^[A-Z]{2}$/,
+      required: [true, "city International Name must be exist"],
     },
-    dbLangCode: {
+    cityCode: {
+      type: String,
+      required: [true, "city code must be exist"],
+    },
+    cityPhotoURL: {
       type: String,
     },
-    urlAdress: {
-      type: String,
+    edited: {
+      type: Number,
     },
-    region: {
+    // langCode: {
+    //   type: String,
+    //   required: [true, "code must be exist"],
+    //   match: /^[A-Z]{2}$/,
+    // },
+    // dbLangCode: {
+    //   type: String,
+    // },
+    state: {
       type: Schema.Types.ObjectId,
       ref: "regionLoc3",
       required: true,
     },
+    districts: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "districtLoc1",
+      },
+    ],
   },
   { versionKey: false, timestamps: true }
 );
 
 const joiSchema = Joi.object({
-  city: Joi.string().required(),
-  location: Joi.string().required(),
-  langCode: Joi.string().required(),
-  dbLangCode: Joi.string().required(),
-  urlAdress: Joi.string(),
+  stateId: Joi.string().required(),
+  cityName: Joi.string().required(),
+  cityInternational: Joi.string().required(),
+  cityCode: Joi.string().required(),
+  cityPhotoURL: Joi.string(),
+  edited: Joi.number(),
 });
 
 const City = model("cityLoc2", cityLoc2Schema);

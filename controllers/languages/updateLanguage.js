@@ -10,7 +10,7 @@ const updateLanguage = async (req, res) => {
     throw new NotFound("Language not found");
   }
   res.json({
-    status: "succes",
+    status: "success",
     code: 200,
     data: {
       languages,

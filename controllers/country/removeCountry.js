@@ -10,7 +10,7 @@ const removeCountry = async (req, res) => {
   res.json({
     status: "succes",
     code: 200,
-    message: "contact deleted",
+    message: "country deleted",
     data: {
       result,
     },
