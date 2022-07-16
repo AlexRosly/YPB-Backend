@@ -23,6 +23,9 @@ const regionLoc3Schema = Schema(
       required: [true, "code must be exist"],
       match: /^[A-Z]{2}$/,
     },
+    dbLangCode: {
+      type: String,
+    },
     statePhotoURL: {
       type: String,
     },

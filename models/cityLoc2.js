@@ -30,9 +30,12 @@ const cityLoc2Schema = Schema(
     //   required: [true, "code must be exist"],
     //   match: /^[A-Z]{2}$/,
     // },
-    // dbLangCode: {
-    //   type: String,
-    // },
+    dbLangCode: {
+      type: String,
+    },
+    stateCode: {
+      type: String,
+    },
     state: {
       type: Schema.Types.ObjectId,
       ref: "regionLoc3",
