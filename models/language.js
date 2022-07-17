@@ -22,12 +22,12 @@ const languageSchema = Schema(
         ref: "country",
       },
     ],
-    states: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: "regionLoc3",
-      },
-    ],
+    // states: [
+    //   {
+    //     type: Schema.Types.ObjectId,
+    //     ref: "regionLoc3",
+    //   },
+    // ],
   },
   { versionKey: false, timestamps: true }
 );

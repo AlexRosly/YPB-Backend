@@ -28,6 +28,12 @@ const districtLoc1Schema = Schema({
   edited: {
     type: Number,
   },
+  cityCode: {
+    type: String,
+  },
+  dbLangCode: {
+    type: String,
+  },
   city: {
     type: Schema.Types.ObjectId,
     ref: "cityLoc2",
