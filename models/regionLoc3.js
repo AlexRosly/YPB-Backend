@@ -15,6 +15,10 @@ const regionLoc3Schema = Schema(
       type: String,
       required: [true, "state code must be exist"],
     },
+    international: {
+      type: String,
+      required: [true, "country International must be exist"],
+    },
     edited: {
       type: Number,
     },
@@ -28,6 +32,13 @@ const regionLoc3Schema = Schema(
     },
     statePhotoURL: {
       type: String,
+    },
+    countryId: {
+      type: String,
+    },
+    country: {
+      type: Schema.Types.ObjectId,
+      ref: "country",
     },
     cities: [
       {
@@ -43,9 +54,11 @@ const joiSchema = Joi.object({
   stateName: Joi.string().required(),
   stateInternational: Joi.string().required(),
   stateCode: Joi.string().required(),
+  international: Joi.string().required(),
   edited: Joi.number(),
   statePhotoURL: Joi.string(),
   langCode: Joi.string().required(),
+  countryId: Joi.string().required(),
 });
 
 const Region = model("regionLoc3", regionLoc3Schema);

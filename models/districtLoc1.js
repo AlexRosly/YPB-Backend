@@ -34,11 +34,13 @@ const districtLoc1Schema = Schema({
   dbLangCode: {
     type: String,
   },
-  city: {
-    type: Schema.Types.ObjectId,
-    ref: "cityLoc2",
-    required: true,
-  },
+  city: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "cityLoc2",
+      required: true,
+    },
+  ],
 });
 
 const joiSchema = Joi.object({

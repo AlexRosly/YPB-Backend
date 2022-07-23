@@ -32,7 +32,7 @@ const addCoutry = async (req, res) => {
           dbLangCode: languages[i].code,
         });
         if (!country) {
-          throw new NotFound("Can not add country");
+          throw new NotFound("Can`t add country");
         }
         const addCoutryToLanguage = await Language.updateOne(
           { code: languages[i].code },

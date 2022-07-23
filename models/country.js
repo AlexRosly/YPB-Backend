@@ -20,6 +20,13 @@ const countrySchema = Schema(
     dbLangCode: {
       type: String,
     },
+    states: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "regionLoc3",
+        required: true,
+      },
+    ],
   }
   // { versionKey: false, timestamps: true }
 );
