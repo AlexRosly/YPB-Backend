@@ -3,17 +3,17 @@ const { NotFound } = require("http-errors");
 
 const removeRegionLoc3 = async (req, res) => {
   const { id } = req.params;
-  const removeState = await Region.findByIdAndRemove(id);
+  const state = await Region.findByIdAndRemove(id);
 
-  if (!removeState) {
+  if (!state) {
     throw new NotFound("state not found");
   }
 
-  const state = await Region.find().populate({
-    path: "cities",
-    model: "cityLoc2",
-    populate: { path: "districts", model: "districtLoc1" },
-  });
+  // const state = await Region.find().populate({
+  //   path: "cities",
+  //   model: "cityLoc2",
+  //   populate: { path: "districts", model: "districtLoc1" },
+  // });
 
   res.json({
     status: "success",

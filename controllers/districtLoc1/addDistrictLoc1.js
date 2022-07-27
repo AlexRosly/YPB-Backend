@@ -13,17 +13,17 @@ const addDistrictLoc1 = async (req, res) => {
     { $push: { districts: distric._id } }
   );
 
-  const state = await Region.find().populate({
-    path: "cities",
-    model: "cityLoc2",
-    populate: { path: "districts", model: "districtLoc1" },
-  });
+  // const state = await Region.find().populate({
+  //   path: "cities",
+  //   model: "cityLoc2",
+  //   populate: { path: "districts", model: "districtLoc1" },
+  // });
 
   res.status(201).json({
     status: "success",
     code: 201,
     data: {
-      state,
+      distric,
     },
   });
 };

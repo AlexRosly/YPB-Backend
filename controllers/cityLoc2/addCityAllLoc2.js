@@ -12,17 +12,18 @@ const addCityAllloc2 = async (req, res) => {
     { $push: { cities: city._id } }
   );
 
-  const state = await Region.find().populate({
-    path: "cities",
-    model: "cityLoc2",
-    populate: { path: "districts", model: "districtLoc1" },
-  });
+  // const state = await Region.find().populate({
+  //   path: "cities",
+  //   model: "cityLoc2",
+  //   populate: { path: "districts", model: "districtLoc1" },
+  // });
 
   res.status(201).json({
     status: "success",
+    mesaage: "city created and added to all languages",
     code: 201,
     data: {
-      state,
+      city,
     },
   });
 };

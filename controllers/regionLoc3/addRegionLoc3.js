@@ -3,14 +3,14 @@ const { NotImplemented } = require("http-errors");
 
 const addRegionLoc3 = async (req, res) => {
   const { countryId, stateCode, international } = req.body;
-  const addState = await Region.create(req.body);
-  if (!addState) {
+  const state = await Region.create(req.body);
+  if (!state) {
     throw new NotImplemented("state doesn`t created");
   }
 
   const updateCountry = await Country.updateOne(
     { _id: countryId },
-    { $push: { states: addState._id } }
+    { $push: { states: state._id } }
   );
 
   const makeCopyState = async () => {
@@ -28,14 +28,14 @@ const addRegionLoc3 = async (req, res) => {
         if (!newState) {
           throw new NotImplemented("states don`t created");
         }
-        addStateToCountry();
+        stateToCountry();
       }
     }
   };
 
   makeCopyState();
 
-  const addStateToCountry = async () => {
+  const stateToCountry = async () => {
     const countriesCopy = await Country.find({ international });
     const countries = JSON.parse(JSON.stringify(countriesCopy));
 
@@ -54,14 +54,15 @@ const addRegionLoc3 = async (req, res) => {
     }
   };
 
-  const state = await Region.find().populate({
-    path: "cities",
-    model: "cityLoc2",
-    populate: { path: "districts", model: "districtLoc1" },
-  });
+  // const state = await Region.find().populate({
+  //   path: "cities",
+  //   model: "cityLoc2",
+  //   populate: { path: "districts", model: "districtLoc1" },
+  // });
 
   res.status(201).json({
     status: "success",
+    message: "created state and added to all languages",
     code: 201,
     data: {
       state,
