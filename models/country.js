@@ -20,6 +20,9 @@ const countrySchema = Schema(
     dbLangCode: {
       type: String,
     },
+    stateId: {
+      type: String,
+    },
     states: [
       {
         type: Schema.Types.ObjectId,
@@ -36,6 +39,7 @@ const joiSchema = Joi.object({
   country: Joi.string().required(),
   langCode: Joi.string().required(),
   dbLangCode: Joi.string(),
+  stateId: Joi.string().required(),
 });
 
 const Country = model("country", countrySchema);

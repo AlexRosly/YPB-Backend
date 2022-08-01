@@ -16,7 +16,7 @@ const addRegionLoc3 = async (req, res) => {
   const makeCopyState = async () => {
     const countries = await Country.find({ international });
 
-    const { dbLangCode, countryId, country } = req.body;
+    const { countryId } = req.body;
     for (const countr of countries) {
       if (countr._id != countryId) {
         const newState = await Region.create({

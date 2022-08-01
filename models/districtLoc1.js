@@ -1,4 +1,4 @@
-const { Schema, model, Types } = require("mongoose");
+const { Schema, model } = require("mongoose");
 const Joi = require("joi");
 
 const districtLoc1Schema = Schema({
@@ -28,19 +28,27 @@ const districtLoc1Schema = Schema({
   edited: {
     type: Number,
   },
+  cityInternational: {
+    type: String,
+  },
   cityCode: {
     type: String,
+  },
+  langCode: {
+    type: String,
+    required: [true, "code must be exist"],
+    match: /^[A-Z]{2}$/,
   },
   dbLangCode: {
     type: String,
   },
-  city: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "cityLoc2",
-      required: true,
-    },
-  ],
+  // city: [
+  //   {
+  //     type: Schema.Types.ObjectId,
+  //     ref: "cityLoc2",
+  //     required: true,
+  //   },
+  // ],
 });
 
 const joiSchema = Joi.object({
@@ -51,6 +59,9 @@ const joiSchema = Joi.object({
   districtCode: Joi.string().required(),
   districtPhotoURL: Joi.string(),
   edited: Joi.number(),
+  cityInternational: Joi.string().required(),
+  langCode: Joi.string().required(),
+  dbLangCode: Joi.string(),
 });
 
 const District = model("districtLoc1", districtLoc1Schema);
