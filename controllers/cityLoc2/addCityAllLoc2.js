@@ -36,7 +36,6 @@ const addCityAllloc2 = async (req, res) => {
     const copyOfStates = await Region.find({ stateInternational });
     const states = JSON.parse(JSON.stringify(copyOfStates));
 
-    // const copyOfCities = await City.find({ cityCode });
     const copyOfCities = await City.find({ cityCode });
     const cities = JSON.parse(JSON.stringify(copyOfCities));
 
@@ -51,12 +50,6 @@ const addCityAllloc2 = async (req, res) => {
       }
     }
   };
-
-  // const state = await Region.find().populate({
-  //   path: "cities",
-  //   model: "cityLoc2",
-  //   populate: { path: "districts", model: "districtLoc1" },
-  // });
 
   res.status(201).json({
     status: "success",

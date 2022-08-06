@@ -51,12 +51,6 @@ const addDistrictLoc1 = async (req, res) => {
     }
   };
 
-  // const state = await Region.find().populate({
-  //   path: "cities",
-  //   model: "cityLoc2",
-  //   populate: { path: "districts", model: "districtLoc1" },
-  // });
-
   res.status(201).json({
     status: "success",
     message: "district created and added to all languages",

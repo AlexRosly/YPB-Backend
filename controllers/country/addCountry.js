@@ -38,25 +38,12 @@ const addCoutry = async (req, res) => {
           { code: languages[i].code },
           { $push: { countries: country } }
         );
-        // console.log(addCoutryToLanguage);
       }
     }
   };
 
   addCoutryToLanguages();
 
-  /////////////////////////
-  //work
-  // const languages = await Language.updateMany(
-  //   { code: { $ne: `${langCode}` } },
-  //   { $push: { countries: country } }
-  // );
-
-  // if (!languages) {
-  //   throw new NotFound("Country not found");
-  // }
-  // console.log(languages);
-  ////////////////////////////////
   res.status(201).json({
     status: "success",
     code: 201,

@@ -7,9 +7,6 @@ const getAllRegionLoc3 = async (req, res) => {
     populate: { path: "districts", model: "districtLoc1" },
   });
 
-  // const getAllStates = await Region.find({ dbLangCode: "EN" });
-  // console.log(getAllStates);
-
   res.json({
     status: "success",
     code: 200,

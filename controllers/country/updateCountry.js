@@ -19,14 +19,7 @@ const updateCoutry = async (req, res) => {
     }
     return arr;
   };
-  /////////////////////////////////////////////////////////////////////////
-  // const deleteLanguageCountry = await Language.updateOne(
-  //   {
-  //     code: `${langCode}`,
-  //   },
-  //   { $pullAll: { countries: launguage[0].countries } }
-  // );
-  /////////////////////////////////////////////////////////////////////////////
+
   const updateLanguageCountry = await Language.updateOne(
     {
       code: `${langCode}`,
