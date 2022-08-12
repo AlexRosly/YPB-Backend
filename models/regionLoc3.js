@@ -19,9 +19,9 @@ const regionLoc3Schema = Schema(
       type: String,
       required: [true, "country International must be exist"],
     },
-    edited: {
-      type: Number,
-    },
+    // edited: {
+    //   type: Number,
+    // },
     langCode: {
       type: String,
       required: [true, "code must be exist"],
@@ -55,10 +55,11 @@ const joiSchema = Joi.object({
   stateInternational: Joi.string().required(),
   stateCode: Joi.string().required(),
   international: Joi.string().required(),
-  edited: Joi.number(),
+  // edited: Joi.number(),
   statePhotoURL: Joi.string(),
   langCode: Joi.string().required(),
   countryId: Joi.string().required(),
+  dbLangCode: Joi.string(),
 });
 
 const Region = model("regionLoc3", regionLoc3Schema);

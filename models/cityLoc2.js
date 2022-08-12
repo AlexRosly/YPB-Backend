@@ -22,9 +22,9 @@ const cityLoc2Schema = Schema(
     cityPhotoURL: {
       type: String,
     },
-    edited: {
-      type: Number,
-    },
+    // edited: {
+    //   type: Number,
+    // },
     langCode: {
       type: String,
       required: [true, "code must be exist"],
@@ -63,7 +63,8 @@ const joiSchema = Joi.object({
   cityPhotoURL: Joi.string(),
   stateInternational: Joi.string().required(),
   langCode: Joi.string().required(),
-  edited: Joi.number(),
+  // edited: Joi.number(),
+  dbLangCode: Joi.string(),
 });
 
 const City = model("cityLoc2", cityLoc2Schema);
