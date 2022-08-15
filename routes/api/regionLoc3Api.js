@@ -8,7 +8,7 @@ router.get("/", ctrlWrapper(ctrl.getAllRegionLoc3));
 
 router.post("/", validation(joiSchema), ctrlWrapper(ctrl.addRegionLoc3));
 
-router.put("/:id", validation(joiSchema), ctrlWrapper(ctrl.updateRegionLoc3));
+router.patch("/:id", validation(joiSchema), ctrlWrapper(ctrl.updateRegionLoc3));
 
 router.delete("/:id", ctrlWrapper(ctrl.removeRegionLoc3));
 

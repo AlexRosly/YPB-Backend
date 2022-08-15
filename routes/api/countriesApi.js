@@ -8,7 +8,7 @@ router.get("/", ctrlWrapper(ctrl.getAllCountries));
 
 router.post("/", validation(joiSchema), ctrlWrapper(ctrl.addCoutry));
 
-router.put("/:id", validation(joiSchema), ctrlWrapper(ctrl.updateCoutry));
+router.patch("/:id", validation(joiSchema), ctrlWrapper(ctrl.updateCoutry));
 
 router.delete("/:id", ctrlWrapper(ctrl.removeCountry));
 

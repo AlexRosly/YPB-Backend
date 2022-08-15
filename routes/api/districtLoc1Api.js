@@ -8,7 +8,11 @@ router.get("/", ctrlWrapper(ctrl.getAllDistrictLoc1));
 
 router.post("/", validation(joiSchema), ctrlWrapper(ctrl.addDistrictLoc1));
 
-router.put("/:id", validation(joiSchema), ctrlWrapper(ctrl.updateDistrictLoc1));
+router.patch(
+  "/:id",
+  validation(joiSchema),
+  ctrlWrapper(ctrl.updateDistrictLoc1)
+);
 
 router.delete("/:id", ctrlWrapper(ctrl.removeDistrictLoc1));
 

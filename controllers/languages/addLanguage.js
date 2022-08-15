@@ -7,9 +7,6 @@ const addLanguage = async (req, res) => {
   const languages = await Language.create({
     lang: req.body.lang,
     code: req.body.code,
-    // countries: [...countries],
-    // states: [...getCopyStates],
-    // distric: [...copyAllDistritcs],
   });
   if (!languages) {
     throw new BadRequest("object doesn`t create");
@@ -50,39 +47,17 @@ const addLanguage = async (req, res) => {
       }
     }
   };
-  // addCountryToLanguage();
-  // const countrys = await Country.find({ dbLangCode: "EN" });
-  // const countriesArray = JSON.parse(JSON.stringify(countrys));
-
-  // const deleteIdCountry = (arr) => {
-  //   for (const count of arr) {
-  //     delete count._id;
-  //     delete count.__v;
-  //     count.dbLangCode = code;
-  //   }
-  //   return arr;
-  // };
-
-  // const countries = await Country.insertMany(deleteIdCountry(countriesArray));
 
   // find all states in english and add to new language
-
   const addStates = async () => {
     const getAllStates = await Region.find({ dbLangCode: "EN" });
     const states = JSON.parse(JSON.stringify(getAllStates));
 
     for (const state of states) {
       delete state._id;
-      // state.dbLangCode = code;
       const newState = await Region.create({
-        stateName: state.stateName,
-        stateInternational: state.stateInternational,
-        stateCode: state.stateCode,
-        international: state.international,
-        langCode: state.langCode,
+        ...state,
         dbLangCode: code,
-        statePhotoURL: state.statePhotoURL,
-        countryId: state.countryId,
       });
     }
     addStateToCountry();
@@ -97,9 +72,7 @@ const addLanguage = async (req, res) => {
     for (const country of countries) {
       for (const state of states) {
         if (country.international === state.international) {
-          console.log("countryID", state.countryId);
-          // delete state.countryId;
-          const updateState = await Region.updateOne(
+          const updateState = await Region.updateMany(
             { international: country.international, dbLangCode: code },
             { $set: { countryId: country._id } }
           );
@@ -111,124 +84,81 @@ const addLanguage = async (req, res) => {
       }
     }
   };
+
   addStates();
-  // const getAllstates = await Region.find({ dbLangCode: "EN" });
-  // const statesArray = JSON.parse(JSON.stringify(getAllstates));
 
-  // const deleteStatesId = (array) => {
-  //   for (const count of array) {
-  //     delete count._id;
-  //     count.dbLangCode = code;
-  //   }
-  //   return array;
-  // };
-
-  // const getCopyStates = await Region.insertMany(deleteStatesId(statesArray));
-  // const getCities = await Region.find({ dbLangCode: code });
-  // console.log("getCities", getCities);
-
+  // find all cities in english and add to new language
   const addCiti = async () => {
-    // console.log("code", code);
-    // const getAllCountries = await Country.find({ dbLangCode: code });
-    // console.log("getAllCountries", getAllCountries);
-    // const getStatesForCities = await Region.find({ dbLangCode: code });
-    // console.log("getStatesForCities", getStatesForCities);
-
-    // const states = JSON.parse(JSON.stringify(getStatesForCities));
     const getAllCities = await City.find({ dbLangCode: "EN" });
     const cities = JSON.parse(JSON.stringify(getAllCities));
-    // console.log("cities", cities);
-    // const getStatesForCities = await Region.find({ dbLangCode: code });
-    // console.log("getStatesForCities", getStatesForCities);
 
-    // const states = JSON.parse(JSON.stringify(getStatesForCities));
-
-    // console.log("states", states);
-
-    // for (const state of states) {
     for (const city of cities) {
-      // if (state.stateInternational === city.stateInternational) {
-      //   console.log(state.stateInternational === city.stateInternational);
       delete city._id;
-      // city.dbLangCode:
       const addCity = await City.create({
-        // stateId: city._id,
-        // cityName: city.cityName,
-        // cityInternational: city.cityInternational,
-        // cityCode: city.cityCode,
-        // cityPhotoURL: city.cityPhotoURL,
-        // langCode: city.langCode,
-        // stateInternational: city.stateInternational,
-        // state: city._id,
         ...city,
         dbLangCode: code,
       });
-      // console.log("addCity", addCity);
-      // }
     }
     addCitiToState();
-    // }
   };
 
   const addCitiToState = async () => {
     const getStatesForCities = await Region.find({ dbLangCode: code });
-    // console.log("getStatesForCities", getStatesForCities);
     const states = JSON.parse(JSON.stringify(getStatesForCities));
-    // console.log("states", states);
 
     const getAllCities = await City.find({ dbLangCode: code });
     const cities = JSON.parse(JSON.stringify(getAllCities));
-    // console.log("city", cities);
+
     for (const state of states) {
       for (const city of cities) {
         if (state.stateInternational === city.stateInternational) {
-          // console.log(state.stateInternational === city.stateInternational);
-          const updateCity = await City.updateOne(
+          const updateCity = await City.updateMany(
             {
               stateInternational: state.stateInternational,
               dbLangCode: code,
             },
             { $set: { stateId: state._id, state: state._id } }
           );
-          // console.log("updateCity", updateCity);
-          const updateState = await Region.updateOne(
+        }
+      }
+    }
+    updateState();
+  };
+
+  const updateState = async () => {
+    const getStatesForCities = await Region.find({ dbLangCode: code });
+    const states = JSON.parse(JSON.stringify(getStatesForCities));
+
+    const getAllCities = await City.find({ dbLangCode: code });
+    const cities = JSON.parse(JSON.stringify(getAllCities));
+
+    for (const state of states) {
+      for (const city of cities) {
+        if (state._id === city.state) {
+          const deleteCities = await Region.updateOne(
             {
-              stateInternational: state.stateInternational,
+              _id: state._id,
               dbLangCode: code,
             },
-            { $addToSet: { cities: city._id } }
+            { $pullAll: { cities: state.cities } }
           );
+          if (deleteCities) {
+            const updateState = await Region.updateOne(
+              {
+                _id: state._id,
+                dbLangCode: code,
+              },
+              { $addToSet: { cities: city._id } }
+            );
+          }
         }
       }
     }
   };
 
   addCiti();
+  // find all cities in english and add to new language
 
-  // const getStatesForCities = await Region.find({ dbLangCode: code });
-  // const getAllCities = await City.find({ dbLangCode: "EN" });
-  // let getCopyAllStates = JSON.parse(JSON.stringify(getAllCities));
-
-  // const chengeStateId = (states, citi) => {
-  //   const cities = JSON.parse(JSON.stringify(citi));
-  //   for (const state of states) {
-  //     for (const city of cities) {
-  //       if (state.stateCode === city.stateCode) {
-  //         city.state = state._id;
-  //         city.stateId = state._id;
-  //         city.dbLangCode = code;
-  //         // city.__v = 0;
-  //         delete city._id;
-  //       }
-  //     }
-  //   }
-  //   return cities;
-  // };
-
-  // const copyAllCities = await City.insertMany(
-  //   chengeStateId(getStatesForCities, getAllCities)
-  // );
-  /////////////////////////////////////////////////////////////////////////////
   const addDistict = async () => {
     const getAllDistricts = await District.find({ dbLangCode: "EN" });
     const districts = JSON.parse(JSON.stringify(getAllDistricts));
@@ -239,7 +169,6 @@ const addLanguage = async (req, res) => {
         ...district,
         dbLangCode: code,
       });
-      // console.log("newDistrict", newDistrict);
     }
     addDistrictToCity();
   };
@@ -247,98 +176,73 @@ const addLanguage = async (req, res) => {
   const addDistrictToCity = async () => {
     const getAllCities = await City.find({ dbLangCode: code });
     const cities = JSON.parse(JSON.stringify(getAllCities));
-    console.log("cities", cities);
 
     const getAllDistrict = await District.find({ dbLangCode: code });
     const districts = JSON.parse(JSON.stringify(getAllDistrict));
-    console.log("districts", districts);
 
     for (const city of cities) {
       for (const district of districts) {
         if (city.cityInternational === district.cityInternational) {
-          const updateDistrict = await District.updateOne(
+          const updateDistrict = await District.updateMany(
             {
               cityInternational: city.cityInternational,
               dbLangCode: code,
             },
             { $set: { cityId: city._id, stateId: city.stateId } }
           );
-          // console.log("updateDistrict", updateDistrict);
-          const updateCity = await City.updateOne(
-            {
-              dbLangCode: code,
-              cityInternational: city.cityInternational,
-            },
-            { $addToSet: { districts: district._id } }
-          );
+        }
+      }
+    }
+    updateCity();
+  };
 
-          console.log("updateCity", updateCity);
+  const updateCity = async () => {
+    const getAllCities = await City.find({ dbLangCode: code });
+    const cities = JSON.parse(JSON.stringify(getAllCities));
+
+    const getAllDistrict = await District.find({ dbLangCode: code });
+    const districts = JSON.parse(JSON.stringify(getAllDistrict));
+
+    for (const city of cities) {
+      for (const district of districts) {
+        if (city._id === district.cityId) {
+          const deleteDistrict = await City.updateMany(
+            {
+              _id: city._id,
+              dbLangCode: code,
+            },
+            { $pullAll: { districts: city.districts } }
+          );
+          if (deleteDistrict) {
+            const updateCity = await City.updateOne(
+              {
+                _id: city._id,
+                dbLangCode: code,
+              },
+              { $addToSet: { districts: district._id } }
+            );
+          }
         }
       }
     }
   };
 
   addDistict();
-  // const getCityForDistricts = await City.find({ dbLangCode: code });
-  // // console.log("city", getCityForDistricts);
-  // const getAllDistrict = await District.find({ dbLangCode: "EN" });
-  // const getCopyAllDistircts = JSON.parse(JSON.stringify(getAllDistrict));
 
-  // const chengeDistricId = (citis, district) => {
-  //   const cities = JSON.parse(JSON.stringify(citis));
-  //   const districs = JSON.parse(JSON.stringify(district));
-  //   // console.log("cities", cities);
-  //   // console.log("district", districs);
-  //   for (const city of cities) {
-  //     for (const distric of districs) {
-  //       console.log("ID", distric._id);
-  //       if (city._id === distric.cityId) {
-  //         distric.stateId = city.stateId;
-  //         distric.cityId = city._id;
-  //         distric.city = city._id;
-  //         distric.dbLangCode = code;
-  //         // distric.__v = 0;
-  //         delete distric._id;
-  //       }
-  //     }
-  //   }
-  //   // console.log("result", districs);
-  //   return districs;
-  // };
-
-  // const copyAllDistritcs = await District.insertMany(
-  //   chengeDistricId(getCityForDistricts, getCopyAllDistircts)
-  // );
-  /////////////////////////////////////////////////////////////////////
-  // const languages = await Language.create({
-  //   lang: req.body.lang,
-  //   code: req.body.code,
-  //   countries: [...countries],
-  //   // states: [...getCopyStates],
-  //   // distric: [...copyAllDistritcs],
+  // const language = await Language.find({ code: code }).populate({
+  //   path: "countries",
+  //   model: "country",
+  //   populate: {
+  //     path: "states",
+  //     model: "regionLoc3",
+  //     populate: {
+  //       path: "cities",
+  //       model: "cityLoc2",
+  //       populate: { path: "districts", model: "districtLoc1" },
+  //     },
+  //   },
   // });
-  // if (!languages) {
-  //   throw new BadRequest("object doesn`t create");
-  // }
-
-  const language = await Language.find({ code: code }).populate({
-    path: "countries",
-    model: "country",
-    populate: {
-      path: "states",
-      model: "regionLoc3",
-      populate: {
-        path: "cities",
-        model: "cityLoc2",
-        populate: { path: "districts", model: "districtLoc1" },
-      },
-    },
-  });
-  // const state = await Region.find({ dbLangCode: code }).populate({
-  //   path: "cities",
-  //   model: "cityLoc2",
-  //   populate: { path: "districts", model: "districtLoc1" },
-  // });
+  const language = await Language.find({ code: code }).populate("country");
 
   res.status(201).json({
     status: "success",
@@ -346,7 +250,6 @@ const addLanguage = async (req, res) => {
     code: 201,
     data: {
       language,
-      // state,
     },
   });
 };
