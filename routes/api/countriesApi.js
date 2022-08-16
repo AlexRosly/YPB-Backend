@@ -6,6 +6,8 @@ const router = express.Router();
 
 router.get("/", ctrlWrapper(ctrl.getAllCountries));
 
+router.get("/:id", ctrlWrapper(ctrl.getCountryById));
+
 router.post("/", validation(joiSchema), ctrlWrapper(ctrl.addCoutry));
 
 router.patch("/:id", validation(joiSchema), ctrlWrapper(ctrl.updateCoutry));

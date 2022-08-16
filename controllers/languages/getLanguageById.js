@@ -1,6 +1,7 @@
 const { Language } = require("../../models");
+const { NotFound } = require("http-errors");
 
-const getLanguagesById = async (req, res) => {
+const getLanguageById = async (req, res) => {
   const { id } = req.params;
 
   const language = await Language.findById(id);
@@ -10,7 +11,7 @@ const getLanguagesById = async (req, res) => {
   }
 
   res.json({
-    status: "succes",
+    status: "success",
     code: 200,
     data: {
       language,
@@ -18,4 +19,4 @@ const getLanguagesById = async (req, res) => {
   });
 };
 
-module.exports = getLanguagesById;
+module.exports = getLanguageById;

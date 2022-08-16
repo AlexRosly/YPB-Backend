@@ -1,4 +1,4 @@
-const { District, Region } = require("../../models");
+const { District } = require("../../models");
 
 const getAllDistrictLoc1 = async (req, res) => {
   const district = await District.find({});

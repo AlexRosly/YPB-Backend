@@ -6,6 +6,8 @@ const router = express.Router();
 
 router.get("/", ctrlWrapper(ctrl.getAllCityLoc2));
 
+router.get("/:id", ctrlWrapper(ctrl.getCityById));
+
 router.post("/", validation(joiSchema), ctrlWrapper(ctrl.addCityAllLoc2));
 
 router.patch("/:id", validation(joiSchema), ctrlWrapper(ctrl.updateCityLoc2));

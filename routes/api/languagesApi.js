@@ -6,6 +6,8 @@ const router = express.Router();
 
 router.get("/", ctrlWrapper(ctrl.getAllLanguages));
 
+router.get("/:id", ctrlWrapper(ctrl.getLanguageById));
+
 router.post("/", validation(joiSchema), ctrlWrapper(ctrl.addLanguage));
 
 router.patch("/:id", validation(joiSchema), ctrlWrapper(ctrl.updateLanguage));

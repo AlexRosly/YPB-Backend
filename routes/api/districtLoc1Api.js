@@ -6,6 +6,8 @@ const router = express.Router();
 
 router.get("/", ctrlWrapper(ctrl.getAllDistrictLoc1));
 
+router.get("/:id", ctrlWrapper(ctrl.getDistrictById));
+
 router.post("/", validation(joiSchema), ctrlWrapper(ctrl.addDistrictLoc1));
 
 router.patch(
