@@ -10,6 +10,7 @@ const countriesRouter = require("./routes/api/countriesApi");
 const regionLoc3Router = require("./routes/api/regionLoc3Api");
 const cityLoc2Router = require("./routes/api/cityLoc2Api");
 const districtLoc1Router = require("./routes/api/districtLoc1Api");
+const languageById = require("./routes/api/languagesById");
 
 const app = express();
 
@@ -24,6 +25,7 @@ app.use("/api/countries", countriesRouter);
 app.use("/api/location-state", regionLoc3Router);
 app.use("/api/location-city", cityLoc2Router);
 app.use("/api/location-district", districtLoc1Router);
+app.use("/api/language", languageById);
 
 app.use((req, res) => {
   res.status(404).json({ message: "Not found" });
