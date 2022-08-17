@@ -157,20 +157,26 @@ const addLanguage = async (req, res) => {
   };
 
   addCiti();
-  // find all cities in english and add to new language
 
+  // find all cities in english and add to new language
   const addDistict = async () => {
     const getAllDistricts = await District.find({ dbLangCode: "EN" });
     const districts = JSON.parse(JSON.stringify(getAllDistricts));
 
     for (const district of districts) {
       delete district._id;
+      delete district.cityId;
+      delete district.stateId;
+
       const newDistrict = await District.create({
         ...district,
         dbLangCode: code,
       });
     }
-    addDistrictToCity();
+    setTimeout(() => {
+      addDistrictToCity();
+    }, 1500);
+    // addDistrictToCity();
   };
 
   const addDistrictToCity = async () => {
@@ -229,20 +235,20 @@ const addLanguage = async (req, res) => {
 
   addDistict();
 
-  // const language = await Language.find({ code: code }).populate({
-  //   path: "countries",
-  //   model: "country",
-  //   populate: {
-  //     path: "states",
-  //     model: "regionLoc3",
-  //     populate: {
-  //       path: "cities",
-  //       model: "cityLoc2",
-  //       populate: { path: "districts", model: "districtLoc1" },
-  //     },
-  //   },
-  // });
-  const language = await Language.find({ code: code }).populate("country");
+  const language = await Language.find({ code: code }).populate({
+    path: "countries",
+    model: "country",
+    populate: {
+      path: "states",
+      model: "regionLoc3",
+      populate: {
+        path: "cities",
+        model: "cityLoc2",
+        populate: { path: "districts", model: "districtLoc1" },
+      },
+    },
+  });
+  // const language = await Language.find({ code: code }).populate("country");
 
   res.status(201).json({
     status: "success",
