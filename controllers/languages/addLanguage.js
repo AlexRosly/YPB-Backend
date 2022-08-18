@@ -235,6 +235,13 @@ const addLanguage = async (req, res) => {
 
   addDistict();
 
+  // const getFullResponse = async () => {
+  //   setTimeout(()=>{
+
+  //   }, 2000)
+  //   return language;
+  // }
+
   const language = await Language.find({ code: code }).populate({
     path: "countries",
     model: "country",
