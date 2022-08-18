@@ -1,7 +1,7 @@
 const { Region } = require("../../models");
 
 const getAllRegionLoc3 = async (req, res) => {
-  const state = await Region.find().populate({
+  const states = await Region.find().populate({
     path: "cities",
     model: "cityLoc2",
     populate: { path: "districts", model: "districtLoc1" },
@@ -11,7 +11,7 @@ const getAllRegionLoc3 = async (req, res) => {
     status: "success",
     code: 200,
     data: {
-      state,
+      states,
     },
   });
 };
