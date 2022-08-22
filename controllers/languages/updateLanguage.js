@@ -3,17 +3,17 @@ const { NotFound } = require("http-errors");
 
 const updateLanguage = async (req, res) => {
   const { id } = req.params;
-  const languages = await Language.findByIdAndUpdate(id, req.body, {
+  const language = await Language.findByIdAndUpdate(id, req.body, {
     new: true,
   });
-  if (!languages) {
+  if (!language) {
     throw new NotFound("Language not found");
   }
   res.json({
     status: "success",
     code: 200,
     data: {
-      languages,
+      language,
     },
   });
 };

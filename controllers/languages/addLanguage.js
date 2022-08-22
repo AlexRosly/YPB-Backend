@@ -3,6 +3,7 @@ const { BadRequest } = require("http-errors");
 
 const addLanguage = async (req, res) => {
   const { code } = req.body;
+
   //add launguage
   const languages = await Language.create({
     lang: req.body.lang,
@@ -176,7 +177,6 @@ const addLanguage = async (req, res) => {
     setTimeout(() => {
       addDistrictToCity();
     }, 1500);
-    // addDistrictToCity();
   };
 
   const addDistrictToCity = async () => {
@@ -242,20 +242,43 @@ const addLanguage = async (req, res) => {
   //   return language;
   // }
 
-  const language = await Language.find({ code: code }).populate({
-    path: "countries",
-    model: "country",
-    populate: {
-      path: "states",
-      model: "regionLoc3",
-      populate: {
-        path: "cities",
-        model: "cityLoc2",
-        populate: { path: "districts", model: "districtLoc1" },
-      },
-    },
-  });
-  // const language = await Language.find({ code: code }).populate("country");
+  // const language = await Language.find({ code: code }).populate({
+  //   path: "countries",
+  //   model: "country",
+  //   populate: {
+  //     path: "states",
+  //     model: "regionLoc3",
+  //     populate: {
+  //       path: "cities",
+  //       model: "cityLoc2",
+  //       populate: { path: "districts", model: "districtLoc1" },
+  //     },
+  //   },
+  // });
+
+  // const getLanguage = async () => {
+  //   const language = await Language.find({ code: code }).populate({
+  //     path: "countries",
+  //     model: "country",
+  //     populate: {
+  //       path: "states",
+  //       model: "regionLoc3",
+  //       populate: {
+  //         path: "cities",
+  //         model: "cityLoc2",
+  //         populate: { path: "districts", model: "districtLoc1" },
+  //       },
+  //     },
+  //   });
+  //   return language;
+  // };
+
+  // const language = setTimeout(() => {
+  //   getLanguage();
+  // }, 1000);
+
+  // console.log("language", language);
+  const language = await Language.find({ code: code });
 
   res.status(201).json({
     status: "success",

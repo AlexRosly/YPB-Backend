@@ -3,8 +3,8 @@ const { NotFound } = require("http-errors");
 
 const removeCountry = async (req, res) => {
   const { id } = req.params;
-  const result = await Country.findByIdAndRemove(id);
-  if (!result) {
+  const country = await Country.findByIdAndRemove(id);
+  if (!country) {
     throw new NotFound("Country not found");
   }
   res.json({
@@ -12,7 +12,7 @@ const removeCountry = async (req, res) => {
     code: 200,
     message: "country deleted",
     data: {
-      result,
+      country,
     },
   });
 };
