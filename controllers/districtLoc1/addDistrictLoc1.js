@@ -2,12 +2,10 @@ const { District, City, Region } = require("../../models");
 const { NotImplemented } = require("http-errors");
 
 const addDistrictLoc1 = async (req, res) => {
-  const { cityId, cityInternational, districtInternational, langCode } =
-    req.body;
+  const { cityId, cityInternational, districtInternational } = req.body;
   const distric = await District.create({
     ...req.body,
     city: cityId,
-    dbLangCode: langCode,
   });
 
   if (!distric) {
