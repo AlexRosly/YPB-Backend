@@ -2,8 +2,12 @@ const { City, Region } = require("../../models");
 const { NotImplemented } = require("http-errors");
 
 const addCityAllloc2 = async (req, res) => {
-  const { stateId, stateInternational, cityCode } = req.body;
-  const city = await City.create({ ...req.body, state: stateId });
+  const { stateId, stateInternational, cityCode, langCode } = req.body;
+  const city = await City.create({
+    ...req.body,
+    state: stateId,
+    dbLangCode: langCode,
+  });
   if (!city) {
     throw new NotImplemented("city doesn`t create");
   }
