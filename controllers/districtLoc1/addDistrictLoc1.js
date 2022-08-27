@@ -3,14 +3,14 @@ const { NotImplemented } = require("http-errors");
 
 const addDistrictLoc1 = async (req, res) => {
   const { cityId, cityInternational, districtInternational } = req.body;
-  const distric = await District.create({ ...req.body, city: cityId });
+  const district = await District.create({ ...req.body, city: cityId });
 
-  if (!distric) {
+  if (!district) {
     throw new NotImplemented("district doesn`t create");
   }
   const city = await City.updateOne(
     { _id: cityId },
-    { $push: { districts: distric._id } }
+    { $push: { districts: district._id } }
   );
 
   const makeCopyDistricts = async (cityInternational, cityId) => {
@@ -56,7 +56,7 @@ const addDistrictLoc1 = async (req, res) => {
     message: "district created and added to all languages",
     code: 201,
     data: {
-      distric,
+      district,
     },
   });
 };
