@@ -1,4 +1,4 @@
-const { City, Region } = require("../../models");
+const { City } = require("../../models");
 
 const { NotFound } = require("http-errors");
 

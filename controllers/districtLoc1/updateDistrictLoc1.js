@@ -1,4 +1,4 @@
-const { District, Region } = require("../../models");
+const { District } = require("../../models");
 const { NotFound } = require("http-errors");
 
 const updateDistrictLoc1 = async (req, res) => {

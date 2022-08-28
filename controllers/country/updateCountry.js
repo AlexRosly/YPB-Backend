@@ -1,5 +1,4 @@
-const { Country } = require("../../models");
-const { Language } = require("../../models");
+const { Country, Language } = require("../../models");
 
 const { NotFound } = require("http-errors");
 

@@ -1,4 +1,4 @@
-const { District, City, Region } = require("../../models");
+const { District, City } = require("../../models");
 const { NotImplemented } = require("http-errors");
 
 const addDistrictLoc1 = async (req, res) => {

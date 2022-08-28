@@ -22,9 +22,6 @@ const addRegionLoc3 = async (req, res) => {
 
     const { countryId } = req.body;
     for (const countr of countries) {
-      // if (countr._id === countryId) {
-      //   const updateContryId = await Region.find({ countryId });
-      // }
       if (countr._id != countryId) {
         const newState = await Region.create({
           ...req.body,

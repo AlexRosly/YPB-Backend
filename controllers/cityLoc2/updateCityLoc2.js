@@ -1,4 +1,4 @@
-const { City, Region } = require("../../models");
+const { City } = require("../../models");
 
 const updateCityLoc2 = async (req, res) => {
   const { id } = req.params;

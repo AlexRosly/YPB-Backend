@@ -235,49 +235,6 @@ const addLanguage = async (req, res) => {
 
   addDistict();
 
-  // const getFullResponse = async () => {
-  //   setTimeout(()=>{
-
-  //   }, 2000)
-  //   return language;
-  // }
-
-  // const language = await Language.find({ code: code }).populate({
-  //   path: "countries",
-  //   model: "country",
-  //   populate: {
-  //     path: "states",
-  //     model: "regionLoc3",
-  //     populate: {
-  //       path: "cities",
-  //       model: "cityLoc2",
-  //       populate: { path: "districts", model: "districtLoc1" },
-  //     },
-  //   },
-  // });
-
-  // const getLanguage = async () => {
-  //   const language = await Language.find({ code: code }).populate({
-  //     path: "countries",
-  //     model: "country",
-  //     populate: {
-  //       path: "states",
-  //       model: "regionLoc3",
-  //       populate: {
-  //         path: "cities",
-  //         model: "cityLoc2",
-  //         populate: { path: "districts", model: "districtLoc1" },
-  //       },
-  //     },
-  //   });
-  //   return language;
-  // };
-
-  // const language = setTimeout(() => {
-  //   getLanguage();
-  // }, 1000);
-
-  // console.log("language", language);
   const language = await Language.find({ code: code });
 
   res.status(201).json({

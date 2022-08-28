@@ -1,5 +1,4 @@
 const { Language } = require("../../models");
-// const { Country } = require("../../models");
 
 const getAllLanguages = async (req, res) => {
   const { code } = req.params;
