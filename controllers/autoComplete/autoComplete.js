@@ -1,29 +1,29 @@
 const { Country, Region, City, District } = require("../../models");
 
 const autoComplete = async ({ query: { search, limit = 10 } }, res) => {
-  const searchToArr = search.split("");
-  const fistLetter = searchToArr[0].toUpperCase();
-  searchToArr.shift();
-  searchToArr.unshift(fistLetter);
-  const searchToStr = searchToArr.join("");
-  const searchFromUrl = decodeURI(searchToStr).trim();
+  // const searchToArr = search.split("");
+  // const fistLetter = searchToArr[0].toUpperCase();
+  // searchToArr.shift();
+  // searchToArr.unshift(fistLetter);
+  // const searchToStr = searchToArr.join("");
+  const searchFromUrl = decodeURI(search).trim();
 
   const countries = await Country.find({
-    country: { $regex: searchFromUrl },
+    country: { $regex: searchFromUrl, $options: "i" },
   })
     .populate("states")
     .limit(limit);
 
   const state = await Region.find({
-    stateName: { $regex: searchFromUrl },
+    stateName: { $regex: searchFromUrl, $options: "i" },
   }).limit(limit);
 
   const cities = await City.find({
-    cityName: { $regex: searchFromUrl },
+    cityName: { $regex: searchFromUrl, $options: "i" },
   }).limit(limit);
 
   const district = await District.find({
-    districtName: { $regex: searchFromUrl },
+    districtName: { $regex: searchFromUrl, $options: "i" },
   }).limit(limit);
 
   if (!countries || !state || !cities || !district) {
