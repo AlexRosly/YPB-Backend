@@ -26,9 +26,9 @@ const districtLoc1Schema = Schema(
     districtPhotoURL: {
       type: String,
     },
-    // edited: {
-    //   type: Number,
-    // },
+    districtPhotoAlt: {
+      type: String,
+    },
     cityInternational: {
       type: String,
     },
@@ -54,7 +54,7 @@ const joiSchema = Joi.object({
   districtInternational: Joi.string().required(),
   districtCode: Joi.string().required(),
   districtPhotoURL: Joi.string(),
-  // edited: Joi.number(),
+  districtPhotoAlt: Joi.string(),
   cityInternational: Joi.string().required(),
   langCode: Joi.string().required(),
   dbLangCode: Joi.string(),
