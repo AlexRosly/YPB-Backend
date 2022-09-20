@@ -3,6 +3,7 @@ const { Country } = require("./country");
 const { Region } = require("./regionLoc3");
 const { City } = require("./cityLoc2");
 const { District } = require("./districtLoc1");
+const { Apartment } = require("./apartmentObject");
 
 module.exports = {
   Language,
@@ -10,4 +11,5 @@ module.exports = {
   Region,
   City,
   District,
+  Apartment,
 };
