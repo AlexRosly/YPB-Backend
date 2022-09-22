@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.get("/", ctrlWrapper(ctrl.getAllApartment));
 
-// router.get("/:id", ctrlWrapper(ctrl.getDistrictById));
+router.get("/:id", ctrlWrapper(ctrl.getApartmentById));
 
 router.post("/", validation(joiSchema), ctrlWrapper(ctrl.addApartment));
 

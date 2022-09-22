@@ -1,55 +1,59 @@
 const { Schema, model } = require("mongoose");
 const Joi = require("joi");
 
-const apartmentObject = Schema({
-  status: {
-    type: Boolean,
-    require: [true, "status must be exist"],
+const apartmentObject = Schema(
+  {
+    status: {
+      type: Boolean,
+      require: [true, "status must be exist"],
+    },
+    activeLocationId: {
+      type: String,
+      require: [true, "activeLocationId must be exist"],
+    },
+    typeId: {
+      type: String,
+      require: [true, "typeId must be exist"],
+    },
+    name: {
+      type: String,
+      require: [true, "name must be exist"],
+    },
+    address: {
+      country: { type: String },
+      state: { type: String },
+      city: { type: String },
+      district: { type: String },
+      street: { type: String },
+      house: { type: String },
+      apartment: { type: String },
+      mail: { type: String },
+      phone: { type: String },
+      email: { type: String },
+    },
+    description: {
+      type: String,
+      require: [true, "description must be exist"],
+    },
+    photos: [{ type: String }],
+    time: {
+      checkin: { type: String },
+      checkout: { type: String },
+    },
+    services: [{ type: String }],
+    payments: [{ type: String }],
+    locations: {
+      type: String,
+    },
+    activeTabId: {
+      type: Number,
+    },
   },
-  activeLocationId: {
-    type: String,
-    require: [true, "activeLocationId must be exist"],
-  },
-  typeId: {
-    type: String,
-    require: [true, "typeId must be exist"],
-  },
-  name: {
-    type: String,
-    require: [true, "name must be exist"],
-  },
-  address: {
-    country: String,
-    state: String,
-    city: String,
-    district: String,
-    street: String,
-    house: String,
-    apartment: String,
-    mail: String,
-    phone: String,
-    email: String,
-  },
-  description: {
-    type: String,
-    require: [true, "description must be exist"],
-  },
-  photos: [String],
-  time: {
-    checkin: String,
-    checkout: String,
-  },
-  services: [String],
-  payments: [String],
-  locations: {
-    type: String,
-  },
-  activeTabId: {
-    type: Number,
-  },
-});
+  { versionKey: false, timestamps: true }
+);
 
 const joiSchema = Joi.object({
+  name: Joi.string(),
   status: Joi.string().required(),
   activeLocationId: Joi.string().required(),
   typeId: Joi.string().required(),
@@ -67,13 +71,13 @@ const joiSchema = Joi.object({
     email: Joi.string().required(),
   },
   description: Joi.string().required(),
-  photos: [Joi.string().required()],
+  photos: [Joi.array().required()],
   time: {
     checkin: Joi.string().required(),
     checkout: Joi.string().required(),
   },
-  services: [Joi.string().required()],
-  payments: [Joi.string().required()],
+  services: [Joi.array().required()],
+  payments: [Joi.array().required()],
   locations: Joi.string().required(),
   activeTabId: Joi.number().required(),
 });

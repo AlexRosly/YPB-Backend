@@ -5,7 +5,7 @@ const addApartment = async (req, res) => {
   const apartment = await Apartment.create({ ...req.body });
 
   if (!apartment) {
-    throw new NotImplemented("district doesn`t create");
+    throw new NotImplemented("apartment doesn`t create");
   }
 
   res.status(201).json({
