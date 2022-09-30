@@ -1,21 +1,33 @@
 const { Schema, model } = require("mongoose");
 const Joi = require("joi");
 
-const apartmentObject = Schema(
+const hotelsObject = Schema(
   {
-    status: {
-      type: Boolean,
+    language: {
+      type: String,
       require: [true, "status must be exist"],
+    },
+    status: {
+      type: String,
+      enum: ["on verification", "active", "not active", "deleted"],
+      default: "on verification",
     },
     activeLocationId: {
       type: String,
       require: [true, "activeLocationId must be exist"],
     },
-    typeId: {
-      type: String,
-      require: [true, "typeId must be exist"],
+    type: {
+      type: {
+        type: String,
+        require: [true, "type must be exist"],
+      },
+      stars: {
+        type: String,
+      },
+      // type: String,
+      // require: [true, "typeId must be exist"],
     },
-    name: {
+    objectName: {
       type: String,
       require: [true, "name must be exist"],
     },
@@ -27,12 +39,13 @@ const apartmentObject = Schema(
       street: { type: String },
       house: { type: String },
       apartment: { type: String },
-      mail: { type: String },
+      zipCode: { type: String },
       phone: { type: String },
       email: { type: String },
     },
     description: {
       type: String,
+      maxlength: 300,
       require: [true, "description must be exist"],
     },
     photos: [{ type: String }],
@@ -42,22 +55,38 @@ const apartmentObject = Schema(
     },
     services: [{ type: String }],
     payments: [{ type: String }],
-    locations: {
+    // locations: {
+    district: {
       type: String,
+      require: [true, "district must be exist"],
     },
-    activeTabId: {
-      type: Number,
+    city: {
+      type: String,
+      require: [true, "city must be exist"],
+    },
+    state: {
+      type: String,
+      require: [true, "state must be exist"],
+    },
+    country: {
+      type: String,
+      require: [true, "country must be exist"],
     },
   },
+  // },
   { versionKey: false, timestamps: true }
 );
 
 const joiSchema = Joi.object({
-  name: Joi.string(),
-  status: Joi.string().required(),
+  language: Joi.string().required(),
+  // name: Joi.string(),
+  status: Joi.string(),
   activeLocationId: Joi.string().required(),
-  typeId: Joi.string().required(),
-  name: Joi.string().required(),
+  type: {
+    type: Joi.string().required(),
+    stars: Joi.string(),
+  },
+  objectName: Joi.string().required(),
   address: {
     country: Joi.string().required(),
     state: Joi.string().required(),
@@ -65,12 +94,12 @@ const joiSchema = Joi.object({
     district: Joi.string().required(),
     street: Joi.string().required(),
     house: Joi.string().required(),
-    apartment: Joi.string().required(),
-    mail: Joi.string().required(),
+    apartment: Joi.string(),
+    zipCode: Joi.string().required(),
     phone: Joi.string().required(),
     email: Joi.string().required(),
   },
-  description: Joi.string().required(),
+  description: Joi.string().max(300).required(),
   photos: [Joi.array().required()],
   time: {
     checkin: Joi.string().required(),
@@ -78,13 +107,17 @@ const joiSchema = Joi.object({
   },
   services: [Joi.array().required()],
   payments: [Joi.array().required()],
-  locations: Joi.string().required(),
-  activeTabId: Joi.number().required(),
+  // locations: {
+  district: Joi.string().required(),
+  city: Joi.string().required(),
+  state: Joi.string().required(),
+  country: Joi.string().required(),
+  // },
 });
 
-const Apartment = model("apartment", apartmentObject);
+const Hotels = model("hotels", hotelsObject);
 
 module.exports = {
-  Apartment,
+  Hotels,
   joiSchema,
 };

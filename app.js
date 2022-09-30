@@ -11,7 +11,11 @@ const regionLoc3Router = require("./routes/api/regionLoc3Api");
 const cityLoc2Router = require("./routes/api/cityLoc2Api");
 const districtLoc1Router = require("./routes/api/districtLoc1Api");
 const autoComplete = require("./routes/api/autoComplete");
-const apartment = require("./routes/api/apartments");
+const hotels = require("./routes/api/hotels");
+const hotelsFinder = require("./routes/api/hotelsFinder");
+const objectType = require("./routes/api/objectType");
+const paymentMethod = require("./routes/api/paymentApi");
+const servicesRouter = require("./routes/api/servicesApi");
 
 const app = express();
 
@@ -27,7 +31,11 @@ app.use("/api/location-state", regionLoc3Router);
 app.use("/api/location-city", cityLoc2Router);
 app.use("/api/location-district", districtLoc1Router);
 app.use("/api/autocomplete", autoComplete);
-app.use("/api/apartment", apartment);
+app.use("/api/hotels", hotels);
+app.use("/api/hotelsFinder", hotelsFinder);
+app.use("/api/get-objects", objectType);
+app.use("/api/payments-method", paymentMethod);
+app.use("/api/services", servicesRouter);
 
 app.use((req, res) => {
   res.status(404).json({ message: "Not found" });
