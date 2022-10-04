@@ -3,16 +3,15 @@ const { Hotels } = require("../../models");
 const hotelsFinder = async ({ query: { search, limit = 10 } }, res) => {
   const searchHotels = decodeURI(search).trim();
 
-  //   const searchFromUrl = decodeURI(search).trim();
   console.log("searchFromUrl", searchHotels);
 
   const hotels = await Hotels.find({
     // locations: { $regex: searchHotels, $options: "i" },
     $or: [
-      { "locations.district": { $regex: searchHotels, $options: "i" } },
-      { "locations.city": { $regex: searchHotels, $options: "i" } },
-      { "locations.state": { $regex: searchHotels, $options: "i" } },
-      { "locations.country": { $regex: searchHotels, $options: "i" } },
+      { district: { $regex: searchHotels, $options: "i" } },
+      { city: { $regex: searchHotels, $options: "i" } },
+      { state: { $regex: searchHotels, $options: "i" } },
+      { country: { $regex: searchHotels, $options: "i" } },
     ],
   }).limit(limit);
   //   console.log(hotels);
