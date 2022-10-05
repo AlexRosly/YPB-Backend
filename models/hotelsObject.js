@@ -24,8 +24,6 @@ const hotelsObject = Schema(
       stars: {
         type: String,
       },
-      // type: String,
-      // require: [true, "typeId must be exist"],
     },
     objectName: {
       type: String,
@@ -53,9 +51,8 @@ const hotelsObject = Schema(
       checkin: { type: String },
       checkout: { type: String },
     },
-    services: [{ type: String }],
-    payments: [{ type: String }],
-    // locations: {
+    services: [{ type: Object }],
+    payments: [{ type: Object }],
     district: {
       type: String,
       require: [true, "district must be exist"],
@@ -73,13 +70,11 @@ const hotelsObject = Schema(
       require: [true, "country must be exist"],
     },
   },
-  // },
   { versionKey: false, timestamps: true }
 );
 
 const joiSchema = Joi.object({
   language: Joi.string().required(),
-  // name: Joi.string(),
   status: Joi.string(),
   activeLocationId: Joi.string().required(),
   type: {
@@ -107,12 +102,10 @@ const joiSchema = Joi.object({
   },
   services: [Joi.array().required()],
   payments: [Joi.array().required()],
-  // locations: {
   district: Joi.string().required(),
   city: Joi.string().required(),
   state: Joi.string().required(),
   country: Joi.string().required(),
-  // },
 });
 
 const Hotels = model("hotels", hotelsObject);
