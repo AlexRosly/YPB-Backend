@@ -43,7 +43,7 @@ const hotelsObject = Schema(
     },
     description: {
       type: String,
-      minlength: 300,
+      // minlength: 300,
       require: [true, "description must be exist"],
     },
     photos: [{ type: String }],
