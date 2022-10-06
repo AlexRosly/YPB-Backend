@@ -66,3 +66,47 @@
         {"id":"19", "type":"Motel"},
         {"id":"20", "type":"Hotel wypoczynkowy"}
 ]
+
+{
+  "language":"EN",
+  "status": "on verification",
+  "type":{
+    "_id":"2",
+    "type":"Апарт - отель"},
+  "objectName":"Kurort",
+  "address":{
+    "country":"q",
+    "state":"q",
+    "city":"q",
+    "street":"q",
+    "house":"q",
+    "apartment":"q",
+    "zipCode":"q",
+    "phone":"q",
+    "email":"q"
+  },
+  "description": "Расскажите про ваш объект подробнее\n
+  Расскажите про ваш объект подробнее\n
+  Расскажите про ваш объект подробнее\n
+  Расскажите про ваш объект подробнее\n
+  Расскажите про ваш объект подробнее\n
+  Расскажите про ваш объект подробнее\n
+  Расскажите про ваш объект подробнее\nРасскажите про ваш объект подробнее\n
+  Расскажите про ваш объект подробнее\nРасскажите про ваш объект подробнее\n
+  Расскажите про ваш объект подробнее\nРасскажите про ваш объект подробнее",
+  "photos":["blob:http://localhost:3000/f3f94c43-ea29-4091-81b5-e8698e8ba1e4"],
+  "time":{"checkin":"20:26","checkout":"20:26"},
+  "services":[
+    {"id":"34","service":"Аренда автомобилей"},
+    {"id":"39","service":"Конференц зал"}],
+  "payments":[
+    {"id":"0","type":"cash","icon":"cash","text":"Оплата на месте наличными"},
+    {"id":"4","type":"American Express","icon":"JCB","text":"Оплата на месте картой American Express"},
+    {"id":"2","type":"UnionPay","icon":"JCB","text":"Оплата на месте картой UnionPay"}],
+  "location":{
+    "_id":"3",
+    "district":"Подол",
+    "city":"Киев",
+    "state":"Киевская область",
+    "country":"Украина"}
+  }

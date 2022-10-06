@@ -11,11 +11,15 @@ const autoComplete = async ({ query: { search, limit = 10 } }, res) => {
 
   const states = await Region.find({
     stateName: { $regex: searchFromUrl, $options: "i" },
-  }).limit(limit);
+  })
+    .populate("cities")
+    .limit(limit);
 
   const cities = await City.find({
     cityName: { $regex: searchFromUrl, $options: "i" },
-  }).limit(limit);
+  })
+    .populate("districts")
+    .limit(limit);
 
   const districts = await District.find({
     districtName: { $regex: searchFromUrl, $options: "i" },

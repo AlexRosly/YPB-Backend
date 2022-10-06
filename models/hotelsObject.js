@@ -12,18 +12,9 @@ const hotelsObject = Schema(
       enum: ["on verification", "active", "not active", "deleted"],
       default: "on verification",
     },
-    // activeLocationId: {
-    //   type: String,
-    //   require: [true, "activeLocationId must be exist"],
-    // },
     type: {
-      type: {
-        type: String,
-        require: [true, "type must be exist"],
-      },
-      stars: {
-        type: String,
-      },
+      type: Object,
+      require: [true, "type must be exist"],
     },
     objectName: {
       type: String,
@@ -43,7 +34,8 @@ const hotelsObject = Schema(
     },
     description: {
       type: String,
-      // minlength: 300,
+      minlength: 300,
+      maxlength: 700,
       require: [true, "description must be exist"],
     },
     photos: [{ type: String }],
@@ -78,11 +70,7 @@ const hotelsObject = Schema(
 const joiSchema = Joi.object({
   language: Joi.string().required(),
   status: Joi.string(),
-  // activeLocationId: Joi.string().required(),
-  type: {
-    type: Joi.string().required(),
-    stars: Joi.string(),
-  },
+  type: Joi.object().required(),
   objectName: Joi.string().required(),
   address: {
     country: Joi.string().required(),
@@ -96,7 +84,7 @@ const joiSchema = Joi.object({
     phone: Joi.string().required(),
     email: Joi.string().required(),
   },
-  description: Joi.string().required(),
+  description: Joi.string().min(300).max(700).required(),
   photos: [Joi.array().required()],
   time: {
     checkin: Joi.string().required(),

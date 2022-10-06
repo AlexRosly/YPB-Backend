@@ -4,10 +4,10 @@ const hotelsFinder = async ({ query: { search, limit = 10 } }, res) => {
   const searchHotels = decodeURI(search).trim();
   const hotels = await Hotels.find({
     $or: [
-      { district: { $regex: searchHotels, $options: "i" } },
-      { city: { $regex: searchHotels, $options: "i" } },
-      { state: { $regex: searchHotels, $options: "i" } },
-      { country: { $regex: searchHotels, $options: "i" } },
+      { "location.district": { $regex: searchHotels, $options: "i" } },
+      { "location.city": { $regex: searchHotels, $options: "i" } },
+      { "location.state": { $regex: searchHotels, $options: "i" } },
+      { "location.country": { $regex: searchHotels, $options: "i" } },
     ],
   }).limit(limit);
 
