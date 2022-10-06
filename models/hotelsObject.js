@@ -94,7 +94,7 @@ const joiSchema = Joi.object({
     phone: Joi.string().required(),
     email: Joi.string().required(),
   },
-  description: Joi.string().max(300).required(),
+  description: Joi.string().required(),
   photos: [Joi.array().required()],
   time: {
     checkin: Joi.string().required(),
