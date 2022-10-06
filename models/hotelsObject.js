@@ -86,7 +86,7 @@ const joiSchema = Joi.object({
     country: Joi.string().required(),
     state: Joi.string().required(),
     city: Joi.string().required(),
-    district: Joi.string().required(),
+    district: Joi.string(),
     street: Joi.string().required(),
     house: Joi.string().required(),
     apartment: Joi.string(),
