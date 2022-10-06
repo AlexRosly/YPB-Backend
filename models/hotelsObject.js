@@ -59,15 +59,15 @@ const hotelsObject = Schema(
     },
     city: {
       type: String,
-      require: [true, "city must be exist"],
+      // require: [true, "city must be exist"],
     },
     state: {
       type: String,
-      require: [true, "state must be exist"],
+      // require: [true, "state must be exist"],
     },
     country: {
       type: String,
-      require: [true, "country must be exist"],
+      // require: [true, "country must be exist"],
     },
   },
   { versionKey: false, timestamps: true }
@@ -103,9 +103,9 @@ const joiSchema = Joi.object({
   services: [Joi.array().required()],
   payments: [Joi.array().required()],
   district: Joi.string(),
-  city: Joi.string().required(),
-  state: Joi.string().required(),
-  country: Joi.string().required(),
+  city: Joi.string(),
+  state: Joi.string(),
+  country: Joi.string(),
 });
 
 const Hotels = model("hotels", hotelsObject);
