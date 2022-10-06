@@ -12,10 +12,10 @@ const hotelsObject = Schema(
       enum: ["on verification", "active", "not active", "deleted"],
       default: "on verification",
     },
-    activeLocationId: {
-      type: String,
-      require: [true, "activeLocationId must be exist"],
-    },
+    // activeLocationId: {
+    //   type: String,
+    //   require: [true, "activeLocationId must be exist"],
+    // },
     type: {
       type: {
         type: String,
@@ -76,7 +76,7 @@ const hotelsObject = Schema(
 const joiSchema = Joi.object({
   language: Joi.string().required(),
   status: Joi.string(),
-  activeLocationId: Joi.string().required(),
+  // activeLocationId: Joi.string().required(),
   type: {
     type: Joi.string().required(),
     stars: Joi.string(),
