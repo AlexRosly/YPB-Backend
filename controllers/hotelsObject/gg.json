@@ -110,3 +110,18 @@
     "state":"Киевская область",
     "country":"Украина"}
   }
+
+  dist {
+    "_id": "251331313",
+    "districtName":"Podil",
+    "cityName": "Kyiv",
+    "stateName": "Kyivski",
+    "country": "ukraine"
+  } 
+
+  city{
+    "_id": "kjknknjk",
+    "cityName": "Kyiv",
+    "stateName": "Kyivski",
+    "countryName": "ukraine"
+  }
