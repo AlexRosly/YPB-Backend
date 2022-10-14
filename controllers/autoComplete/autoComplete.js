@@ -1,25 +1,25 @@
 const { Country, Region, City, District } = require("../../models");
 
-const autoComplete = async ({ query: { search, limit = 10 } }, res) => {
+const autoComplete = async ({ query: { search, limit = 10, lang } }, res) => {
   const searchFromUrl = decodeURI(search).trim();
 
   const countries = await Country.find({
+    langCode: lang,
     country: { $regex: searchFromUrl, $options: "i" },
-  })
-    // .populate("states")
-    .limit(limit);
+  }).limit(limit);
 
   const states = await Region.find({
+    langCode: lang,
     stateName: { $regex: searchFromUrl, $options: "i" },
-  })
-    // .populate("cities")
-    .limit(limit);
+  }).limit(limit);
 
   const cities = await City.find({
+    langCode: lang,
     cityName: { $regex: searchFromUrl, $options: "i" },
   }).limit(limit);
 
   const districts = await District.find({
+    langCode: lang,
     districtName: { $regex: searchFromUrl, $options: "i" },
   }).limit(limit);
 
@@ -108,17 +108,10 @@ const autoComplete = async ({ query: { search, limit = 10 } }, res) => {
     }
   }
 
-  // console.log("insede if", district, city, state);
-
   res.json({
     status: "success",
     code: 200,
     data: {
-      // countries,
-      // states,
-      // cities,
-      // districts,
-      // allName,
       district,
       city,
       state,
