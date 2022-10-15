@@ -62,6 +62,10 @@ const hotelsObject = Schema(
         type: String,
         require: [true, "country must be exist"],
       },
+      _id: {
+        type: String,
+        // require: [true, "country must be exist"],
+      },
     },
   },
   { versionKey: false, timestamps: true }
@@ -97,6 +101,7 @@ const joiSchema = Joi.object({
     cityName: Joi.string().required(),
     stateName: Joi.string().required(),
     country: Joi.string().required(),
+    _id: Joi.string(),
   },
 });
 
