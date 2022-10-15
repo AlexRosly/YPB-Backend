@@ -46,15 +46,15 @@ const hotelsObject = Schema(
     services: [{ type: Object }],
     payments: [{ type: Object }],
     location: {
-      district: {
+      districtName: {
         type: String,
         // require: [true, "district must be exist"],
       },
-      city: {
+      cityName: {
         type: String,
         require: [true, "city must be exist"],
       },
-      state: {
+      stateName: {
         type: String,
         require: [true, "state must be exist"],
       },
@@ -93,9 +93,9 @@ const joiSchema = Joi.object({
   services: [Joi.array().required()],
   payments: [Joi.array().required()],
   location: {
-    district: Joi.string(),
-    city: Joi.string().required(),
-    state: Joi.string().required(),
+    districtName: Joi.string(),
+    cityName: Joi.string().required(),
+    stateName: Joi.string().required(),
     country: Joi.string().required(),
   },
 });
