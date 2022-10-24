@@ -3,6 +3,7 @@ const addDistrictLoc1 = require("./addDistrictLoc1");
 const updateDistrictLoc1 = require("./updateDistrictLoc1");
 // const removeDistrictLoc1 = require("./removeDistrictLoc1");
 const getDistrictById = require("./getDistrictById");
+// const insertMany = require("./insertMany");
 
 module.exports = {
   getAllDistrictLoc1,
@@ -10,4 +11,5 @@ module.exports = {
   updateDistrictLoc1,
   // removeDistrictLoc1,
   getDistrictById,
+  // insertMany,
 };
