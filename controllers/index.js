@@ -8,6 +8,8 @@ const hotelsObject = require("./hotelsObject");
 const objectType = require("./objectType");
 const paymentMethod = require("./paymentMethod");
 const services = require("./services");
+const bookingOption = require("./bookingOption");
+const bookingServices = require("./servicesForBookingOption");
 
 module.exports = {
   languages,
@@ -20,4 +22,6 @@ module.exports = {
   objectType,
   paymentMethod,
   services,
+  bookingOption,
+  bookingServices,
 };

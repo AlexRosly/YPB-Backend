@@ -1,0 +1,164 @@
+{
+  "typeOfObject": "hotel",
+  "bedrooms": {
+    "fistBedroom": {
+      "doubleBed": 2,
+      "singleBed": 1
+    },
+    "secondBedroom": {
+      "doubleBed": 1,
+      "singleBed": 2
+    },
+    "thirdBedroom": {
+      "doubleBed": 3,
+      "singleBed": 0
+    },
+    "fourthBedroom": {
+      "doubleBed": 1,
+      "singleBed": 1
+    }
+  },
+  "roomServices": ["nnkjnk", "hknkj", "njk"],
+  "animals": ["dog", "cat", "snake"],
+  "description": "klnlanljbcdblkBLDBLJ",
+  "uniqueNumber": 141,
+  "totalSquiere": 15,
+  "smoking": true,
+  "photos": ["kjbbjbj", "njkbkjv", "nknkj"]
+}
+
+
+{
+    "typeOfObject": "hotel",
+    "bedrooms":{
+        "fistBedroom":{
+            "doubleBed":2,
+            "singleBed":1
+        },
+        "secondBedroom": {
+        "doubleBed": 1,
+        "singleBed": 2
+        },
+        "thirdBedroom": {
+        "doubleBed": 3,
+        "singleBed": 0
+        },
+  },
+  "roomServices": ["nnkjnk", "hknkj", "njk"],
+  "animals": ["dog", "cat", "snake"],
+  "description": "klnlanljbcdblkBLDBLJ",
+  "uniqueNumber": 141,
+  "totalSquiere": 15,
+  "smoking": true,
+  "photos": ["kjbbjbj", "njkbkjv", "nknkj"  ]
+}
+
+{
+    "langCode": "PL",
+    "services": [
+      {
+        "id": "1",
+        "type": "Lodówka",
+      },      
+      {
+        "id": "2",
+        "type": "Telewizja",
+      },      
+      {
+        "id": "3",
+        "type": "Wi-Fi",
+      },      
+      {
+        "id": "4",
+        "type": "Klimatyzator",
+      },      
+      {
+        "id": "5",
+        "type": "Ręczniki",
+      },      
+      {
+        "id": "6",
+        "type": "bielizna",
+      },
+      {
+        "id": "7",
+        "type": "Kapcie",
+      },      
+      {
+        "id": "8",
+        "type": "Papier toaletowy",
+      },      
+      {
+        "id": "9",
+        "type": "Taras",
+      },      
+      {
+        "id": "10",
+        "type": "Żelazo",
+      },      
+      {
+        "id": "11",
+        "type": "Kredens",
+      },      
+      {
+        "id": "12",
+        "type": "Szafa",
+      },
+        {
+        "id": "13",
+        "type": "Produkty toaletowe",
+      },      
+      {
+        "id": "14",
+        "type": "Bezpieczny",
+      },      
+      {
+        "id": "15",
+        "type": "Prysznic na zewnątrz pokoju",
+      },      
+      {
+        "id": "16",
+        "type": "Prysznic w pokoju",
+      },
+           {
+        "id": "17",
+        "type": "Toaleta w pokoju",
+      },      
+      {
+        "id": "18",
+        "type": "Toaleta na zewnątrz pokoju",
+      },      
+      {
+        "id": "19",
+        "type": "Ekspres do kawy",
+      },      
+      {
+        "id": "20",
+        "type": "Czajnik",
+      },
+      {
+        "id": "21",
+        "type": "suszarka do włosów",
+      },      
+      {
+        "id": "22",
+        "type": "Pralka",
+      },      
+      {
+        "id": "23",
+        "type": "Wspólna kuchnia",
+      },
+      {
+        "id": "24",
+        "type": "Jacuzzi",
+      },      
+      {
+        "id": "25",
+        "type": "Kąpiel",
+      },      
+      {
+        "id": "26",
+        "type": "Izolacja akustyczna",
+      },
+    ],
+  }

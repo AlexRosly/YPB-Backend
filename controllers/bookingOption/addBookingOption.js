@@ -1,12 +1,11 @@
-const { Hotels } = require("../../models");
-const { NotImplemented } = require("http-errors");
+const { BookingOption } = require("../../models");
 const cloudinary = require("../../utils/cloudinary");
 const fs = require("fs");
 
-const addHotel = async (req, res) => {
+const addBookingOption = async (req, res) => {
   try {
     const uploader = async (path) =>
-      await cloudinary.uploads(path, "addObject");
+      await cloudinary.uploads(path, "bookingOptionHotel");
     if (req.method === "POST") {
       const urls = [];
       const files = req.files;
@@ -17,18 +16,21 @@ const addHotel = async (req, res) => {
         fs.unlinkSync(path);
       }
 
-      const hotel = await Hotels.create({ ...req.body, photos: urls });
+      const bookingOption = await BookingOption.create({
+        ...req.body,
+        photos: urls,
+      });
 
-      if (!hotel) {
-        throw new NotImplemented("hotels doesn`t create");
+      if (!bookingOption) {
+        throw new NotImplemented("booking option doesn`t create");
       }
 
       res.status(201).json({
         status: "success",
-        message: "hotel created",
+        message: "booking option created",
         code: 201,
         data: {
-          hotel,
+          bookingOption,
         },
       });
     } else {
@@ -38,20 +40,20 @@ const addHotel = async (req, res) => {
     }
   } catch (error) {}
 
-  // const hotel = await Hotels.create({ ...req.body });
+  // const bookingOption = await BookingOption.create({ ...req.body });
 
-  // if (!hotel) {
-  //   throw new NotImplemented("hotels doesn`t create");
+  // if (!bookingOption) {
+  //   throw new NotImplemented("booking option doesn`t create");
   // }
 
   // res.status(201).json({
   //   status: "success",
-  //   message: "hotel created",
+  //   message: "booking option created",
   //   code: 201,
   //   data: {
-  //     hotel,
+  //     bookingOption,
   //   },
   // });
 };
 
-module.exports = addHotel;
+module.exports = addBookingOption;

@@ -1,6 +1,7 @@
 const express = require("express");
 const logger = require("morgan");
 const cors = require("cors");
+const bodyParser = require("body-parser");
 
 const dotenv = require("dotenv");
 dotenv.config();
@@ -16,6 +17,9 @@ const hotelsFinder = require("./routes/api/hotelsFinder");
 const objectType = require("./routes/api/objectType");
 const paymentMethod = require("./routes/api/paymentApi");
 const servicesRouter = require("./routes/api/servicesApi");
+const bookingOption = require("./routes/api/bookingOption");
+const bookingOptionHs = require("./routes/api/bookingOptionHs");
+const bookingServices = require("./routes/api/servicesForBookingOption");
 
 const app = express();
 
@@ -24,6 +28,13 @@ const formatsLogger = app.get("env") === "development" ? "dev" : "short";
 app.use(logger(formatsLogger));
 app.use(cors());
 app.use(express.json());
+
+app.use(
+  bodyParser.urlencoded({
+    extended: false,
+  })
+);
+app.use(bodyParser.json());
 
 app.use("/api/languages", languagesRouter);
 app.use("/api/countries", countriesRouter);
@@ -36,6 +47,9 @@ app.use("/api/hotelsFinder", hotelsFinder);
 app.use("/api/get-objects", objectType);
 app.use("/api/payments-method", paymentMethod);
 app.use("/api/services", servicesRouter);
+app.use("/api/bookingOption-hotel", bookingOption);
+app.use("/api/bookingOption-hostel", bookingOptionHs);
+app.use("/api/booking-services", bookingServices);
 
 app.use((req, res) => {
   res.status(404).json({ message: "Not found" });
