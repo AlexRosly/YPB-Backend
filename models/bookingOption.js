@@ -53,7 +53,7 @@ const bookingOption = Schema(
     ],
     description: {
       type: String,
-      minlength: 300,
+      minlength: 3,
       maxlength: 700,
       require: [true, "description must be exist"],
     },
@@ -98,7 +98,7 @@ const joiSchema = Joi.object({
   },
   roomServices: [Joi.array()],
   animals: [Joi.array()],
-  description: Joi.string().min(300).max(500),
+  description: Joi.string().min(3).max(500),
   uniqueNumber: Joi.string(),
   totalSquiere: Joi.number(),
   smoking: Joi.boolean(),

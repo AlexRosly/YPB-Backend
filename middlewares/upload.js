@@ -21,7 +21,7 @@ const path = require("path");
 // module.exports = upload;
 
 const tempDir = path.join(__dirname, "../", "temp");
-console.log(tempDir);
+// console.log(tempDir);
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {

@@ -1,6 +1,7 @@
 const { Hotels } = require("../../models");
 const { NotImplemented } = require("http-errors");
 const cloudinary = require("../../utils/cloudinary");
+const path = require("path");
 const fs = require("fs");
 
 const addHotel = async (req, res) => {

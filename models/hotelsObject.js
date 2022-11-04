@@ -5,7 +5,6 @@ const hotelsObject = Schema(
   {
     language: {
       type: String,
-      // require: [true, "status must be exist"],
     },
     status: {
       type: String,
@@ -14,11 +13,9 @@ const hotelsObject = Schema(
     },
     type: {
       type: Object,
-      // require: [true, "type must be exist"],
     },
     objectName: {
       type: String,
-      // require: [true, "name must be exist"],
     },
     address: {
       country: { type: String },
@@ -34,7 +31,7 @@ const hotelsObject = Schema(
     },
     description: {
       type: String,
-      minlength: 3,
+      minlength: 300,
       maxlength: 700,
       require: [true, "description must be exist"],
     },
@@ -66,20 +63,23 @@ const hotelsObject = Schema(
       },
       cityName: {
         type: String,
-        // require: [true, "city must be exist"],
       },
       stateName: {
         type: String,
-        // require: [true, "state must be exist"],
       },
       country: {
         type: String,
-        // require: [true, "country must be exist"],
       },
       _id: {
         type: String,
       },
     },
+    // documents: {
+    //   type: String,
+    // },
+    // usersSelfi: {
+    //   type: String,
+    // }
   },
   { versionKey: false, timestamps: true }
 );
@@ -101,7 +101,7 @@ const joiSchema = Joi.object({
     phone: Joi.string(),
     email: Joi.string(),
   },
-  description: Joi.string().min(3).max(700),
+  description: Joi.string().min(300).max(700),
   photos: [Joi.array()],
   video: [Joi.array()],
   mapLink: Joi.string(),
@@ -122,6 +122,8 @@ const joiSchema = Joi.object({
     country: Joi.string(),
     _id: Joi.string(),
   },
+  documents: Joi.string(),
+  usersSelfi: Joi.string(),
 });
 
 const Hotels = model("hotels", hotelsObject);

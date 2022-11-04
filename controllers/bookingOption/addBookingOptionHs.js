@@ -1,5 +1,6 @@
 const { BookingOptionHs } = require("../../models");
 const cloudinary = require("../../utils/cloudinary");
+const path = require("path");
 const fs = require("fs");
 
 const addBookingOptionHs = async (req, res) => {
