@@ -11,7 +11,7 @@ router.get("/:id", ctrlWrapper(ctrl.getHotelById));
 router.post(
   "/",
   upload.array("image"),
-  // validation(joiSchema),
+  validation(joiSchema),
   ctrlWrapper(ctrl.addHotel)
 );
 
