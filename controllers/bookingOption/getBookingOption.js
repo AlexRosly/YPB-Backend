@@ -1,13 +1,13 @@
 const { BookingOption } = require("../../models");
 
 const getBookingOption = async (req, res) => {
-  const bookingOption = await BookingOption.find({});
+  const bookingHotel = await BookingOption.find({});
 
   res.json({
     status: "success",
     code: 200,
     data: {
-      bookingOption,
+      bookingHotel,
     },
   });
 };

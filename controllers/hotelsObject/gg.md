@@ -151,3 +151,95 @@ singleDeb:[]
 1. add booking Option (hotels, hostels) - ready
 2. services for booking options - ready
 3. Cloudinary - ready
+
+body: [Object: null prototype] {
+language: 'EN',
+objectName: 'TestHotel',
+description: 'testjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjtestjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj',
+mapLink: 'mapLink'
+},
+route: Route {
+path: '/',
+stack: [ [Layer], [Layer], [Layer] ],
+methods: { post: true }
+},
+files: [
+{
+fieldname: 'image',
+originalname: 'Programmers-day.png',
+encoding: '7bit',
+mimetype: 'image/png',
+destination: './temp/',
+filename: '1668023960624-Programmers-day.png',
+path: 'temp\\1668023960624-Programmers-day.png',
+size: 102029
+},
+{
+fieldname: 'image',
+originalname: 'Programmers-day.png',
+encoding: '7bit',
+mimetype: 'image/png',
+destination: './temp/',
+filename: '1668023960629-Programmers-day.png',
+path: 'temp\\1668023960629-Programmers-day.png',
+size: 102029
+},
+{
+fieldname: 'image',
+originalname: 'Programmers-day.png',
+encoding: '7bit',
+mimetype: 'image/png',
+destination: './temp/',
+filename: '1668023960633-Programmers-day.png',
+path: 'temp\\1668023960633-Programmers-day.png',
+size: 102029
+}
+],
+[Symbol(kCapture)]: false,
+[Symbol(kHeaders)]: {
+'user-agent': 'PostmanRuntime/7.29.2',
+accept: '_/_',
+'postman-token': 'ae6d7821-628e-4b9e-90c2-0db86893eea7',
+host: 'localhost:5000',
+'accept-encoding': 'gzip, deflate, br',
+connection: 'keep-alive',
+'content-type': 'multipart/form-data; boundary=--------------------------375021805327959227806605',
+'content-length': '307731'
+},
+[Symbol(kHeadersCount)]: 16,
+[Symbol(kTrailers)]: null,
+[Symbol(kTrailersCount)]: 0,
+[Symbol(RequestTimeout)]: undefined
+} [Object: null prototype] {
+language: 'EN',
+objectName: 'TestHotel',
+description: 'testjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjtestjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj',
+mapLink: 'mapLink'
+}
+
+            {
+                "_id": "636d5aa5e6c4ed63543c8a48",
+                "type": "hotel",
+                "bedrooms": 1,
+                "detailedBedrooms": {
+                    "firstBedroom": {
+                        "doubleBed": 1,
+                        "singleBed": 1
+                    }
+                },
+                "roomServices": [
+                    "KLLLL",
+                    "kkk"
+                ],
+                "animals": [
+                    "cat",
+                    "dog"
+                ],
+                "description": "kmlmlm",
+                "uniqueNumber": "kkoko",
+                "totalSquare": 111,
+                "smoking": true,
+                "photos": [],
+                "createdAt": "2022-11-10T20:10:13.287Z",
+                "updatedAt": "2022-11-10T20:10:13.287Z"
+            },

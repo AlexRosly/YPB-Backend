@@ -3,11 +3,62 @@ const Joi = require("joi");
 
 const bookingOption = Schema(
   {
-    typeOfObject: {
+    //   typeOfObject: {
+    //     type: String,
+    //   },
+    //   bedrooms: {
+    //     fistBedroom: {
+    //       doubleBed: {
+    //         type: Number,
+    //       },
+    //       singleBed: {
+    //         type: Number,
+    //       },
+    //     },
+    //     secondBedroom: {
+    //       doubleBed: {
+    //         type: Number,
+    //       },
+    //       singleBed: {
+    //         type: Number,
+    //       },
+    //     },
+    //     thirdBedroom: {
+    //       doubleBed: {
+    //         type: Number,
+    //       },
+    //       singleBed: {
+    //         type: Number,
+    //       },
+    //     },
+    //     fourthBedroom: {
+    //       doubleBed: {
+    //         type: Number,
+    //       },
+    //       singleBed: {
+    //         type: Number,
+    //       },
+    //     },
+    //   },
+    //   roomServices: [
+    //     {
+    //       type: Object,
+    //     },
+    //   ],
+    //   animals: [
+    //     {
+    //       type: String,
+    //       default: "With out anaimals",
+    //     },
+    //   ],
+    type: {
       type: String,
     },
     bedrooms: {
-      fistBedroom: {
+      type: Number,
+    },
+    detailedBedrooms: {
+      firstBedroom: {
         doubleBed: {
           type: Number,
         },
@@ -45,22 +96,20 @@ const bookingOption = Schema(
         type: Object,
       },
     ],
-    animals: [
-      {
-        type: String,
-        default: "With out anaimals",
-      },
-    ],
+    animals: {
+      type: Object,
+      // default: false,
+    },
     description: {
       type: String,
-      minlength: 3,
+      minlength: 300,
       maxlength: 700,
       require: [true, "description must be exist"],
     },
     uniqueNumber: {
       type: String,
     },
-    totalSquiere: {
+    totalSquare: {
       type: Number,
     },
     smoking: {
@@ -77,9 +126,28 @@ const bookingOption = Schema(
 );
 
 const joiSchema = Joi.object({
-  typeOfObject: Joi.string(),
-  bedrooms: {
-    fistBedroom: {
+  type: Joi.string(),
+  // bedrooms: {
+  //   fistBedroom: {
+  //     doubleBed: Joi.number(),
+  //     singleBed: Joi.number(),
+  //   },
+  //   secondBedroom: {
+  //     doubleBed: Joi.number(),
+  //     singleBed: Joi.number(),
+  //   },
+  //   thirdBedroom: {
+  //     doubleBed: Joi.number(),
+  //     singleBed: Joi.number(),
+  //   },
+  //   fourthBedroom: {
+  //     doubleBed: Joi.number(),
+  //     singleBed: Joi.number(),
+  //   },
+  // },
+  bedrooms: Joi.number(),
+  detailedBedrooms: {
+    firstBedroom: {
       doubleBed: Joi.number(),
       singleBed: Joi.number(),
     },
@@ -97,10 +165,10 @@ const joiSchema = Joi.object({
     },
   },
   roomServices: [Joi.array()],
-  animals: [Joi.array()],
-  description: Joi.string().min(3).max(500),
+  animals: Joi.object(),
+  description: Joi.string().min(300).max(500),
   uniqueNumber: Joi.string(),
-  totalSquiere: Joi.number(),
+  totalSquare: Joi.number(),
   smoking: Joi.boolean(),
   photos: [Joi.array()],
 });

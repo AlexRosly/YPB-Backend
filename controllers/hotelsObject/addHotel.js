@@ -5,6 +5,7 @@ const path = require("path");
 const fs = require("fs");
 
 const addHotel = async (req, res) => {
+  console.log("req", req, req.body);
   try {
     const uploader = async (path) =>
       await cloudinary.uploads(path, "addObject");

@@ -8,7 +8,7 @@ router.get("/", ctrlWrapper(ctrl.getBookingOption));
 
 router.post(
   "/",
-  upload.array("image"),
+  // upload.array("image"),
   validation(joiSchema),
   ctrlWrapper(ctrl.addBookingOption)
 );
