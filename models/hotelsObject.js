@@ -31,7 +31,7 @@ const hotelsObject = Schema(
     },
     description: {
       type: String,
-      minlength: 300,
+      minlength: 3,
       maxlength: 700,
       require: [true, "description must be exist"],
     },
@@ -39,6 +39,7 @@ const hotelsObject = Schema(
       {
         id: { type: String },
         url: { type: String },
+        position: { type: String },
       },
     ],
     video: [{ type: String }],
@@ -101,7 +102,7 @@ const joiSchema = Joi.object({
     phone: Joi.string(),
     email: Joi.string(),
   },
-  description: Joi.string().min(300).max(700),
+  description: Joi.string().min(3).max(700),
   photos: [Joi.array()],
   video: [Joi.array()],
   mapLink: Joi.string(),

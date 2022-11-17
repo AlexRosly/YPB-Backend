@@ -5,21 +5,28 @@ const path = require("path");
 const fs = require("fs");
 
 const addHotel = async (req, res) => {
-  console.log("req", req, req.body);
+  console.log("ADD-req.body", req.body);
+  console.log("ADD-req.file", req.files);
+
   try {
     const uploader = async (path) =>
       await cloudinary.uploads(path, "addObject");
     if (req.method === "POST") {
       const urls = [];
       const files = req.files;
+      console.log({ files });
       for (const file of files) {
-        const { path } = file;
+        const { path, filename } = file;
         const newPath = await uploader(path);
-        urls.push(newPath);
+        const newPathWithPosition = { ...newPath, position: filename };
+        urls.push(newPathWithPosition);
         fs.unlinkSync(path);
       }
-
-      const hotel = await Hotels.create({ ...req.body, photos: urls });
+      console.log({ urls });
+      const hotel = await Hotels.create({
+        ...req.body,
+        photos: urls,
+      });
 
       if (!hotel) {
         throw new NotImplemented("hotels doesn`t create");

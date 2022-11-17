@@ -243,3 +243,8 @@ mapLink: 'mapLink'
                 "createdAt": "2022-11-10T20:10:13.287Z",
                 "updatedAt": "2022-11-10T20:10:13.287Z"
             },
+
+1. Look on function on remove image fs.unlinkSync(path);
+2. Patch on chenge Hotel
+3. How to use two model in Mongoose
+4. Verification (video, photo, selfi)

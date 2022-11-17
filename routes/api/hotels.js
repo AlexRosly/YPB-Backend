@@ -15,7 +15,12 @@ router.post(
   ctrlWrapper(ctrl.addHotel)
 );
 
-router.patch("/:id", validation(joiSchema), ctrlWrapper(ctrl.updateHotel));
+router.patch(
+  "/:id",
+  upload.array("image"),
+  validation(joiSchema),
+  ctrlWrapper(ctrl.updateHotel)
+);
 
 // router.delete("/:id", ctrlWrapper(ctrl.removeDistrictLoc1));
 

@@ -25,3 +25,9 @@ exports.uploads = (file, folder) => {
     );
   });
 };
+
+exports.remove = (id) => {
+  return new Promise((resolve) => {
+    cloudinary.uploader.destroy(id);
+  });
+};
