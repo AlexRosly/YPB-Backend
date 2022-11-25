@@ -2,27 +2,22 @@ const { Hotels } = require("../../models");
 const { NotImplemented } = require("http-errors");
 const cloudinary = require("../../utils/cloudinary");
 const path = require("path");
-const fs = require("fs");
+const fs = require("fs").promises;
 
 const addHotel = async (req, res) => {
-  console.log("ADD-req.body", req.body);
-  console.log("ADD-req.file", req.files);
-
   try {
     const uploader = async (path) =>
       await cloudinary.uploads(path, "addObject");
     if (req.method === "POST") {
       const urls = [];
       const files = req.files;
-      console.log({ files });
       for (const file of files) {
         const { path, filename } = file;
         const newPath = await uploader(path);
         const newPathWithPosition = { ...newPath, position: filename };
         urls.push(newPathWithPosition);
-        fs.unlinkSync(path);
+        await fs.unlink(path);
       }
-      console.log({ urls });
       const hotel = await Hotels.create({
         ...req.body,
         photos: urls,

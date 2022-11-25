@@ -1,11 +1,11 @@
 const { BookingOptionHs } = require("../../models");
 const cloudinary = require("../../utils/cloudinary");
 const path = require("path");
-const fs = require("fs");
+const fs = require("fs").promises;
 
 const addBookingOptionHs = async (req, res) => {
-  const { bedInRoom, bedAddSite, roomServices, description, uniqueNumber } =
-    req.body;
+  // const { bedInRoom, bedAddSite, roomServices, description, uniqueNumber } =
+  //   req.body;
   try {
     const uploader = async (path) =>
       await cloudinary.uploads(path, "bookingOptionHostel");
@@ -16,7 +16,7 @@ const addBookingOptionHs = async (req, res) => {
         const { path } = file;
         const newPath = await uploader(path);
         urls.push(newPath);
-        fs.unlinkSync(path);
+        await fs.unlink(path);
       }
 
       // const bookingOption = await BookingOptionHs.create({

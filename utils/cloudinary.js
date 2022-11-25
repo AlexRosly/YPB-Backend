@@ -6,8 +6,6 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
-// module.exports = cloudinary;
-
 exports.uploads = (file, folder) => {
   return new Promise((resolve) => {
     cloudinary.uploader.upload(

@@ -1,11 +1,10 @@
 const { BookingOption } = require("../../models");
 const cloudinary = require("../../utils/cloudinary");
 const path = require("path");
-const fs = require("fs");
+const fs = require("fs").promises;
 
 const addBookingOption = async (req, res) => {
-  const { path: tempDir } = req.file;
-  console.log("tempDir", tempDir);
+  // const { path: tempDir } = req.file;
   try {
     const uploader = async (path) =>
       await cloudinary.uploads(path, "bookingOptionHotel");
@@ -14,10 +13,9 @@ const addBookingOption = async (req, res) => {
       const files = req.files;
       for (const file of files) {
         const { path } = file;
-        // console.log("path", path);
         const newPath = await uploader(path);
         urls.push(newPath);
-        fs.unlinkSync(path);
+        await fs.unlink(path);
 
         //         fs.unlink(path.join(__dirname, 'test1.txt', (err) => {
         //   if (err) throw err;

@@ -1,11 +1,13 @@
 const { Hotels } = require("../../models");
 const { NotFound } = require("http-errors");
+const path = require("path");
+const fs = require("fs").promises;
 // const cloudinary = require("cloudinary");
 const cloudinary = require("../../utils/cloudinary");
 
 const updateHotel = async (req, res) => {
   const { id } = req.params;
-  const files = req.files;
+  // const files = req.files;
 
   const getHotelById = await Hotels.findById(id);
   const { photos } = getHotelById;
@@ -14,8 +16,12 @@ const updateHotel = async (req, res) => {
 
   const removePhotoFromCloudinary = async (photos) => {
     let b;
-    // const filess = ["1668719468636-Programmers-day.png"];
-    for (const file of files) {
+    const filess = [
+      "1669059568306-Programmers-day.png",
+      "1669059568307-Programmers-day.png",
+      "1669059568308-Programmers-day.png",
+    ];
+    for (const file of filess) {
       for (const photo of photos) {
         if (photo.position === file) {
           b = cloudinary.remove(photo.id);
@@ -30,9 +36,13 @@ const updateHotel = async (req, res) => {
   removePhotoFromCloudinary(photos);
 
   const addNewLinkToDB = async (photos, urls) => {
-    // const filess = ["1668719468636-Programmers-day.png"];
+    const filess = [
+      "1669059568306-Programmers-day.png",
+      "1669059568307-Programmers-day.png",
+      "1669059568308-Programmers-day.png",
+    ];
     const newArr = [];
-    for (const file of files) {
+    for (const file of filess) {
       for (const photo of photos) {
         if (photo.position != file) {
           newArr.push(photo);
@@ -74,7 +84,7 @@ const updateHotel = async (req, res) => {
           const newPath = await uploader(path);
           const newPathWithPosition = { ...newPath, position: filename };
           urls.push(newPathWithPosition);
-          fs.unlinkSync(path);
+          await fs.unlink(path);
         }
       } else {
         res.status(405).json({
