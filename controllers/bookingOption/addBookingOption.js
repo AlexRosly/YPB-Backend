@@ -24,7 +24,7 @@ const addBookingOption = async (req, res) => {
       }
       const bookingHotel = await BookingOption.create({
         ...req.body,
-        // photos: urls,
+        photos: urls,
       });
 
       if (!bookingHotel) {
