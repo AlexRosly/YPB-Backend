@@ -21,6 +21,9 @@ const servicesRouter = require("./routes/api/servicesApi");
 const bookingOption = require("./routes/api/bookingOption");
 const bookingOptionHs = require("./routes/api/bookingOptionHs");
 const bookingServices = require("./routes/api/servicesForBookingOption");
+const authAgents = require("./routes/api/authAgents");
+const authUsers = require("./routes/api/authUsers");
+const authHoteliers = require("./routes/api/authHoteliers");
 
 const app = express();
 
@@ -52,6 +55,9 @@ app.use("/api/services", servicesRouter);
 app.use("/api/bookingOption-hotel", bookingOption);
 app.use("/api/bookingOption-hostel", bookingOptionHs);
 app.use("/api/booking-services", bookingServices);
+app.use("/api/auth-agents", authAgents);
+app.use("/api/auth-users", authUsers);
+app.use("/api/auth-hoteliers", authHoteliers);
 
 app.use((req, res) => {
   res.status(404).json({ message: "Not found" });

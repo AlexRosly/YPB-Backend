@@ -10,6 +10,9 @@ const paymentMethod = require("./paymentMethod");
 const services = require("./services");
 const bookingOption = require("./bookingOption");
 const bookingServices = require("./servicesForBookingOption");
+const authAgents = require("./authAgents");
+const authHoteliers = require("./authHoteliers");
+const authUsers = require("./authUsers");
 
 module.exports = {
   languages,
@@ -24,4 +27,7 @@ module.exports = {
   services,
   bookingOption,
   bookingServices,
+  authAgents,
+  authHoteliers,
+  authUsers,
 };
