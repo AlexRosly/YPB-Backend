@@ -10,6 +10,10 @@ const { Services } = require("./services");
 const { BookingOption } = require("./bookingOption");
 const { BookingOptionHs } = require("./bookingOptionHs");
 const { BookingServices } = require("./servicesForBookingOption");
+const { Agent } = require("./agents");
+const { Hotelier } = require("./hoteliers");
+const { User } = require("./users");
+const { Candidate } = require("./candidate");
 
 module.exports = {
   Language,
@@ -24,4 +28,8 @@ module.exports = {
   BookingOption,
   BookingOptionHs,
   BookingServices,
+  Agent,
+  Hotelier,
+  User,
+  Candidate,
 };

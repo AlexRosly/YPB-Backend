@@ -56,8 +56,8 @@ app.use("/api/bookingOption-hotel", bookingOption);
 app.use("/api/bookingOption-hostel", bookingOptionHs);
 app.use("/api/booking-services", bookingServices);
 app.use("/api/auth-agents", authAgents);
-app.use("/api/auth-users", authUsers);
 app.use("/api/auth-hoteliers", authHoteliers);
+app.use("/api/auth-users", authUsers);
 
 app.use((req, res) => {
   res.status(404).json({ message: "Not found" });
