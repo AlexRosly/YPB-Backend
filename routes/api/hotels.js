@@ -22,6 +22,4 @@ router.patch(
   ctrlWrapper(ctrl.updateHotel)
 );
 
-// router.delete("/:id", ctrlWrapper(ctrl.removeDistrictLoc1));
-
 module.exports = router;

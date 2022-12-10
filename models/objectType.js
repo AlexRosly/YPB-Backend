@@ -3,12 +3,6 @@ const Joi = require("joi");
 
 const objectType = Schema(
   {
-    //   objects: {
-    //     type: {
-    //       ua: { type: String },
-    //       en: { type: String },
-    //     },
-    //   },
     langCode: {
       type: String,
       require: [true, "status must be exist"],
@@ -25,9 +19,6 @@ const objectType = Schema(
 );
 
 const joiSchema = Joi.object({
-  //   objects: {
-  //     type: {},
-  //   },
   langCode: Joi.string().required(),
   objects: [Joi.array()],
 });

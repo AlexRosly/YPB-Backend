@@ -10,7 +10,6 @@ const countrySchema = Schema(
     country: {
       type: String,
       required: [true, "country must be exist"],
-      //   match: /^[A-Z][a-z]$/,
     },
     langCode: {
       type: String,
@@ -24,7 +23,6 @@ const countrySchema = Schema(
       {
         type: Schema.Types.ObjectId,
         ref: "regionLoc3",
-        // required: true,
       },
     ],
   },

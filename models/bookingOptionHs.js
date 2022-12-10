@@ -18,11 +18,6 @@ const bookingOptionHs = Schema(
         type: Object,
       },
     ],
-    // animals: [
-    //   {
-    //     type: Object,
-    //   },
-    // ],
     description: {
       type: String,
       minlength: 300,
@@ -32,12 +27,6 @@ const bookingOptionHs = Schema(
     uniqueNumber: {
       type: String,
     },
-    // totalSquiere: {
-    //   type: Number,
-    // },
-    // smoking: {
-    //   type: Boolean,
-    // },
     photos: [
       {
         id: { type: String },
@@ -53,11 +42,8 @@ const joiSchema = Joi.object({
   bedInRoom: Joi.number(),
   bedAddSite: Joi.number(),
   roomServices: [Joi.array()],
-  //   animals: [Joi.array()],
   description: Joi.string().min(300).max(500),
   uniqueNumber: Joi.string(),
-  //   totalSquiere: Joi.number(),
-  //   smoking: Joi.boolean(),
   photos: [Joi.array()],
 });
 

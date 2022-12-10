@@ -18,6 +18,4 @@ router.patch(
 
 router.delete("/:id", ctrlWrapper(ctrl.removeDistrictLoc1));
 
-// router.post("/insert", validation(joiSchema), ctrlWrapper(ctrl.insertMany));
-
 module.exports = router;

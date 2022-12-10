@@ -3,54 +3,6 @@ const Joi = require("joi");
 
 const bookingOption = Schema(
   {
-    //   typeOfObject: {
-    //     type: String,
-    //   },
-    //   bedrooms: {
-    //     fistBedroom: {
-    //       doubleBed: {
-    //         type: Number,
-    //       },
-    //       singleBed: {
-    //         type: Number,
-    //       },
-    //     },
-    //     secondBedroom: {
-    //       doubleBed: {
-    //         type: Number,
-    //       },
-    //       singleBed: {
-    //         type: Number,
-    //       },
-    //     },
-    //     thirdBedroom: {
-    //       doubleBed: {
-    //         type: Number,
-    //       },
-    //       singleBed: {
-    //         type: Number,
-    //       },
-    //     },
-    //     fourthBedroom: {
-    //       doubleBed: {
-    //         type: Number,
-    //       },
-    //       singleBed: {
-    //         type: Number,
-    //       },
-    //     },
-    //   },
-    //   roomServices: [
-    //     {
-    //       type: Object,
-    //     },
-    //   ],
-    //   animals: [
-    //     {
-    //       type: String,
-    //       default: "With out anaimals",
-    //     },
-    //   ],
     type: {
       type: String,
     },
@@ -98,7 +50,6 @@ const bookingOption = Schema(
     ],
     animals: {
       type: Object,
-      // default: false,
     },
     description: {
       type: String,
@@ -127,24 +78,6 @@ const bookingOption = Schema(
 
 const joiSchema = Joi.object({
   type: Joi.string(),
-  // bedrooms: {
-  //   fistBedroom: {
-  //     doubleBed: Joi.number(),
-  //     singleBed: Joi.number(),
-  //   },
-  //   secondBedroom: {
-  //     doubleBed: Joi.number(),
-  //     singleBed: Joi.number(),
-  //   },
-  //   thirdBedroom: {
-  //     doubleBed: Joi.number(),
-  //     singleBed: Joi.number(),
-  //   },
-  //   fourthBedroom: {
-  //     doubleBed: Joi.number(),
-  //     singleBed: Joi.number(),
-  //   },
-  // },
   bedrooms: Joi.number(),
   detailedBedrooms: {
     firstBedroom: {

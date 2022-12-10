@@ -4,8 +4,6 @@ const path = require("path");
 const fs = require("fs").promises;
 
 const addBookingOptionHs = async (req, res) => {
-  // const { bedInRoom, bedAddSite, roomServices, description, uniqueNumber } =
-  //   req.body;
   try {
     const uploader = async (path) =>
       await cloudinary.uploads(path, "bookingOptionHostel");
@@ -19,14 +17,6 @@ const addBookingOptionHs = async (req, res) => {
         await fs.unlink(path);
       }
 
-      // const bookingOption = await BookingOptionHs.create({
-      //   bedInRoom,
-      //   bedAddSite,
-      //   roomServices,
-      //   description,
-      //   uniqueNumber,
-      //   photos: [...urls],
-      // });
       const bookingOption = await BookingOptionHs.create({
         ...req.body,
         photos: urls,
@@ -44,11 +34,6 @@ const addBookingOptionHs = async (req, res) => {
           bookingOption,
         },
       });
-
-      // res.status(200).json({
-      //   message: "images uploaded successfully",
-      //   data: urls,
-      // });
     } else {
       res.status(405).json({
         err: `${req.method} method not allowed`,
