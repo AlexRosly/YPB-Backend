@@ -11,10 +11,11 @@ const addHotel = async (req, res) => {
     if (req.method === "POST") {
       const urls = [];
       const files = req.files;
+      console.log("addFiles", files);
       for (const file of files) {
-        const { path, filename } = file;
+        const { path, originalname } = file;
         const newPath = await uploader(path);
-        const newPathWithPosition = { ...newPath, position: filename };
+        const newPathWithPosition = { ...newPath, position: originalname };
         urls.push(newPathWithPosition);
         await fs.unlink(path);
       }
@@ -26,7 +27,6 @@ const addHotel = async (req, res) => {
       if (!hotel) {
         throw new NotImplemented("hotels doesn`t create");
       }
-
       res.status(201).json({
         status: "success",
         message: "hotel created",

@@ -2,29 +2,28 @@ const { Hotels } = require("../../models");
 const { NotFound } = require("http-errors");
 const path = require("path");
 const fs = require("fs").promises;
-// const cloudinary = require("cloudinary");
 const cloudinary = require("../../utils/cloudinary");
 
 const updateHotel = async (req, res) => {
   const { id } = req.params;
-  // const files = req.files;
+  const files = req.files;
+  console.log("updateFiles", files);
+  // console.log("req1", req.body);
 
   const getHotelById = await Hotels.findById(id);
-  const { photos } = getHotelById;
+  const { photos, _id } = getHotelById;
   let a;
+  let b;
   const urls = [];
 
-  const removePhotoFromCloudinary = async (photos) => {
-    let b;
-    const filess = [
-      "1669059568306-Programmers-day.png",
-      "1669059568307-Programmers-day.png",
-      "1669059568308-Programmers-day.png",
-    ];
-    for (const file of filess) {
+  const removePhotoFromCloudinary = async (photos, files, b) => {
+    for (const file of files) {
       for (const photo of photos) {
-        if (photo.position === file) {
+        if (photo.position === file.originalname) {
+          // console.log("photo", photo.position);
+          // console.log("file", file.originalname);
           b = cloudinary.remove(photo.id);
+          console.log("remove from cloudinary work");
         }
       }
     }
@@ -33,28 +32,41 @@ const updateHotel = async (req, res) => {
     }
   };
 
-  removePhotoFromCloudinary(photos);
+  removePhotoFromCloudinary(photos, files, b);
 
-  const addNewLinkToDB = async (photos, urls) => {
-    const filess = [
-      "1669059568306-Programmers-day.png",
-      "1669059568307-Programmers-day.png",
-      "1669059568308-Programmers-day.png",
-    ];
-    const newArr = [];
-    for (const file of filess) {
-      for (const photo of photos) {
-        if (photo.position != file) {
-          newArr.push(photo);
+  const addNewLinkToDB = async (photos, urls, _id) => {
+    // const newArr = [];
+    // for (const file of files) {
+    //   for (const photo of photos) {
+    //     if (photo.position !== file.originalname) {
+    //       newArr.push(photo);
+    //     }
+    //   }
+    // }
+    const newArr = JSON.parse(JSON.stringify(photos));
+    for (const file of files) {
+      for (const newAr of newArr) {
+        if (file.originalname === newAr.position) {
+          // const index = newArr.indexOf(newAr.position);
+          // newArr.splice(index, 1);
+          console.log("work");
+          const deleteFoto = await Hotels.updateOne(
+            { _id: _id },
+            { $pop: { photos: -1 } }
+          );
+          console.log({ deleteFoto });
         }
       }
     }
-
+    // console.log("req2", req.body);
+    // console.log({ newArr });
+    // console.log({ urls });
     const hotel = await Hotels.findByIdAndUpdate(
       id,
       {
         ...req.body,
-        photos: [...newArr, ...urls],
+        photos: [...urls],
+        // photos: [...newArr, ...urls],
       },
       {
         new: true,
@@ -80,9 +92,11 @@ const updateHotel = async (req, res) => {
       if (req.method === "PATCH") {
         const files = req.files;
         for (const file of files) {
-          const { path, filename } = file;
+          const { path, originalname } = file;
+          // console.log("filename", filename);
+          // console.log("originalname", originalname);
           const newPath = await uploader(path);
-          const newPathWithPosition = { ...newPath, position: filename };
+          const newPathWithPosition = { ...newPath, position: originalname };
           urls.push(newPathWithPosition);
           await fs.unlink(path);
         }
@@ -92,7 +106,7 @@ const updateHotel = async (req, res) => {
         });
       }
     } catch (error) {}
-    addNewLinkToDB(photos, urls);
+    addNewLinkToDB(photos, urls, _id);
     return urls;
   };
 
