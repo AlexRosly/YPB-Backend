@@ -1,0 +1,11 @@
+{
+  "session": {
+    "secret": "YourPriceBooking",
+    "key": "BookingPriceYour",
+    "cookie": {
+      "path": "/",
+      "httpOnly": true,
+      "maxAge": null
+    }
+  }
+}
