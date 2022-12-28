@@ -7,7 +7,7 @@ const cloudinary = require("../../utils/cloudinary");
 const updateHotel = async (req, res) => {
   const { id } = req.params;
   const files = req.files;
-  console.log("updateFiles", files);
+  // console.log("updateFiles", files);
   // console.log("req1", req.body);
 
   const getHotelById = await Hotels.findById(id);
@@ -49,7 +49,7 @@ const updateHotel = async (req, res) => {
         if (file.originalname === newAr.position) {
           // const index = newArr.indexOf(newAr.position);
           // newArr.splice(index, 1);
-          console.log("work");
+          // console.log("work");
           const deleteFoto = await Hotels.updateOne(
             { _id: _id },
             { $pop: { photos: -1 } }

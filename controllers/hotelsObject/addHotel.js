@@ -11,7 +11,7 @@ const addHotel = async (req, res) => {
     if (req.method === "POST") {
       const urls = [];
       const files = req.files;
-      console.log("addFiles", files);
+      // console.log("addFiles", files);
       for (const file of files) {
         const { path, originalname } = file;
         const newPath = await uploader(path);

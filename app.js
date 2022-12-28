@@ -2,6 +2,7 @@ const express = require("express");
 const logger = require("morgan");
 const cors = require("cors");
 const bodyParser = require("body-parser");
+// const config = require("./config/config.json");
 
 const dotenv = require("dotenv");
 dotenv.config();
@@ -33,12 +34,20 @@ app.use(logger(formatsLogger));
 app.use(cors());
 app.use(express.json());
 
-app.use(
-  bodyParser.urlencoded({
-    extended: false,
-  })
-);
+// app.use(
+//   bodyParser.urlencoded({
+//     extended: false,
+//   })
+// );
 app.use(bodyParser.json());
+// app.use(express.cookieParser());
+// app.use(
+//   express.session({
+//     secret: config.get("session: secret"),
+//     key: config.get("session:key"),
+//     cookie:
+//   })
+// );
 
 app.use("/api/languages", languagesRouter);
 app.use("/api/countries", countriesRouter);
