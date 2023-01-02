@@ -3,6 +3,7 @@ const { Conflict } = require("http-errors");
 const { transporter } = require("../utils");
 
 const createRegistrationCode = async (req, res) => {
+  // console.log("request", req);
   const { email, lastName, firstName } = req.body;
 
   const agentCandidat = await Agent.findOne({ email });

@@ -2,10 +2,19 @@ const express = require("express");
 const logger = require("morgan");
 const cors = require("cors");
 const bodyParser = require("body-parser");
+const session = require("express-session");
+let RedisStore = require("connect-redis")(session);
 // const config = require("./config/config.json");
 
 const dotenv = require("dotenv");
 dotenv.config();
+
+// const redis = require("redis"),
+//   client = redis.createClient();
+
+const { createClient } = require("redis");
+let redisClient = createClient({ legacyMode: true });
+redisClient.connect().catch(console.error);
 
 const languagesRouter = require("./routes/api/languagesApi");
 const countriesRouter = require("./routes/api/countriesApi");
@@ -40,6 +49,15 @@ app.use(express.json());
 //   })
 // );
 app.use(bodyParser.json());
+app.use(
+  session({
+    secret: "YourPriceBooking",
+    resave: false,
+    saveUninitialized: false,
+    store: new RedisStore({ client: redisClient }),
+    // store: new RedisStore({ client: client }),
+  })
+);
 // app.use(express.cookieParser());
 // app.use(
 //   express.session({
