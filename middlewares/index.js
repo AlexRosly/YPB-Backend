@@ -5,6 +5,7 @@ const uploadVideo = require("./verificationVideo");
 const createRegistrationCode = require("./createRegistrationCode");
 const createSignInCode = require("./createSignInCode");
 const auth = require("./auth");
+const { authCacheService } = require("./authCacheService");
 
 module.exports = {
   validation,
@@ -14,4 +15,5 @@ module.exports = {
   createRegistrationCode,
   createSignInCode,
   auth,
+  authCacheService,
 };

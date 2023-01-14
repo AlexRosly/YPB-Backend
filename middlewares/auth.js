@@ -8,6 +8,19 @@
 
 */
 
+/*
+  for Auth
+  const sessionIDd = req.signedCookies["sessionID"];
+
+  console.log({ sessionIDd });
+  const getAgentFromCache = await getFromCache(`${sessionIDd}`);
+  console.log({ getAgentFromCache });
+  const { id } = agent;
+  console.log("id", id);
+  const a = getAgentFromCache === id ? true : false;
+  console.log({ a });
+*/
+
 const { Agent, Hotelier, User } = require("../models");
 const { Unauthorized } = require("http-errors");
 const jwt = require("jsonwebtoken");

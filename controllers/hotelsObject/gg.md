@@ -294,3 +294,86 @@ ID agenta - done
 Slawa email for send mail.
 yourpricebooking@gmail.com
 pass: Pobeda306)yourpricebooking80462225440
+
+npm install redis connect-redis express-session - done
+
+ендпоінти реєстрації
+baseUrl: https://server-your-price-booking.onrender.com/
+a. Для Агента.
+
+1. Перевіряємо чи є така пошта у відповідній (юзера, отелера чи агента) колекції
+   Якщо є, то відсилаємо 4х значний код на неї
+   Запит робимо на: api/auth-agents/check-candidate
+   метод POST
+   body:
+   {
+   "lastName":"agent5",
+   "firstName":"ivan",
+   "email":"agent5_ivan@gmail.com"
+   }
+
+2. Якщо такої пошти не зареєстровано раніше в жодній колекції, то відсилаємо перевірочний код на неї, який діє 2 хв (відіслали і сказали про це фронту, щоб він відобразив) - Перевірочний код приходить на реальну пошту. Надсилання перевірочного коду налаштоване.
+
+3. Після отримання коду робимо запит на додавання на: api/auth-agents/signUp
+   метод POST
+   body:
+   {
+   "lastName":"agent5",
+   "firstName":"ivan",
+   "email":"agent5_ivan@gmail.com"
+   "secretCode":"2837"
+   }
+
+b. Для Юзера
+
+1. Перевіряємо чи є така пошта у відповідній (юзера, отелера чи агента) колекції
+   Якщо є, то відсилаємо 4х значний код на неї
+   Запит робимо на: api/auth-users/check-candidate
+   метод POST
+   body:
+   {
+   "lastName":"user1",
+   "firstName":"ivan",
+   "email":"user1_ivan@gmail.com",
+   "language": "EN"
+   }
+
+2. Якщо такої пошти не зареєстровано раніше в жодній колекції, то відсилаємо перевірочний код на неї, який діє 2 хв (відіслали і сказали про це фронту, щоб він відобразив) - Перевірочний код приходить на реальну пошту. Надсилання перевірочного коду налаштоване.
+
+3. Після отримання коду робимо запит на додавання на: api/auth-users/signUp
+   метод POST
+   body:
+   {
+   "lastName":"user1",
+   "firstName":"ivan",
+   "email":"user1_ivan@gmail.com",
+   "language": "EN",
+   "secretCode":"3963"
+   }
+
+с. Для отельера
+
+1. Перевіряємо чи є така пошта у відповідній (юзера, отелера чи агента) колекції
+   Якщо є, то відсилаємо 4х значний код на неї
+   Запит робимо на: api/auth-hoteliers/check-candidate
+   метод POST
+   body:
+   {
+   "lastName":"hotelier15",
+   "firstName":"ivan",
+   "email":"hotelier15_ivan@gmail.com",
+   "language": "EN"
+   }
+
+2. Якщо такої пошти не зареєстровано раніше в жодній колекції, то відсилаємо перевірочний код на неї, який діє 2 хв (відіслали і сказали про це фронту, щоб він відобразив) - Перевірочний код приходить на реальну пошту. Надсилання перевірочного коду налаштоване.
+
+3. Після отримання коду робимо запит на додавання на: api/auth-hoteliers/signUp
+   метод POST
+   body:
+   {
+   "lastName":"hotelier15",
+   "firstName":"ivan",
+   "email":"hotelier15_ivan@gmail.com",
+   "language": "EN",
+   "secretCode":"9914"
+   }

@@ -36,6 +36,8 @@ const createSignInCode = async (req, res) => {
   const createdCode = new Date();
   const validCode = createdCode.getTime() + 120000;
 
+  console.log({ secretCode });
+
   if (agentCandidat) {
     const filter = { email };
     const update = { secretCode, createdCode, validCode };
@@ -67,15 +69,15 @@ const createSignInCode = async (req, res) => {
     html: `<p>Your confirmation code ${secretCode}.</p><br/><p>Attention code valid only 2 minutes</p>`,
   };
   // await sendEmail(mail);
-  transporter
-    .sendMail(mail)
-    .then(() =>
-      // console.log("Email send")
-      res.json({
-        message: `Confirmation code sent to ${email}`,
-      })
-    )
-    .catch((error) => console.log(error.message));
+  // transporter
+  //   .sendMail(mail)
+  //   .then(() =>
+  //     // console.log("Email send")
+  //     res.json({
+  //       message: `Confirmation code sent to ${email}`,
+  //     })
+  //   )
+  //   .catch((error) => console.log(error.message));
 
   // res.json({
   //   message: `Confirmation code sent to ${email}`,
