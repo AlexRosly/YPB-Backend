@@ -3,7 +3,6 @@ const { Conflict } = require("http-errors");
 const { transporter } = require("../utils");
 
 const createRegistrationCode = async (req, res) => {
-  // console.log("request", req);
   const { email, lastName, firstName } = req.body;
 
   const agentCandidat = await Agent.findOne({ email });
@@ -52,14 +51,14 @@ const createRegistrationCode = async (req, res) => {
       new: true,
     });
     console.log({ candidate });
-    // transporter
-    //   .sendMail(mail)
-    //   .then(() =>
-    //     res.json({
-    //       message: `Confirmation code sent to ${email}`,
-    //     })
-    //   )
-    //   .catch((error) => console.log(error.message));
+    transporter
+      .sendMail(mail)
+      .then(() =>
+        res.json({
+          message: `Confirmation code sent to ${email}`,
+        })
+      )
+      .catch((error) => console.log(error.message));
   } else {
     const candidate = await Candidate.create({
       email,
@@ -70,14 +69,14 @@ const createRegistrationCode = async (req, res) => {
       validCode,
     });
 
-    // transporter
-    //   .sendMail(mail)
-    //   .then(() =>
-    //     res.json({
-    //       message: `Confirmation code sent to ${email}`,
-    //     })
-    //   )
-    //   .catch((error) => console.log(error.message));
+    transporter
+      .sendMail(mail)
+      .then(() =>
+        res.json({
+          message: `Confirmation code sent to ${email}`,
+        })
+      )
+      .catch((error) => console.log(error.message));
   }
   ////////////////////////////////////////
   // const candidate = await Candidate.create({

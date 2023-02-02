@@ -4,20 +4,14 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
-let RedisStore = require("connect-redis")(session);
-// const config = require("./config/config.json");
+// let RedisStore = require("connect-redis")(session);
 
 const dotenv = require("dotenv");
 dotenv.config();
 
-// const REDIS_PORT = 6379;
-// const redis = require("redis"),
-//   client = redis.createClient(REDIS_PORT);
-
-const { createClient } = require("redis");
-// let redisClient = createClient({ legacyMode: true });
-let redisClient = createClient();
-redisClient.connect().catch(console.error);
+// const { createClient } = require("redis");
+// let redisClient = createClient();
+// redisClient.connect().catch(console.error);
 
 const SECRET_COOKIE = process.env.SECRET_COOKIE;
 
@@ -48,17 +42,12 @@ app.use(logger(formatsLogger));
 app.use(cors());
 app.use(express.json());
 
-// app.use(
-//   bodyParser.urlencoded({
-//     extended: false,
-//   })
-// );
 app.use(bodyParser.json());
 app.use(cookieParser(SECRET_COOKIE));
 app.use(
   session({
     secret: SECRET_COOKIE,
-    key: "session-key",
+    // key: "session-key",
     cookie: {
       path: "/",
       httpOnly: true,
@@ -66,20 +55,9 @@ app.use(
     },
     saveUninitialized: false,
     resave: false,
-    store: new RedisStore({ client: redisClient }),
-    // store: new RedisStore({ client: client }),
+    // store: new RedisStore({ client: redisClient }),
   })
 );
-// app.use(
-//   express.session({
-//     secret: config.get("session: secret"),
-//     key: config.get("session:key"),
-//     cookie:
-//   })
-// );
-redisClient.set("key", "value");
-// redisClient.set("key1", "value");
-// redisClient.set("key2", "value");
 
 app.use("/api/languages", languagesRouter);
 app.use("/api/countries", countriesRouter);

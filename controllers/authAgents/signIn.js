@@ -2,8 +2,6 @@ const { Agent } = require("../../models");
 const { addToCash } = require("../../middlewares/authCacheService");
 
 const { Unauthorized } = require("http-errors");
-// const jwt = require("jsonwebtoken");
-// const { SECRET_KEY_JWT } = process.env;
 
 const signIn = async (req, res) => {
   const { email, secretCode } = req.body;
@@ -23,32 +21,23 @@ const signIn = async (req, res) => {
     throw new Unauthorized("Code is invalid");
   }
 
-  // const payload = {
-  //   id: agent._id,
-  // };
-  const sessionID = req.sessionID;
-  const { id } = agent;
+  if (agent) {
+    const sessionID = req.sessionID;
+    const { id } = agent;
 
-  // console.log("id", id);
-  // console.log({ sessionID });
-  await addToCash(`${sessionID}`, `${id}`);
+    await addToCash(`${sessionID}`, `${id}`);
 
-  res.cookie("sessionID", sessionID, { signed: true });
-  res.cookie("user", id, { signed: true });
+    res.cookie("_sid", sessionID, { signed: true }); //sessionID
+    res.cookie("user", id, { signed: true });
+    res.cookie("auth", true, { signed: true });
 
-  //review next step maybe now need update agent
-  // await Agent.findByIdAndUpdate(agent._id, { token });
+    req.session.authenticated = true;
+  }
 
-  res.json(
-    // req.session
-    {
-      status: "success",
-      code: 200,
-      // data: {
-      //   // token,
-      // },
-    }
-  );
+  res.json({
+    status: "success",
+    code: 200,
+  });
 };
 
 module.exports = signIn;

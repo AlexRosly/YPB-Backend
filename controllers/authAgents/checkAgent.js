@@ -4,7 +4,6 @@ const { Conflict } = require("http-errors");
 
 const checkAgent = async (req, res) => {
   const { email, lastName, firstName } = req.body;
-  // console.log("req.body", req.body);
 
   const agentCandidat = await Agent.findOne({ email });
   const hotelierCandidat = await Hotelier.findOne({ email });
@@ -27,12 +26,9 @@ const checkAgent = async (req, res) => {
   const fouthNumber = Math.floor(Math.random() * (10 - 1) + 1);
 
   const secretCode = `${firstNumber}${secondNumber}${thirdNumber}${fouthNumber}`;
-  console.log({ secretCode });
 
   const createdCode = new Date();
   const validCode = createdCode.getTime() + 120000;
-
-  console.log(validCode);
 
   const candidate = await Candidate.create({
     email,

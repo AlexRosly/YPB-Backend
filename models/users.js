@@ -29,10 +29,10 @@ const userSchema = Schema(
     validCode: {
       type: Number,
     },
-    token: {
-      type: String,
-      default: null,
-    },
+    // token: {
+    //   type: String,
+    //   default: null,
+    // },
   },
   { versionKey: false, timestamps: true }
 );

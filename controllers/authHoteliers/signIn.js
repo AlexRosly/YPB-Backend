@@ -1,7 +1,6 @@
 const { Hotelier } = require("../../models");
+const { addToCash } = require("../../middlewares/authCacheService");
 const { Unauthorized } = require("http-errors");
-const jwt = require("jsonwebtoken");
-const { SECRET_KEY_JWT } = process.env;
 
 const signIn = async (req, res) => {
   const { email, secretCode } = req.body;
@@ -21,20 +20,21 @@ const signIn = async (req, res) => {
     throw new Unauthorized("Code is invalid");
   }
 
-  const payload = {
-    id: hotelier._id,
-  };
+  if (hotelier) {
+    const sessionID = req.sessionID;
+    const { id } = hotelier;
 
-  const token = jwt.sign(payload, SECRET_KEY_JWT);
+    await addToCash(`${sessionID}`, `${id}`);
 
-  await Hotelier.findByIdAndUpdate(hotelier._id, { token });
+    res.cookie("_sid", sessionID, { signed: true }); //sessionID
+    res.cookie("user", id, { signed: true });
+    res.cookie("auth", true, { signed: true });
+    req.session.authenticated = true;
+  }
 
   res.json({
     status: "success",
     code: 200,
-    data: {
-      token,
-    },
   });
 };
 

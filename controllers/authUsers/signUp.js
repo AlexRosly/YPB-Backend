@@ -1,5 +1,6 @@
 const { Candidate, User } = require("../../models");
 const { NotAcceptable } = require("http-errors");
+const { addToCash } = require("../../middlewares/authCacheService");
 
 const signUp = async (req, res) => {
   const { email, lastName, firstName, secretCode, language } = req.body;
@@ -16,21 +17,31 @@ const signUp = async (req, res) => {
     throw new NotAcceptable("Confirmation code invalid");
   }
 
-  const agent = await User.create({
+  const user = await User.create({
     lastName,
     firstName,
     email,
     secretCode,
-    language,
+    language: language.toLowerCase(),
   });
 
-  const removeCandidate = await Candidate.findOneAndRemove({ email });
+  if (user) {
+    const removeCandidate = await Candidate.findOneAndRemove({ email });
+
+    const sessionID = req.sessionID;
+    await addToCash(`${sessionID}`, `${user._id}`);
+
+    res.cookie("_sid", sessionID, { signed: true }); //sessionID
+    res.cookie("user", user._id, { signed: true });
+    res.cookie("auth", true, { signed: true });
+    req.session.authenticated = true;
+  }
 
   res.status(201).json({
     status: "success",
     code: 201,
     data: {
-      hotelier: {
+      user: {
         email,
         firstName,
       },

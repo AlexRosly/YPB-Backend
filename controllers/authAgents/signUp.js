@@ -19,17 +19,18 @@ const signUp = async (req, res) => {
 
   const agent = await Agent.create({ lastName, firstName, email, secretCode });
 
-  const removeCandidate = await Candidate.findOneAndRemove({ email });
+  if (agent) {
+    const removeCandidate = await Candidate.findOneAndRemove({ email });
 
-  const sessionID = req.sessionID;
-  // console.log("id", agent._id);
-  // console.log({ sessionID });
-  await addToCash(`${sessionID}`, `${agent._id}`);
+    const sessionID = req.sessionID;
+    await addToCash(`${sessionID}`, `${agent._id}`);
 
-  res.cookie("sessionID", sessionID, { signed: true });
-  res.cookie("user", agent._id, { signed: true });
+    res.cookie("_sid", sessionID, { signed: true }); //sessionID
+    res.cookie("user", agent._id, { signed: true });
+    res.cookie("auth", true, { signed: true });
 
-  // req.session.authenticated = true;
+    req.session.authenticated = true;
+  }
 
   res.status(201).json({
     status: "success",

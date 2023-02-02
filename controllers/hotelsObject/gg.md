@@ -377,3 +377,11 @@ b. Для Юзера
    "language": "EN",
    "secretCode":"9914"
    }
+
+   updateMany({langCode: "EN"}, {$set: {langCode: "en"}})
+   updateMany({dbLangCode: "EN"}, {$set: {dbLangCode: "en"}})
+
+EN - en
+PL - pl
+UA - uk
+RU - ru

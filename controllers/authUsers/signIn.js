@@ -1,7 +1,6 @@
 const { User } = require("../../models");
 const { Unauthorized } = require("http-errors");
-const jwt = require("jsonwebtoken");
-const { SECRET_KEY_JWT } = process.env;
+const { addToCash } = require("../../middlewares/authCacheService");
 
 const signIn = async (req, res) => {
   const { email, secretCode } = req.body;
@@ -21,20 +20,21 @@ const signIn = async (req, res) => {
     throw new Unauthorized("Code is invalid");
   }
 
-  const payload = {
-    id: user._id,
-  };
+  if (user) {
+    const sessionID = req.sessionID;
+    const { id } = user;
 
-  const token = jwt.sign(payload, SECRET_KEY_JWT);
+    await addToCash(`${sessionID}`, `${id}`);
 
-  await User.findByIdAndUpdate(user._id, { token });
+    res.cookie("_sid", sessionID, { signed: true }); //sessionID
+    res.cookie("user", id, { signed: true });
+    res.cookie("auth", true, { signed: true });
+    req.session.authenticated = true;
+  }
 
   res.json({
     status: "success",
     code: 200,
-    data: {
-      token,
-    },
   });
 };
 

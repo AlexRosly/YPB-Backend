@@ -1,54 +1,21 @@
-/*
-1.Извлекаем из заголовков содержимое заголовка autorization
-2.Разделяем его на 2 слова: bearer и token
-3.Проверяем равно ли первое слово "Bearer"
-4.Проверяем валидность второго слова token
-5.Если токен валиден извелекаем из него id
-6.Если пользователь с таким id нашли в базе - его нужно прекрепить к запросу
-
-*/
-
-/*
-  for Auth
-  const sessionIDd = req.signedCookies["sessionID"];
-
-  console.log({ sessionIDd });
-  const getAgentFromCache = await getFromCache(`${sessionIDd}`);
-  console.log({ getAgentFromCache });
-  const { id } = agent;
-  console.log("id", id);
-  const a = getAgentFromCache === id ? true : false;
-  console.log({ a });
-*/
-
-const { Agent, Hotelier, User } = require("../models");
+// const { Agent, Hotelier, User } = require("../models");
 const { Unauthorized } = require("http-errors");
-const jwt = require("jsonwebtoken");
-
-const { SECRET_KEY_JWT } = process.env;
+const { getFromCache } = require("./authCacheService");
 
 const auth = async (req, res, next) => {
-  const { authorization = "" } = req.headers;
-  const [bearer, token] = authorization.split(" ");
+  const sessionIDFromCookie = req.signedCookies["_sid"]; //sessionID
+  const userId = req.signedCookies["user"];
+  const auth = req.signedCookies["auth"];
+
   try {
-    if (bearer !== "Bearer") {
+    const checkUserInCache = await getFromCache(`${sessionIDFromCookie}`);
+
+    if (checkUserInCache !== userId) {
       throw new Unauthorized("Not authorized");
     }
-    const { id } = jwt.verify(token, SECRET_KEY_JWT);
-    const agent = await Agent.findById(id);
-    const hotelier = await Hotelier.findById(id);
-    const user = await User.findById(id);
-    // if (!agent) {
-    //   throw new Unauthorized("Not authorized");
-    // }
-    if (agent) {
-      req.agent = agent;
-    }
-    if (hotelier) {
-      req.hotelier = hotelier;
-    }
-    if (user) {
-      req.user = user;
+
+    if (!req.session.authenticated && !auth) {
+      throw new Unauthorized("Not authorized");
     }
     next();
   } catch (error) {
