@@ -7,8 +7,6 @@ const cloudinary = require("../../utils/cloudinary");
 const updateHotel = async (req, res) => {
   const { id } = req.params;
   const files = req.files;
-  // console.log("updateFiles", files);
-  // console.log("req1", req.body);
 
   const getHotelById = await Hotels.findById(id);
   const { photos, _id } = getHotelById;
@@ -20,10 +18,8 @@ const updateHotel = async (req, res) => {
     for (const file of files) {
       for (const photo of photos) {
         if (photo.position === file.originalname) {
-          // console.log("photo", photo.position);
-          // console.log("file", file.originalname);
           b = cloudinary.remove(photo.id);
-          console.log("remove from cloudinary work");
+          // console.log("remove from cloudinary work");
         }
       }
     }
@@ -47,26 +43,20 @@ const updateHotel = async (req, res) => {
     for (const file of files) {
       for (const newAr of newArr) {
         if (file.originalname === newAr.position) {
-          // const index = newArr.indexOf(newAr.position);
-          // newArr.splice(index, 1);
-          // console.log("work");
           const deleteFoto = await Hotels.updateOne(
             { _id: _id },
             { $pop: { photos: -1 } }
           );
-          console.log({ deleteFoto });
+          // console.log({ deleteFoto });
         }
       }
     }
-    // console.log("req2", req.body);
-    // console.log({ newArr });
-    // console.log({ urls });
+
     const hotel = await Hotels.findByIdAndUpdate(
       id,
       {
         ...req.body,
         photos: [...urls],
-        // photos: [...newArr, ...urls],
       },
       {
         new: true,
@@ -93,8 +83,6 @@ const updateHotel = async (req, res) => {
         const files = req.files;
         for (const file of files) {
           const { path, originalname } = file;
-          // console.log("filename", filename);
-          // console.log("originalname", originalname);
           const newPath = await uploader(path);
           const newPathWithPosition = { ...newPath, position: originalname };
           urls.push(newPathWithPosition);

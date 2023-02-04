@@ -1,7 +1,6 @@
 const { Payments } = require("../../models");
 
 const getAllPaymentMethod = async ({ query: { search } }, res) => {
-  console.log({ search });
   const payment = await Payments.find({ langCode: search });
 
   res.json({

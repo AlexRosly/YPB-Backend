@@ -30,12 +30,6 @@ const createRegistrationCode = async (req, res) => {
   const createdCode = new Date();
   const validCode = createdCode.getTime() + 120000;
 
-  /*change logic if user already exist
-  1. go to db and check candidate
-  2.if !candidate create candidate
-  3.else candidate update
-*/
-  console.log({ secretCode });
   const mail = {
     to: email,
     subject: "Confirmation code",
@@ -50,7 +44,7 @@ const createRegistrationCode = async (req, res) => {
     const candidate = await Candidate.findOneAndUpdate(filter, update, {
       new: true,
     });
-    console.log({ candidate });
+    // console.log({ candidate });
     transporter
       .sendMail(mail)
       .then(() =>
