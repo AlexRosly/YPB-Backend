@@ -1,5 +1,7 @@
 const { createClient } = require("redis");
-let redisClient = createClient();
+let redisClient = createClient({
+  url: "redis://red-cffc091a6gdma8jkbj1g:6379",
+});
 redisClient.connect().catch(console.error);
 
 const addToCash = async (key, value) => {
