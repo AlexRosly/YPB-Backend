@@ -1,7 +1,12 @@
 const { createClient } = require("redis");
+// connection for server
 let redisClient = createClient({
   url: "redis://red-cffc091a6gdma8jkbj1g:6379",
 });
+
+// connection for locallhost
+// let redisClient = createClient();
+
 redisClient.connect().catch(console.error);
 
 const addToCash = async (key, value) => {
