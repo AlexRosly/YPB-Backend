@@ -9,23 +9,11 @@ const createSignInCode = async (req, res) => {
   const hotelierCandidat = await Hotelier.findOne({ email });
   const userCandidat = await User.findOne({ email });
 
-  //   if (agentCandidat === null) {
-  //     throw new Conflict("This email isn`t up in Agents collection");
-  //     console.log("work if");
-  //   }
-
-  //   if (hotelierCandidat === null) {
-  //     throw new Conflict("This email isn`t up in Hoteliers collection");
-  //   }
-
-  //   if (userCandidat === null) {
-  //     throw new Conflict("This email isn`t up in Users collection");
-  //   }
-
-  //   if (agentCandidat && hotelierCandidat && userCandidat) {
-  //     throw new Conflict("This email isn`t up in Agents collection");
-  //     console.log("work if");
-  //   }
+  if (!agentCandidat && !hotelierCandidat && !userCandidat) {
+    throw new Conflict(
+      "Code 409. This email does not have in the relevant collection"
+    );
+  }
 
   const firstNumber = Math.floor(Math.random() * (10 - 1) + 1);
   const secondNumber = Math.floor(Math.random() * (10 - 1) + 1);
@@ -70,7 +58,7 @@ const createSignInCode = async (req, res) => {
     .sendMail(mail)
     .then(() =>
       res.json({
-        message: `Confirmation code sent to ${email}`,
+        message: `Confirmation code sent to email: ${email}`,
       })
     )
     .catch((error) => console.log(error.message));

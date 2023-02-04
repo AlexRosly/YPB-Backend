@@ -7,6 +7,7 @@ const signIn = async (req, res) => {
 
   const hotelier = await Hotelier.findOne({ email, secretCode });
   const date = new Date();
+  const { id, firstName, language } = hotelier;
 
   if (!hotelier) {
     throw new Unauthorized(`Email ${email} not found`);
@@ -22,7 +23,6 @@ const signIn = async (req, res) => {
 
   if (hotelier) {
     const sessionID = req.sessionID;
-    const { id } = hotelier;
 
     await addToCash(`${sessionID}`, `${id}`);
 
@@ -35,6 +35,12 @@ const signIn = async (req, res) => {
   res.json({
     status: "success",
     code: 200,
+    data: {
+      hotelier: {
+        firstName,
+        language,
+      },
+    },
   });
 };
 
