@@ -10,15 +10,27 @@ const createRegistrationCode = async (req, res) => {
   const userCandidat = await User.findOne({ email });
 
   if (agentCandidat) {
-    throw new Conflict("This email is already existed in Agents collection");
+    return res.status(409).json({
+      status: "error",
+      code: 409,
+      message: "This email is already existed in Agents collection",
+    });
   }
 
   if (hotelierCandidat) {
-    throw new Conflict("This email is already existed in Hoteliers collection");
+    return res.status(409).json({
+      status: "error",
+      code: 409,
+      message: "This email is already existed in Hoteliers collection",
+    });
   }
 
   if (userCandidat) {
-    throw new Conflict("This email is already existed in Users collection");
+    return res.status(409).json({
+      status: "error",
+      code: 409,
+      message: "This email is already existed in Users collection",
+    });
   }
 
   const firstNumber = Math.floor(Math.random() * (10 - 1) + 1);
@@ -28,7 +40,7 @@ const createRegistrationCode = async (req, res) => {
 
   const secretCode = `${firstNumber}${secondNumber}${thirdNumber}${fouthNumber}`;
   const createdCode = new Date();
-  const validCode = createdCode.getTime() + 120000;
+  const validCode = createdCode.getTime() + 180000;
 
   const mail = {
     to: email,
@@ -44,11 +56,11 @@ const createRegistrationCode = async (req, res) => {
     const candidate = await Candidate.findOneAndUpdate(filter, update, {
       new: true,
     });
-    // console.log({ candidate });
     transporter
       .sendMail(mail)
       .then(() =>
         res.json({
+          status: "success",
           message: `Confirmation code sent to ${email}`,
         })
       )
@@ -67,6 +79,7 @@ const createRegistrationCode = async (req, res) => {
       .sendMail(mail)
       .then(() =>
         res.json({
+          status: "success",
           message: `Confirmation code sent to ${email}`,
         })
       )

@@ -1,52 +1,54 @@
-const { Agent, Hotelier, User, Candidate } = require("../../models");
-const { Conflict } = require("http-errors");
-// const { sendEmail } = require("../../utils");
+const { Agent } = require("../../models");
+const { transporter } = require("../../utils");
 
 const checkAgent = async (req, res) => {
-  const { email, lastName, firstName } = req.body;
+  const { email } = req.body;
 
   const agentCandidat = await Agent.findOne({ email });
-  const hotelierCandidat = await Hotelier.findOne({ email });
-  const userCandidat = await User.findOne({ email });
 
-  if (agentCandidat) {
-    throw new Conflict("This email is already existed in Agents collection");
+  if (!agentCandidat) {
+    return res.status(409).json({
+      status: "error",
+      code: 409,
+      message: "This email does not exist in Agents collection",
+    });
   }
 
-  if (hotelierCandidat) {
-    throw new Conflict("This email is already existed in Hoteliers collection");
-  }
-
-  if (userCandidat) {
-    throw new Conflict("This email is already existed in Users collection");
-  }
   const firstNumber = Math.floor(Math.random() * (10 - 1) + 1);
   const secondNumber = Math.floor(Math.random() * (10 - 1) + 1);
   const thirdNumber = Math.floor(Math.random() * (10 - 1) + 1);
   const fouthNumber = Math.floor(Math.random() * (10 - 1) + 1);
 
   const secretCode = `${firstNumber}${secondNumber}${thirdNumber}${fouthNumber}`;
-
   const createdCode = new Date();
-  const validCode = createdCode.getTime() + 120000;
+  const validCode = createdCode.getTime() + 180000;
 
-  const candidate = await Candidate.create({
-    email,
-    lastName,
-    firstName,
-    secretCode,
-    createdCode,
-    validCode,
-  });
+  if (agentCandidat) {
+    const filter = { email };
+    const update = { secretCode, createdCode, validCode };
+    const agent = await Agent.findOneAndUpdate(filter, update, {
+      new: true,
+    });
+  }
 
-  //   const mail = {
-  //     to: email,
-  //     subject: "Confirmation code",
-  //     html: `<p>Your confirmation code ${secretCode}.</p><br/><p>Attention code valid only 2 minutes</p>`,
-  //   };
-  //   await sendEmail(mail);
+  const mail = {
+    form: "yourpricebooking@gmail.com",
+    to: email,
+    subject: "Confirmation code",
+    html: `<p>Your confirmation code ${secretCode}.</p><br/><p>Attention code valid only 2 minutes</p>`,
+  };
+  transporter
+    .sendMail(mail)
+    .then(() =>
+      res.json({
+        status: "success",
+        message: `Confirmation code sent to email: ${email}`,
+      })
+    )
+    .catch((error) => console.log(error.message));
 
   res.json({
+    status: "success",
     message: `Confirmation code sent to ${email}`,
   });
 };

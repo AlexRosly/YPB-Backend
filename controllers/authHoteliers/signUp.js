@@ -10,11 +10,19 @@ const signUp = async (req, res) => {
   const date = new Date();
 
   if (secretCode !== candidate.secretCode) {
-    throw new NotAcceptable("Confirmation code invalid");
+    return res.status(409).json({
+      status: "error",
+      code: 409,
+      message: "Code is wrong",
+    });
   }
 
   if (candidate.validCode < date) {
-    throw new NotAcceptable("Confirmation code invalid");
+    return res.status(409).json({
+      status: "error",
+      code: 409,
+      message: "Code is invalid",
+    });
   }
 
   const hotelier = await Hotelier.create({

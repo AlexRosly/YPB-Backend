@@ -4,7 +4,6 @@ const {
   validation,
   ctrlWrapper,
   createRegistrationCode,
-  createSignInCode,
 } = require("../../middlewares");
 const {
   joiSignInSchema,
@@ -29,7 +28,7 @@ router.post("/signUp", validation(joiSignUpSchema), ctrlWrapper(ctrl.signUp));
 router.patch(
   "/check-user",
   validation(joiGetCodeSchema),
-  ctrlWrapper(createSignInCode)
+  ctrlWrapper(ctrl.checkUser)
 );
 
 //sign in

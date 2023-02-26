@@ -1,24 +1,35 @@
 const { Agent } = require("../../models");
 const { addToCash } = require("../../middlewares/authCacheService");
 
-const { Unauthorized } = require("http-errors");
-
 const signIn = async (req, res) => {
   const { email, secretCode } = req.body;
 
-  const agent = await Agent.findOne({ email, secretCode });
-  const date = new Date();
+  const agent = await Agent.findOne({ email });
 
   if (!agent) {
-    throw new Unauthorized(`Email ${email} not found`);
+    return res.status(409).json({
+      status: "error",
+      code: 409,
+      message: `Email ${email} not found`,
+    });
   }
 
+  const date = new Date();
+
   if (secretCode !== agent.secretCode) {
-    throw new Unauthorized("Code is wrong");
+    return res.status(409).json({
+      status: "error",
+      code: 409,
+      message: "Code is wrong",
+    });
   }
 
   if (agent.validCode < date) {
-    throw new Unauthorized("Code is invalid");
+    return res.status(409).json({
+      status: "error",
+      code: 409,
+      message: "Code is invalid",
+    });
   }
 
   if (agent) {

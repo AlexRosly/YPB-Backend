@@ -22,7 +22,7 @@ const createSignInCode = async (req, res) => {
 
   const secretCode = `${firstNumber}${secondNumber}${thirdNumber}${fouthNumber}`;
   const createdCode = new Date();
-  const validCode = createdCode.getTime() + 120000;
+  const validCode = createdCode.getTime() + 180000;
 
   if (agentCandidat) {
     const filter = { email };
@@ -58,12 +58,14 @@ const createSignInCode = async (req, res) => {
     .sendMail(mail)
     .then(() =>
       res.json({
+        status: "success",
         message: `Confirmation code sent to email: ${email}`,
       })
     )
     .catch((error) => console.log(error.message));
 
   res.json({
+    status: "success",
     message: `Confirmation code sent to ${email}`,
   });
 };
