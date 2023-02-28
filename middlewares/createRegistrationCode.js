@@ -10,25 +10,25 @@ const createRegistrationCode = async (req, res) => {
   const userCandidat = await User.findOne({ email });
 
   if (agentCandidat) {
-    return res.status(409).json({
+    return res.status(432).json({
       status: "error",
-      code: 409,
+      code: 432,
       message: "This email is already existed in Agents collection",
     });
   }
 
   if (hotelierCandidat) {
-    return res.status(409).json({
+    return res.status(433).json({
       status: "error",
-      code: 409,
+      code: 433,
       message: "This email is already existed in Hoteliers collection",
     });
   }
 
   if (userCandidat) {
-    return res.status(409).json({
+    return res.status(434).json({
       status: "error",
-      code: 409,
+      code: 434,
       message: "This email is already existed in Users collection",
     });
   }

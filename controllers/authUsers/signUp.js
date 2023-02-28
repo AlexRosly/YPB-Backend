@@ -10,17 +10,17 @@ const signUp = async (req, res) => {
   const date = new Date();
 
   if (secretCode !== candidate.secretCode) {
-    return res.status(409).json({
+    return res.status(435).json({
       status: "error",
-      code: 409,
+      code: 435,
       message: "Code is wrong",
     });
   }
 
   if (candidate.validCode < date) {
-    return res.status(409).json({
+    return res.status(436).json({
       status: "error",
-      code: 409,
+      code: 436,
       message: "Code is invalid",
     });
   }

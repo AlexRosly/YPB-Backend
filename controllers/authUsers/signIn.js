@@ -18,17 +18,17 @@ const signIn = async (req, res) => {
   const { id, firstName, language } = user;
 
   if (secretCode !== user.secretCode) {
-    return res.status(409).json({
+    return res.status(435).json({
       status: "error",
-      code: 409,
+      code: 435,
       message: "Code is wrong",
     });
   }
 
   if (user.validCode < date) {
-    return res.status(409).json({
+    return res.status(436).json({
       status: "error",
-      code: 409,
+      code: 436,
       message: "Code is invalid",
     });
   }
