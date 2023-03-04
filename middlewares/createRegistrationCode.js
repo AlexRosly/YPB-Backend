@@ -45,7 +45,7 @@ const createRegistrationCode = async (req, res) => {
   const mail = {
     to: email,
     subject: "Confirmation code",
-    html: `<p>Your confirmation code ${secretCode}.</p><br/><p>Attention code valid only 2 minutes</p>`,
+    html: `<p>Your confirmation code ${secretCode}.</p><br/><p>Attention code valid only 3 minutes</p>`,
   };
 
   const findCandidate = await Candidate.findOne({ email });

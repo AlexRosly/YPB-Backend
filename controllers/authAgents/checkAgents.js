@@ -42,7 +42,7 @@ const checkAgent = async (req, res) => {
   //   const mail = {
   //     to: email,
   //     subject: "Confirmation code",
-  //     html: `<p>Your confirmation code ${secretCode}.</p><br/><p>Attention code valid only 2 minutes</p>`,
+  //     html: `<p>Your confirmation code ${secretCode}.</p><br/><p>Attention code valid only 3 minutes</p>`,
   //   };
   //   await sendEmail(mail);
 
