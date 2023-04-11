@@ -30,7 +30,6 @@ const checkUser = async (req, res) => {
       new: true,
     });
   }
-
   const mail = {
     form: "yourpricebooking@gmail.com",
     to: email,
