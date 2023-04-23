@@ -13,6 +13,7 @@ const bookingServices = require("./servicesForBookingOption");
 const authAgents = require("./authAgents");
 const authHoteliers = require("./authHoteliers");
 const authUsers = require("./authUsers");
+const catalogForHotelier = require("./catalogForHotelier");
 
 module.exports = {
   languages,
@@ -30,4 +31,5 @@ module.exports = {
   authAgents,
   authHoteliers,
   authUsers,
+  catalogForHotelier,
 };

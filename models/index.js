@@ -14,6 +14,10 @@ const { Agent } = require("./agents");
 const { Hotelier } = require("./hoteliers");
 const { User } = require("./users");
 const { Candidate } = require("./candidate");
+const { UaCatalogForHotelier } = require("./uaCatalogForHotelier");
+const { RuCatalogForHotelier } = require("./ruCatalogForHotelier");
+const { PlCatalogForHotelier } = require("./plCatalogForHotelier");
+const { EnCatalogForHotelier } = require("./enCatalogForHotelier");
 
 module.exports = {
   Language,
@@ -32,4 +36,8 @@ module.exports = {
   Hotelier,
   User,
   Candidate,
+  UaCatalogForHotelier,
+  RuCatalogForHotelier,
+  PlCatalogForHotelier,
+  EnCatalogForHotelier,
 };
