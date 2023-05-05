@@ -30,10 +30,10 @@ const hotelierSchema = Schema(
     validCode: {
       type: Number,
     },
-    // token: {
-    //   type: String,
-    //   default: null,
-    // },
+    status: {
+      type: String,
+      default: "active",
+    },
   },
   { versionKey: false, timeStamps: true }
 );

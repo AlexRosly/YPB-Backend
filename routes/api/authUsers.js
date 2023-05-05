@@ -37,4 +37,7 @@ router.post("/signIn", validation(joiSignInSchema), ctrlWrapper(ctrl.signIn));
 //logOut
 router.get("/signOut", auth, ctrlWrapper(ctrl.logOut));
 
+//delete account of agent
+router.patch("/delete-account", ctrlWrapper(ctrl.deleteUser));
+
 module.exports = router;

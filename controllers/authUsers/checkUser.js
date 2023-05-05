@@ -14,6 +14,14 @@ const checkUser = async (req, res) => {
     });
   }
 
+  if (userCandidat.status === "deleted") {
+    return res.status(401).json({
+      status: "error",
+      code: 401,
+      message: `User with email ${email} don't registered yet`,
+    });
+  }
+
   const firstNumber = Math.floor(Math.random() * (10 - 1) + 1);
   const secondNumber = Math.floor(Math.random() * (10 - 1) + 1);
   const thirdNumber = Math.floor(Math.random() * (10 - 1) + 1);

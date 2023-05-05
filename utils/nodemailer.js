@@ -8,19 +8,22 @@ const nodemailerConfig = {
   // host: "smtp.meta,ua",
   // port: 435, //25, 465, 2255
   // secure: true,
-  // service: "gmail",
-  // auth: {
-  //   user: "yourpricebooking@gmail.com", // from send email
-  //   pass: NODEMAILER_PASS,
-  // },
-  host: "ypbooking.chost.com.ua",
-  port: 587,
-  secure: false,
-
+  service: "gmail",
   auth: {
-    user: "noreply@yourpricebooking.com", // from send email
-    pass: NODEMAILER_PASS1,
+    user: "yourpricebooking@gmail.com", // from send email
+    pass: NODEMAILER_PASS,
   },
+  // host: "ypbooking.chost.com.ua",
+  // port: 465,
+  // secure: true,
+  // host: "mail.yourpricebooking.com",
+  // port: 465,
+  // secure: true,
+
+  // auth: {
+  //   user: "noreply@yourpricebooking.com", // from send email
+  //   pass: NODEMAILER_PASS1,
+  // },
 };
 
 const transporter = nodemailer.createTransport(nodemailerConfig);

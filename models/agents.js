@@ -26,9 +26,9 @@ const agetnSchema = Schema(
     validCode: {
       type: Number,
     },
-    token: {
+    status: {
       type: String,
-      default: null,
+      default: "active",
     },
   },
   { versionKey: false, timestamps: true }

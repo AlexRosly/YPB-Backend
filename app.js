@@ -68,7 +68,7 @@ app.use("/api/location-district", districtLoc1Router);
 app.use("/api/autocomplete", autoComplete);
 app.use("/api/hotels", hotels);
 app.use("/api/hotelsFinder", hotelsFinder);
-app.use("api/hotels-verification-video", hotelsVerificationVideo);
+app.use("/api/hotels-verification-video", hotelsVerificationVideo);
 app.use("/api/get-objects", objectType);
 app.use("/api/payments-method", paymentMethod);
 app.use("/api/services", servicesRouter);
