@@ -14,6 +14,7 @@ const authAgents = require("./authAgents");
 const authHoteliers = require("./authHoteliers");
 const authUsers = require("./authUsers");
 const catalogForHotelier = require("./catalogForHotelier");
+const acsessToAdmin = require("./acsessToAdmin");
 
 module.exports = {
   languages,
@@ -32,4 +33,5 @@ module.exports = {
   authHoteliers,
   authUsers,
   catalogForHotelier,
+  acsessToAdmin,
 };

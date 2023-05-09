@@ -34,6 +34,7 @@ const authAgents = require("./routes/api/authAgents");
 const authUsers = require("./routes/api/authUsers");
 const authHoteliers = require("./routes/api/authHoteliers");
 const catalogForHotelier = require("./routes/api/catalogForHotelier");
+const acsessToAdmin = require("./routes/api/acsessToAdmin");
 
 const app = express();
 
@@ -79,6 +80,7 @@ app.use("/api/auth-agents", authAgents);
 app.use("/api/auth-hoteliers", authHoteliers);
 app.use("/api/auth-users", authUsers);
 app.use("/api/catalogForHotelier", catalogForHotelier);
+app.use("/api/acsess-to-admin", acsessToAdmin);
 
 app.use((req, res) => {
   res.status(404).json({ message: "Not found" });

@@ -7,9 +7,6 @@ const deleteAgent = async (req, res) => {
   const sessionID = req.sessionID;
   const userId = req.signedCookies["user"];
 
-  //   console.log({ sessionID });
-  //   console.log({ userId });
-
   const findAccount = await Agent.find({ email });
 
   if (!findAccount) {
@@ -21,16 +18,10 @@ const deleteAgent = async (req, res) => {
   }
 
   const getId = findAccount[0]._id.toString();
-  //   console.log("mmm", _id.toString());
 
   const checkRedis = await getFromCache(`${sessionID}`);
-  //   console.log({ findAccount });
-  //   console.log("id", findAccount[0]._id.toString());
-  //   console.log({ checkRedis });
-  //   console.log("bool", getId === userId);
 
   if (checkRedis === getId || getId === userId) {
-    // console.log("working");
     const deleteAccount = await Agent.updateOne(
       { email },
       {
@@ -44,13 +35,6 @@ const deleteAgent = async (req, res) => {
       message: `account with email ${email} has been deleted`,
     });
   }
-
-  //   const deleteAccount = await Agent.updateOne(
-  //     { email },
-  //     {
-  //       $set: { status: "deleted" },
-  //     }
-  //   );
 
   res.status(401).json({
     status: "error",

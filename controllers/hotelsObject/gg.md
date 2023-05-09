@@ -455,7 +455,7 @@ RU - ru
 Кавычки ' " ` - удаляются из url.
 
 1. add trim to createNewPages to const getString
-2. const MAIN_DOMAIN perenesti to env
+2. const MAIN_DOMAIN perenesti to env - done
 3. cyrillicToTranslit vinesti in middlewares
 4. pageCatalog vinesti
 
@@ -464,3 +464,9 @@ RU - ru
 6. Статуси при реєстрації додавити
 7. к0ли логініться перевірити статус, якщо видалений - зареєструйся
 8. знайти його в БД та оновити інфо та статус.
+   ////////////////////////////////////////////////////////////////////////////////////////
+9. description Строка в англ варианте с большой буквы начало - done
+10. в все ссылки при создании добавлять в конце код языка на которой создается ссылка - done
+11. в ответе получить все с языка возвращать в дате массив -done
+12. сделать метод который возращает по инфу по коду языка и ссылке
+    catalogForHotelier api change models - done

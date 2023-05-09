@@ -30,6 +30,9 @@ const enCatalogForHotelier = Schema(
     url: {
       type: String,
     },
+    description: {
+      type: String,
+    },
   },
   { versionKey: false, timestamps: true }
 );
@@ -42,6 +45,8 @@ const joiSchema = Joi.object({
   state: Joi.string().required(),
   country: Joi.string().required(),
   linkOnPhoto: Joi.string().required(),
+  url: Joi.string(),
+  description: Joi.string(),
 });
 
 const EnCatalogForHotelier = model(

@@ -4,12 +4,12 @@ const {
   PlCatalogForHotelier,
   EnCatalogForHotelier,
 } = require("../../models");
+require("dotenv").config();
+
+const { MAIN_DOMAIN } = process.env;
 
 const CyrillicToTranslit = require("cyrillic-to-translit-js");
-
 const cyrillicToTranslit = new CyrillicToTranslit();
-
-const MAIN_DOMAIN = "https://www.yourpricebooking.com/";
 
 const pageCatalog = {
   ru: [
@@ -95,8 +95,8 @@ const createNewPages = async (req, res) => {
 
   //   const getString = `${district} ${city} ${state} ${country}`;
   const getString = !district
-    ? `${city} ${state} ${country}`
-    : `${district} ${city} ${state} ${country}`;
+    ? `${city} ${state} ${country} ${language}`
+    : `${district} ${city} ${state} ${country} ${language}`;
 
   const translit = cyrillicToTranslit.transform(getString, "-").toLowerCase();
 
@@ -104,6 +104,9 @@ const createNewPages = async (req, res) => {
     case "uk":
       for (const link of pageCatalog.uk) {
         const createUrl = `${MAIN_DOMAIN}${link}-${translit}`;
+        const getIndex = pageCatalog.uk.indexOf(link);
+        const createDescription = pageCatalog.en[getIndex];
+
         const checkLinkPlCatalog = await PlCatalogForHotelier.find({
           url: createUrl,
         });
@@ -127,6 +130,7 @@ const createNewPages = async (req, res) => {
             ...req.body,
             nameOfpage: district,
             url: createUrl,
+            description: createDescription,
           });
           if (addToUaCatalog) {
             isPageAdded = true;
@@ -144,6 +148,7 @@ const createNewPages = async (req, res) => {
             ...req.body,
             nameOfpage: district,
             url: upgradeUrl,
+            description: createDescription,
           });
 
           if (addToUaCatalog) {
@@ -176,6 +181,9 @@ const createNewPages = async (req, res) => {
     case "ru":
       for (const link of pageCatalog.ru) {
         const createUrl = `${MAIN_DOMAIN}${link}-${translit}`;
+        const getIndex = pageCatalog.ru.indexOf(link);
+        const createDescription = pageCatalog.en[getIndex];
+
         const checkLinkPlCatalog = await PlCatalogForHotelier.find({
           url: createUrl,
         });
@@ -199,6 +207,7 @@ const createNewPages = async (req, res) => {
             ...req.body,
             nameOfpage: district,
             url: createUrl,
+            description: createDescription,
           });
           if (addToRuCatalog) {
             isPageAdded = true;
@@ -217,6 +226,7 @@ const createNewPages = async (req, res) => {
             ...req.body,
             nameOfpage: district,
             url: upgradeUrl,
+            description: createDescription,
           });
 
           if (addToRuCatalog) {
@@ -249,6 +259,9 @@ const createNewPages = async (req, res) => {
     case "pl":
       for (const link of pageCatalog.pl) {
         const createUrl = `${MAIN_DOMAIN}${link}-${translit}`;
+        const getIndex = pageCatalog.pl.indexOf(link);
+        const createDescription = pageCatalog.en[getIndex];
+
         const checkLinkPlCatalog = await PlCatalogForHotelier.find({
           url: createUrl,
         });
@@ -272,6 +285,7 @@ const createNewPages = async (req, res) => {
             ...req.body,
             nameOfpage: district,
             url: createUrl,
+            description: createDescription,
           });
           if (addToPlCatalog) {
             isPageAdded = true;
@@ -290,6 +304,7 @@ const createNewPages = async (req, res) => {
             ...req.body,
             nameOfpage: district,
             url: upgradeUrl,
+            description: createDescription,
           });
 
           if (addToPlCatalog) {
@@ -322,7 +337,12 @@ const createNewPages = async (req, res) => {
 
     case "en":
       for (const link of pageCatalog.en) {
+        // console.log({ link });
+        // console.log("index", pageCatalog.en.indexOf(link));
         const createUrl = `${MAIN_DOMAIN}${link}-${translit}`;
+        const getIndex = pageCatalog.en.indexOf(link);
+        const createDescription = pageCatalog.en[getIndex];
+        // console.log({ createDescription });
         const checkLinkPlCatalog = await PlCatalogForHotelier.find({
           url: createUrl,
         });
@@ -346,6 +366,7 @@ const createNewPages = async (req, res) => {
             ...req.body,
             nameOfpage: district,
             url: createUrl,
+            description: createDescription,
           });
           if (addToEnCatalog) {
             isPageAdded = true;
@@ -363,6 +384,7 @@ const createNewPages = async (req, res) => {
             ...req.body,
             nameOfpage: district,
             url: upgradeUrl,
+            description: createDescription,
           });
 
           if (addToEnCatalog) {

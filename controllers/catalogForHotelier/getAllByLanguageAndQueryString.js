@@ -5,10 +5,13 @@ const {
   EnCatalogForHotelier,
 } = require("../../models");
 
-const getAllHoteilerPages = async ({ query: { language } }, res) => {
+const getAllByLanguageAndQueryString = async (
+  { query: { language, url } },
+  res
+) => {
   switch (language) {
     case "uk":
-      const getAllUkPages = await UaCatalogForHotelier.find({ language });
+      const getAllUkPages = await UaCatalogForHotelier.find({ language, url });
       res.status(200).json({
         status: "success",
         code: 200,
@@ -16,7 +19,7 @@ const getAllHoteilerPages = async ({ query: { language } }, res) => {
       });
       break;
     case "ru":
-      const getAllRuPages = await RuCatalogForHotelier.find({ language });
+      const getAllRuPages = await RuCatalogForHotelier.find({ language, url });
       res.status(200).json({
         status: "success",
         code: 200,
@@ -25,7 +28,7 @@ const getAllHoteilerPages = async ({ query: { language } }, res) => {
 
       break;
     case "pl":
-      const getAllPlPages = await PlCatalogForHotelier.find({ language });
+      const getAllPlPages = await PlCatalogForHotelier.find({ language, url });
       res.status(200).json({
         status: "success",
         code: 200,
@@ -53,4 +56,4 @@ const getAllHoteilerPages = async ({ query: { language } }, res) => {
   }
 };
 
-module.exports = getAllHoteilerPages;
+module.exports = getAllByLanguageAndQueryString;
