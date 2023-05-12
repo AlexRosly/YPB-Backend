@@ -1,24 +1,16 @@
-const { Agent } = require("../../models");
+const { Admin } = require("../../models");
 const { transporter } = require("../../utils");
 
-const checkAgent = async (req, res) => {
+const checkAdmin = async (req, res) => {
   const { email } = req.body;
 
-  const agentCandidat = await Agent.findOne({ email });
+  const checkAdmin = await Admin.find({ email });
 
-  if (!agentCandidat) {
+  if (!checkAdmin) {
     return res.status(409).json({
       status: "error",
       code: 409,
-      message: "This email does not exist in Agents collection",
-    });
-  }
-
-  if (agentCandidat.status === "deleted") {
-    return res.status(401).json({
-      status: "error",
-      code: 401,
-      message: `User with email ${email} don't registered yet`,
+      message: "This email does not exist in Admin",
     });
   }
 
@@ -26,15 +18,18 @@ const checkAgent = async (req, res) => {
   const secondNumber = Math.floor(Math.random() * (10 - 1) + 1);
   const thirdNumber = Math.floor(Math.random() * (10 - 1) + 1);
   const fouthNumber = Math.floor(Math.random() * (10 - 1) + 1);
+  const fivethNumber = Math.floor(Math.random() * (10 - 1) + 1);
+  const sixthNumber = Math.floor(Math.random() * (10 - 1) + 1);
+  const seventhNumber = Math.floor(Math.random() * (10 - 1) + 1);
 
-  const secretCode = `${firstNumber}${secondNumber}${thirdNumber}${fouthNumber}`;
+  const secretCode = `${firstNumber}${secondNumber}${thirdNumber}${fouthNumber}${fivethNumber}${sixthNumber}${seventhNumber}`;
   const createdCode = new Date();
-  const validCode = createdCode.getTime() + 180000;
+  const validCode = createdCode.getTime() + 1800000;
 
-  if (agentCandidat) {
+  if (checkAdmin) {
     const filter = { email };
     const update = { secretCode, createdCode, validCode };
-    const agent = await Agent.findOneAndUpdate(filter, update, {
+    const admin = await Admin.findOneAndUpdate(filter, update, {
       new: true,
     });
   }
@@ -43,7 +38,7 @@ const checkAgent = async (req, res) => {
     form: "yourpricebooking@gmail.com",
     to: email,
     subject: "Confirmation code",
-    html: `<p>Your confirmation code ${secretCode}.</p><br/><p>Attention code valid only 3 minutes</p>`,
+    html: `<p>Your confirmation code ${secretCode}.</p><br/><p>Attention code valid 30 minutes</p>`,
   };
   transporter
     .sendMail(mail)
@@ -54,11 +49,6 @@ const checkAgent = async (req, res) => {
       })
     )
     .catch((error) => console.log(error.message));
-
-  // res.json({
-  //   status: "success",
-  //   message: `Confirmation code sent to ${email}`,
-  // });
 };
 
-module.exports = checkAgent;
+module.exports = checkAdmin;

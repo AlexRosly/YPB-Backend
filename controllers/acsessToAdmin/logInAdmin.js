@@ -1,17 +1,35 @@
+const { Admin } = require("../../models");
+
 const logInAdmin = async (req, res) => {
-  const ADMIN_EMAIL = "rosly.a777@gmail.com";
-  let code;
-  console.log("acsess to admin");
+  const { email, secretCode } = req.body;
 
-  // create 4 digits code
-  const firstNumber = Math.floor(Math.random() * (10 - 1) + 1);
-  const secondNumber = Math.floor(Math.random() * (10 - 1) + 1);
-  const thirdNumber = Math.floor(Math.random() * (10 - 1) + 1);
-  const fouthNumber = Math.floor(Math.random() * (10 - 1) + 1);
+  const admin = await Admin.findOne({ email });
 
-  const secretCode = `${firstNumber}${secondNumber}${thirdNumber}${fouthNumber}`;
-  const createdCode = new Date();
-  const validCode = createdCode.getTime() + 180000;
+  if (!admin) {
+    return res.status(409).json({
+      status: "error",
+      code: 409,
+      message: `Email ${email} not found`,
+    });
+  }
+
+  const date = new Date();
+
+  if (secretCode !== admin.secretCode) {
+    return res.status(435).json({
+      status: "error",
+      code: 435,
+      message: "Code is wrong",
+    });
+  }
+
+  if (admin.validCode < date) {
+    return res.status(436).json({
+      status: "error",
+      code: 436,
+      message: "Code is invalid",
+    });
+  }
 };
 
 module.exports = logInAdmin;
