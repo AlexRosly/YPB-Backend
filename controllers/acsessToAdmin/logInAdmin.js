@@ -3,6 +3,9 @@ const { Admin } = require("../../models");
 const logInAdmin = async (req, res) => {
   const { email, secretCode } = req.body;
 
+  console.log({ email });
+  console.log({ secretCode });
+
   const admin = await Admin.findOne({ email });
 
   if (!admin) {
@@ -30,6 +33,26 @@ const logInAdmin = async (req, res) => {
       message: "Code is invalid",
     });
   }
+
+  if (admin) {
+    // const sessionID = req.sessionID;
+    const { id } = admin;
+    const isAuth = true;
+
+    await Admin.findByIdAndUpdate(id, { isAuth });
+    // await addToCash(`${sessionID}`, `${id}`);
+
+    // res.cookie("_sid", sessionID, { signed: true }); //sessionID
+    // res.cookie("user", id, { signed: true });
+    // res.cookie("auth", true, { signed: true });
+
+    // req.session.authenticated = true;
+  }
+
+  res.json({
+    status: "success",
+    code: 200,
+  });
 };
 
 module.exports = logInAdmin;

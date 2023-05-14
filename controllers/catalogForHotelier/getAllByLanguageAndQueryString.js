@@ -9,9 +9,14 @@ const getAllByLanguageAndQueryString = async (
   { query: { language, url } },
   res
 ) => {
+  const decodeUrl = decodeURIComponent(url);
+
   switch (language) {
     case "uk":
-      const getAllUkPages = await UaCatalogForHotelier.find({ language, url });
+      const getAllUkPages = await UaCatalogForHotelier.find({
+        language,
+        url: decodeUrl,
+      });
       res.status(200).json({
         status: "success",
         code: 200,
@@ -19,7 +24,10 @@ const getAllByLanguageAndQueryString = async (
       });
       break;
     case "ru":
-      const getAllRuPages = await RuCatalogForHotelier.find({ language, url });
+      const getAllRuPages = await RuCatalogForHotelier.find({
+        language,
+        url: decodeUrl,
+      });
       res.status(200).json({
         status: "success",
         code: 200,
@@ -28,7 +36,10 @@ const getAllByLanguageAndQueryString = async (
 
       break;
     case "pl":
-      const getAllPlPages = await PlCatalogForHotelier.find({ language, url });
+      const getAllPlPages = await PlCatalogForHotelier.find({
+        language,
+        url: decodeUrl,
+      });
       res.status(200).json({
         status: "success",
         code: 200,
@@ -37,7 +48,10 @@ const getAllByLanguageAndQueryString = async (
 
       break;
     case "en":
-      const getAllEnPages = await EnCatalogForHotelier.find({ language });
+      const getAllEnPages = await EnCatalogForHotelier.find({
+        language,
+        url: decodeUrl,
+      });
       res.status(200).json({
         status: "success",
         code: 200,

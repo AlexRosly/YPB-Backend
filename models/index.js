@@ -19,6 +19,7 @@ const { RuCatalogForHotelier } = require("./ruCatalogForHotelier");
 const { PlCatalogForHotelier } = require("./plCatalogForHotelier");
 const { EnCatalogForHotelier } = require("./enCatalogForHotelier");
 const { Admin } = require("./addAdmin");
+const { AcsessToAdmin } = require("./acsessToAdmin");
 
 module.exports = {
   Language,
@@ -42,4 +43,5 @@ module.exports = {
   PlCatalogForHotelier,
   EnCatalogForHotelier,
   Admin,
+  AcsessToAdmin,
 };

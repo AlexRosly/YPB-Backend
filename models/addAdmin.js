@@ -24,6 +24,10 @@ const admin = Schema(
       type: String,
       default: "admin",
     },
+    isAuth: {
+      type: Boolean,
+      default: false,
+    },
   },
   { versionKey: false, timestamps: true }
 );

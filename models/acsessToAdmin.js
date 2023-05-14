@@ -1,4 +1,4 @@
-const { Schema } = require("mongoose");
+const { Schema, model } = require("mongoose");
 const Joi = require("joi");
 
 const acsessToAdmin = Schema(
@@ -7,7 +7,7 @@ const acsessToAdmin = Schema(
       type: String,
       required: true,
     },
-    acsess: [{ type: String }],
+    access: [{ type: String }],
     status: {
       type: String,
       default: "active",
@@ -15,3 +15,15 @@ const acsessToAdmin = Schema(
   },
   { versionKey: false, timestamps: true }
 );
+
+const joiSchema = Joi.object({
+  email: Joi.string().required(),
+  access: Joi.array().required(),
+});
+
+const AcsessToAdmin = model("acsessToAdmin", acsessToAdmin);
+
+module.exports = {
+  AcsessToAdmin,
+  joiSchema,
+};

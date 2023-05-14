@@ -470,3 +470,5 @@ RU - ru
 11. в ответе получить все с языка возвращать в дате массив -done
 12. сделать метод который возращает по инфу по коду языка и ссылке
     catalogForHotelier api change models - done
+
+1.access to admin make on token
