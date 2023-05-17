@@ -33,6 +33,9 @@ const ruCatalogForHotelier = Schema(
     description: {
       type: String,
     },
+    districtInternational: {
+      type: String,
+    },
   },
   { versionKey: false, timestamps: true }
 );
@@ -47,6 +50,7 @@ const joiSchema = Joi.object({
   linkOnPhoto: Joi.string().required(),
   url: Joi.string(),
   description: Joi.string(),
+  districtInternational: Joi.string().required(),
 });
 
 const RuCatalogForHotelier = model(
