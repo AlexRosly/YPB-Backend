@@ -3,8 +3,6 @@ const { AcsessToAdmin } = require("../../models");
 const changeStatus = async (req, res) => {
   const { email, status } = req.body;
 
-  console.log({ status });
-
   switch (status) {
     case "ban":
       const findEmail = await AcsessToAdmin.findOne({ email });
@@ -23,7 +21,7 @@ const changeStatus = async (req, res) => {
         status,
       });
 
-      if (!changeStatus) {
+      if (!changeStatusToBan) {
         return res.status(409).json({
           status: "error",
           code: 409,
@@ -31,13 +29,14 @@ const changeStatus = async (req, res) => {
         });
       }
 
+      const result = await AcsessToAdmin.findOne({ email });
+
       res.json({
         status: "success",
         code: 200,
         message: `The status for email ${email} was change`,
-
         data: {
-          changeStatusToBan,
+          result,
         },
       });
 
@@ -68,17 +67,25 @@ const changeStatus = async (req, res) => {
         });
       }
 
+      const result1 = await AcsessToAdmin.findOne({ email });
+
       res.json({
         status: "success",
         code: 200,
         message: `The status for email ${email} was change`,
-
         data: {
-          changeStatusToActive,
+          result1,
         },
       });
+      break;
 
     default:
+      res.json({
+        status: "error",
+        code: 406,
+        message: `The status for email ${email} wasn't change`,
+      });
+
       break;
   }
 };

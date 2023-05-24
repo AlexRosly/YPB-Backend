@@ -10,15 +10,12 @@ const admin = Schema(
     },
     secretCode: {
       type: String,
-      // required: true,
     },
     createdCode: {
       type: Number,
-      // required: true,
     },
     validCode: {
       type: Number,
-      // required: true,
     },
     role: {
       type: String,
@@ -28,17 +25,27 @@ const admin = Schema(
       type: Boolean,
       default: false,
     },
+    token: {
+      type: String,
+      default: null,
+    },
   },
   { versionKey: false, timestamps: true }
 );
 
-const joiAddAdminSchema = Joi.object({
+const checkAdmin = Joi.object({
   email: Joi.string().required(),
+});
+
+const logInAdmin = Joi.object({
+  email: Joi.string().required(),
+  secretCode: Joi.string().min(6).required(),
 });
 
 const Admin = model("admin", admin);
 
 module.exports = {
   Admin,
-  joiAddAdminSchema,
+  checkAdmin,
+  logInAdmin,
 };

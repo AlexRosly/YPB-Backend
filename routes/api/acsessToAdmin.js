@@ -1,36 +1,56 @@
 const { acsessToAdmin: ctrl } = require("../../controllers");
+const { authAdmin, validation, ctrlWrapper } = require("../../middlewares");
+const { checkAdmin, logInAdmin } = require("../../models/addAdmin");
 const {
-  //   auth,
-  validation,
-  ctrlWrapper,
-  //   createRegistrationCode,
-} = require("../../middlewares");
-// const { joiAddAdminSchema } = require("../../models/addAdmin");
-const { joiSchema } = require("../../models/acsessToAdmin");
+  joiSchema,
+  joiStatus,
+  joiAccess,
+} = require("../../models/acsessToAdmin");
 const express = require("express");
 const router = express.Router();
 
 //add new admin
-router.post(
-  "/add-new-admin",
-  //   validation(joiAddAdminSchema),
-  ctrlWrapper(ctrl.addAdmin)
-);
+router.post("/add-new-admin", ctrlWrapper(ctrl.addAdmin));
 
 //check admin and send code
-router.post("/check-admin", ctrlWrapper(ctrl.checkAdmin));
+router.post(
+  "/check-admin",
+  validation(checkAdmin),
+  ctrlWrapper(ctrl.checkAdmin)
+);
 
 //log In admin
-router.post("/log-in-admin", ctrlWrapper(ctrl.logInAdmin));
+router.post(
+  "/log-in-admin",
+  validation(logInAdmin),
+  ctrlWrapper(ctrl.logInAdmin)
+);
+
+//log out admin
+router.get("/log-out-admin", authAdmin, ctrlWrapper(ctrl.logOutAdmin));
 
 //add email to DB to acsess to admin
-router.post("/add-email", validation(joiSchema), ctrlWrapper(ctrl.addNewEmail));
+router.post(
+  "/add-email",
+  authAdmin,
+  validation(joiSchema),
+  ctrlWrapper(ctrl.addNewEmail)
+);
 
-//add to ban email
-router.patch("/change-status", ctrlWrapper(ctrl.changeStatus));
-//chenge ban to active
+//add to ban email and chenge ban to active
+router.patch(
+  "/change-status",
+  authAdmin,
+  validation(joiStatus),
+  ctrlWrapper(ctrl.changeStatus)
+);
 
 //change acsess to 4 collection
-router.patch("/change-access", ctrlWrapper(ctrl.changeAccess));
+router.patch(
+  "/change-access",
+  authAdmin,
+  validation(joiAccess),
+  ctrlWrapper(ctrl.changeAccess)
+);
 
 module.exports = router;

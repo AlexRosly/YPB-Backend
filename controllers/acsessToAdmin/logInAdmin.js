@@ -1,14 +1,15 @@
 const { Admin } = require("../../models");
+const jwt = require("jsonwebtoken");
+
+const { SECRET_KEY } = process.env;
 
 const logInAdmin = async (req, res) => {
   const { email, secretCode } = req.body;
 
-  console.log({ email });
-  console.log({ secretCode });
-
   const admin = await Admin.findOne({ email });
 
   if (!admin) {
+    //throw new Unauthorized();
     return res.status(409).json({
       status: "error",
       code: 409,
@@ -19,40 +20,42 @@ const logInAdmin = async (req, res) => {
   const date = new Date();
 
   if (secretCode !== admin.secretCode) {
-    return res.status(435).json({
+    //throw new Unauthorized("Code is wrong");
+
+    return res.status(409).json({
       status: "error",
-      code: 435,
+      code: 409,
       message: "Code is wrong",
     });
   }
 
   if (admin.validCode < date) {
-    return res.status(436).json({
+    //throw new Unauthorized("Code is wrong");
+
+    return res.status(409).json({
       status: "error",
-      code: 436,
+      code: 409,
       message: "Code is invalid",
     });
   }
 
   if (admin) {
-    // const sessionID = req.sessionID;
     const { id } = admin;
     const isAuth = true;
+    const payload = {
+      id,
+    };
+    const token = jwt.sign(payload, SECRET_KEY, { expiresIn: "1h" });
+    await Admin.findByIdAndUpdate(id, { token, isAuth });
 
-    await Admin.findByIdAndUpdate(id, { isAuth });
-    // await addToCash(`${sessionID}`, `${id}`);
-
-    // res.cookie("_sid", sessionID, { signed: true }); //sessionID
-    // res.cookie("user", id, { signed: true });
-    // res.cookie("auth", true, { signed: true });
-
-    // req.session.authenticated = true;
+    res.json({
+      status: "success",
+      code: 200,
+      data: {
+        token,
+      },
+    });
   }
-
-  res.json({
-    status: "success",
-    code: 200,
-  });
 };
 
 module.exports = logInAdmin;

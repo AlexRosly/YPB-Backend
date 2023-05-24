@@ -21,9 +21,21 @@ const joiSchema = Joi.object({
   access: Joi.array().required(),
 });
 
+const joiStatus = Joi.object({
+  email: Joi.string().required(),
+  status: Joi.string().required(),
+});
+
+const joiAccess = Joi.object({
+  email: Joi.string().required(),
+  access: Joi.array().required(),
+});
+
 const AcsessToAdmin = model("acsessToAdmin", acsessToAdmin);
 
 module.exports = {
   AcsessToAdmin,
   joiSchema,
+  joiStatus,
+  joiAccess,
 };

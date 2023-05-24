@@ -6,6 +6,7 @@ const createRegistrationCode = require("./createRegistrationCode");
 const createSignInCode = require("./createSignInCode");
 const auth = require("./auth");
 const { authCacheService } = require("./authCacheService");
+const authAdmin = require("./authAdmin");
 
 module.exports = {
   validation,
@@ -16,4 +17,5 @@ module.exports = {
   createSignInCode,
   auth,
   authCacheService,
+  authAdmin,
 };

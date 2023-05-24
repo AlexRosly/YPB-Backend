@@ -2,11 +2,7 @@ const { AcsessToAdmin } = require("../../models");
 
 const addNewEmail = async (req, res) => {
   const { email, access } = req.body;
-  console.log({ email });
-  console.log({ access });
-
   const findEmail = await AcsessToAdmin.findOne({ email });
-  console.log({ findEmail });
 
   if (findEmail) {
     return res.status(409).json({
@@ -16,17 +12,15 @@ const addNewEmail = async (req, res) => {
     });
   }
 
-  const addEmail = await AcsessToAdmin.create({ email, access });
-  console.log({ addEmail });
+  const result = await AcsessToAdmin.create({ email, access });
 
   res.status(201).json({
     status: "success",
-    // isAdded: true,
     message: `email ${email} added to DB`,
     code: 201,
-    // data: {
-    //   uaPages,
-    // },
+    data: {
+      result,
+    },
   });
 };
 

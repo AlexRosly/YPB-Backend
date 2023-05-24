@@ -1,22 +1,16 @@
 const { Admin } = require("../../models");
 
-require("dotenv").config();
-
 const { ACCESS_TO_ADMIN } = process.env;
 
 const addAdmin = async (req, res) => {
-  //   console.log("i", req.body);
   const { email, secretCode } = req.body;
-  //   console.log({ secretCode });
 
   const findUser = await Admin.find({ email });
 
-  //   console.log({ findUser });
-
   if (findUser.length > 0) {
-    return res.status(401).json({
+    return res.status(409).json({
       status: "error",
-      code: 401,
+      code: 409,
       message: `Admin with email ${email} already exists`,
     });
   }
@@ -24,9 +18,9 @@ const addAdmin = async (req, res) => {
   const checkPassword = secretCode === ACCESS_TO_ADMIN ? true : false;
 
   if (!checkPassword) {
-    return res.status(401).json({
+    return res.status(409).json({
       status: "error",
-      code: 401,
+      code: 409,
       message: `incorect password or email. Try later`,
     });
   }
@@ -34,9 +28,9 @@ const addAdmin = async (req, res) => {
   const addAdmin = await Admin.create({ email });
 
   if (!addAdmin) {
-    return res.status(401).json({
+    return res.status(409).json({
       status: "error",
-      code: 401,
+      code: 409,
       message: `incorect password or email. Try later`,
     });
   }
@@ -45,7 +39,7 @@ const addAdmin = async (req, res) => {
     status: "success",
     code: 201,
     data: {
-      addAdmin,
+      email,
     },
   });
 };
