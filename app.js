@@ -55,7 +55,7 @@ app.use(
       httpOnly: true,
       maxAge: null,
     },
-    saveUninitialized: false,
+    saveUninitialized: true,
     resave: false,
     // store: new RedisStore({ client: redisClient }),
   })
