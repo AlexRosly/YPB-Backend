@@ -1,4 +1,4 @@
-// const { Agent, Hotelier, User } = require("../models");
+const { Agent, Hotelier, User } = require("../models");
 const { Unauthorized } = require("http-errors");
 const { getFromCache } = require("./authCacheService");
 
@@ -17,6 +17,9 @@ const auth = async (req, res, next) => {
     if (!req.session.authenticated && !auth) {
       throw new Unauthorized("Not authorized");
     }
+
+    const hotelier = await Hotelier.findById(userId);
+    req.hotelier = hotelier;
     next();
   } catch (error) {
     if ((error.message = "Invalid signature")) {

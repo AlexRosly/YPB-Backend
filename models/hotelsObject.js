@@ -75,6 +75,11 @@ const hotelsObject = Schema(
         type: String,
       },
     },
+    owner: {
+      type: Schema.Types.ObjectId,
+      ref: "hotelier",
+      requred: true,
+    },
     // documents: {
     //   type: String,
     // },
