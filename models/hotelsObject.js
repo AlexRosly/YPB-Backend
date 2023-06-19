@@ -80,6 +80,14 @@ const hotelsObject = Schema(
       ref: "hotelier",
       requred: true,
     },
+    verification: {
+      phone1: { type: String, default: "without" },
+      phone2: { type: String, default: "without" },
+      nextVerificationDate: {
+        type: String,
+        default: "not required",
+      },
+    },
     // documents: {
     //   type: String,
     // },
@@ -128,8 +136,16 @@ const joiSchema = Joi.object({
     country: Joi.string(),
     _id: Joi.string(),
   },
-  documents: Joi.string(),
-  usersSelfi: Joi.string(),
+  // documents: Joi.string(),
+  // usersSelfi: Joi.string(),
+});
+
+const addPhoneAndDateSchema = Joi.object({
+  verification: {
+    phone1: Joi.string(),
+    phone2: Joi.string(),
+    nextVerificationDate: Joi.string(),
+  },
 });
 
 const Hotels = model("hotels", hotelsObject);
@@ -137,4 +153,5 @@ const Hotels = model("hotels", hotelsObject);
 module.exports = {
   Hotels,
   joiSchema,
+  addPhoneAndDateSchema,
 };

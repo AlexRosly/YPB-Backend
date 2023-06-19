@@ -5,6 +5,7 @@ const getHotelById = require("./getHotelById");
 const hotelsFinder = require("./hotelsFinder");
 const hotelsVerificationVideo = require("./hotelsVerificationVideo");
 const getHotelsByHotelierId = require("./getHotelsByHotelierId");
+const addPhoneAndDateVerification = require("./addPhoneAndDateVerification");
 
 module.exports = {
   addHotel,
@@ -14,4 +15,5 @@ module.exports = {
   hotelsFinder,
   hotelsVerificationVideo,
   getHotelsByHotelierId,
+  addPhoneAndDateVerification,
 };

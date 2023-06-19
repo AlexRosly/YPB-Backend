@@ -1,6 +1,9 @@
 const { hotelsObject: ctrl } = require("../../controllers");
 const { auth, validation, ctrlWrapper, upload } = require("../../middlewares");
-const { joiSchema } = require("../../models/hotelsObject");
+const {
+  joiSchema,
+  addPhoneAndDateSchema,
+} = require("../../models/hotelsObject");
 const express = require("express");
 const router = express.Router();
 
@@ -30,6 +33,13 @@ router.patch(
   upload.array("image"),
   validation(joiSchema),
   ctrlWrapper(ctrl.updateHotel)
+);
+
+//update verification data. Add phone and date of next verification
+router.patch(
+  "/add-phone-and-date-for-verification/:id",
+  validation(addPhoneAndDateSchema),
+  ctrlWrapper(ctrl.addPhoneAndDateVerification)
 );
 
 module.exports = router;
