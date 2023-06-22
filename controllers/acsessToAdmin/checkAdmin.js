@@ -25,7 +25,8 @@ const checkAdmin = async (req, res) => {
   const secretCode = `${firstNumber}${secondNumber}${thirdNumber}${fouthNumber}${fivethNumber}${sixthNumber}${seventhNumber}`;
   const createdCode = new Date();
   //Код перевірочний нехай діє 30 хв
-  const validCode = createdCode.getTime() + 1800000;
+  // const validCode = createdCode.getTime() + 1800000; //after developer FE part by Bozhena change validCode
+  const validCode = createdCode.getTime() + 60000;
 
   //другий запит тіки через 30 хв щоб можна було прийняти (якщо трушний запит, з вірною адресою електронної пошти
   if (checkAdmin[0].validCode > createdCode) {
