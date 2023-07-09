@@ -30,6 +30,7 @@ const nodemailerConfig = {
     user: "noreply@yourpricebooking.com", // from send email
     pass: NODEMAILER_PASS1,
   },
+  // logger: true,
 };
 
 const transporter = nodemailer.createTransport(nodemailerConfig);
