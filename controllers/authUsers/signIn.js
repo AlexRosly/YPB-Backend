@@ -15,7 +15,7 @@ const signIn = async (req, res) => {
   }
 
   const date = new Date();
-  const { id, firstName, language } = user;
+  const { id, firstName, lastName, language } = user;
 
   if (secretCode !== user.secretCode) {
     return res.status(435).json({
@@ -48,7 +48,9 @@ const signIn = async (req, res) => {
     status: "success",
     code: 200,
     user: {
+      id,
       firstName,
+      lastName,
       language,
     },
   });

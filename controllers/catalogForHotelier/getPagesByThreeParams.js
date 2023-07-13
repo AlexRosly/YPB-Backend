@@ -16,6 +16,15 @@ const getPagesByThreeParams = async (
         description,
         districtInternational: decodeUrl,
       });
+
+      if (getAllUkPages.length === 0) {
+        return res.status(406).json({
+          status: "error",
+          message: `page not found`,
+          code: 406,
+        });
+      }
+
       res.status(200).json({
         status: "success",
         code: 200,
@@ -27,6 +36,15 @@ const getPagesByThreeParams = async (
         description,
         districtInternational: decodeUrl,
       });
+
+      if (getAllRuPages.length === 0) {
+        return res.status(406).json({
+          status: "error",
+          message: `page not found`,
+          code: 406,
+        });
+      }
+
       res.status(200).json({
         status: "success",
         code: 200,
@@ -39,6 +57,15 @@ const getPagesByThreeParams = async (
         description,
         districtInternational: decodeUrl,
       });
+
+      if (getAllPlPages.length === 0) {
+        return res.status(406).json({
+          status: "error",
+          message: `page not found`,
+          code: 406,
+        });
+      }
+
       res.status(200).json({
         status: "success",
         code: 200,
@@ -51,6 +78,15 @@ const getPagesByThreeParams = async (
         description,
         districtInternational: decodeUrl,
       });
+
+      if (getAllEnPages.length === 0) {
+        return res.status(406).json({
+          status: "error",
+          message: `page not found`,
+          code: 406,
+        });
+      }
+
       res.status(200).json({
         status: "success",
         code: 200,

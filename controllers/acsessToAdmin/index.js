@@ -5,6 +5,7 @@ const logOutAdmin = require("./logOutAdmin");
 const addNewEmail = require("./addNewEmail");
 const changeStatus = require("./changeStatus");
 const changeAccess = require("./changeAccess");
+const addBonus = require("./addBonus");
 
 module.exports = {
   checkAdmin,
@@ -14,4 +15,5 @@ module.exports = {
   logOutAdmin,
   changeStatus,
   changeAccess,
+  addBonus,
 };

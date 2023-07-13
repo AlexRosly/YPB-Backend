@@ -17,6 +17,15 @@ const getAllByLanguageAndQueryString = async (
         language,
         url: decodeUrl,
       });
+
+      if (getAllUkPages.length === 0) {
+        return res.status(406).json({
+          status: "error",
+          message: `page not found`,
+          code: 406,
+        });
+      }
+
       res.status(200).json({
         status: "success",
         code: 200,
@@ -28,6 +37,15 @@ const getAllByLanguageAndQueryString = async (
         language,
         url: decodeUrl,
       });
+
+      if (getAllRuPages.length === 0) {
+        return res.status(406).json({
+          status: "error",
+          message: `page not found`,
+          code: 406,
+        });
+      }
+
       res.status(200).json({
         status: "success",
         code: 200,
@@ -40,6 +58,19 @@ const getAllByLanguageAndQueryString = async (
         language,
         url: decodeUrl,
       });
+      console.log("m", getAllPlPages.length);
+
+      console.log({ language });
+      console.log({ url });
+
+      if (getAllPlPages.length === 0) {
+        return res.status(406).json({
+          status: "error",
+          message: `page not found`,
+          code: 406,
+        });
+      }
+
       res.status(200).json({
         status: "success",
         code: 200,
@@ -52,6 +83,15 @@ const getAllByLanguageAndQueryString = async (
         language,
         url: decodeUrl,
       });
+
+      if (getAllEnPages.length === 0) {
+        return res.status(406).json({
+          status: "error",
+          message: `page not found`,
+          code: 406,
+        });
+      }
+
       res.status(200).json({
         status: "success",
         code: 200,

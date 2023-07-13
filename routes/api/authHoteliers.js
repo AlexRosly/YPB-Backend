@@ -41,7 +41,7 @@ router.get("/signOut", auth, ctrlWrapper(ctrl.logOut));
 router.patch("/send-code", ctrlWrapper(ctrl.sendHotelierCode));
 
 //change hotelier email
-router.patch("/change-email", auth, ctrlWrapper(ctrl.changeEmailHotelier));
+// router.patch("/change-email", auth, ctrlWrapper(ctrl.changeEmailHotelier));
 
 //change first name hotelier
 router.patch("/change-first-name", auth, ctrlWrapper(ctrl.changeFirstName));

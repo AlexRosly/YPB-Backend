@@ -53,4 +53,7 @@ router.patch(
   ctrlWrapper(ctrl.changeAccess)
 );
 
+//add bonus
+router.patch("/add-bonus", ctrlWrapper(ctrl.addBonus));
+
 module.exports = router;

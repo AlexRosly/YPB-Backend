@@ -1,5 +1,4 @@
 const { Candidate, User } = require("../../models");
-const { NotAcceptable } = require("http-errors");
 const { addToCash } = require("../../middlewares/authCacheService");
 
 const signUp = async (req, res) => {
@@ -33,25 +32,35 @@ const signUp = async (req, res) => {
     language: language.toLowerCase(),
   });
 
-  if (user) {
-    const removeCandidate = await Candidate.findOneAndRemove({ email });
-
-    const sessionID = req.sessionID;
-    await addToCash(`${sessionID}`, `${user._id}`);
-
-    res.cookie("_sid", sessionID, { signed: true }); //sessionID
-    res.cookie("user", user._id, { signed: true });
-    res.cookie("auth", true, { signed: true });
-    req.session.authenticated = true;
+  if (!user) {
+    return res.status(409).json({
+      status: "error",
+      code: 409,
+      message: `account not created`,
+    });
   }
+
+  await Candidate.findOneAndRemove({ email });
+
+  const sessionID = req.sessionID;
+  await addToCash(`${sessionID}`, `${user._id}`);
+
+  res.cookie("_sid", sessionID, { signed: true }); //sessionID
+  res.cookie("user", user._id, { signed: true });
+  res.cookie("auth", true, { signed: true });
+  req.session.authenticated = true;
+
+  const { id } = user;
 
   res.status(201).json({
     status: "success",
     code: 201,
     data: {
       user: {
-        email,
+        id,
         firstName,
+        lastName,
+        email,
       },
     },
   });

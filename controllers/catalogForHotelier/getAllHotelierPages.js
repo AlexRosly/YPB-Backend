@@ -9,6 +9,15 @@ const getAllHoteilerPages = async ({ query: { language } }, res) => {
   switch (language) {
     case "uk":
       const getAllUkPages = await UaCatalogForHotelier.find({ language });
+
+      if (!getAllUkPages) {
+        return res.status(406).json({
+          status: "error",
+          message: `page not found`,
+          code: 406,
+        });
+      }
+
       res.status(200).json({
         status: "success",
         code: 200,
@@ -17,6 +26,15 @@ const getAllHoteilerPages = async ({ query: { language } }, res) => {
       break;
     case "ru":
       const getAllRuPages = await RuCatalogForHotelier.find({ language });
+
+      if (!getAllRuPages) {
+        return res.status(406).json({
+          status: "error",
+          message: `page not found`,
+          code: 406,
+        });
+      }
+
       res.status(200).json({
         status: "success",
         code: 200,
@@ -26,6 +44,15 @@ const getAllHoteilerPages = async ({ query: { language } }, res) => {
       break;
     case "pl":
       const getAllPlPages = await PlCatalogForHotelier.find({ language });
+
+      if (!getAllPlPages) {
+        return res.status(406).json({
+          status: "error",
+          message: `page not found`,
+          code: 406,
+        });
+      }
+
       res.status(200).json({
         status: "success",
         code: 200,
@@ -35,6 +62,15 @@ const getAllHoteilerPages = async ({ query: { language } }, res) => {
       break;
     case "en":
       const getAllEnPages = await EnCatalogForHotelier.find({ language });
+
+      if (!getAllEnPages) {
+        return res.status(406).json({
+          status: "error",
+          message: `page not found`,
+          code: 406,
+        });
+      }
+
       res.status(200).json({
         status: "success",
         code: 200,

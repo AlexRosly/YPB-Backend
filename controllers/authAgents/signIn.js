@@ -15,6 +15,7 @@ const signIn = async (req, res) => {
   }
 
   const date = new Date();
+  const { id, firstName, lastName } = agent;
 
   if (secretCode !== agent.secretCode) {
     return res.status(435).json({
@@ -48,6 +49,14 @@ const signIn = async (req, res) => {
   res.json({
     status: "success",
     code: 200,
+    data: {
+      agent: {
+        id,
+        firstName,
+        lastName,
+        email,
+      },
+    },
   });
 };
 
