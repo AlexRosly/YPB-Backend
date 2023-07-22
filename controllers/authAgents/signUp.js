@@ -2,7 +2,7 @@ const { Agent, Candidate } = require("../../models");
 const { addToCash } = require("../../middlewares/authCacheService");
 
 const signUp = async (req, res) => {
-  const { email, lastName, firstName, secretCode } = req.body;
+  const { email, lastName, firstName, secretCode, language } = req.body;
 
   const candidate = await Candidate.findOne({ email });
 
@@ -24,7 +24,13 @@ const signUp = async (req, res) => {
     });
   }
 
-  const agent = await Agent.create({ lastName, firstName, email, secretCode });
+  const agent = await Agent.create({
+    lastName,
+    firstName,
+    email,
+    secretCode,
+    language: language.toLowerCase(),
+  });
 
   if (!agent) {
     return res.status(409).json({

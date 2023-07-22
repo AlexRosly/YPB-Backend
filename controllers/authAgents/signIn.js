@@ -15,7 +15,7 @@ const signIn = async (req, res) => {
   }
 
   const date = new Date();
-  const { id, firstName, lastName } = agent;
+  const { id, firstName, lastName, language } = agent;
 
   if (secretCode !== agent.secretCode) {
     return res.status(435).json({
@@ -54,6 +54,7 @@ const signIn = async (req, res) => {
         id,
         firstName,
         lastName,
+        language,
         email,
       },
     },

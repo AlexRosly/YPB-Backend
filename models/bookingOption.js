@@ -72,6 +72,14 @@ const bookingOption = Schema(
         url: { type: String },
       },
     ],
+    owner: {
+      type: Schema.Types.ObjectId,
+      ref: "hotelier",
+      requred: true,
+    },
+    objectId: {
+      type: String,
+    },
   },
   { versionKey: false, timestamps: true }
 );
@@ -104,6 +112,7 @@ const joiSchema = Joi.object({
   totalSquare: Joi.number(),
   smoking: Joi.boolean(),
   photos: [Joi.array()],
+  objectId: Joi.string().required(),
 });
 
 const BookingOption = model("bookingOption", bookingOption);

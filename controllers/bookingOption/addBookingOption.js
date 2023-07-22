@@ -4,6 +4,7 @@ const path = require("path");
 const fs = require("fs").promises;
 
 const addBookingOption = async (req, res) => {
+  const { _id } = req.hotelier;
   try {
     const uploader = async (path) =>
       await cloudinary.uploads(path, "bookingOptionHotel");
@@ -19,6 +20,7 @@ const addBookingOption = async (req, res) => {
       const bookingHotel = await BookingOption.create({
         ...req.body,
         photos: urls,
+        owner: _id,
       });
 
       if (!bookingHotel) {

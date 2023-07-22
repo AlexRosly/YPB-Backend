@@ -34,7 +34,8 @@ const hotelierSchema = Schema(
       type: String,
       default: "active",
     },
-    currency: {
+    finances: {
+      currency: { type: String, default: "USD" },
       bonus: { type: Number, default: 0 },
       money: { type: Number, default: 0 },
       total: { type: Number, default: 0 },

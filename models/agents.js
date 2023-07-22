@@ -16,6 +16,9 @@ const agetnSchema = Schema(
       required: true,
       unique: true,
     },
+    language: {
+      type: String,
+    },
     secretCode: {
       type: String,
       required: true,
@@ -38,6 +41,7 @@ const joiSignUpSchema = Joi.object({
   lastName: Joi.string().required(),
   firstName: Joi.string().required(),
   email: Joi.string().required(),
+  language: Joi.string().required(),
   secretCode: Joi.string().required(),
 });
 

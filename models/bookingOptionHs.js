@@ -33,6 +33,14 @@ const bookingOptionHs = Schema(
         url: { type: String },
       },
     ],
+    owner: {
+      type: Schema.Types.ObjectId,
+      ref: "hotelier",
+      requred: true,
+    },
+    objectId: {
+      type: String,
+    },
   },
   { versionKey: false, timestamps: true }
 );
@@ -42,9 +50,10 @@ const joiSchema = Joi.object({
   bedInRoom: Joi.number(),
   bedAddSite: Joi.number(),
   roomServices: [Joi.array()],
-  description: Joi.string().min(300).max(500),
+  description: Joi.string().min(3).max(500),
   uniqueNumber: Joi.string(),
   photos: [Joi.array()],
+  objectId: Joi.string().required(),
 });
 
 const BookingOptionHs = model("bookingOptionHs", bookingOptionHs);

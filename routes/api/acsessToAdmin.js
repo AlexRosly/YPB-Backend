@@ -54,6 +54,6 @@ router.patch(
 );
 
 //add bonus
-router.patch("/add-bonus", ctrlWrapper(ctrl.addBonus));
+router.patch("/add-bonus", authAdmin, ctrlWrapper(ctrl.addBonus));
 
 module.exports = router;

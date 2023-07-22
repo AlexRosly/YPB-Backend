@@ -52,6 +52,7 @@ const signIn = async (req, res) => {
       firstName,
       lastName,
       language,
+      email,
     },
   });
 };

@@ -13,6 +13,7 @@ router.get("/", ctrlWrapper(ctrl.getAllHotels));
 //get hotel by id
 router.get("/:id", ctrlWrapper(ctrl.getHotelById));
 
+//get hotels by id hotelier
 router.get(
   "/get-hotels-by-id-hotelier/:id",
   ctrlWrapper(ctrl.getHotelsByHotelierId)
