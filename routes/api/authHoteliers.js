@@ -44,10 +44,10 @@ router.patch("/send-code", ctrlWrapper(ctrl.sendHotelierCode));
 // router.patch("/change-email", auth, ctrlWrapper(ctrl.changeEmailHotelier));
 
 //change first name hotelier
-router.patch("/change-first-name", auth, ctrlWrapper(ctrl.changeFirstName));
+router.patch("/change-first-name", ctrlWrapper(ctrl.changeFirstName)); // додадти auth,
 
 //change last name hotelier
-router.patch("/change-last-name", ctrlWrapper(ctrl.changeLastName));
+router.patch("/change-last-name", ctrlWrapper(ctrl.changeLastName)); // додадти auth,
 
 //delete account of agent
 router.patch("/delete-account", auth, ctrlWrapper(ctrl.deleteHotelier));
