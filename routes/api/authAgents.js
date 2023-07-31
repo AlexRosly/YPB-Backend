@@ -40,4 +40,10 @@ router.get("/signOut", auth, ctrlWrapper(ctrl.logOut));
 //delete account of agent
 router.patch("/delete-account", ctrlWrapper(ctrl.deleteAgent));
 
+//change first name user
+router.patch("/change-first-name", ctrlWrapper(ctrl.changeFirstName)); // додадти auth
+
+//change last name hotelier
+router.patch("/change-last-name", ctrlWrapper(ctrl.changeLastName)); // додадти auth,
+
 module.exports = router;
