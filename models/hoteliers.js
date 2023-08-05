@@ -40,6 +40,18 @@ const hotelierSchema = Schema(
       money: { type: Number, default: 0 },
       total: { type: Number, default: 0 },
     },
+    rating: {
+      type: Number,
+      default: 0,
+    },
+    yourObjects: {
+      type: Number,
+      default: 0,
+    },
+    currentBookings: {
+      type: Number,
+      default: 0,
+    },
   },
   { versionKey: false, timeStamps: true }
 );

@@ -65,8 +65,10 @@ app.use(
       path: "/",
       httpOnly: true,
       maxAge: null,
+      sameSite: "none",
+      secure: true,
     },
-    saveUninitialized: true,
+    saveUninitialized: false, //change to => false
     resave: false,
     // store: new RedisStore({ client: redisClient }),
   })
