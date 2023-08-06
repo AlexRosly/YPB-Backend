@@ -38,9 +38,13 @@ const signIn = async (req, res) => {
 
     await addToCash(`${sessionID}`, `${id}`);
 
-    res.cookie("_sid", sessionID, { signed: true }); //sessionID
-    res.cookie("user", id, { signed: true });
-    res.cookie("auth", true, { signed: true });
+    res.cookie("_sid", sessionID, {
+      signed: true,
+      SameSite: "None",
+      secure: true,
+    }); //sessionID
+    res.cookie("user", id, { signed: true, SameSite: "None", secure: true });
+    res.cookie("auth", true, { signed: true, SameSite: "None", secure: true });
     req.session.authenticated = true;
   }
 
