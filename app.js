@@ -65,7 +65,7 @@ app.use(
       path: "/",
       httpOnly: true,
       maxAge: null,
-      sameSite: "none",
+      SameSite: "none",
       secure: true,
     },
     saveUninitialized: false, //change to => false
