@@ -66,7 +66,7 @@ app.use(
       httpOnly: true,
       maxAge: null,
       SameSite: "None",
-      secure: true,
+      Secure: true,
     },
     saveUninitialized: false, //change to => false
     resave: false,
