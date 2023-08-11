@@ -7,6 +7,7 @@ const changeEmailHotelier = require("./changeEmailHotelier");
 const sendHotelierCode = require("./sendHotelierCode");
 const changeFirstName = require("./changeFirstName");
 const changeLastName = require("./changeLastName");
+const getAllHotelier = require("./getAllHotelier");
 
 module.exports = {
   signUp,
@@ -18,4 +19,5 @@ module.exports = {
   sendHotelierCode,
   changeFirstName,
   changeLastName,
+  getAllHotelier,
 };

@@ -1,4 +1,5 @@
 const { acsessToAdmin: ctrl } = require("../../controllers");
+const { authHoteliers: ctrls } = require("../../controllers");
 const { authAdmin, validation, ctrlWrapper } = require("../../middlewares");
 const { checkAdmin, logInAdmin } = require("../../models/addAdmin");
 const {
@@ -55,5 +56,11 @@ router.patch(
 
 //add bonus
 router.patch("/add-bonus", authAdmin, ctrlWrapper(ctrl.addBonus));
+
+//get all hotelier
+router.get("/get-all-hotelier", authAdmin, ctrlWrapper(ctrls.getAllHotelier));
+
+//get statistic
+router.get("/get-statistic", ctrlWrapper(ctrl.getStatistic));
 
 module.exports = router;
