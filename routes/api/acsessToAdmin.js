@@ -61,6 +61,6 @@ router.patch("/add-bonus", authAdmin, ctrlWrapper(ctrl.addBonus));
 router.get("/get-all-hotelier", authAdmin, ctrlWrapper(ctrls.getAllHotelier));
 
 //get statistic
-router.get("/get-statistic", ctrlWrapper(ctrl.getStatistic));
+router.get("/get-statistic", authAdmin, ctrlWrapper(ctrl.getStatistic));
 
 module.exports = router;
