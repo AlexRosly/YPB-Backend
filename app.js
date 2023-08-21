@@ -49,6 +49,7 @@ app.use(
       "http://localhost:5000",
       "https://dev-app-gamma.vercel.app",
       "https://admin2-alpha.vercel.app",
+      "https://xaeycpio.yourpricebooking.com",
     ],
     credentials: true,
   })

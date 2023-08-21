@@ -6,7 +6,7 @@ const checkAdmin = async (req, res) => {
 
   const checkAdmin = await Admin.find({ email });
 
-  if (!checkAdmin) {
+  if (checkAdmin.length === 0) {
     return res.status(409).json({
       status: "error",
       code: 409,
