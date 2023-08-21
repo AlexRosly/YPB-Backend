@@ -40,16 +40,18 @@ const signIn = async (req, res) => {
 
     res.cookie("_sid", sessionID, {
       signed: true,
-      // SameSite: "None",
-      // Secure: true,
+      SameSite: "None",
+      Secure: true,
     }); //sessionID
     res.cookie("user", id, {
       signed: true,
-      // SameSite: "None", Secure: true
+      SameSite: "None",
+      Secure: true,
     });
     res.cookie("auth", true, {
       signed: true,
-      // SameSite: "None", Secure: true
+      SameSite: "None",
+      Secure: true,
     });
     req.session.authenticated = true;
   }
