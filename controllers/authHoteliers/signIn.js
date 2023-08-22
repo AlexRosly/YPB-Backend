@@ -60,13 +60,13 @@ const signIn = async (req, res) => {
     // });
     // req.session.authenticated = true;
     // return user, auth;
-    console.log({ sid });
-    console.log({ user });
-    console.log({ auth });
+    // console.log({ sid });
+    // console.log({ user });
+    // console.log({ auth });
 
-    res.setHeader("sessionId", [sid]);
-    res.setHeader("userId", [user]);
-    res.setHeader("auth", [auth]);
+    res.setHeader("sessionId", [sid, user, auth]);
+    // res.setHeader("userId", [user]);
+    // res.setHeader("auth", [auth]);
     res.json({
       status: "success",
       code: 200,
