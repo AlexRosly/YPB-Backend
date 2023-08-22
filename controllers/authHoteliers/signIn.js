@@ -50,9 +50,9 @@ const signIn = async (req, res) => {
     //   SameSite: "None",
     //   Secure: true,
     // });
-    const sid = `_sid=${sessionID}; samesite=none; httpOnly=true; path='/'; secure`;
-    const user = `user=${id}; samesite=none; httpOnly=true; path='/'; secure`;
-    const auth = "auth=true; samesite=none; httpOnly=true; path='/'; secure";
+    const sid = `_sid=${sessionID}; samesite=none; httpOnly=true; path=/; secure`;
+    const user = `user=${id}; samesite=none; httpOnly=true; path=/; secure`;
+    const auth = "auth=true; samesite=none; httpOnly=true; path=/; secure";
     // res.cookie("auth", true, {
     //   signed: true,
     //   SameSite: "None",
@@ -64,7 +64,9 @@ const signIn = async (req, res) => {
     console.log({ user });
     console.log({ auth });
 
-    res.setHeader("set-cookie", [sid, user, auth]);
+    res.setHeader("set-cookie", [sid]);
+    res.setHeader("set-cookie", [user]);
+    res.setHeader("set-cookie", [auth]);
     res.json({
       status: "success",
       code: 200,
