@@ -50,9 +50,9 @@ const signIn = async (req, res) => {
     //   SameSite: "None",
     //   Secure: true,
     // });
-    const sid = `_sid=${sessionID}; samesite=none; secure`;
-    const user = `user=${id}; samesite=none; secure`;
-    const auth = "auth=true; samesite=none; secure";
+    const sid = `_sid=${sessionID}; samesite=none; httpOnly=true; path='/'; secure`;
+    const user = `user=${id}; samesite=none; httpOnly=true; path='/'; secure`;
+    const auth = "auth=true; samesite=none; httpOnly=true; path='/'; secure";
     // res.cookie("auth", true, {
     //   signed: true,
     //   SameSite: "None",
