@@ -66,8 +66,8 @@ app.use(
       path: "/",
       httpOnly: true,
       maxAge: null,
-      SameSite: "None",
-      Secure: true,
+      // SameSite: "None",
+      // Secure: true,
     },
     saveUninitialized: false, //change to => false
     resave: false,
