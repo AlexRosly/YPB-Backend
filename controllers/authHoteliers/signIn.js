@@ -40,64 +40,64 @@ const signIn = async (req, res) => {
     // console.log({ sessionID });
     await addToCash(`${sessionID}`, `${id}`);
 
-    // res.cookie("_sid", sessionID, {
-    //   signed: true,
-    //   SameSite: "None",
-    //   Secure: true,
-    // }); //sessionID
-    // res.cookie("user", id, {
-    //   signed: true,
-    //   SameSite: "None",
-    //   Secure: true,
-    // });
-    const sid = `_sid=${sessionID}; samesite=none; httpOnly=true; path=/; secure`;
-    const user = `user=${id}; samesite=none; httpOnly=true; path=/; secure`;
-    const auth = "auth=true; samesite=none; httpOnly=true; path=/; secure";
-    // res.cookie("auth", true, {
-    //   signed: true,
-    //   SameSite: "None",
-    //   Secure: true,
-    // });
+    res.cookie("_sid", sessionID, {
+      signed: true,
+      SameSite: "None",
+      Secure: true,
+    }); //sessionID
+    res.cookie("user", id, {
+      signed: true,
+      SameSite: "None",
+      Secure: true,
+    });
+    // const sid = `_sid=${sessionID}; samesite=none; httpOnly=true; path=/; secure`;
+    // const user = `user=${id}; samesite=none; httpOnly=true; path=/; secure`;
+    // const auth = "auth=true; samesite=none; httpOnly=true; path=/; secure";
+    res.cookie("auth", true, {
+      signed: true,
+      SameSite: "None",
+      Secure: true,
+    });
     // req.session.authenticated = true;
     // return user, auth;
     // console.log({ sid });
     // console.log({ user });
     // console.log({ auth });
 
-    res.setHeader("sessionId", sid);
-    res.setHeader("userId", user);
-    res.setHeader("auth", auth);
-    res.json({
-      status: "success",
-      code: 200,
-      data: {
-        hotelier: {
-          id,
-          firstName,
-          lastName,
-          language,
-          email,
-        },
-      },
-    });
+    // res.setHeader("sessionId", sid);
+    // res.setHeader("userId", user);
+    // res.setHeader("auth", auth);
+    // res.json({
+    //   status: "success",
+    //   code: 200,
+    //   data: {
+    //     hotelier: {
+    //       id,
+    //       firstName,
+    //       lastName,
+    //       language,
+    //       email,
+    //     },
+    //   },
+    // });
   }
 
   // console.log({ user });
   // console.log({ auth });
   // res.setHeader("set-cookie", [user, auth]);
-  // res.json({
-  //   status: "success",
-  //   code: 200,
-  //   data: {
-  //     hotelier: {
-  //       id,
-  //       firstName,
-  //       lastName,
-  //       language,
-  //       email,
-  //     },
-  //   },
-  // });
+  res.json({
+    status: "success",
+    code: 200,
+    data: {
+      hotelier: {
+        id,
+        firstName,
+        lastName,
+        language,
+        email,
+      },
+    },
+  });
 };
 
 module.exports = signIn;
