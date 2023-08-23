@@ -40,12 +40,12 @@ const signIn = async (req, res) => {
     // console.log({ sessionID });
     await addToCash(`${sessionID}`, `${id}`);
 
-    res.cookie("_sid", sessionID, {
+    res.cookie("_sid", `${sessionID}`, {
       signed: true,
       SameSite: "None",
       Secure: true,
     }); //sessionID
-    res.cookie("user", id, {
+    res.cookie("user", `${id}`, {
       signed: true,
       SameSite: "None",
       Secure: true,
@@ -53,7 +53,7 @@ const signIn = async (req, res) => {
     // const sid = `_sid=${sessionID}; samesite=none; httpOnly=true; path=/; secure`;
     // const user = `user=${id}; samesite=none; httpOnly=true; path=/; secure`;
     // const auth = "auth=true; samesite=none; httpOnly=true; path=/; secure";
-    res.cookie("auth", true, {
+    res.cookie("auth", "true", {
       signed: true,
       SameSite: "None",
       Secure: true,
