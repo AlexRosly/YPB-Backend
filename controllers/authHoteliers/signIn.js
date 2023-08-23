@@ -64,9 +64,9 @@ const signIn = async (req, res) => {
     // console.log({ user });
     // console.log({ auth });
 
-    res.setHeader("sessionId", [sid, user, auth]);
-    // res.setHeader("userId", [user]);
-    // res.setHeader("auth", [auth]);
+    res.setHeader("sessionId", sid);
+    res.setHeader("userId", user);
+    res.setHeader("auth", auth);
     res.json({
       status: "success",
       code: 200,
