@@ -1,6 +1,7 @@
 const { authAgents: ctrl } = require("../../controllers");
 const {
   auth,
+  authAgent,
   validation,
   ctrlWrapper,
   createRegistrationCode,
@@ -35,7 +36,7 @@ router.patch(
 router.post("/signIn", validation(joiSignInSchema), ctrlWrapper(ctrl.signIn));
 
 //logOut
-router.get("/signOut", auth, ctrlWrapper(ctrl.logOut));
+router.get("/signOut", authAgent, ctrlWrapper(ctrl.logOut));
 
 //delete account of agent
 router.patch("/delete-account", ctrlWrapper(ctrl.deleteAgent));

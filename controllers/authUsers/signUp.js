@@ -1,5 +1,7 @@
 const { Candidate, User } = require("../../models");
-const { addToCash } = require("../../middlewares/authCacheService");
+const jwt = require("jsonwebtoken");
+const { SECRET_KEY } = process.env;
+// const { addToCash } = require("../../middlewares/authCacheService");
 
 const signUp = async (req, res) => {
   const { email, lastName, firstName, secretCode, language } = req.body;
@@ -40,17 +42,23 @@ const signUp = async (req, res) => {
     });
   }
 
-  await Candidate.findOneAndRemove({ email });
+  // await Candidate.findOneAndRemove({ email });
 
-  const sessionID = req.sessionID;
-  await addToCash(`${sessionID}`, `${user._id}`);
+  // const sessionID = req.sessionID;
+  // await addToCash(`${sessionID}`, `${user._id}`);
 
-  res.cookie("_sid", sessionID, { signed: true }); //sessionID
-  res.cookie("user", user._id, { signed: true });
-  res.cookie("auth", true, { signed: true });
-  req.session.authenticated = true;
+  // res.cookie("_sid", sessionID, { signed: true }); //sessionID
+  // res.cookie("user", user._id, { signed: true });
+  // res.cookie("auth", true, { signed: true });
+  // req.session.authenticated = true;
 
   const { id } = user;
+
+  const payload = {
+    id,
+  };
+  const token = jwt.sign(payload, SECRET_KEY, { expiresIn: "365d" });
+  await User.findByIdAndUpdate(id, { token });
 
   res.status(201).json({
     status: "success",
@@ -62,6 +70,7 @@ const signUp = async (req, res) => {
         lastName,
         email,
       },
+      token,
     },
   });
 };

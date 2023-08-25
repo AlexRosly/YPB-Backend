@@ -52,7 +52,20 @@ const createSignInCode = async (req, res) => {
     form: "yourpricebooking@gmail.com",
     to: email,
     subject: "Confirmation code",
-    html: `<p>Your confirmation code ${secretCode}.</p><br/><p>Attention code valid only 2 minutes</p>`,
+    text: "Your Price Booking confirmation code",
+    html: `<p>Your confirmation code ${secretCode}.</p><br/><p>Attention code valid only 3 minutes</p>`,
+    amp: `<!doctype html>
+      <html ⚡4email data-css-strict>
+      <head>
+        <meta charset="utf-8">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+        <style amp4email-boilerplate>body{visibility:hidden}</style>
+      </head>
+      <body>
+              <p>Your confirmation code ${secretCode}.</p>
+              <p>Attention code valid only 3 minutes</p>
+      </body>
+      </html>`,
   };
   transporter
     .sendMail(mail)

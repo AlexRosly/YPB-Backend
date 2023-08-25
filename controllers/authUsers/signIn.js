@@ -1,10 +1,16 @@
 const { User } = require("../../models");
+const jwt = require("jsonwebtoken");
 const { addToCash } = require("../../middlewares/authCacheService");
+
+const { SECRET_KEY } = process.env;
 
 const signIn = async (req, res) => {
   const { email, secretCode } = req.body;
 
   const user = await User.findOne({ email });
+
+  const date = new Date();
+  const { id, firstName, lastName, language } = user;
 
   if (!user) {
     return res.status(409).json({
@@ -13,9 +19,6 @@ const signIn = async (req, res) => {
       message: `Email ${email} not found`,
     });
   }
-
-  const date = new Date();
-  const { id, firstName, lastName, language } = user;
 
   if (secretCode !== user.secretCode) {
     return res.status(435).json({
@@ -33,16 +36,22 @@ const signIn = async (req, res) => {
     });
   }
 
-  if (user) {
-    const sessionID = req.sessionID;
+  // if (user) {
+  // const sessionID = req.sessionID;
 
-    await addToCash(`${sessionID}`, `${id}`);
+  // await addToCash(`${sessionID}`, `${id}`);
 
-    res.cookie("_sid", sessionID, { signed: true }); //sessionID
-    res.cookie("user", id, { signed: true });
-    res.cookie("auth", true, { signed: true });
-    req.session.authenticated = true;
-  }
+  // res.cookie("_sid", sessionID, { signed: true }); //sessionID
+  // res.cookie("user", id, { signed: true });
+  // res.cookie("auth", true, { signed: true });
+  // req.session.authenticated = true;
+  // }
+
+  const payload = {
+    id,
+  };
+  const token = jwt.sign(payload, SECRET_KEY, { expiresIn: "365d" });
+  await User.findByIdAndUpdate(id, { token });
 
   res.json({
     status: "success",
@@ -54,6 +63,7 @@ const signIn = async (req, res) => {
       language,
       email,
     },
+    token,
   });
 };
 

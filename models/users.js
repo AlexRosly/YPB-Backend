@@ -37,6 +37,10 @@ const userSchema = Schema(
       type: Number,
       default: 0,
     },
+    token: {
+      type: String,
+      default: null,
+    },
   },
   { versionKey: false, timestamps: true }
 );

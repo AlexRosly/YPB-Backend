@@ -1,7 +1,7 @@
 const { Admin } = require("../../models");
 
 const logOutAdmin = async (req, res) => {
-  const { id } = req.admin;
+  const { id } = req.hotelier;
   const isAuth = false;
 
   await Admin.findByIdAndUpdate(id, { token: null, isAuth });

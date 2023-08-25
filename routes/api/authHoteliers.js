@@ -1,5 +1,6 @@
 const { authHoteliers: ctrl } = require("../../controllers");
 const {
+  authHotelier,
   auth,
   validation,
   ctrlWrapper,
@@ -35,7 +36,7 @@ router.patch(
 router.post("/signIn", validation(joiSignInSchema), ctrlWrapper(ctrl.signIn));
 
 //logOut
-router.get("/signOut", auth, ctrlWrapper(ctrl.logOut));
+router.get("/signOut", authHotelier, ctrlWrapper(ctrl.logOut));
 
 //send hotelier code
 router.patch("/send-code", ctrlWrapper(ctrl.sendHotelierCode));
@@ -50,6 +51,6 @@ router.patch("/change-first-name", ctrlWrapper(ctrl.changeFirstName)); // дод
 router.patch("/change-last-name", ctrlWrapper(ctrl.changeLastName)); // додадти auth,
 
 //delete account of agent
-router.patch("/delete-account", auth, ctrlWrapper(ctrl.deleteHotelier));
+router.patch("/delete-account", authHotelier, ctrlWrapper(ctrl.deleteHotelier));
 
 module.exports = router;

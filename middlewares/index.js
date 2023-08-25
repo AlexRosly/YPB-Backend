@@ -7,6 +7,9 @@ const createSignInCode = require("./createSignInCode");
 const auth = require("./auth");
 const { authCacheService } = require("./authCacheService");
 const authAdmin = require("./authAdmin");
+const authHotelier = require("./authHotelier");
+const authUser = require("./authUser");
+const authAgent = require("./authAgent");
 
 module.exports = {
   validation,
@@ -18,4 +21,7 @@ module.exports = {
   auth,
   authCacheService,
   authAdmin,
+  authHotelier,
+  authUser,
+  authAgent,
 };

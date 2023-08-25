@@ -33,6 +33,10 @@ const agetnSchema = Schema(
       type: String,
       default: "active",
     },
+    token: {
+      type: String,
+      default: null,
+    },
   },
   { versionKey: false, timestamps: true }
 );

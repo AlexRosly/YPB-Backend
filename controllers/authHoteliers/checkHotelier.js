@@ -34,7 +34,7 @@ const checkHotelier = async (req, res) => {
   if (hotelierCandidat) {
     const filter = { email };
     const update = { secretCode, createdCode, validCode };
-    const hotelier = await Hotelier.findOneAndUpdate(filter, update, {
+    await Hotelier.findOneAndUpdate(filter, update, {
       new: true,
     });
   }
