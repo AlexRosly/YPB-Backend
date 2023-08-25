@@ -49,7 +49,7 @@ const createSignInCode = async (req, res) => {
   }
 
   const mail = {
-    form: "yourpricebooking@gmail.com",
+    form: "noreply@yourpricebooking.com",
     to: email,
     subject: "Confirmation code",
     text: "Your Price Booking confirmation code",
