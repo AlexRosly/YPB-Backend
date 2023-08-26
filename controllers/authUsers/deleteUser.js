@@ -2,9 +2,10 @@ const { User } = require("../../models");
 
 const deleteUser = async (req, res) => {
   const { email } = req.body;
+  const { id } = req.user;
 
-  const sessionID = req.sessionID;
-  const userId = req.signedCookies["user"];
+  // const sessionID = req.sessionID;
+  // const userId = req.signedCookies["user"];
 
   const findAccount = await User.find({ email });
 
@@ -18,13 +19,13 @@ const deleteUser = async (req, res) => {
 
   const getId = findAccount[0]._id.toString();
 
-  const checkRedis = await getFromCache(`${sessionID}`);
+  // const checkRedis = await getFromCache(`${sessionID}`);
 
-  if (checkRedis === getId || getId === userId) {
-    const deleteAccount = await User.updateOne(
+  if (id === getId) {
+    await User.updateOne(
       { email },
       {
-        $set: { status: "deleted" },
+        $set: { status: "deleted", token: null },
       }
     );
 

@@ -39,12 +39,12 @@ router.post("/signIn", validation(joiSignInSchema), ctrlWrapper(ctrl.signIn));
 router.get("/signOut", authUser, ctrlWrapper(ctrl.logOut));
 
 //delete account of user
-router.patch("/delete-account", ctrlWrapper(ctrl.deleteUser));
+router.patch("/delete-account", authUser, ctrlWrapper(ctrl.deleteUser));
 
 //change first name user
-router.patch("/change-first-name", ctrlWrapper(ctrl.changeFirstName)); // додадти auth
+router.patch("/change-first-name", authUser, ctrlWrapper(ctrl.changeFirstName)); // додадти auth
 
 //change last name hotelier
-router.patch("/change-last-name", ctrlWrapper(ctrl.changeLastName)); // додадти auth,
+router.patch("/change-last-name", authUser, ctrlWrapper(ctrl.changeLastName)); // додадти auth,
 
 module.exports = router;

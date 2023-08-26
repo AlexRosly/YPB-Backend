@@ -1,5 +1,5 @@
 const { Agent } = require("../../models");
-const { deleteFromCache } = require("../../middlewares/authCacheService");
+// const { deleteFromCache } = require("../../middlewares/authCacheService");
 
 const logOut = async (req, res) => {
   // const sessionID = req.signedCookies["sessionID"];

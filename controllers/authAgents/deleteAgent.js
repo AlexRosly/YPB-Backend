@@ -1,11 +1,12 @@
 const { Agent } = require("../../models");
-const { getFromCache } = require("../../middlewares/authCacheService");
+// const { getFromCache } = require("../../middlewares/authCacheService");
 
 const deleteAgent = async (req, res) => {
   const { email } = req.body;
+  const { id } = req.agent;
 
-  const sessionID = req.sessionID;
-  const userId = req.signedCookies["user"];
+  // const sessionID = req.sessionID;
+  // const userId = req.signedCookies["user"];
 
   const findAccount = await Agent.find({ email });
 
@@ -19,13 +20,13 @@ const deleteAgent = async (req, res) => {
 
   const getId = findAccount[0]._id.toString();
 
-  const checkRedis = await getFromCache(`${sessionID}`);
+  // const checkRedis = await getFromCache(`${sessionID}`);
 
-  if (checkRedis === getId || getId === userId) {
-    const deleteAccount = await Agent.updateOne(
+  if (id === getId) {
+    await Agent.updateOne(
       { email },
       {
-        $set: { status: "deleted" },
+        $set: { status: "deleted", token: null },
       }
     );
 

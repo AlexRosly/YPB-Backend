@@ -1,13 +1,14 @@
 const { Hotelier } = require("../../models");
-const { getFromCache } = require("../../middlewares/authCacheService");
+// const { getFromCache } = require("../../middlewares/authCacheService");
 
 const deleteHotelier = async (req, res) => {
   const { email } = req.body;
+  const { id } = req.hotelier;
 
   const findAccount = await Hotelier.find({ email });
 
-  const sessionID = req.sessionID;
-  const userId = req.signedCookies["user"];
+  // const sessionID = req.sessionID;
+  // const userId = req.signedCookies["user"];
 
   if (!findAccount) {
     return res.status(409).json({
@@ -18,13 +19,13 @@ const deleteHotelier = async (req, res) => {
   }
 
   const getId = findAccount[0]._id.toString();
-  const checkRedis = await getFromCache(`${sessionID}`);
+  // const checkRedis = await getFromCache(`${sessionID}`);
 
-  if (checkRedis === getId || getId === userId) {
-    const deleteAccount = await Hotelier.updateOne(
+  if (id === getId) {
+    await Hotelier.updateOne(
       { email },
       {
-        $set: { status: "deleted" },
+        $set: { status: "deleted", token: null },
       }
     );
 
