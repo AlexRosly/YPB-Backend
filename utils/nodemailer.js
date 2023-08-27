@@ -7,21 +7,21 @@ const { NODEMAILER_PASS, NODEMAILER_PASS1 } = process.env;
 const nodemailerConfig = {
   //variant 1 for gmail
 
-  // secure: true,
-  // service: "gmail",
-  // auth: {
-  //   user: "yourpricebooking@gmail.com", // from send email
-  //   pass: NODEMAILER_PASS,
-  // },
+  secure: true,
+  service: "gmail",
+  auth: {
+    user: "yourpricebooking@gmail.com", // from send email
+    pass: NODEMAILER_PASS,
+  },
 
   //variant 2 for ypb email
-  host: "ypbooking.chost.com.ua",
-  port: 465,
-  secure: true,
-  auth: {
-    user: "noreply@yourpricebooking.com", // from send email
-    pass: NODEMAILER_PASS1,
-  },
+  // host: "ypbooking.chost.com.ua",
+  // port: 465,
+  // secure: true,
+  // auth: {
+  //   user: "noreply@yourpricebooking.com", // from send email
+  //   pass: NODEMAILER_PASS1,
+  // },
   // port: 465,
   // secure: true,
   // host: "mail.yourpricebooking.com",
