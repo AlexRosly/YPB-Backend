@@ -69,8 +69,8 @@ const signUp = async (req, res) => {
         firstName,
         lastName,
         email,
+        token,
       },
-      token,
     },
   });
 };

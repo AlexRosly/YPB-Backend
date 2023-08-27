@@ -1,6 +1,6 @@
 const { User } = require("../../models");
 const jwt = require("jsonwebtoken");
-const { addToCash } = require("../../middlewares/authCacheService");
+// const { addToCash } = require("../../middlewares/authCacheService");
 
 const { SECRET_KEY } = process.env;
 
@@ -62,8 +62,8 @@ const signIn = async (req, res) => {
       lastName,
       language,
       email,
+      token,
     },
-    token,
   });
 };
 

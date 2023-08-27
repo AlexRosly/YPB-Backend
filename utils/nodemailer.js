@@ -5,20 +5,26 @@ require("dotenv").config();
 const { NODEMAILER_PASS, NODEMAILER_PASS1 } = process.env;
 
 const nodemailerConfig = {
-  // host: "smtp.meta,ua",
-  // port: 435, //25, 465, 2255
+  //variant 1 for gmail
+
   // secure: true,
-  service: "gmail",
+  // service: "gmail",
+  // auth: {
+  //   user: "yourpricebooking@gmail.com", // from send email
+  //   pass: NODEMAILER_PASS,
+  // },
+
+  //variant 2 for ypb email
+  host: "ypbooking.chost.com.ua",
+  port: 465,
+  secure: true,
   auth: {
-    user: "yourpricebooking@gmail.com", // from send email
-    pass: NODEMAILER_PASS,
+    user: "noreply@yourpricebooking.com", // from send email
+    pass: NODEMAILER_PASS1,
   },
-  // host: "ypbooking.chost.com.ua",
-  // // port: 465,
-  // // secure: true,
-  // // host: "mail.yourpricebooking.com",
   // port: 465,
   // secure: true,
+  // host: "mail.yourpricebooking.com",
   // dkim: {
   //   domainName: "yourpricebooking.com",
   //   keySelector: "mail",
@@ -26,10 +32,6 @@ const nodemailerConfig = {
   //     "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDIgbNo1oiGx6ccC53Xm+9gIgrIoQ8sFoAdCX5OLYLk5eTmBgipmM+2selYbOFX5YwTsvm5Zl6quzmG7Hu0g56AU3+l7S2LVp1MU/PbBFHIYbacaLUMvjpXe8jUfo5hJZgtX7PuQCMsZ9ua7O5yrZ7uvWoTvaB0zyNP+8n2FZH7UwIDAQAB",
   // },
 
-  // auth: {
-  //   user: "noreply@yourpricebooking.com", // from send email
-  //   pass: NODEMAILER_PASS1,
-  // },
   // logger: true,
 };
 

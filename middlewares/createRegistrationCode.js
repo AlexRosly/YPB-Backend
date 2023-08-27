@@ -43,7 +43,7 @@ const createRegistrationCode = async (req, res) => {
   const validCode = createdCode.getTime() + 180000;
 
   const mail = {
-    form: "yourpricebooking@gmail.com",
+    form: "noreply@yourpricebooking.com",
     to: email,
     subject: "Confirmation code",
     text: "Your Price Booking confirmation code",
