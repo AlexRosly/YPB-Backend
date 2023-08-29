@@ -70,6 +70,7 @@ const signUp = async (req, res) => {
         firstName,
         lastName,
         email,
+        language,
         token,
       },
     },
