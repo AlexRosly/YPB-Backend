@@ -1,7 +1,7 @@
 const { Hotelier } = require("../../models");
 
 const getAllHotelier = async (req, res) => {
-  const result = await Hotelier.find();
+  const result = await Hotelier.find({ status: { $ne: "deleted" } });
 
   if (!result) {
     return res.status(409).json({

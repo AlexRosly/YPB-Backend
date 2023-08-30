@@ -20,6 +20,15 @@ const addBonus = async (req, res) => {
 
   const _id = id;
 
+  if (total >= -20) {
+    await Hotelier.updateOne(
+      { _id },
+      {
+        $set: { finances: currency1, status: "active" },
+      }
+    );
+  }
+
   await Hotelier.updateOne(
     { _id },
     {
