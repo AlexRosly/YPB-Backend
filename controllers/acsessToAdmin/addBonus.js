@@ -13,6 +13,14 @@ const addBonus = async (req, res) => {
     });
   }
 
+  if (amount < 0) {
+    return res.status(409).json({
+      status: "error",
+      code: 409,
+      message: `The amount should be more`,
+    });
+  }
+
   const bonus = finances.bonus + amount;
   const money = finances.money;
   const total = bonus + money;
