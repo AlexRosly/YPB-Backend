@@ -15,6 +15,7 @@ const authHoteliers = require("./authHoteliers");
 const authUsers = require("./authUsers");
 const catalogForHotelier = require("./catalogForHotelier");
 const acsessToAdmin = require("./acsessToAdmin");
+const currency = require("./currency");
 
 module.exports = {
   languages,
@@ -34,4 +35,5 @@ module.exports = {
   authUsers,
   catalogForHotelier,
   acsessToAdmin,
+  currency,
 };

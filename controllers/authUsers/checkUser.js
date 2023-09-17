@@ -34,7 +34,7 @@ const checkUser = async (req, res) => {
   if (userCandidat) {
     const filter = { email };
     const update = { secretCode, createdCode, validCode };
-    const user = await User.findOneAndUpdate(filter, update, {
+    await User.findOneAndUpdate(filter, update, {
       new: true,
     });
   }
@@ -67,10 +67,10 @@ const checkUser = async (req, res) => {
     )
     .catch((error) => console.log(error.message));
 
-  res.json({
-    status: "success",
-    message: `Confirmation code sent to ${email}`,
-  });
+  // res.json({
+  //   status: "success",
+  //   message: `Confirmation code sent to ${email}`,
+  // });
 };
 
 module.exports = checkUser;

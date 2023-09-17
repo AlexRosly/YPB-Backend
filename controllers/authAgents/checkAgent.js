@@ -34,7 +34,7 @@ const checkAgent = async (req, res) => {
   if (agentCandidat) {
     const filter = { email };
     const update = { secretCode, createdCode, validCode };
-    const agent = await Agent.findOneAndUpdate(filter, update, {
+    await Agent.findOneAndUpdate(filter, update, {
       new: true,
     });
   }

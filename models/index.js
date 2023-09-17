@@ -20,6 +20,7 @@ const { PlCatalogForHotelier } = require("./plCatalogForHotelier");
 const { EnCatalogForHotelier } = require("./enCatalogForHotelier");
 const { Admin } = require("./addAdmin");
 const { AcsessToAdmin } = require("./acsessToAdmin");
+const { Currency } = require("./currency");
 
 module.exports = {
   Language,
@@ -44,4 +45,5 @@ module.exports = {
   EnCatalogForHotelier,
   Admin,
   AcsessToAdmin,
+  Currency,
 };

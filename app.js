@@ -35,6 +35,7 @@ const authUsers = require("./routes/api/authUsers");
 const authHoteliers = require("./routes/api/authHoteliers");
 const catalogForHotelier = require("./routes/api/catalogForHotelier");
 const acsessToAdmin = require("./routes/api/acsessToAdmin");
+const currency = require("./routes/api/currency");
 
 const app = express();
 
@@ -95,6 +96,7 @@ app.use("/api/auth-hoteliers", authHoteliers);
 app.use("/api/auth-users", authUsers);
 app.use("/api/catalogForHotelier", catalogForHotelier);
 app.use("/api/acsess-to-admin", acsessToAdmin);
+app.use("/api/currency", currency);
 
 app.use((req, res) => {
   res.status(404).json({ message: "Not found" });
