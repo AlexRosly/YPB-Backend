@@ -3,6 +3,10 @@ const Joi = require("joi");
 
 const agetnSchema = Schema(
   {
+    role: {
+      type: String,
+      default: "agent",
+    },
     lastName: {
       type: String,
       required: true,

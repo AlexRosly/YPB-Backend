@@ -31,6 +31,7 @@ const signUp = async (req, res) => {
     firstName,
     email,
     secretCode,
+    bookingKarma: 0,
     language: language.toLowerCase(),
   });
 
@@ -52,7 +53,7 @@ const signUp = async (req, res) => {
   // res.cookie("auth", true, { signed: true });
   // req.session.authenticated = true;
 
-  const { id } = user;
+  const { id, bookingKarma, role } = user;
 
   const payload = {
     id,
@@ -66,10 +67,12 @@ const signUp = async (req, res) => {
     data: {
       user: {
         id,
+        role,
         firstName,
         lastName,
         email,
         language,
+        bookingKarma,
         token,
       },
     },

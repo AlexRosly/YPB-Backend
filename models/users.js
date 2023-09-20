@@ -3,6 +3,10 @@ const Joi = require("joi");
 
 const userSchema = Schema(
   {
+    role: {
+      type: String,
+      default: "user",
+    },
     lastName: {
       type: String,
       required: true,

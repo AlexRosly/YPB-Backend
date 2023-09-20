@@ -52,7 +52,7 @@ const signUp = async (req, res) => {
   // res.cookie("auth", true, { signed: true });
   // req.session.authenticated = true;
 
-  const { id } = hotelier;
+  const { id, role } = hotelier;
 
   const payload = {
     id,
@@ -66,6 +66,7 @@ const signUp = async (req, res) => {
     data: {
       hotelier: {
         id,
+        role,
         firstName,
         lastName,
         email,

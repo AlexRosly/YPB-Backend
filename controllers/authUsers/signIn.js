@@ -10,7 +10,7 @@ const signIn = async (req, res) => {
   const user = await User.findOne({ email });
 
   const date = new Date();
-  const { id, firstName, lastName, language } = user;
+  const { id, firstName, lastName, language, bookingKarma, role } = user;
 
   if (!user) {
     return res.status(409).json({
@@ -58,9 +58,11 @@ const signIn = async (req, res) => {
     code: 200,
     user: {
       id,
+      role,
       firstName,
       lastName,
       language,
+      bookingKarma,
       email,
       token,
     },

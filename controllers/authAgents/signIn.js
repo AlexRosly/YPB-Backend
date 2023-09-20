@@ -9,7 +9,7 @@ const signIn = async (req, res) => {
   const agent = await Agent.findOne({ email });
 
   const date = new Date();
-  const { id, firstName, lastName, language } = agent;
+  const { id, firstName, lastName, language, role } = agent;
 
   if (!agent) {
     return res.status(409).json({
@@ -60,6 +60,7 @@ const signIn = async (req, res) => {
     data: {
       agent: {
         id,
+        role,
         firstName,
         lastName,
         language,

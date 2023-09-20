@@ -3,6 +3,10 @@ const Joi = require("joi");
 
 const hotelierSchema = Schema(
   {
+    role: {
+      type: String,
+      default: "hotelier",
+    },
     lastName: {
       type: String,
       required: true,

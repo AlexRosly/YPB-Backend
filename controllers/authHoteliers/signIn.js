@@ -9,7 +9,7 @@ const signIn = async (req, res) => {
   const hotelier = await Hotelier.findOne({ email });
 
   const date = new Date();
-  const { id, firstName, lastName, language } = hotelier;
+  const { id, firstName, lastName, language, role } = hotelier;
 
   if (!hotelier) {
     return res.status(409).json({
@@ -86,6 +86,7 @@ const signIn = async (req, res) => {
     data: {
       hotelier: {
         id,
+        role,
         firstName,
         lastName,
         language,
