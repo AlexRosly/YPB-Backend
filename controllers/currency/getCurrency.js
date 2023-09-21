@@ -37,13 +37,9 @@ const getCurrency = async (req, res) => {
 
     const addCurrency = await Currency.create({ ...getNewCurrency });
 
-    return res.status(200).json({
-      result: addCurrency,
-    });
+    return res.status(200).json(addCurrency[0]);
   } else {
-    return res.status(200).json({
-      result: getCurrency,
-    });
+    return res.status(200).json(getCurrency[0]);
   }
 };
 
