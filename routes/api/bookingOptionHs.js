@@ -2,6 +2,7 @@ const { bookingOption: ctrl } = require("../../controllers");
 const { auth, validation, ctrlWrapper, upload } = require("../../middlewares");
 // const cloudinary = require("../../utils/cloudinary");
 const { joiSchema } = require("../../models/bookingOptionHs");
+const { joiSchemaBookingBed } = require("../../models/bookingOptionHsBed");
 const express = require("express");
 const router = express.Router();
 
@@ -29,5 +30,14 @@ router.get(
   "/get-by-objectId/:id",
   ctrlWrapper(ctrl.getBookingOptionHsByObjectId)
 );
+
+//add booking option bed on site
+router.post(
+  "/add-bed",
+  validation(joiSchemaBookingBed),
+  ctrlWrapper(ctrl.addBookingOptionHsBed)
+);
+
+//update booking option bed on site
 
 module.exports = router;

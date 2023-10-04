@@ -6,6 +6,8 @@ const getBookingOptionHs = require("./getBookingOptionHs");
 const updateBookingOptionHs = require("./updateBookingOptionHs");
 const getBookingOptionHsByObjectId = require("./getBookingOptionHsByObjectId");
 const getBookingOptionByObjectId = require("./getBookingOptionByObjectId");
+const addBookingOptionHsBed = require("./addBookingOptionHsBed");
+const addBookingOptionBed = require("./addBookingOptionBed");
 
 module.exports = {
   getBookingOption,
@@ -16,4 +18,6 @@ module.exports = {
   updateBookingOptionHs,
   getBookingOptionHsByObjectId,
   getBookingOptionByObjectId,
+  addBookingOptionHsBed,
+  addBookingOptionBed,
 };

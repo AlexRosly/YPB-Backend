@@ -1,5 +1,11 @@
 const { hotelsObject: ctrl } = require("../../controllers");
-const { auth, validation, ctrlWrapper, upload } = require("../../middlewares");
+const {
+  auth,
+  authHotelier,
+  validation,
+  ctrlWrapper,
+  upload,
+} = require("../../middlewares");
 const {
   joiSchema,
   addPhoneAndDateSchema,
@@ -22,7 +28,7 @@ router.get(
 //add hotel/object
 router.post(
   "/",
-  auth,
+  authHotelier,
   upload.array("image"),
   validation(joiSchema),
   ctrlWrapper(ctrl.addHotel)
@@ -31,6 +37,7 @@ router.post(
 //change hotel/object
 router.patch(
   "/:id",
+  authHotelier,
   upload.array("image"),
   validation(joiSchema),
   ctrlWrapper(ctrl.updateHotel)

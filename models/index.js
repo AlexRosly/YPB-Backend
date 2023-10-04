@@ -21,6 +21,8 @@ const { EnCatalogForHotelier } = require("./enCatalogForHotelier");
 const { Admin } = require("./addAdmin");
 const { AcsessToAdmin } = require("./acsessToAdmin");
 const { Currency } = require("./currency");
+const { BookingOptionHsBed } = require("./bookingOptionHsBed");
+const { BookingOptionBed } = require("./bookingOptionBed");
 
 module.exports = {
   Language,
@@ -46,4 +48,6 @@ module.exports = {
   Admin,
   AcsessToAdmin,
   Currency,
+  BookingOptionHsBed,
+  BookingOptionBed,
 };
