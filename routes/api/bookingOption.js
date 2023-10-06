@@ -38,4 +38,6 @@ router.post(
   ctrlWrapper(ctrl.addBookingOptionBed)
 );
 
+router.patch("/update-price", ctrlWrapper(ctrl.updateBookingOptionBed));
+
 module.exports = router;

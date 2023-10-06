@@ -1,6 +1,5 @@
 const { authAgents: ctrl } = require("../../controllers");
 const {
-  auth,
   authAgent,
   validation,
   ctrlWrapper,
@@ -42,9 +41,13 @@ router.get("/signOut", authAgent, ctrlWrapper(ctrl.logOut));
 router.patch("/delete-account", authAgent, ctrlWrapper(ctrl.deleteAgent));
 
 //change first name user
-router.patch("/change-first-name", authAgent, ctrlWrapper(ctrl.changeFirstName)); // додадти auth
+router.patch(
+  "/change-first-name",
+  authAgent,
+  ctrlWrapper(ctrl.changeFirstName)
+); // додадти auth
 
 //change last name hotelier
-router.patch("/change-last-name", authAgent, ctrlWrapper(ctrl.changeLastName)); // додадти auth,
+router.patch("/change-last-name", authAgent, ctrlWrapper(ctrl.changeLastName));
 
 module.exports = router;

@@ -1,7 +1,6 @@
 const { authHoteliers: ctrl } = require("../../controllers");
 const {
   authHotelier,
-  auth,
   validation,
   ctrlWrapper,
   createRegistrationCode,
@@ -45,7 +44,11 @@ router.patch("/send-code", ctrlWrapper(ctrl.sendHotelierCode));
 // router.patch("/change-email", auth, ctrlWrapper(ctrl.changeEmailHotelier));
 
 //change first name hotelier
-router.patch("/change-first-name", authHotelier, ctrlWrapper(ctrl.changeFirstName)); // додадти auth,
+router.patch(
+  "/change-first-name",
+  authHotelier,
+  ctrlWrapper(ctrl.changeFirstName)
+); // додадти auth,
 
 //change last name hotelier
 router.patch(

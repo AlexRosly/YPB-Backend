@@ -1,6 +1,5 @@
 const { authUsers: ctrl } = require("../../controllers");
 const {
-  auth,
   authUser,
   validation,
   ctrlWrapper,

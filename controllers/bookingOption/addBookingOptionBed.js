@@ -6,7 +6,10 @@ const addBookingOptionBed = async (req, res) => {
   const result = await BookingOptionBed.create({ ...req.body });
 
   if (!result) {
-    throw new NotImplemented("booking option doesn`t create");
+    res.status(422).json({
+      status: "error",
+      message: "booking option doesn`t create",
+    });
   }
 
   res.status(201).json({

@@ -295,4 +295,6 @@ npm install redis connect-redis express-session - done
 12. сделать метод который возращает по инфу по коду языка и ссылке
     catalogForHotelier api change models - done
 
-1.
+1. Видалити всі емйли
+2. Видалити всі обєкти
+3. видалити всі доступи до 
