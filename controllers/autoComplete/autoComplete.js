@@ -1,6 +1,6 @@
 const { Country, Region, City, District } = require("../../models");
 
-const autoComplete = async ({ query: { search, limit = 400, lang } }, res) => {
+const autoComplete = async ({ query: { search, limit = 10, lang } }, res) => {
   const searchFromUrl = decodeURI(search).trim();
 
   const countries = await Country.find({
