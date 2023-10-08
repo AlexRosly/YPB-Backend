@@ -1,13 +1,26 @@
 const { City } = require("../../models");
 
 const getAllCity = async ({ query: { language } }, res) => {
-  const result = await City.find({ langCode: language });
+  const cities = await City.find({ langCode: language }).populate({
+    path: "state",
+    populate: { path: "country" },
+  });
 
-  if (!result) {
+  if (!cities) {
     res.status(422).json({
       status: "error",
       message: "doesn't get all cities",
     });
+  }
+
+  const result = [];
+
+  for (const city of cities) {
+    let tempObj = {};
+    tempObj.city = city.cityName;
+    tempObj.state = city.state.stateName;
+    tempObj.country = city.state.country.country;
+    result.push(tempObj);
   }
 
   res.status(200).json({

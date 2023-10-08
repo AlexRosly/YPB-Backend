@@ -1,4 +1,4 @@
-const { BookingOptionBed } = require("../../models");
+// const { BookingOptionBed } = require("../../models");
 
 const updateBookingOptionBed = async (req, res) => {
   console.log("object", req.body);
