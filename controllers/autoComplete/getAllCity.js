@@ -1,7 +1,9 @@
 const { City } = require("../../models");
 
 const getAllCity = async ({ query: { language } }, res) => {
-  const cities = await City.find({ langCode: language }).populate({
+  const cities = await City.find({
+    langCode: language.toUpperCase(),
+  }).populate({
     path: "state",
     populate: { path: "country" },
   });
@@ -19,7 +21,7 @@ const getAllCity = async ({ query: { language } }, res) => {
     let tempObj = {};
     tempObj.city = city.cityName;
     tempObj.state = city.state.stateName;
-    tempObj.country = city.state.country.country;
+    tempObj.country = city.state.country?.country;
     result.push(tempObj);
   }
 
