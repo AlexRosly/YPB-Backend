@@ -1,12 +1,27 @@
-// const { BookingOptionBed } = require("../../models");
+const { BookingOptionBed } = require("../../models");
 
 const updateBookingOptionBed = async (req, res) => {
-  console.log("object", req.body);
+  const { id } = req.body;
 
-  res.status(422).json({
-    status: "error",
-    message: "booking option doesn`t create",
+  const result = await BookingOptionBed.findByIdAndUpdate(id, req.body, {
+    new: true,
   });
+
+  if (!result) {
+    res.status(422).json({
+      status: "error",
+      message: "booking option doesn`t create",
+    });
+    res.end();
+  }
+
+  res.json({
+    status: "success",
+    message: "booking option update",
+    code: 200,
+    result,
+  });
+  res.end();
 };
 
 module.exports = updateBookingOptionBed;

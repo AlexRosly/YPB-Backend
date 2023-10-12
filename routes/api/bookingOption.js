@@ -1,5 +1,10 @@
 const { bookingOption: ctrl } = require("../../controllers");
-const { auth, validation, ctrlWrapper, upload } = require("../../middlewares");
+const {
+  authHotelier,
+  validation,
+  ctrlWrapper,
+  upload,
+} = require("../../middlewares");
 const { joiSchema } = require("../../models/bookingOption");
 const { joiSchemaBookingBed } = require("../../models/bookingOptionBed");
 const express = require("express");
@@ -17,7 +22,7 @@ router.get(
 //create option
 router.post(
   "/",
-  auth,
+  authHotelier,
   upload.array("image"),
   validation(joiSchema),
   ctrlWrapper(ctrl.addBookingOption)
@@ -30,13 +35,14 @@ router.post(
   ctrlWrapper(ctrl.addBookingOptionBed)
 );
 
+//update booking option bed on site
+router.patch("/update-price", ctrlWrapper(ctrl.updateBookingOptionBed));
+
 //update option
 router.patch(
   "/:id",
   validation(joiSchema),
   ctrlWrapper(ctrl.updateBookingOption)
 );
-
-router.put("/update-price", ctrlWrapper(ctrl.updateBookingOptionBed));
 
 module.exports = router;

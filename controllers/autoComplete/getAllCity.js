@@ -19,6 +19,7 @@ const getAllCity = async ({ query: { language } }, res) => {
 
   for (const city of cities) {
     let tempObj = {};
+    tempObj.id = city._id;
     tempObj.city = city.cityName;
     tempObj.state = city.state.stateName;
     tempObj.country = city.state.country?.country;
