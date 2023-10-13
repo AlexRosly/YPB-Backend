@@ -50,7 +50,7 @@ const joiSchema = Joi.object({
   linkOnPhoto: Joi.string().required(),
   url: Joi.string(),
   description: Joi.string(),
-  districtInternational: Joi.string().required(),
+  districtInternational: Joi.string(),
 });
 
 const EnCatalogForHotelier = model(
