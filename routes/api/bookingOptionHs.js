@@ -1,5 +1,10 @@
 const { bookingOption: ctrl } = require("../../controllers");
-const { auth, validation, ctrlWrapper, upload } = require("../../middlewares");
+const {
+  authHotelier,
+  validation,
+  ctrlWrapper,
+  upload,
+} = require("../../middlewares");
 // const cloudinary = require("../../utils/cloudinary");
 const { joiSchema } = require("../../models/bookingOptionHs");
 const { joiSchemaBookingBed } = require("../../models/bookingOptionHsBed");
@@ -12,7 +17,7 @@ router.get("/", ctrlWrapper(ctrl.getBookingOptionHs));
 //create option
 router.post(
   "/",
-  auth,
+  authHotelier,
   upload.array("image"),
   validation(joiSchema),
   ctrlWrapper(ctrl.addBookingOptionHs)
@@ -21,6 +26,7 @@ router.post(
 //update option
 router.patch(
   "/:id",
+  authHotelier,
   validation(joiSchema),
   ctrlWrapper(ctrl.updateBookingOptionHs)
 );
