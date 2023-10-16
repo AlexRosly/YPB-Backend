@@ -46,6 +46,7 @@ router.patch(
 //update verification data. Add phone and date of next verification
 router.patch(
   "/add-phone-and-date-for-verification/:id",
+  authHotelier,
   validation(addPhoneAndDateSchema),
   ctrlWrapper(ctrl.addPhoneAndDateVerification)
 );

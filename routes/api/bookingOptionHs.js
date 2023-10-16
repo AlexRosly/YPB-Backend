@@ -23,14 +23,6 @@ router.post(
   ctrlWrapper(ctrl.addBookingOptionHs)
 );
 
-//update option
-router.patch(
-  "/:id",
-  authHotelier,
-  validation(joiSchema),
-  ctrlWrapper(ctrl.updateBookingOptionHs)
-);
-
 //get option by object id
 router.get(
   "/get-by-objectId/:id",
@@ -45,5 +37,14 @@ router.post(
 );
 
 //update booking option bed on site
+router.patch("/update-price", ctrlWrapper(ctrl.updateBookingOptionHsBed));
+
+//update option
+router.patch(
+  "/:id",
+  authHotelier,
+  validation(joiSchema),
+  ctrlWrapper(ctrl.updateBookingOptionHs)
+);
 
 module.exports = router;

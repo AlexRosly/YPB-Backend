@@ -31,16 +31,22 @@ router.post(
 //add booking option bed on site
 router.post(
   "/add-bed",
+  authHotelier,
   validation(joiSchemaBookingBed),
   ctrlWrapper(ctrl.addBookingOptionBed)
 );
 
 //update booking option bed on site
-router.patch("/update-price", ctrlWrapper(ctrl.updateBookingOptionBed));
+router.patch(
+  "/update-price",
+  authHotelier,
+  ctrlWrapper(ctrl.updateBookingOptionBed)
+);
 
 //update option
 router.patch(
   "/:id",
+  authHotelier,
   validation(joiSchema),
   ctrlWrapper(ctrl.updateBookingOption)
 );

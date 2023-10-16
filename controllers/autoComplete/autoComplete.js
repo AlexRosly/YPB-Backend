@@ -1,32 +1,43 @@
 const { Country, Region, City, District } = require("../../models");
 
-const autoComplete = async ({ query: { search, limit = 10, lang } }, res) => {
+const autoComplete = async ({ query: { search, limit = 8, lang } }, res) => {
   const searchFromUrl = decodeURI(search).trim();
 
   const countries = await Country.find({
-    langCode: lang,
+    // langCode: lang,
     country: { $regex: searchFromUrl, $options: "i" },
   }).limit(limit);
 
   const states = await Region.find({
-    langCode: lang,
+    // langCode: lang,
     stateName: { $regex: searchFromUrl, $options: "i" },
   }).limit(limit);
 
   const cities = await City.find({
-    langCode: lang,
+    // langCode: lang,
     cityName: { $regex: searchFromUrl, $options: "i" },
   }).limit(limit);
 
   const districts = await District.find({
-    langCode: lang,
+    // langCode: lang,
     districtName: { $regex: searchFromUrl, $options: "i" },
   }).limit(limit);
 
-  if (!countries || !states || !cities || !districts) {
-    const error = new Error(`${search} not found`);
-    error.status = 404;
-    throw error;
+  const statment =
+    (countries.length === 0) &
+    (states.length === 0) &
+    (cities.length === 0) &
+    (districts.length === 0);
+
+  if (statment) {
+    // const error = new Error(`${search} not found`);
+    // error.status = 404;
+    // throw error;
+    return res.json({
+      status: "error",
+      code: 404,
+      message: `${search} not found in DB`,
+    });
   }
 
   let district = [];
@@ -118,6 +129,7 @@ const autoComplete = async ({ query: { search, limit = 10, lang } }, res) => {
       country: countri,
     },
   });
+  res.end();
 };
 
 module.exports = autoComplete;
