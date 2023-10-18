@@ -67,6 +67,6 @@ router.get("/get-statistic", authAdmin, ctrlWrapper(ctrl.getStatistic));
 router.get("/statistic", ctrlWrapper(ctrl.statistic));
 
 //get all admins
-router.get("/get-all-admin", ctrlWrapper(ctrl.getAllAdmin));
+router.get("/get-all-admin", ctrlWrapper(ctrl.getAllAdmin)); //authAdmin,
 
 module.exports = router;
