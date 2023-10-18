@@ -32,12 +32,17 @@ router.get(
 //add booking option bed on site
 router.post(
   "/add-bed",
+  authHotelier,
   validation(joiSchemaBookingBed),
   ctrlWrapper(ctrl.addBookingOptionHsBed)
 );
 
 //update booking option bed on site
-router.patch("/update-price", ctrlWrapper(ctrl.updateBookingOptionHsBed));
+router.patch(
+  "/update-price",
+  authHotelier,
+  ctrlWrapper(ctrl.updateBookingOptionHsBed)
+);
 
 //update option
 router.patch(

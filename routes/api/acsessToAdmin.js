@@ -66,4 +66,7 @@ router.get("/get-statistic", authAdmin, ctrlWrapper(ctrl.getStatistic));
 //get statistic about user, hotelier, object
 router.get("/statistic", ctrlWrapper(ctrl.statistic));
 
+//get all admins
+router.get("/get-all-admin", ctrlWrapper(ctrl.getAllAdmin));
+
 module.exports = router;

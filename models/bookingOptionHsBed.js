@@ -21,7 +21,8 @@ const bookingOptionHsBed = Schema(
       default: 0,
     },
     availableDate: [],
-    notAvailableDate: [],
+    reservedWithoutOurService: [],
+    reservedOnOurService: [],
     owner: {
       type: Schema.Types.ObjectId,
       ref: "hotelier",
@@ -42,7 +43,8 @@ const joiSchemaBookingBed = Joi.object({
   bedNumber: Joi.number(),
   price_1: Joi.number(),
   availableDate: [Joi.array()],
-  notAvailableDate: [Joi.array()],
+  reservedWithoutOurService: [Joi.array()],
+  reservedOnOurService: [Joi.array()],
   owner: Joi.string(),
   bookingOptionHs: Joi.string(),
 });

@@ -8,20 +8,23 @@ const updateBookingOptionBed = async (req, res) => {
   });
 
   if (!result) {
-    res.status(422).json({
-      status: "error",
-      message: "booking option doesn`t create",
-    });
-    res.end();
+    res
+      .status(422)
+      .json({
+        status: "error",
+        message: "booking option doesn`t create",
+      })
+      .end();
   }
 
-  res.json({
-    status: "success",
-    message: "booking option update",
-    code: 200,
-    result,
-  });
-  res.end();
+  res
+    .json({
+      status: "success",
+      message: "booking option update",
+      code: 200,
+      result,
+    })
+    .end();
 };
 
 module.exports = updateBookingOptionBed;
