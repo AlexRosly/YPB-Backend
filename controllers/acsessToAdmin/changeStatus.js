@@ -96,7 +96,7 @@ const changeStatus = async (req, res) => {
         .end();
       break;
 
-    case " ":
+    case "not active":
       const checkEmails = await AcsessToAdmin.findOne({ email });
 
       if (!checkEmails) {
