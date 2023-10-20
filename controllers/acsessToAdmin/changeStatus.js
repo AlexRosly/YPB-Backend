@@ -8,37 +8,46 @@ const changeStatus = async (req, res) => {
       const findEmail = await AcsessToAdmin.findOne({ email });
 
       if (!findEmail) {
-        return res.status(409).json({
-          status: "error",
-          code: 409,
-          message: `The email ${email} doesn't exist in DB`,
-        });
+        return res
+          .status(409)
+          .json({
+            status: "error",
+            code: 409,
+            message: `The email ${email} doesn't exist in DB`,
+          })
+          .end();
       }
 
       const { id } = findEmail;
 
       const changeStatusToBan = await AcsessToAdmin.findByIdAndUpdate(id, {
         status,
+        access: [],
       });
 
       if (!changeStatusToBan) {
-        return res.status(409).json({
-          status: "error",
-          code: 409,
-          message: `The status for email ${email} wasn't change`,
-        });
+        return res
+          .status(409)
+          .json({
+            status: "error",
+            code: 409,
+            message: `The status for email ${email} wasn't change`,
+          })
+          .end();
       }
 
       const result = await AcsessToAdmin.findOne({ email });
 
-      res.json({
-        status: "success",
-        code: 200,
-        message: `The status for email ${email} was change`,
-        data: {
-          result,
-        },
-      });
+      res
+        .json({
+          status: "success",
+          code: 200,
+          message: `The status for email ${email} was change`,
+          data: {
+            result,
+          },
+        })
+        .end();
 
       break;
 
@@ -46,11 +55,14 @@ const changeStatus = async (req, res) => {
       const checkEmail = await AcsessToAdmin.findOne({ email });
 
       if (!checkEmail) {
-        return res.status(409).json({
-          status: "error",
-          code: 409,
-          message: `The email ${email} doesn't exist in DB`,
-        });
+        return res
+          .status(409)
+          .json({
+            status: "error",
+            code: 409,
+            message: `The email ${email} doesn't exist in DB`,
+          })
+          .end();
       }
 
       const { _id } = checkEmail;
@@ -60,31 +72,85 @@ const changeStatus = async (req, res) => {
       });
 
       if (!changeStatusToActive) {
-        return res.status(409).json({
-          status: "error",
-          code: 409,
-          message: `The status for email ${email} wasn't change`,
-        });
+        return res
+          .status(409)
+          .json({
+            status: "error",
+            code: 409,
+            message: `The status for email ${email} wasn't change`,
+          })
+          .end();
       }
 
-      const result1 = await AcsessToAdmin.findOne({ email });
+      const active = await AcsessToAdmin.findOne({ email });
 
-      res.json({
-        status: "success",
-        code: 200,
-        message: `The status for email ${email} was change`,
-        data: {
-          result1,
-        },
-      });
+      res
+        .json({
+          status: "success",
+          code: 200,
+          message: `The status for email ${email} was change`,
+          data: {
+            active,
+          },
+        })
+        .end();
+      break;
+
+    case " ":
+      const checkEmails = await AcsessToAdmin.findOne({ email });
+
+      if (!checkEmails) {
+        return res
+          .status(409)
+          .json({
+            status: "error",
+            code: 409,
+            message: `The email ${email} doesn't exist in DB`,
+          })
+          .end();
+      }
+
+      const changeStatusToNotActive = await AcsessToAdmin.findByIdAndUpdate(
+        checkEmails.id,
+        {
+          status: "not active",
+          access: [],
+        }
+      );
+
+      if (!changeStatusToNotActive) {
+        return res
+          .status(409)
+          .json({
+            status: "error",
+            code: 409,
+            message: `The status for email ${email} wasn't change`,
+          })
+          .end();
+      }
+
+      const notActive = await AcsessToAdmin.findOne({ email });
+
+      res
+        .json({
+          status: "success",
+          code: 200,
+          message: `The status for email ${email} was change`,
+          data: {
+            notActive,
+          },
+        })
+        .end();
       break;
 
     default:
-      res.json({
-        status: "error",
-        code: 406,
-        message: `The status for email ${email} wasn't change`,
-      });
+      res
+        .json({
+          status: "error",
+          code: 406,
+          message: `The status for email ${email} wasn't change`,
+        })
+        .end();
 
       break;
   }

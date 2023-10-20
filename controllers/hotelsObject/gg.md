@@ -295,3 +295,16 @@ npm install redis connect-redis express-session - done
 12. сделать метод который возращает по инфу по коду языка и ссылке
     catalogForHotelier api change models - done
 
+export default async (req: NextApiRequest, res: NextApiResponse) => {
+  const { text, to } = req.body; //отримуємо текст для перекладу і на яку мову буде переклад. Це отримує бек
+
+  const detectedLang: string = langdetect.detectOne(text); //тут ми виявляємо, якою мовою переданий текст
+  
+  try {
+    const translatedText = await translate(text, { detectedLang, to });
+    res.status(200).json({ translations: translatedText, detectedLang: detectedLang }); //перекладаємо текст та повертаємо перевод та виявлену мову тексту. Тобто якщо ми передали на бек текст українською, то змінна detectedLang === ua
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Translation failed' });
+  }
+};
