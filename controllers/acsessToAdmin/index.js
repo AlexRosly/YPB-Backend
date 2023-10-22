@@ -9,6 +9,7 @@ const addBonus = require("./addBonus");
 const getStatistic = require("./getStatistic");
 const statistic = require("./statistic");
 const getAllAdmin = require("./getAllAdmin");
+const getAllUsers = require("./getAllUsers");
 
 module.exports = {
   checkAdmin,
@@ -22,4 +23,5 @@ module.exports = {
   getStatistic,
   statistic,
   getAllAdmin,
+  getAllUsers,
 };
