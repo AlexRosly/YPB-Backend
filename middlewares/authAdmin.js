@@ -1,4 +1,4 @@
-const { Admin } = require("../models");
+const { Admin, AcsessToAdmin } = require("../models");
 
 const { Unauthorized } = require("http-errors");
 const jwt = require("jsonwebtoken");
@@ -13,11 +13,24 @@ const authAdmin = async (req, res, next) => {
       throw new Unauthorized("Not authorized");
     }
     const { id } = jwt.verify(token, SECRET_KEY);
-    const admin = await Admin.findById(id);
-    if (!admin || !admin.token) {
-      throw new Unauthorized("Not authorized");
+    const superAdmin = await Admin.findById(id);
+    const admin = await AcsessToAdmin.findById(id);
+
+    if (superAdmin) {
+      if (!superAdmin || !superAdmin.token) {
+        throw new Unauthorized("Not authorized");
+      }
     }
+
+    if (admin) {
+      if (!admin || !admin.token) {
+        throw new Unauthorized("Not authorized");
+      }
+    }
+
+    req.superAdmin = superAdmin;
     req.admin = admin;
+
     next();
   } catch (error) {
     if (error.message === "Invalid sugnature") {

@@ -19,7 +19,7 @@ const admin = Schema(
     },
     role: {
       type: String,
-      default: "admin",
+      default: "super admin",
     },
     isAuth: {
       type: Boolean,

@@ -1,46 +1,67 @@
 const { Admin } = require("../../models");
+const { AcsessToAdmin } = require("../../models");
 const { transporter } = require("../../utils");
+const { secretCodeForAdmin } = require("../../utils");
 
 const checkAdmin = async (req, res) => {
   const { email } = req.body;
 
   const checkAdmin = await Admin.find({ email });
+  const checkUser = await AcsessToAdmin.find({ email });
 
-  if (checkAdmin.length === 0) {
-    return res.status(409).json({
-      status: "error",
-      code: 409,
-      message: "This email does not exist in Admin",
-    });
+  if (checkAdmin.length === 0 && checkUser.length === 0) {
+    return res
+      .status(409)
+      .json({
+        status: "error",
+        code: 409,
+        message: "This email does not exist in Admin",
+      })
+      .end();
   }
 
-  const firstNumber = Math.floor(Math.random() * (10 - 1) + 1);
-  const secondNumber = Math.floor(Math.random() * (10 - 1) + 1);
-  const thirdNumber = Math.floor(Math.random() * (10 - 1) + 1);
-  const fouthNumber = Math.floor(Math.random() * (10 - 1) + 1);
-  const fivethNumber = Math.floor(Math.random() * (10 - 1) + 1);
-  const sixthNumber = Math.floor(Math.random() * (10 - 1) + 1);
-  const seventhNumber = Math.floor(Math.random() * (10 - 1) + 1);
-
-  const secretCode = `${firstNumber}${secondNumber}${thirdNumber}${fouthNumber}${fivethNumber}${sixthNumber}${seventhNumber}`;
+  const secretCode = secretCodeForAdmin();
   const createdCode = new Date();
   //Код перевірочний нехай діє 30 хв
-  // const validCode = createdCode.getTime() + 1800000; //after developer FE part by Bozhena change validCode
-  const validCode = createdCode.getTime() + 60000;
+  const validCode = createdCode.getTime() + 1800000; //after developer FE part by Bozhena change validCode
+  // const validCode = createdCode.getTime() + 60000;
 
-  //другий запит тіки через 30 хв щоб можна було прийняти (якщо трушний запит, з вірною адресою електронної пошти
-  if (checkAdmin[0].validCode > createdCode) {
-    return res.status(409).json({
-      status: "error",
-      code: 409,
-      message: "Try to enter later",
-    });
+  if (checkAdmin.length > 0 && checkAdmin[0].validCode > createdCode) {
+    return res
+      .status(409)
+      .json({
+        status: "error",
+        code: 409,
+        message: "Try to enter later",
+      })
+      .end();
   }
 
   if (checkAdmin) {
     const filter = { email };
     const update = { secretCode, createdCode, validCode };
+
     await Admin.findOneAndUpdate(filter, update, {
+      new: true,
+    });
+  }
+
+  if (checkUser.length > 0 && checkUser[0].validCode > createdCode) {
+    return res
+      .status(409)
+      .json({
+        status: "error",
+        code: 409,
+        message: "Try to enter later",
+      })
+      .end();
+  }
+
+  if (checkUser) {
+    const filter = { email };
+    const update = { secretCode, createdCode, validCode };
+
+    await AcsessToAdmin.findOneAndUpdate(filter, update, {
       new: true,
     });
   }

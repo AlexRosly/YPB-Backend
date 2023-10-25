@@ -6,19 +6,25 @@ const addBonus = async (req, res) => {
   const { finances } = findHotelier;
 
   if (!findHotelier) {
-    return res.status(409).json({
-      status: "error",
-      code: 409,
-      message: `The user with id ${id} does not exist in Hoteliers collection`,
-    });
+    return res
+      .status(409)
+      .json({
+        status: "error",
+        code: 409,
+        message: `The user with id ${id} does not exist in Hoteliers collection`,
+      })
+      .end();
   }
 
   if (amount < 0) {
-    return res.status(409).json({
-      status: "error",
-      code: 409,
-      message: `The amount should be more`,
-    });
+    return res
+      .status(409)
+      .json({
+        status: "error",
+        code: 409,
+        message: `The amount should be more`,
+      })
+      .end();
   }
 
   const bonus = finances.bonus + amount;
@@ -46,13 +52,15 @@ const addBonus = async (req, res) => {
 
   const result = await Hotelier.findById(id);
 
-  res.json({
-    status: "success",
-    code: 200,
-    data: {
-      result,
-    },
-  });
+  res
+    .json({
+      status: "success",
+      code: 200,
+      data: {
+        result,
+      },
+    })
+    .end();
 };
 
 module.exports = addBonus;

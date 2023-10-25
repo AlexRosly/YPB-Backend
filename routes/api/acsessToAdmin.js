@@ -16,7 +16,7 @@ router.post("/add-new-admin", ctrlWrapper(ctrl.addAdmin));
 //check admin and send code
 router.post(
   "/check-admin",
-  validation(checkAdmin),
+  // validation(checkAdmin),
   ctrlWrapper(ctrl.checkAdmin)
 );
 
@@ -67,8 +67,8 @@ router.get("/get-statistic", authAdmin, ctrlWrapper(ctrl.getStatistic));
 router.get("/statistic", ctrlWrapper(ctrl.statistic));
 
 //get all admins
-router.get("/get-all-admin", ctrlWrapper(ctrl.getAllAdmin)); //authAdmin,
+router.get("/get-all-admin", authAdmin, ctrlWrapper(ctrl.getAllAdmin)); //authAdmin,
 
-router.get("/get-all-users", ctrlWrapper(ctrl.getAllUsers));
+router.get("/get-all-users", authAdmin, ctrlWrapper(ctrl.getAllUsers));
 
 module.exports = router;

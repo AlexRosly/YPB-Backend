@@ -1,15 +1,44 @@
 const { Admin } = require("../../models");
+const { AcsessToAdmin } = require("../../models");
 
 const logOutAdmin = async (req, res) => {
-  const { id } = req.hotelier;
-  const isAuth = false;
+  const id = req.superAdmin;
+  const _id = req.admin;
 
-  await Admin.findByIdAndUpdate(id, { token: null, isAuth });
+  if (id) {
+    await Admin.findByIdAndUpdate(id, { token: null });
+    res
+      .json({
+        status: "success",
+        code: 204,
+      })
+      .end();
+  }
 
-  res.json({
-    status: "success",
-    code: 204,
-  });
+  if (_id) {
+    await AcsessToAdmin.findByIdAndUpdate(_id, {
+      token: null,
+    });
+
+    res
+      .json({
+        status: "success",
+        code: 204,
+      })
+      .end();
+  }
+
+  // console.log({ superAdmin });
+  // console.log({ admin });
+
+  // if (superAdmin || admin) {
+  //   console.log("work");
+  // }
+
+  // res.json({
+  //   status: "success",
+  //   code: 204,
+  // });
 };
 
 module.exports = logOutAdmin;

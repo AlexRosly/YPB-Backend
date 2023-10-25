@@ -3,6 +3,7 @@ const { AcsessToAdmin } = require("../../models");
 const changeStatus = async (req, res) => {
   const { email, status } = req.body;
 
+  //change status
   switch (status) {
     case "ban":
       const findEmail = await AcsessToAdmin.findOne({ email });
@@ -151,7 +152,6 @@ const changeStatus = async (req, res) => {
           message: `The status for email ${email} wasn't change`,
         })
         .end();
-
       break;
   }
 };

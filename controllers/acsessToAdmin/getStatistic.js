@@ -6,18 +6,20 @@ const getStatistic = async (req, res) => {
   const hoteliersPaidWithBonuses = 0;
   const hoteliersHavePaid = 0;
 
-  res.json({
-    status: "success",
-    code: 200,
-    data: {
-      fundsOnHotelierAccounts,
-      bonusFundsOnHoteliersAccounts,
-      refundsOfUnspentMoneyToHoteliers,
-      grossHotelRevens,
-      hoteliersPaidWithBonuses,
-      hoteliersHavePaid,
-    },
-  });
+  res
+    .json({
+      status: "success",
+      code: 200,
+      data: {
+        fundsOnHotelierAccounts,
+        bonusFundsOnHoteliersAccounts,
+        refundsOfUnspentMoneyToHoteliers,
+        grossHotelRevens,
+        hoteliersPaidWithBonuses,
+        hoteliersHavePaid,
+      },
+    })
+    .end();
 };
 
 module.exports = getStatistic;

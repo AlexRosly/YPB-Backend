@@ -2,5 +2,6 @@
 const transporter = require("./nodemailer");
 const currency = require("./currency");
 const pageCatalog = require("./pageCatalog");
+const secretCodeForAdmin = require("./secretCodeForAdmin");
 
-module.exports = { transporter, currency, pageCatalog };
+module.exports = { transporter, currency, pageCatalog, secretCodeForAdmin };

@@ -321,3 +321,4 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 3. кількість ліжок додано на наш сервіс
 4. Ціна сьогодні за кожне ліжко
 5. Дати бронювання на кожне ліжко
+
