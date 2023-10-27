@@ -56,14 +56,17 @@ const addDistrictLoc1 = async (req, res) => {
     }
   };
 
-  res.status(201).json({
-    status: "success",
-    message: "district created and added to all languages",
-    code: 201,
-    data: {
-      district,
-    },
-  });
+  res
+    .status(201)
+    .json({
+      status: "success",
+      message: "district created and added to all languages",
+      code: 201,
+      data: {
+        district,
+      },
+    })
+    .end();
 };
 
 module.exports = addDistrictLoc1;

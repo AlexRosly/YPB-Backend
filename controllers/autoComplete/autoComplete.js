@@ -3,6 +3,7 @@ const { Country, Region, City, District } = require("../../models");
 const autoComplete = async ({ query: { search, limit = 8, lang } }, res) => {
   const searchFromUrl = decodeURI(search).trim();
 
+  //find country, state, cities and district by query string
   const countries = await Country.find({
     // langCode: lang,
     country: { $regex: searchFromUrl, $options: "i" },
@@ -23,23 +24,28 @@ const autoComplete = async ({ query: { search, limit = 8, lang } }, res) => {
     districtName: { $regex: searchFromUrl, $options: "i" },
   }).limit(limit);
 
+  //check response from DB
   const statment =
     (countries.length === 0) &
     (states.length === 0) &
     (cities.length === 0) &
     (districts.length === 0);
 
+  //if statment true (not found in DB) return error
   if (statment) {
     // const error = new Error(`${search} not found`);
     // error.status = 404;
     // throw error;
-    return res.json({
-      status: "error",
-      code: 404,
-      message: `${search} not found in DB`,
-    });
+    return res
+      .json({
+        status: "error",
+        code: 404,
+        message: `${search} not found in DB`,
+      })
+      .end();
   }
 
+  //create response
   let district = [];
 
   if (districts.length > 0) {
@@ -55,7 +61,7 @@ const autoComplete = async ({ query: { search, limit = 8, lang } }, res) => {
       const getStateName = stateParse.stateName;
       const getCountryById = await Country.findById(getCountryId);
       const countryParse = JSON.parse(JSON.stringify(getCountryById));
-      const getCountryName = countryParse.country;
+      const getCountryName = countryParse?.country;
       const createObject = {
         _id,
         districtName,
