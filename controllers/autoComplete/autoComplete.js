@@ -84,7 +84,7 @@ const autoComplete = async ({ query: { search, limit = 8, lang } }, res) => {
       const getStateName = stateParse.stateName;
       const getCountryById = await Country.findById(getCountryId);
       const countryParse = JSON.parse(JSON.stringify(getCountryById));
-      const getCountryName = countryParse.country;
+      const getCountryName = countryParse?.country;
       const createObject = {
         _id,
         cityName,
@@ -102,7 +102,7 @@ const autoComplete = async ({ query: { search, limit = 8, lang } }, res) => {
       const { _id, countryId, stateName } = states[i];
       const getCountryById = await Country.findById(countryId);
       const countryParse = JSON.parse(JSON.stringify(getCountryById));
-      const getCountryName = countryParse.country;
+      const getCountryName = countryParse?.country;
       const createObject = {
         _id,
         stateName,
