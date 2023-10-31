@@ -6,6 +6,7 @@ const hotelsFinder = require("./hotelsFinder");
 const hotelsVerificationVideo = require("./hotelsVerificationVideo");
 const getHotelsByHotelierId = require("./getHotelsByHotelierId");
 const addPhoneAndDateVerification = require("./addPhoneAndDateVerification");
+const translateDescription = require("./translateDescription");
 
 module.exports = {
   addHotel,
@@ -16,4 +17,5 @@ module.exports = {
   hotelsVerificationVideo,
   getHotelsByHotelierId,
   addPhoneAndDateVerification,
+  translateDescription,
 };

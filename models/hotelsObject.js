@@ -35,6 +35,9 @@ const hotelsObject = Schema(
       maxlength: 700,
       require: [true, "description must be exist"],
     },
+    translation: {
+      type: Object,
+    },
     photos: [
       {
         id: { type: String },

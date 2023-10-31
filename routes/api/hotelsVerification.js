@@ -15,14 +15,18 @@ const router = express.Router();
 //   ctrlWrapper(ctrl.addHotel)
 // );
 
+router.post("/", uploadVideo.single("video"), async (req, res) => {
+  console.log(req.file);
+});
+
+//add a translation
+router.patch("/add-a-translation", ctrlWrapper(ctrl.translateDescription));
+
+//
 router.patch(
   "/:id",
   uploadVideo.single("video"),
   ctrlWrapper(ctrl.hotelsVerificationVideo)
 );
-
-router.post("/", uploadVideo.single("video"), async (req, res) => {
-  console.log(req.file);
-});
 
 module.exports = router;

@@ -28,20 +28,28 @@ const addHotel = async (req, res) => {
       if (!hotel) {
         throw new NotImplemented("hotels doesn`t create");
       }
-      res.status(201).json({
-        status: "success",
-        message: "hotel created",
-        code: 201,
-        data: {
-          hotel,
-        },
-      });
+      res
+        .status(201)
+        .json({
+          status: "success",
+          message: "hotel created",
+          code: 201,
+          data: {
+            hotel,
+          },
+        })
+        .end();
     } else {
-      res.status(405).json({
-        err: `${req.method} method not allowed`,
-      });
+      res
+        .status(405)
+        .json({
+          err: `${req.method} method not allowed`,
+        })
+        .end();
     }
-  } catch (error) {}
+  } catch (error) {
+    console.log({ error });
+  }
 
   // const hotel = await Hotels.create({ ...req.body });
 

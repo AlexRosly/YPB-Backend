@@ -27,12 +27,13 @@ const checkAdmin = async (req, res) => {
   // const validCode = createdCode.getTime() + 60000;
 
   if (checkAdmin.length > 0 && checkAdmin[0].validCode > createdCode) {
+    console.log("object", checkAdmin[0].validCode > createdCode);
     return res
-      .status(409)
+      .status(200)
       .json({
-        status: "error",
-        code: 409,
-        message: "Try to enter later",
+        status: "success",
+        code: 200,
+        message: "You have an access code in the mail",
       })
       .end();
   }
@@ -48,11 +49,11 @@ const checkAdmin = async (req, res) => {
 
   if (checkUser.length > 0 && checkUser[0].validCode > createdCode) {
     return res
-      .status(409)
+      .status(200)
       .json({
-        status: "error",
-        code: 409,
-        message: "Try to enter later",
+        status: "success",
+        code: 200,
+        message: "You have an access code in the mail",
       })
       .end();
   }
