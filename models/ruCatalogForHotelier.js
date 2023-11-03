@@ -30,10 +30,16 @@ const ruCatalogForHotelier = Schema(
     url: {
       type: String,
     },
-    description: {
+    typeOfPage: {
       type: String,
     },
     districtInternational: {
+      type: String,
+    },
+    title: {
+      type: String,
+    },
+    discription: {
       type: String,
     },
   },
@@ -49,7 +55,7 @@ const joiSchema = Joi.object({
   country: Joi.string().required(),
   linkOnPhoto: Joi.string().required(),
   url: Joi.string(),
-  description: Joi.string(),
+  typeOfPage: Joi.string(),
   districtInternational: Joi.string(),
 });
 

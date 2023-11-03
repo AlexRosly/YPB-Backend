@@ -333,3 +333,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 en: "Two very common methods of fortune telling are reading coffee grounds or tea leaves. Since time immemorial, people have been fascinated by the idea of making predictions and forecasts about the future. And tasseography is a relatively easy method to learn for this. This book explains very practically and clearly with many pictures and step by step how coffee grounds and tea leaves are interpreted and which rules apply. What do you need to consider when reading? Which position of the symbols gives you information about what? What are the methods of interpretation? How do you prepare yourself mentally? How to properly prepare your mocha or tea for reading? and much more. The very comprehensive"
 
 ua: "Для того щоб перетворити нескінчений періодичний дріб на звичайний, треба від числа, що стоїть до другого періоду, відняти число,  що стоїть до першого періоду. Потім записати цю різницю чисельником, а в знаменнику записати цифру 9 стільки разів, скільки цифр у періоді, а після дев'яток дописати стільки нулів, скільки цифр стоїть між комою і першим періодом. "
+
+typeOfPage

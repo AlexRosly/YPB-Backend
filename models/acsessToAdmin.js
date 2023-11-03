@@ -1,39 +1,36 @@
 const { Schema, model } = require("mongoose");
 const Joi = require("joi");
 
-const acsessToAdmin = Schema(
-  {
-    email: {
-      type: String,
-      required: true,
-    },
-    access: [{ type: String }],
-    status: {
-      type: String,
-      default: "active",
-    },
-    role: {
-      type: String,
-      default: "admin",
-    },
-    secretCode: {
-      type: String,
-    },
-    createdCode: {
-      type: Number,
-      default: 0,
-    },
-    validCode: {
-      type: Number,
-      default: 0,
-    },
-    token: {
-      type: String,
-      default: null,
-    },
+const acsessToAdmin = Schema({
+  email: {
+    type: String,
+    required: true,
   },
-  { versionKey: false, timestamps: true }
-);
+  access: [{ type: String }],
+  status: {
+    type: String,
+    default: "active",
+  },
+  role: {
+    type: String,
+    default: "admin",
+  },
+  secretCode: {
+    type: String,
+  },
+  createdCode: {
+    type: Number,
+    default: 0,
+  },
+  validCode: {
+    type: Number,
+    default: 0,
+  },
+  token: {
+    type: String,
+    default: null,
+  },
+});
 
 const joiSchema = Joi.object({
   email: Joi.string().required(),
