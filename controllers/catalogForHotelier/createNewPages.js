@@ -7,6 +7,25 @@ const {
 const { pageCatalog } = require("../../utils");
 require("dotenv").config();
 
+const description = {
+  ru: [
+    // `Сдайте жилье посуточно в  городе ${city}, ${country} с Your Price Booking и получайте оплату перед заселением. 5% комиссии, гибкие цены, регистрация объектов онлайн. Удовлетворите потребности бронирующих гостей, предлагая индивидуальные цены. Привлекайте путешественников, знающих, что наши комиссии для отельеров минимальны. Регистрируйте отели, квартиры, дома и многое другое сегодня и привлекайте клиентов!`,
+    // `Сдайте комнату в квартире посуточно - ${city}, ${country}, с оплатой перед заселением. Мы взимаем всего 5% комиссии и позволяем вам гибко управлять ценами. Зарегистрируйте свое жилье онлайн и получите клиентов. Предлагайте индивидуальные цены, видимые для ищущих бронирование. Не упустите возможность предложить хорошие цены и получить клиентов с минимальной комиссией. Регистрируйтесь и начните аренду жилья прямо сейчас.`,
+  ],
+  uk: [
+    // `Здавайте житло добово у місті ${city}, ${country} за допомогою Your Price Booking і отримуйте оплату перед заселенням. 5% комісії, гнучкі ціни, реєстрація об'єктів онлайн. Задовольняйте потреби бронюючих гостей, запропоновуючи індивідуальні ціни. Привертайте подорожуючих, які знають, що наші комісії для господарів є мінімальними. Реєструйте готелі, квартири, будинки та багато іншого вже сьогодні і приваблюйте клієнтів!`,
+    // `Здайте кімнату в квартирі добово - ${city}, ${country}, з оплатою перед заселенням. Ми беремо лише 5% комісії та надаємо можливість гнучкого керування цінами. Зареєструйте своє житло онлайн та отримайте клієнтів. Пропонуйте індивідуальні ціни, видимі для тих, хто шукає бронювання. Не пропустіть можливість запропонувати хороші ціни та отримати клієнтів з мінімальною комісією. Реєструйтеся і почніть здачу житла прямо зараз.`,
+  ],
+  pl: [
+    // `Wynajmij apartamenty na dzień - ${city}, ${country} z Your Price Booking i zarabiaj przed wprowadzeniem się. 5% prowizji, elastyczne ceny, rejestracja obiektu online. Spełniaj potrzeby rezerwacyjne swoich gości, oferując spersonalizowane ceny. Przyciągaj podróżnych, którzy wiedzą, że opłaty naszych właścicieli są minimalne. Wystaw hotele, apartamenty, domy i nie tylko już dziś i przyciągnij klientów!`,
+    // `Wynajmij pokój w mieszkaniu na dobę w mieście ${city}, ${country}, z płatnością przed zameldowaniem. Pobieramy tylko 5% prowizji i zapewniamy elastyczne zarządzanie cenami. Zarejestruj swoje zakwaterowanie online i zdobywaj klientów. Oferuj niestandardowe ceny widoczne dla osób poszukujących rezerwacji. Nie przegap okazji, aby zaoferować dobre ceny i pozyskać klientów przy minimalnej prowizji. Zarejestruj się i zacznij wynajmować swój dom już teraz.`,
+  ],
+  en: [
+    // `Rent Accommodation Daily in the city of ${city}, ${country} with Your Price Booking and get paid before check-in. 5% commission, flexible pricing, online property registration. Cater to the needs of booking guests by offering individual prices. Attract travelers who know that our commissions for hosts are minimal. Register hotels, apartments, homes, and more today and attract customers!`,
+    // `Rent a room in an apartment daily in the city of ${city}, ${country}, with payment before check-in. We charge only 5% commission and provide flexible price management. Register your accommodation online and get customers. Offer custom pricing visible to those looking for a reservation. Do not miss the opportunity to offer good prices and get customers with minimal commission. Register and start renting out your home right now.`,
+  ],
+};
+
 const { MAIN_DOMAIN } = process.env;
 
 const CyrillicToTranslit = require("cyrillic-to-translit-js");
@@ -14,6 +33,25 @@ const cyrillicToTranslit = new CyrillicToTranslit();
 
 const createNewPages = async (req, res) => {
   const { language, idLocation, district, city, state, country } = req.body;
+
+  const title = {
+    ru: [
+      `Посуточная аренда жилья - ${city}, ${country} | Your Price Booking`,
+      `Посуточная аренда жилья - ${city}, ${country} | Your Price Booking`,
+    ],
+    uk: [
+      `Бронювання готелів та посуточна оренда житла - ${city}, ${country} | Your Price Booking`,
+      `Добова оренда житла - ${city}, ${country} | Your Price Booking`,
+    ],
+    pl: [
+      `Rezerwacja hoteli i wynajem na krótki okres - ${city}, ${country} | Your Price Booking`,
+      `Dzierżawa na krótki okres - ${city}, ${country} | Your Price Booking`,
+    ],
+    en: [
+      `Hotel Booking and Short-Term Rental - ${city}, ${country} | Your Price Booking`,
+      `Short-Term Rental in ${city}, ${country} | Your Price Booking`,
+    ],
+  };
 
   let isPageAdded = false;
 
@@ -47,7 +85,7 @@ const createNewPages = async (req, res) => {
       for (const link of pageCatalog.uk) {
         const createUrl = `${MAIN_DOMAIN}${link}-${translit}`;
         const getIndex = pageCatalog.uk.indexOf(link);
-        const createDescription = pageCatalog.en[getIndex];
+        const createTypeOfPage = pageCatalog.en[getIndex];
 
         const checkLinkPlCatalog = await PlCatalogForHotelier.find({
           url: createUrl,
@@ -72,7 +110,7 @@ const createNewPages = async (req, res) => {
             ...req.body,
             nameOfpage: district,
             url: createUrl,
-            description: createDescription,
+            typeOfPage: createTypeOfPage,
           });
           if (addToUaCatalog) {
             isPageAdded = true;
@@ -90,7 +128,7 @@ const createNewPages = async (req, res) => {
             ...req.body,
             nameOfpage: district,
             url: upgradeUrl,
-            description: createDescription,
+            typeOfPage: createTypeOfPage,
           });
 
           if (addToUaCatalog) {
@@ -124,7 +162,7 @@ const createNewPages = async (req, res) => {
       for (const link of pageCatalog.ru) {
         const createUrl = `${MAIN_DOMAIN}${link}-${translit}`;
         const getIndex = pageCatalog.ru.indexOf(link);
-        const createDescription = pageCatalog.en[getIndex];
+        const createTypeOfPage = pageCatalog.en[getIndex];
 
         const checkLinkPlCatalog = await PlCatalogForHotelier.find({
           url: createUrl,
@@ -149,7 +187,7 @@ const createNewPages = async (req, res) => {
             ...req.body,
             nameOfpage: district,
             url: createUrl,
-            description: createDescription,
+            typeOfPage: createTypeOfPage,
           });
           if (addToRuCatalog) {
             isPageAdded = true;
@@ -168,7 +206,7 @@ const createNewPages = async (req, res) => {
             ...req.body,
             nameOfpage: district,
             url: upgradeUrl,
-            description: createDescription,
+            typeOfPage: createTypeOfPage,
           });
 
           if (addToRuCatalog) {
@@ -202,7 +240,7 @@ const createNewPages = async (req, res) => {
       for (const link of pageCatalog.pl) {
         const createUrl = `${MAIN_DOMAIN}${link}-${translit}`;
         const getIndex = pageCatalog.pl.indexOf(link);
-        const createDescription = pageCatalog.en[getIndex];
+        const createTypeOfPage = pageCatalog.en[getIndex];
 
         const checkLinkPlCatalog = await PlCatalogForHotelier.find({
           url: createUrl,
@@ -227,7 +265,7 @@ const createNewPages = async (req, res) => {
             ...req.body,
             nameOfpage: district,
             url: createUrl,
-            description: createDescription,
+            typeOfPage: createTypeOfPage,
           });
           if (addToPlCatalog) {
             isPageAdded = true;
@@ -246,7 +284,7 @@ const createNewPages = async (req, res) => {
             ...req.body,
             nameOfpage: district,
             url: upgradeUrl,
-            description: createDescription,
+            typeOfPage: createTypeOfPage,
           });
 
           if (addToPlCatalog) {
@@ -283,8 +321,8 @@ const createNewPages = async (req, res) => {
         // console.log("index", pageCatalog.en.indexOf(link));
         const createUrl = `${MAIN_DOMAIN}${link}-${translit}`;
         const getIndex = pageCatalog.en.indexOf(link);
-        const createDescription = pageCatalog.en[getIndex];
-        // console.log({ createDescription });
+        const createTypeOfPage = pageCatalog.en[getIndex];
+        // console.log({ createTypeOfPage });
         const checkLinkPlCatalog = await PlCatalogForHotelier.find({
           url: createUrl,
         });
@@ -308,7 +346,7 @@ const createNewPages = async (req, res) => {
             ...req.body,
             nameOfpage: district,
             url: createUrl,
-            description: createDescription,
+            typeOfPage: createTypeOfPage,
           });
           if (addToEnCatalog) {
             isPageAdded = true;
@@ -326,7 +364,7 @@ const createNewPages = async (req, res) => {
             ...req.body,
             nameOfpage: district,
             url: upgradeUrl,
-            description: createDescription,
+            typeOfPage: createTypeOfPage,
           });
 
           if (addToEnCatalog) {

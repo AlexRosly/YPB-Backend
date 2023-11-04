@@ -14,7 +14,7 @@ exports.uploads = (file, folder) => {
         resolve({
           url: result.url,
           id: result.public_id,
-        });
+        }); //use for create object [{id:id, url: "http"}]
       },
       {
         resource_type: "auto",

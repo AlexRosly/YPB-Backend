@@ -7,8 +7,10 @@ const { NODEMAILER_PASS, NODEMAILER_PASS1 } = process.env;
 const nodemailerConfig = {
   //variant 1 for gmail
 
+  // service: "gmail",
+  host: "smtp.gmail.com",
+  port: 465,
   secure: true,
-  service: "gmail",
   auth: {
     user: "yourpricebooking@gmail.com", // from send email
     pass: NODEMAILER_PASS,
