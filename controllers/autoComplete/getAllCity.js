@@ -32,6 +32,7 @@ const getAllCity = async ({ query: { language } }, res) => {
     tempObj.country = city.state.country?.country;
     resultTemp.push(tempObj);
   }
+
   //temporary decision for return 3 districts and city
   switch (language.toUpperCase()) {
     case "EN":
