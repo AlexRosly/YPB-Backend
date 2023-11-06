@@ -35,10 +35,19 @@ const translateDescription = async (req, res) => {
     }
   );
 
+  if (!findHotels) {
+    return res
+      .json({
+        code: 404,
+        message: "translation doesn't created",
+      })
+      .end();
+  }
+
   res
     .json({
       code: 200,
-      message: "ok",
+      message: "success",
       translate: findHotels.translation,
     })
     .end();

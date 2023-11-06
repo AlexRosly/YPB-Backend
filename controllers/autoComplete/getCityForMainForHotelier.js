@@ -1,11 +1,5 @@
 const { City } = require("../../models");
 
-// {
-//     "city": "Kyiv",
-//  "state": "Kyiv region",
-//  "country": "Ukraine"
-// }
-
 const getCityForMainForHotelier = async ({ query: { language } }, res) => {
   const cities = await City.find({ langCode: language.toUpperCase() }).populate(
     {
@@ -32,6 +26,7 @@ const getCityForMainForHotelier = async ({ query: { language } }, res) => {
     let tempObj = {};
     tempObj.id = city._id;
     tempObj.city = city.cityName;
+    tempObj.cityInternational = city.cityInternational;
     tempObj.state = city.state.stateName;
     tempObj.country = city.state.country?.country;
     tempObj.photoUrl = city.cityPhotoURL;
@@ -41,7 +36,7 @@ const getCityForMainForHotelier = async ({ query: { language } }, res) => {
   res
     .json({
       code: 200,
-      message: "ok",
+      message: "success",
       result,
     })
     .end();

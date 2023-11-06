@@ -39,7 +39,7 @@ const plCatalogForHotelier = Schema(
     title: {
       type: String,
     },
-    discription: {
+    description: {
       type: String,
     },
   },
