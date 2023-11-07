@@ -58,6 +58,7 @@ const createNewPages = async (req, res) => {
           checkLinkRuCatalog.length === 0 &&
           checkLinkEnCatalog.length === 0
         ) {
+          //create page
           const addToUaCatalog = await UaCatalogForHotelier.create({
             ...req.body,
             nameOfpage: district,
