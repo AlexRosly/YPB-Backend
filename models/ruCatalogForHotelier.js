@@ -39,7 +39,7 @@ const ruCatalogForHotelier = Schema(
     title: {
       type: String,
     },
-    discription: {
+    description: {
       type: String,
     },
   },

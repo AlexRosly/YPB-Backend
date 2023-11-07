@@ -39,7 +39,7 @@ const uaCatalogForHotelier = Schema(
     title: {
       type: String,
     },
-    discription: {
+    description: {
       type: String,
     },
   },

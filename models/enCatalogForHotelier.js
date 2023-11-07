@@ -39,7 +39,7 @@ const enCatalogForHotelier = Schema(
     title: {
       type: String,
     },
-    discription: {
+    description: {
       type: String,
     },
   },
