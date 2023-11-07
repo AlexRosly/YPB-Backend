@@ -3,7 +3,7 @@ const { User } = require("../../models");
 const getAllUsers = async (_, res) => {
   const users = await User.find(
     {},
-    { _id: 1, lastName: 1, firstName: 1, email: 1 }
+    { _id: 1, lastName: 1, firstName: 1, email: 1, status: 1 }
   );
 
   if (!users) {
