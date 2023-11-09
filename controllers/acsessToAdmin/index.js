@@ -10,6 +10,7 @@ const getStatistic = require("./getStatistic");
 const statistic = require("./statistic");
 const getAllAdmin = require("./getAllAdmin");
 const getAllUsers = require("./getAllUsers");
+const getAmountObjectInCountry = require("./getAmountObjectInCountry");
 
 module.exports = {
   checkAdmin,
@@ -24,4 +25,5 @@ module.exports = {
   statistic,
   getAllAdmin,
   getAllUsers,
+  getAmountObjectInCountry,
 };

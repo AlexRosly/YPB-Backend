@@ -72,4 +72,10 @@ router.get("/get-all-admin", authAdmin, ctrlWrapper(ctrl.getAllAdmin)); //authAd
 //get all users
 router.get("/get-all-users", ctrlWrapper(ctrl.getAllUsers));
 
+//get Amount Object In Country
+router.get(
+  "/get-amount-object-in-country",
+  ctrlWrapper(ctrl.getAmountObjectInCountry)
+);
+
 module.exports = router;
