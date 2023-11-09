@@ -1,7 +1,6 @@
 const { City } = require("../../models");
 
 const getCityForCreateObject = async ({ query: { language } }, res) => {
-  console.log("work");
   const cities = await City.find({ langCode: language.toUpperCase() }).populate(
     {
       path: "state",
