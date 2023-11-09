@@ -12,4 +12,9 @@ router.get(
   ctrlWrapper(ctrl.getCityForMainForHotelier)
 );
 
+router.get(
+  "/get-city-for-create-object",
+  ctrlWrapper(ctrl.getCityForCreateObject)
+);
+
 module.exports = router;
