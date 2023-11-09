@@ -10,6 +10,7 @@ const getAllByLanguageAndQueryString = async (
   res
 ) => {
   const decodeUrl = decodeURIComponent(url);
+  let getAllPages = [];
 
   switch (language) {
     case "uk":
@@ -25,13 +26,14 @@ const getAllByLanguageAndQueryString = async (
           code: 406,
         });
       }
-
+      getAllPages = [...getAllUkPages];
       res.status(200).json({
         status: "success",
         code: 200,
-        getAllUkPages,
+        getAllPages,
       });
       break;
+
     case "ru":
       const getAllRuPages = await RuCatalogForHotelier.find({
         language,
@@ -45,11 +47,12 @@ const getAllByLanguageAndQueryString = async (
           code: 406,
         });
       }
+      getAllPages = [...getAllRuPages];
 
       res.status(200).json({
         status: "success",
         code: 200,
-        getAllRuPages,
+        getAllPages,
       });
 
       break;
@@ -58,10 +61,6 @@ const getAllByLanguageAndQueryString = async (
         language,
         url: decodeUrl,
       });
-      console.log("m", getAllPlPages.length);
-
-      console.log({ language });
-      console.log({ url });
 
       if (getAllPlPages.length === 0) {
         return res.status(406).json({
@@ -70,14 +69,16 @@ const getAllByLanguageAndQueryString = async (
           code: 406,
         });
       }
+      getAllPages = [...getAllPlPages];
 
       res.status(200).json({
         status: "success",
         code: 200,
-        getAllPlPages,
+        getAllPages,
       });
 
       break;
+
     case "en":
       const getAllEnPages = await EnCatalogForHotelier.find({
         language,
@@ -91,11 +92,11 @@ const getAllByLanguageAndQueryString = async (
           code: 406,
         });
       }
-
+      getAllPages = [...getAllEnPages];
       res.status(200).json({
         status: "success",
         code: 200,
-        getAllEnPages,
+        getAllPages,
       });
 
       break;
