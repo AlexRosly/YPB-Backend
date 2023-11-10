@@ -1,47 +1,218 @@
-const { City } = require("../../models");
+const {
+  City,
+  UaCatalogForHotelier,
+  RuCatalogForHotelier,
+  PlCatalogForHotelier,
+  EnCatalogForHotelier,
+} = require("../../models");
 
 const getCityForMainForHotelier = async ({ query: { language } }, res) => {
-  const cities = await City.find({ langCode: language.toUpperCase() }).populate(
-    {
-      path: "state",
-      populate: { path: "country" },
-    }
-  );
+  console.log({ language });
+  const cities = await City.find({
+    dbLangCode: language.toLowerCase(),
+  }).populate({
+    path: "state",
+    populate: { path: "country" },
+  });
 
   //if city not found return error
-  if (!cities) {
-    res
-      .status(422)
-      .json({
-        status: "error",
-        message: "doesn't get all cities",
-      })
-      .end();
-  }
+  // if (!cities) {
+  //   res
+  //     .status(422)
+  //     .json({
+  //       status: "error",
+  //       message: "doesn't get all cities",
+  //     })
+  //     .end();
+  // }
 
   const result = [];
 
-  //create array of city
-  for (const city of cities) {
-    let tempObj = {};
-    tempObj.id = city._id;
-    tempObj.city = city.cityName;
-    tempObj.cityInternational = city.cityInternational;
-    tempObj.state = city.state.stateName;
-    tempObj.stateInternational = city.stateInternational;
-    tempObj.country = city.state.country?.country;
-    tempObj.countryInternational = city.state.international;
-    tempObj.photoUrl = city.cityPhotoURL;
-    result.push(tempObj);
+  // //create array of city
+  // for (const city of cities) {
+  //   let tempObj = {};
+  //   tempObj.id = city._id;
+  //   tempObj.city = city.cityName;
+  //   tempObj.cityInternational = city.cityInternational;
+  //   tempObj.state = city.state.stateName;
+  //   tempObj.stateInternational = city.stateInternational;
+  //   tempObj.country = city.state.country?.country;
+  //   tempObj.countryInternational = city.state.international;
+  //   tempObj.photoUrl = city.cityPhotoURL;
+  //   result.push(tempObj);
+  // }
+
+  switch (language) {
+    case "pl":
+      for (const city of cities) {
+        const findPage = await PlCatalogForHotelier.find({
+          city: city.cityName,
+        });
+        if (findPage.length > 0) {
+          let tempObj = {};
+          tempObj.id = city._id;
+          tempObj.city = city.cityName;
+          tempObj.cityInternational = city.cityInternational;
+          tempObj.state = city.state.stateName;
+          tempObj.stateInternational = city.stateInternational;
+          tempObj.country = city.state.country?.country;
+          tempObj.countryInternational = city.state.international;
+          tempObj.photoUrl = city.cityPhotoURL;
+          result.push(tempObj);
+        }
+      }
+
+      if (!result.length === 0) {
+        res
+          .json({
+            code: 404,
+            message: "city doesn't found in DB",
+          })
+          .end();
+      }
+
+      res
+        .json({
+          code: 200,
+          message: "success",
+          result,
+        })
+        .end();
+
+      break;
+
+    case "en":
+      for (const city of cities) {
+        const findPage = await EnCatalogForHotelier.find({
+          city: city.cityName,
+        });
+        if (findPage.length > 0) {
+          let tempObj = {};
+          tempObj.id = city._id;
+          tempObj.city = city.cityName;
+          tempObj.cityInternational = city.cityInternational;
+          tempObj.state = city.state.stateName;
+          tempObj.stateInternational = city.stateInternational;
+          tempObj.country = city.state.country?.country;
+          tempObj.countryInternational = city.state.international;
+          tempObj.photoUrl = city.cityPhotoURL;
+          result.push(tempObj);
+        }
+      }
+
+      if (!result.length === 0) {
+        res
+          .json({
+            code: 404,
+            message: "city doesn't found in DB",
+          })
+          .end();
+      }
+
+      res
+        .json({
+          code: 200,
+          message: "success",
+          result,
+        })
+        .end();
+
+      break;
+
+    case "ru":
+      for (const city of cities) {
+        const findPage = await RuCatalogForHotelier.find({
+          city: city.cityName,
+        });
+        if (findPage.length > 0) {
+          let tempObj = {};
+          tempObj.id = city._id;
+          tempObj.city = city.cityName;
+          tempObj.cityInternational = city.cityInternational;
+          tempObj.state = city.state.stateName;
+          tempObj.stateInternational = city.stateInternational;
+          tempObj.country = city.state.country?.country;
+          tempObj.countryInternational = city.state.international;
+          tempObj.photoUrl = city.cityPhotoURL;
+          result.push(tempObj);
+        }
+      }
+
+      if (!result.length === 0) {
+        res
+          .json({
+            code: 404,
+            message: "city doesn't found in DB",
+          })
+          .end();
+      }
+
+      res
+        .json({
+          code: 200,
+          message: "success",
+          result,
+        })
+        .end();
+
+      break;
+
+    case "uk":
+      for (const city of cities) {
+        const findPage = await UaCatalogForHotelier.find({
+          city: city.cityName,
+        });
+        if (findPage.length > 0) {
+          let tempObj = {};
+          tempObj.id = city._id;
+          tempObj.city = city.cityName;
+          tempObj.cityInternational = city.cityInternational;
+          tempObj.state = city.state.stateName;
+          tempObj.stateInternational = city.stateInternational;
+          tempObj.country = city.state.country?.country;
+          tempObj.countryInternational = city.state.international;
+          tempObj.photoUrl = city.cityPhotoURL;
+          result.push(tempObj);
+        }
+      }
+
+      if (!result.length === 0) {
+        res
+          .json({
+            code: 404,
+            message: "city doesn't found in DB",
+          })
+          .end();
+      }
+
+      res
+        .json({
+          code: 200,
+          message: "success",
+          result,
+        })
+        .end();
+
+      break;
+
+    default:
+      res
+        .json({
+          code: 404,
+          message: `This language ${language} doesn't exist in DB`,
+        })
+        .end();
+
+      break;
   }
 
-  res
-    .json({
-      code: 200,
-      message: "success",
-      result,
-    })
-    .end();
+  // res
+  //   .json({
+  //     code: 200,
+  //     message: "success",
+  //     cities,
+  //   })
+  //   .end();
 };
 
 module.exports = getCityForMainForHotelier;
