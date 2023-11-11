@@ -78,4 +78,6 @@ router.get(
   ctrlWrapper(ctrl.getAmountObjectInCountry)
 );
 
+//get first object by click
+router.get("/get-earlier-object", ctrlWrapper(ctrl.getFirstObject));
 module.exports = router;

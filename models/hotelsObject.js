@@ -74,6 +74,9 @@ const hotelsObject = Schema(
       country: {
         type: String,
       },
+      international: {
+        type: String,
+      },
       _id: {
         type: String,
       },
@@ -137,6 +140,7 @@ const joiSchema = Joi.object({
     cityName: Joi.string(),
     stateName: Joi.string(),
     country: Joi.string(),
+    international: Joi.string(),
     _id: Joi.string(),
   },
   // documents: Joi.string(),

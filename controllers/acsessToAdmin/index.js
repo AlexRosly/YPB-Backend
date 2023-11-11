@@ -11,6 +11,7 @@ const statistic = require("./statistic");
 const getAllAdmin = require("./getAllAdmin");
 const getAllUsers = require("./getAllUsers");
 const getAmountObjectInCountry = require("./getAmountObjectInCountry");
+const getFirstObject = require("./getFirstObject");
 
 module.exports = {
   checkAdmin,
@@ -26,4 +27,5 @@ module.exports = {
   getAllAdmin,
   getAllUsers,
   getAmountObjectInCountry,
+  getFirstObject,
 };

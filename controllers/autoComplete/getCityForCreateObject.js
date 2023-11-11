@@ -27,6 +27,7 @@ const getCityForCreateObject = async ({ query: { language } }, res) => {
     tempObj.city = city.cityName;
     tempObj.state = city.state.stateName;
     tempObj.country = city.state.country?.country;
+    tempObj.international = city.state.international;
     result.push(tempObj);
   }
 
