@@ -52,6 +52,7 @@ app.use(
       "https://dev-app-react-ceotravelvee.vercel.app",
       "https://admin2-alpha.vercel.app",
       "https://xaeycpio.yourpricebooking.com",
+      "https://catalog-for-hoteliers-next13.vercel.app",
     ],
     credentials: true,
   })
