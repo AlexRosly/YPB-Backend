@@ -6,14 +6,17 @@ const {
 } = require("../../models");
 
 const getPagesByThreeParams = async (
-  { query: { language, description, districtInternational } },
+  { query: { language, typeOfPage, districtInternational } },
   res
 ) => {
   const decodeUrl = decodeURIComponent(districtInternational);
+
+  let getPage = [];
+
   switch (language) {
     case "uk":
       const getAllUkPages = await UaCatalogForHotelier.find({
-        description,
+        typeOfPage,
         districtInternational: decodeUrl,
       });
 
@@ -24,16 +27,17 @@ const getPagesByThreeParams = async (
           code: 406,
         });
       }
-
+      getPage = [...getAllUkPages];
       res.status(200).json({
         status: "success",
         code: 200,
-        getAllUkPages,
+        getPage,
       });
       break;
+
     case "ru":
       const getAllRuPages = await RuCatalogForHotelier.find({
-        description,
+        typeOfPage,
         districtInternational: decodeUrl,
       });
 
@@ -44,17 +48,19 @@ const getPagesByThreeParams = async (
           code: 406,
         });
       }
+      getPage = [...getAllRuPages];
 
       res.status(200).json({
         status: "success",
         code: 200,
-        getAllRuPages,
+        getPage,
       });
 
       break;
+
     case "pl":
       const getAllPlPages = await PlCatalogForHotelier.find({
-        description,
+        typeOfPage,
         districtInternational: decodeUrl,
       });
 
@@ -65,17 +71,19 @@ const getPagesByThreeParams = async (
           code: 406,
         });
       }
+      getPage = [...getAllPlPages];
 
       res.status(200).json({
         status: "success",
         code: 200,
-        getAllPlPages,
+        getPage,
       });
 
       break;
+
     case "en":
       const getAllEnPages = await EnCatalogForHotelier.find({
-        description,
+        typeOfPage,
         districtInternational: decodeUrl,
       });
 
@@ -86,11 +94,12 @@ const getPagesByThreeParams = async (
           code: 406,
         });
       }
+      getPage = [...getAllEnPages];
 
       res.status(200).json({
         status: "success",
         code: 200,
-        getAllEnPages,
+        getPage,
       });
 
       break;
