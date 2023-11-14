@@ -6,6 +6,9 @@ const {
   EnCatalogForHotelier,
 } = require("../../models");
 
+const CyrillicToTranslit = require("cyrillic-to-translit-js");
+const cyrillicToTranslit = new CyrillicToTranslit();
+
 const getCityForMainForHotelier = async ({ query: { language } }, res) => {
   console.log({ language });
   const cities = await City.find({
@@ -25,6 +28,7 @@ const getCityForMainForHotelier = async ({ query: { language } }, res) => {
   //     })
   //     .end();
   // }
+  // const translit = cyrillicToTranslit.transform(getString, "-").toLowerCase();
 
   const result = [];
 
@@ -120,6 +124,7 @@ const getCityForMainForHotelier = async ({ query: { language } }, res) => {
       break;
 
     case "ru":
+      console.log({ cities });
       for (const city of cities) {
         const findPage = await RuCatalogForHotelier.find({
           city: city.cityName,
@@ -128,10 +133,19 @@ const getCityForMainForHotelier = async ({ query: { language } }, res) => {
           let tempObj = {};
           tempObj.id = city._id;
           tempObj.city = city.cityName;
+          tempObj.cityTransliteration = cyrillicToTranslit.transform(
+            city.cityName
+          );
           tempObj.cityInternational = city.cityInternational;
           tempObj.state = city.state.stateName;
+          tempObj.stateTransliteration = cyrillicToTranslit.transform(
+            city.state.stateName
+          );
           tempObj.stateInternational = city.stateInternational;
           tempObj.country = city.state.country?.country;
+          tempObj.countryTransliteration = cyrillicToTranslit.transform(
+            city.state.country.country
+          );
           tempObj.countryInternational = city.state.international;
           tempObj.photoUrl = city.cityPhotoURL;
           result.push(tempObj);
@@ -166,10 +180,19 @@ const getCityForMainForHotelier = async ({ query: { language } }, res) => {
           let tempObj = {};
           tempObj.id = city._id;
           tempObj.city = city.cityName;
+          tempObj.cityTransliteration = cyrillicToTranslit.transform(
+            city.cityName
+          );
           tempObj.cityInternational = city.cityInternational;
           tempObj.state = city.state.stateName;
+          tempObj.stateTransliteration = cyrillicToTranslit.transform(
+            city.state.stateName
+          );
           tempObj.stateInternational = city.stateInternational;
           tempObj.country = city.state.country?.country;
+          tempObj.countryTransliteration = cyrillicToTranslit.transform(
+            city.state.country.country
+          );
           tempObj.countryInternational = city.state.international;
           tempObj.photoUrl = city.cityPhotoURL;
           result.push(tempObj);
