@@ -17,4 +17,14 @@ router.get(
   ctrlWrapper(ctrl.getCityForCreateObject)
 );
 
+router.get(
+  "/get-city-for-catalog-hotelier",
+  ctrlWrapper(ctrl.autoCompleteForCatalogHotelier)
+);
+
+router.get(
+  "/get-district-for-catalog-hotelier",
+  ctrlWrapper(ctrl.getDistrictForCatalogHotelier)
+);
+
 module.exports = router;

@@ -6,11 +6,14 @@ const changeLastName = async (req, res) => {
   const findUser = await User.findById(id);
 
   if (!findUser) {
-    return res.status(409).json({
-      status: "error",
-      code: 409,
-      message: `The user with first name  ${lastName} does not exist in Hoteliers collection`,
-    });
+    return res
+      .status(409)
+      .json({
+        status: "error",
+        code: 409,
+        message: `The user with first name  ${lastName} does not exist in Hoteliers collection`,
+      })
+      .end();
   }
 
   const filter = { _id: id };
@@ -20,13 +23,15 @@ const changeLastName = async (req, res) => {
     new: true,
   });
 
-  res.json({
-    status: "success",
-    code: 200,
-    data: {
-      result,
-    },
-  });
+  res
+    .json({
+      status: "success",
+      code: 200,
+      data: {
+        result,
+      },
+    })
+    .end();
 };
 
 module.exports = changeLastName;

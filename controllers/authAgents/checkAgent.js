@@ -7,19 +7,25 @@ const checkAgent = async (req, res) => {
   const agentCandidat = await Agent.findOne({ email });
 
   if (!agentCandidat) {
-    return res.status(409).json({
-      status: "error",
-      code: 409,
-      message: "This email does not exist in Agents collection",
-    });
+    return res
+      .status(409)
+      .json({
+        status: "error",
+        code: 409,
+        message: "This email does not exist in Agents collection",
+      })
+      .end();
   }
 
   if (agentCandidat.status === "deleted") {
-    return res.status(401).json({
-      status: "error",
-      code: 401,
-      message: `User with email ${email} don't registered yet`,
-    });
+    return res
+      .status(401)
+      .json({
+        status: "error",
+        code: 401,
+        message: `User with email ${email} don't registered yet`,
+      })
+      .end();
   }
 
   const firstNumber = Math.floor(Math.random() * (10 - 1) + 1);
@@ -61,10 +67,12 @@ const checkAgent = async (req, res) => {
   transporter
     .sendMail(mail)
     .then(() =>
-      res.json({
-        status: "success",
-        message: `Confirmation code sent to email: ${email}`,
-      })
+      res
+        .json({
+          status: "success",
+          message: `Confirmation code sent to email: ${email}`,
+        })
+        .end()
     )
     .catch((error) => console.log(error.message));
 

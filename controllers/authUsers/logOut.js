@@ -14,10 +14,12 @@ const logOut = async (req, res) => {
 
   await User.findByIdAndUpdate(id, { token: null });
 
-  res.json({
-    status: "success",
-    code: 204,
-  });
+  res
+    .json({
+      status: "success",
+      code: 204,
+    })
+    .end();
 };
 
 module.exports = logOut;

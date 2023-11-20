@@ -29,18 +29,24 @@ const deleteUser = async (req, res) => {
       }
     );
 
-    return res.status(201).json({
-      status: "success",
-      code: 201,
-      message: `account with email ${email} has been deleted`,
-    });
+    return res
+      .status(201)
+      .json({
+        status: "success",
+        code: 201,
+        message: `account with email ${email} has been deleted`,
+      })
+      .end();
   }
 
-  res.status(401).json({
-    status: "error",
-    code: 401,
-    message: `account with email ${email} not autorized`,
-  });
+  res
+    .status(401)
+    .json({
+      status: "error",
+      code: 401,
+      message: `account with email ${email} not autorized`,
+    })
+    .end();
 };
 
 module.exports = deleteUser;

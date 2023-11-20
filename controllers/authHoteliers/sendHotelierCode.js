@@ -7,11 +7,14 @@ const sendHotelierCode = async (req, res) => {
   const findHotelier = await Hotelier.findById(id);
 
   if (!findHotelier) {
-    return res.status(409).json({
-      status: "error",
-      code: 409,
-      message: "This email does not exist in Hoteliers collection",
-    });
+    return res
+      .status(409)
+      .json({
+        status: "error",
+        code: 409,
+        message: "This email does not exist in Hoteliers collection",
+      })
+      .end();
   }
 
   const firstNumber = Math.floor(Math.random() * (10 - 1) + 1);
@@ -53,10 +56,12 @@ const sendHotelierCode = async (req, res) => {
   transporter
     .sendMail(mail)
     .then(() =>
-      res.json({
-        status: "success",
-        message: `Confirmation code sent to email: ${email}`,
-      })
+      res
+        .json({
+          status: "success",
+          message: `Confirmation code sent to email: ${email}`,
+        })
+        .end()
     )
     .catch((error) => console.log(error.message));
 };

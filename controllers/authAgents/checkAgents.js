@@ -46,9 +46,11 @@ const checkAgent = async (req, res) => {
   //   };
   //   await sendEmail(mail);
 
-  res.json({
-    message: `Confirmation code sent to ${email}`,
-  });
+  res
+    .json({
+      message: `Confirmation code sent to ${email}`,
+    })
+    .end();
 };
 
 module.exports = checkAgent;

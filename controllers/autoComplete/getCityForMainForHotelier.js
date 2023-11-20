@@ -10,7 +10,6 @@ const CyrillicToTranslit = require("cyrillic-to-translit-js");
 const cyrillicToTranslit = new CyrillicToTranslit();
 
 const getCityForMainForHotelier = async ({ query: { language } }, res) => {
-  console.log({ language });
   const cities = await City.find({
     dbLangCode: language.toLowerCase(),
   }).populate({

@@ -7,19 +7,25 @@ const checkUser = async (req, res) => {
   const userCandidat = await User.findOne({ email });
 
   if (!userCandidat) {
-    return res.status(409).json({
-      status: "error",
-      code: 409,
-      message: "This email does not exist in Users collection",
-    });
+    return res
+      .status(409)
+      .json({
+        status: "error",
+        code: 409,
+        message: "This email does not exist in Users collection",
+      })
+      .end();
   }
 
   if (userCandidat.status === "deleted") {
-    return res.status(401).json({
-      status: "error",
-      code: 401,
-      message: `User with email ${email} don't registered yet`,
-    });
+    return res
+      .status(401)
+      .json({
+        status: "error",
+        code: 401,
+        message: `User with email ${email} don't registered yet`,
+      })
+      .end();
   }
 
   const firstNumber = Math.floor(Math.random() * (10 - 1) + 1);
@@ -60,10 +66,12 @@ const checkUser = async (req, res) => {
   transporter
     .sendMail(mail)
     .then(() =>
-      res.json({
-        status: "success",
-        message: `Confirmation code sent to email: ${email}`,
-      })
+      res
+        .json({
+          status: "success",
+          message: `Confirmation code sent to email: ${email}`,
+        })
+        .end()
     )
     .catch((error) => console.log(error.message));
 

@@ -16,10 +16,12 @@ const logOut = async (req, res) => {
 
   await Hotelier.findByIdAndUpdate(id, { token: null });
 
-  res.json({
-    status: "success",
-    code: 204,
-  });
+  res
+    .json({
+      status: "success",
+      code: 204,
+    })
+    .end();
 
   // res.status(204).json();
 };

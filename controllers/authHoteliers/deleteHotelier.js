@@ -11,11 +11,14 @@ const deleteHotelier = async (req, res) => {
   // const userId = req.signedCookies["user"];
 
   if (!findAccount) {
-    return res.status(409).json({
-      status: "error",
-      code: 409,
-      message: `Account with email ${email} not found`,
-    });
+    return res
+      .status(409)
+      .json({
+        status: "error",
+        code: 409,
+        message: `Account with email ${email} not found`,
+      })
+      .end();
   }
 
   const getId = findAccount[0]._id.toString();
@@ -29,18 +32,24 @@ const deleteHotelier = async (req, res) => {
       }
     );
 
-    return res.status(201).json({
-      status: "success",
-      code: 201,
-      message: `account with email ${email} has been deleted`,
-    });
+    return res
+      .status(201)
+      .json({
+        status: "success",
+        code: 201,
+        message: `account with email ${email} has been deleted`,
+      })
+      .end();
   }
 
-  res.status(401).json({
-    status: "error",
-    code: 401,
-    message: `account with email ${email} not autorized`,
-  });
+  res
+    .status(401)
+    .json({
+      status: "error",
+      code: 401,
+      message: `account with email ${email} not autorized`,
+    })
+    .end();
 };
 
 module.exports = deleteHotelier;

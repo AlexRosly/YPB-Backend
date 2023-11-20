@@ -12,27 +12,36 @@ const signIn = async (req, res) => {
   const { id, firstName, lastName, language, role } = agent;
 
   if (!agent) {
-    return res.status(409).json({
-      status: "error",
-      code: 409,
-      message: `Email ${email} not found`,
-    });
+    return res
+      .status(409)
+      .json({
+        status: "error",
+        code: 409,
+        message: `Email ${email} not found`,
+      })
+      .end();
   }
 
   if (secretCode !== agent.secretCode) {
-    return res.status(435).json({
-      status: "error",
-      code: 435,
-      message: "Code is wrong",
-    });
+    return res
+      .status(435)
+      .json({
+        status: "error",
+        code: 435,
+        message: "Code is wrong",
+      })
+      .end();
   }
 
   if (agent.validCode < date) {
-    return res.status(436).json({
-      status: "error",
-      code: 436,
-      message: "Code is invalid",
-    });
+    return res
+      .status(436)
+      .json({
+        status: "error",
+        code: 436,
+        message: "Code is invalid",
+      })
+      .end();
   }
 
   // if (agent) {
@@ -54,21 +63,23 @@ const signIn = async (req, res) => {
   const token = jwt.sign(payload, SECRET_KEY, { expiresIn: "365d" });
   await Agent.findByIdAndUpdate(id, { token });
 
-  res.json({
-    status: "success",
-    code: 200,
-    data: {
-      agent: {
-        id,
-        role,
-        firstName,
-        lastName,
-        language,
-        email,
-        token,
+  res
+    .json({
+      status: "success",
+      code: 200,
+      data: {
+        agent: {
+          id,
+          role,
+          firstName,
+          lastName,
+          language,
+          email,
+          token,
+        },
       },
-    },
-  });
+    })
+    .end();
 };
 
 module.exports = signIn;
