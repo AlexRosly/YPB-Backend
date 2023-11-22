@@ -2,8 +2,6 @@ const { Agent, Candidate } = require("../../models");
 const jwt = require("jsonwebtoken");
 const { SECRET_KEY } = process.env;
 
-// const { addToCash } = require("../../middlewares/authCacheService");
-
 const signUp = async (req, res) => {
   const { email, lastName, firstName, secretCode, language } = req.body;
 
@@ -52,17 +50,7 @@ const signUp = async (req, res) => {
       .end();
   }
 
-  // await Candidate.findOneAndRemove({ email });
-
-  // const sessionID = req.sessionID;
-  // await addToCash(`${sessionID}`, `${agent._id}`);
-
-  // res.cookie("_sid", sessionID, { signed: true }); //sessionID
-  // res.cookie("user", agent._id, { signed: true });
-  // res.cookie("auth", true, { signed: true });
-  // req.session.authenticated = true;
-
-  const { id, role } = agent;
+  const { id, role, createdAt } = agent;
 
   const payload = {
     id,
@@ -84,6 +72,7 @@ const signUp = async (req, res) => {
           email,
           language,
           token,
+          createdAt,
         },
       },
     })

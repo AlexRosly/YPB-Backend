@@ -1,16 +1,15 @@
 const { Agent } = require("../../models");
 const jwt = require("jsonwebtoken");
-// const { addToCash } = require("../../middlewares/authCacheService");
 const { SECRET_KEY } = process.env;
 
 const signIn = async (req, res) => {
   const { email, secretCode } = req.body;
-
+  //find hotelier in DB
   const agent = await Agent.findOne({ email });
-
+  //get date
   const date = new Date();
-  const { id, firstName, lastName, language, role } = agent;
-
+  const { id, firstName, lastName, language, role, createdAt } = agent;
+  //if hotelier don't find return response
   if (!agent) {
     return res
       .status(409)
@@ -21,7 +20,7 @@ const signIn = async (req, res) => {
       })
       .end();
   }
-
+  //if fornt send wrong secret code
   if (secretCode !== agent.secretCode) {
     return res
       .status(435)
@@ -32,7 +31,7 @@ const signIn = async (req, res) => {
       })
       .end();
   }
-
+  //if time is up for secret code return response
   if (agent.validCode < date) {
     return res
       .status(436)
@@ -43,26 +42,13 @@ const signIn = async (req, res) => {
       })
       .end();
   }
-
-  // if (agent) {
-  //   const sessionID = req.sessionID;
-  //   const { id } = agent;
-
-  //   await addToCash(`${sessionID}`, `${id}`);
-
-  //   res.cookie("_sid", sessionID, { signed: true }); //sessionID
-  //   res.cookie("user", id, { signed: true });
-  //   res.cookie("auth", true, { signed: true });
-
-  //   req.session.authenticated = true;
-  // }
-
+  //create token and write in DB
   const payload = {
     id,
   };
   const token = jwt.sign(payload, SECRET_KEY, { expiresIn: "365d" });
-  await Agent.findByIdAndUpdate(id, { token });
-
+  await Agent.findByIdAndUpdate(id, { token, status: "active" });
+  // if all ok return response
   res
     .json({
       status: "success",
@@ -76,6 +62,7 @@ const signIn = async (req, res) => {
           language,
           email,
           token,
+          createdAt,
         },
       },
     })

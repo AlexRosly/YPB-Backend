@@ -17,16 +17,16 @@ const checkUser = async (req, res) => {
       .end();
   }
 
-  if (userCandidat.status === "deleted") {
-    return res
-      .status(401)
-      .json({
-        status: "error",
-        code: 401,
-        message: `User with email ${email} don't registered yet`,
-      })
-      .end();
-  }
+  // if (userCandidat.status === "deleted") {
+  //   return res
+  //     .status(401)
+  //     .json({
+  //       status: "error",
+  //       code: 401,
+  //       message: `User with email ${email} don't registered yet`,
+  //     })
+  //     .end();
+  // }
 
   const firstNumber = Math.floor(Math.random() * (10 - 1) + 1);
   const secondNumber = Math.floor(Math.random() * (10 - 1) + 1);

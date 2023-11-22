@@ -6,12 +6,13 @@ const { SECRET_KEY } = process.env;
 
 const signIn = async (req, res) => {
   const { email, secretCode } = req.body;
-
+  //find hotelier in DB
   const user = await User.findOne({ email });
-
+  //get date
   const date = new Date();
-  const { id, firstName, lastName, language, bookingKarma, role } = user;
-
+  const { id, firstName, lastName, language, bookingKarma, role, createdAt } =
+    user;
+  //if hotelier don't find return response
   if (!user) {
     return res
       .status(409)
@@ -22,7 +23,7 @@ const signIn = async (req, res) => {
       })
       .end();
   }
-
+  //if fornt send wrong secret code
   if (secretCode !== user.secretCode) {
     return res
       .status(435)
@@ -33,7 +34,7 @@ const signIn = async (req, res) => {
       })
       .end();
   }
-
+  //if time is up for secret code return response
   if (user.validCode < date) {
     return res
       .status(436)
@@ -44,24 +45,13 @@ const signIn = async (req, res) => {
       })
       .end();
   }
-
-  // if (user) {
-  // const sessionID = req.sessionID;
-
-  // await addToCash(`${sessionID}`, `${id}`);
-
-  // res.cookie("_sid", sessionID, { signed: true }); //sessionID
-  // res.cookie("user", id, { signed: true });
-  // res.cookie("auth", true, { signed: true });
-  // req.session.authenticated = true;
-  // }
-
+  //create token and write in DB
   const payload = {
     id,
   };
   const token = jwt.sign(payload, SECRET_KEY, { expiresIn: "365d" });
-  await User.findByIdAndUpdate(id, { token });
-
+  await User.findByIdAndUpdate(id, { token, status: "active" });
+  // if all ok return response
   res
     .json({
       status: "success",
@@ -75,6 +65,7 @@ const signIn = async (req, res) => {
         bookingKarma,
         email,
         token,
+        createdAt,
       },
     })
     .end();

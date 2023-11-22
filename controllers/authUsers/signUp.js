@@ -52,17 +52,7 @@ const signUp = async (req, res) => {
       .end();
   }
 
-  // await Candidate.findOneAndRemove({ email });
-
-  // const sessionID = req.sessionID;
-  // await addToCash(`${sessionID}`, `${user._id}`);
-
-  // res.cookie("_sid", sessionID, { signed: true }); //sessionID
-  // res.cookie("user", user._id, { signed: true });
-  // res.cookie("auth", true, { signed: true });
-  // req.session.authenticated = true;
-
-  const { id, bookingKarma, role } = user;
+  const { id, bookingKarma, role, createdAt } = user;
 
   const payload = {
     id,
@@ -85,6 +75,7 @@ const signUp = async (req, res) => {
           language,
           bookingKarma,
           token,
+          createdAt,
         },
       },
     })
