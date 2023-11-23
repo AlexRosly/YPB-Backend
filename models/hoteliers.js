@@ -61,7 +61,7 @@ const hotelierSchema = Schema(
       default: 0,
     },
   },
-  { versionKey: false, timeStamps: true }
+  { versionKey: false, timestamps: true }
 );
 
 const joiSignUpSchema = Joi.object({

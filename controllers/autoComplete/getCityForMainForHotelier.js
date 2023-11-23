@@ -65,7 +65,7 @@ const getCityForMainForHotelier = async ({ query: { language } }, res) => {
         }
       }
 
-      if (!result.length === 0) {
+      if (result.length === 0) {
         res
           .json({
             code: 404,
@@ -103,7 +103,7 @@ const getCityForMainForHotelier = async ({ query: { language } }, res) => {
         }
       }
 
-      if (!result.length === 0) {
+      if (result.length === 0) {
         res
           .json({
             code: 404,
@@ -151,7 +151,7 @@ const getCityForMainForHotelier = async ({ query: { language } }, res) => {
         }
       }
 
-      if (!result.length === 0) {
+      if (result.length === 0) {
         res
           .json({
             code: 404,
@@ -198,7 +198,7 @@ const getCityForMainForHotelier = async ({ query: { language } }, res) => {
         }
       }
 
-      if (!result.length === 0) {
+      if (result.length === 0) {
         res
           .json({
             code: 404,

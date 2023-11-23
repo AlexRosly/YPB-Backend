@@ -51,7 +51,7 @@ const signUp = async (req, res) => {
   }
 
   const { id, role, createdAt } = agent;
-
+  console.log({ createdAt });
   const payload = {
     id,
   };
