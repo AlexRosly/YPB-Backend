@@ -17,7 +17,7 @@ const getDistrictForCatalogHotelier = async (req, res) => {
   // });
 
   //create array for response
-  const result = [];
+  let result = [];
 
   // if (districts.length === 0) {
   //   return res.json({
@@ -46,7 +46,8 @@ const getDistrictForCatalogHotelier = async (req, res) => {
         // tempObj.districtName = district.districtName;
         // tempObj.locationName = district.districtPhotoAlt;
         // result.push(tempObj);
-        result.push(findPageUa);
+        // result.push(findPageUa);
+        result = [...findPageUa];
       }
       // }
       // if array empty return responde
@@ -86,7 +87,8 @@ const getDistrictForCatalogHotelier = async (req, res) => {
         // tempObj.id = district._id;
         // tempObj.districtName = district.districtName;
         // tempObj.locationName = district.districtPhotoAlt;
-        result.push(findPageRu);
+        // result.push(findPageRu);
+        result = [...findPageRu];
       }
       // console.log({ findPage });
       // }
@@ -126,7 +128,8 @@ const getDistrictForCatalogHotelier = async (req, res) => {
         // tempObj.id = district._id;
         // tempObj.districtName = district.districtName;
         // tempObj.locationName = district.districtPhotoAlt;
-        result.push(findPagePl);
+        // result.push(findPagePl);
+        result = [...findPagePl];
       }
       // }
       // if array empty return responde
@@ -166,7 +169,8 @@ const getDistrictForCatalogHotelier = async (req, res) => {
         // tempObj.id = district._id;
         // tempObj.districtName = district.districtName;
         // tempObj.locationName = district.districtPhotoAlt;
-        result.push(findPageEn);
+        // result.push(findPageEn);
+        result = [...findPageEn];
       }
       // }
       // if array empty return responde
