@@ -7,7 +7,7 @@ const {
 } = require("../../models");
 
 const getDistrictForCatalogHotelier = async (req, res) => {
-  const { language, city } = req.query;
+  const { language, city, typeOfPage } = req.query;
   const searchFromUrl = decodeURI(city).trim();
 
   //find district  in DB
@@ -35,9 +35,10 @@ const getDistrictForCatalogHotelier = async (req, res) => {
       const findPageUa = await UaCatalogForHotelier.find(
         {
           city: searchFromUrl,
+          typeOfPage,
           district: { $exists: true },
         },
-        { district: 1, city: 1, state: 1, country: 1, url: 1 }
+        { district: 1, city: 1, state: 1, country: 1, typeOfPage: 1, url: 1 }
       );
       //if page was found create object and push to array
       if (findPageUa.length > 0) {
@@ -76,9 +77,10 @@ const getDistrictForCatalogHotelier = async (req, res) => {
       const findPageRu = await RuCatalogForHotelier.find(
         {
           city: searchFromUrl,
+          typeOfPage,
           district: { $exists: true },
         },
-        { district: 1, city: 1, state: 1, country: 1, url: 1 }
+        { district: 1, city: 1, state: 1, country: 1, typeOfPage: 1, url: 1 }
       );
 
       //if page was found create object and push to array
@@ -118,9 +120,10 @@ const getDistrictForCatalogHotelier = async (req, res) => {
       const findPagePl = await PlCatalogForHotelier.find(
         {
           city: searchFromUrl,
+          typeOfPage,
           district: { $exists: true },
         },
-        { district: 1, city: 1, state: 1, country: 1, url: 1 }
+        { district: 1, city: 1, state: 1, country: 1, typeOfPage: 1, url: 1 }
       );
       //if page was found create object and push to array
       if (findPagePl.length > 0) {
@@ -158,9 +161,10 @@ const getDistrictForCatalogHotelier = async (req, res) => {
       const findPageEn = await EnCatalogForHotelier.find(
         {
           city: searchFromUrl,
+          typeOfPage,
           district: { $exists: true },
         },
-        { district: 1, city: 1, state: 1, country: 1, url: 1 }
+        { district: 1, city: 1, state: 1, country: 1, typeOfPage: 1, url: 1 }
       );
       //if page was found create object and push to array
 

@@ -10,7 +10,7 @@ const getAllHoteilerPages = async ({ query: { language } }, res) => {
   switch (language) {
     case "uk":
       const getAllUkPages = await UaCatalogForHotelier.find({ language });
-
+      console.log("oooooo");
       if (!getAllUkPages) {
         return res
           .status(406)
