@@ -19,4 +19,7 @@ router.get(
   "/get-pages-by-three-params",
   ctrlWrapper(ctrl.getPagesByThreeParams)
 );
+
+router.get("/get-page-by-six-params", ctrlWrapper(ctrl.getPageBySixParams));
+
 module.exports = router;

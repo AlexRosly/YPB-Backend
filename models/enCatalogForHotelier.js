@@ -36,6 +36,15 @@ const enCatalogForHotelier = Schema(
     districtInternational: {
       type: String,
     },
+    cityInternational: {
+      type: String,
+    },
+    stateInternational: {
+      type: String,
+    },
+    countryInternational: {
+      type: String,
+    },
     title: {
       type: String,
     },
@@ -57,6 +66,9 @@ const joiSchema = Joi.object({
   url: Joi.string(),
   typeOfPage: Joi.string(),
   districtInternational: Joi.string(),
+  cityInternational: Joi.string(),
+  stateInternational: Joi.string(),
+  countryInternational: Joi.string(),
 });
 
 const EnCatalogForHotelier = model(
