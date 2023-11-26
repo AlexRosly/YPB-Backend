@@ -10,8 +10,8 @@ require("dotenv").config();
 
 const { MAIN_DOMAIN } = process.env;
 
-const CyrillicToTranslit = require("cyrillic-to-translit-js");
-const cyrillicToTranslit = new CyrillicToTranslit();
+const cyrillicToTranslit = require("cyrillic-to-translit-js");
+// const cyrillicToTranslit = new CyrillicToTranslit();
 
 const createNewPages = async (req, res) => {
   const { language, idLocation, district, city, state, country } = req.body;
@@ -28,7 +28,9 @@ const createNewPages = async (req, res) => {
     ? `${city} ${state} ${country} ${language}`
     : `${district} ${city} ${state} ${country} ${language}`;
 
-  const translit = cyrillicToTranslit.transform(getString, "-").toLowerCase();
+  const translit = cyrillicToTranslit({ preset: language })
+    .transform(getString, "-")
+    .toLowerCase();
 
   switch (language) {
     case "uk":
