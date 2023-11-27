@@ -1,41 +1,43 @@
-const { Hotels } = require("../../models");
-const path = require("path");
-const fs = require("fs").promises;
-const { exists } = require("node:fs");
+// const { Hotels } = require("../../models");
+// const path = require("path");
+// const fs = require("fs").promises;
+// const { exists } = require("fs").promises;
 
-const startVerification = async (req, res) => {
-  const { _id } = req.hotelier;
-  const { hotelsId } = req.body;
-  // console.log(req.files);
-  console.log("id hotelier", _id);
-  console.log({ hotelsId });
+// // const { exists } = require("node:fs");
 
-  const folderName = hotelsId;
+// const startVerification = async (req, res) => {
+//   const { _id } = req.hotelier;
+//   const { hotelsId } = req.body;
+//   // console.log(req.files);
+//   console.log("id hotelier", _id);
+//   console.log({ hotelsId });
 
-  // await fs.mkdir(`./verification/video/${folderName}`, (err) => {
-  //   if (err) {
-  //     console.error(err);
-  //   } else {
-  //     console.log("\nDirectory created successfully asynchronously.");
-  //   }
-  // });
-  exists(`./verification/video/${folderName}`, (e) => {
-    console.log(e ? "it exists" : "no passwd!");
-  });
+//   const folderName = hotelsId;
 
-  // try {
-  //   if (fs.exists(`./verification/video/${folderName}`)) {
-  //     console.log("work");
-  //   }
-  //   await fs.mkdir(`./verification/video/${folderName}`);
-  // } catch (error) {}
-  // const hotel = await Hotels.findById(id);
-  // console.log(req.file);
+//   // await fs.mkdir(`./verification/video/${folderName}`, (err) => {
+//   //   if (err) {
+//   //     console.error(err);
+//   //   } else {
+//   //     console.log("\nDirectory created successfully asynchronously.");
+//   //   }
+//   // });
+//   exists(`./verification/video/${folderName}`, (e) => {
+//     console.log(e ? "it exists" : "no passwd!");
+//   });
 
-  res.json({
-    code: 200,
-    mes: "ok",
-  });
-};
+//   // try {
+//   //   if (fs.exists(`./verification/video/${folderName}`)) {
+//   //     console.log("work");
+//   //   }
+//   //   await fs.mkdir(`./verification/video/${folderName}`);
+//   // } catch (error) {}
+//   // const hotel = await Hotels.findById(id);
+//   // console.log(req.file);
 
-module.exports = startVerification;
+//   res.json({
+//     code: 200,
+//     mes: "ok",
+//   });
+// };
+
+// module.exports = startVerification;
