@@ -15,7 +15,7 @@ const multerConfig = multer.diskStorage({
     cb(null, verificationVideoPath);
   },
   filename: (req, file, cb) => {
-    cb(null, file.originalname);
+    cb(null, file.originalname + "-" + Date.now());
   },
 });
 
