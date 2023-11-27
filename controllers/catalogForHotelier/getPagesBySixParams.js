@@ -13,7 +13,7 @@ const getPageBySixParams = async (req, res) => {
     stateInternational,
     countryInternational,
     typeOfPage,
-  } = req.body;
+  } = req.query;
 
   let result;
 
