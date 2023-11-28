@@ -59,7 +59,8 @@ app.use(
   })
 );
 app.use(express.json());
-
+app.use(express.static("public"));
+app.use(express.static("verification"));
 app.use(bodyParser.json());
 app.use(cookieParser(SECRET_COOKIE));
 app.use(
@@ -78,7 +79,6 @@ app.use(
     // store: new RedisStore({ client: redisClient }),
   })
 );
-
 app.use("/api/languages", languagesRouter);
 app.use("/api/countries", countriesRouter);
 app.use("/api/location-state", regionLoc3Router);

@@ -3,13 +3,10 @@ const Joi = require("joi");
 
 const hotelsVerification = Schema(
   {
-    video: {
-      type: String,
-      requred: true,
-    },
-    documents: [{ type: Sting }],
-    selfi: { type: String, requred: true },
-    link: [{ type: Sting }],
+    video: [{ type: String }],
+    documents: [{ type: String }],
+    selfi: [{ type: String }],
+    link: [{ type: String }],
     owner: {
       type: Schema.Types.ObjectId,
       ref: "hotelier",

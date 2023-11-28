@@ -23,6 +23,7 @@ const { AcsessToAdmin } = require("./acsessToAdmin");
 const { Currency } = require("./currency");
 const { BookingOptionHsBed } = require("./bookingOptionHsBed");
 const { BookingOptionBed } = require("./bookingOptionBed");
+const { Verification } = require("./hotelsVerification");
 
 module.exports = {
   Language,
@@ -50,4 +51,5 @@ module.exports = {
   Currency,
   BookingOptionHsBed,
   BookingOptionBed,
+  Verification,
 };

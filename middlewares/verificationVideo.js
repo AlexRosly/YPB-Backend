@@ -1,21 +1,21 @@
 const multer = require("multer");
 const path = require("path");
 
-const verificationVideoPath = path.join(
+const verificationTempFilePath = path.join(
   __dirname,
   "../",
   "verification",
-  "video"
+  "temp"
 );
 
 // console.log(verificationVideoPath);
 
 const multerConfig = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, verificationVideoPath);
+    cb(null, verificationTempFilePath);
   },
   filename: (req, file, cb) => {
-    cb(null, file.originalname + "-" + Date.now());
+    cb(null, file.originalname);
   },
 });
 
