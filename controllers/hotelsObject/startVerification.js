@@ -1,4 +1,4 @@
-const { Hotels, Verification } = require("../../models");
+const { Verification } = require("../../models");
 const path = require("path");
 const fs = require("fs").promises;
 const { exists } = require("fs");
@@ -8,24 +8,24 @@ const startVerification = async (req, res) => {
   const { hotelsId } = req.body; // get hotels id
   const { video, documents, selfi } = req.files; // Destructuring files from uploader
   const files = [...video, ...documents, ...selfi]; //craete array of files
-  console.log(req.body);
-  // console.log({ files });
-  // console.log("video", video);
-  // console.log({ documents });
-  // console.log({ selfi });
-
-  // console.log("id hotelier", _id);
-  // console.log({ hotelsId });
-
   const folderName = hotelsId; // will appoint name for new folder with hotels id
   let videos = []; //create array for video link
   let documentes = []; //create array for documents link
   let selfies = []; //create array for selfi link
+  let folderStatus; //
 
   //check folderName before create new folder in Verification folder
-  exists(`./verification/${folderName}`, (e) => {
+  exists(`./verification/${folderName}`, async (e) => {
+    folderStatus = e ? (folderStatus = true) : (folderStatus = false);
+    return folderStatus;
     console.log(e ? "it exists" : "no passwd!");
+    // if (e) {
+    //   return (folderStatus = true);
+    // } else {
+    //   return ;
+    // }
   });
+  console.log({ folderStatus });
 
   //create new folder with `${folderName}` in Verification folder
   await fs.mkdir(`./verification/${folderName}`, (err) => {
@@ -35,6 +35,7 @@ const startVerification = async (req, res) => {
       console.log("\nDirectory created successfully asynchronously.");
     }
   });
+
   //remove files from temp folder to new folder with name `${folderName}`
   //and push in appropriate array
   for (const file of files) {
@@ -125,9 +126,9 @@ const startVerification = async (req, res) => {
   // } catch (error) {
   //   await fs.unlink(verificationTempFilePath);
   // }
-  console.log("video array", videos);
-  console.log("document array", documentes);
-  console.log("selfi array", selfies);
+  // console.log("video array", videos);
+  // console.log("document array", documentes);
+  // console.log("selfi array", selfies);
 
   res.json({
     code: 200,

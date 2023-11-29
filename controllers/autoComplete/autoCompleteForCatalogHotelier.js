@@ -305,14 +305,14 @@ const autoCompleteForCatalogHotelier = async (req, res) => {
       district: { $regex: searchFromUrl, $options: "i" },
       typeOfPage,
     },
-    { district: 1, city: 1, state: 1, country: 1, url: 1 }
+    { district: 1, city: 1, state: 1, country: 1, url: 1, language: 1 }
   );
   const findUaPagesCity = await UaCatalogForHotelier.find(
     {
       city: { $regex: searchFromUrl, $options: "i" },
       typeOfPage,
     },
-    { district: 1, city: 1, state: 1, country: 1, url: 1 }
+    { district: 1, city: 1, state: 1, country: 1, url: 1, language: 1 }
   );
   //find pages for location 1 and 2 level (distric and city) for RU
   const findRuPagesDistrict = await RuCatalogForHotelier.find(
@@ -320,14 +320,14 @@ const autoCompleteForCatalogHotelier = async (req, res) => {
       district: { $regex: searchFromUrl, $options: "i" },
       typeOfPage,
     },
-    { district: 1, city: 1, state: 1, country: 1, url: 1 }
+    { district: 1, city: 1, state: 1, country: 1, url: 1, language: 1 }
   );
   const findRuPagesCity = await RuCatalogForHotelier.find(
     {
       city: { $regex: searchFromUrl, $options: "i" },
       typeOfPage,
     },
-    { district: 1, city: 1, state: 1, country: 1, url: 1 }
+    { district: 1, city: 1, state: 1, country: 1, url: 1, language: 1 }
   );
   //find pages for location 1 and 2 level (distric and city) for PL
   const findPlPagesDistrict = await PlCatalogForHotelier.find(
@@ -335,14 +335,14 @@ const autoCompleteForCatalogHotelier = async (req, res) => {
       district: { $regex: searchFromUrl, $options: "i" },
       typeOfPage,
     },
-    { district: 1, city: 1, state: 1, country: 1, url: 1 }
+    { district: 1, city: 1, state: 1, country: 1, url: 1, language: 1 }
   );
   const findPlPagesCity = await PlCatalogForHotelier.find(
     {
       city: { $regex: searchFromUrl, $options: "i" },
       typeOfPage,
     },
-    { district: 1, city: 1, state: 1, country: 1, url: 1 }
+    { district: 1, city: 1, state: 1, country: 1, url: 1, language: 1 }
   );
   //find pages for location 1 and 2 level (distric and city) for EN
   const findEnPagesDistrict = await EnCatalogForHotelier.find(
@@ -350,14 +350,14 @@ const autoCompleteForCatalogHotelier = async (req, res) => {
       district: { $regex: searchFromUrl, $options: "i" },
       typeOfPage,
     },
-    { district: 1, city: 1, state: 1, country: 1, url: 1 }
+    { district: 1, city: 1, state: 1, country: 1, url: 1, language: 1 }
   );
   const findEnPagesCity = await EnCatalogForHotelier.find(
     {
       city: { $regex: searchFromUrl, $options: "i" },
       typeOfPage,
     },
-    { district: 1, city: 1, state: 1, country: 1, url: 1 }
+    { district: 1, city: 1, state: 1, country: 1, url: 1, language: 1 }
   );
 
   result = [
