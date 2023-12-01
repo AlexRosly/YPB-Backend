@@ -3,10 +3,8 @@ const updateHotel = require("./updateHotel");
 const getAllHotels = require("./getAllHotels");
 const getHotelById = require("./getHotelById");
 const hotelsFinder = require("./hotelsFinder");
-const startVerification = require("./startVerification");
 const getHotelsByHotelierId = require("./getHotelsByHotelierId");
 const addPhoneAndDateVerification = require("./addPhoneAndDateVerification");
-const translateDescription = require("./translateDescription");
 
 module.exports = {
   addHotel,
@@ -14,8 +12,6 @@ module.exports = {
   getAllHotels,
   getHotelById,
   hotelsFinder,
-  startVerification,
   getHotelsByHotelierId,
   addPhoneAndDateVerification,
-  translateDescription,
 };

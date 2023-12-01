@@ -16,6 +16,7 @@ const authUsers = require("./authUsers");
 const catalogForHotelier = require("./catalogForHotelier");
 const acsessToAdmin = require("./acsessToAdmin");
 const currency = require("./currency");
+const hotelVerification = require("./hotelVerification");
 const test = require("./test");
 
 module.exports = {
@@ -37,5 +38,6 @@ module.exports = {
   catalogForHotelier,
   acsessToAdmin,
   currency,
+  hotelVerification,
   test,
 };

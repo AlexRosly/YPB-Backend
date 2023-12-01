@@ -5,8 +5,10 @@ const hotelsVerification = Schema(
   {
     video: [{ type: String }],
     documents: [{ type: String }],
-    selfi: [{ type: String }],
+    selfie: [{ type: String }],
     link: [{ type: String }],
+    chatHistory: { hotelier: [], verifier: [] },
+    pointOnTheMap: { type: String },
     owner: {
       type: Schema.Types.ObjectId,
       ref: "hotelier",
