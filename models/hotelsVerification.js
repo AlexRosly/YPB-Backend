@@ -9,6 +9,13 @@ const hotelsVerification = Schema(
     link: [{ type: String }],
     chatHistory: { hotelier: [], verifier: [] },
     pointOnTheMap: { type: String },
+    youTubeLink: { type: String },
+    phone1: { type: String, default: "without" },
+    phone2: { type: String, default: "without" },
+    nextVerificationDate: {
+      type: String,
+      default: "not required",
+    },
     owner: {
       type: Schema.Types.ObjectId,
       ref: "hotelier",

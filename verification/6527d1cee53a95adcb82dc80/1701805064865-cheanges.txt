@@ -1,0 +1,42 @@
+1.Constatns
+ added 66-69 строка
+export const USER_ACCOUNT_SETTING = "/user-account-setting";
+export const USER_SMS_SETTINGS = "/user-sms-settings";
+export const BOOKING_KARMA = "/user-booking-karma";
+export const BOOKING_HISTORY = "/user-booking-history";
+
+2.RouterConfig
+добавлен импорт на 67-70
+  USER_ACCOUNT_SETTING,
+  USER_SMS_SETTINGS,
+  USER_BOOKING_KARMA,
+  USER_BOOKING_HISTORY,
+добавлен импорт на 92-95
+import { UserAccountSetting } from "components/SideMenu/pages/UserAccountSetting";
+import { UserSmsSettings } from "components/SideMenu/pages/UserSmsSettings";
+import { UserBookingKarma } from "components/SideMenu/pages/UserBookingKarma";
+import { UserBookingHistory } from "components/SideMenu/pages/UserBookingHistory";
+3.добалено на 791
+  const history = useHistory();
+
+  const clickUserAccountSetting = () => {
+    history.push("/user-account-setting");
+  };
+  const clickUserSmsSetting = () => {
+    history.push("/user-sms-settings");
+  };
+  const clickBookingKarma = () => {
+    history.push("/user-booking-karma");
+  };
+  const clickBookingHistory = () => {
+    history.push("/user-booking-history");
+  };
+изменено
+на 864               onClick={clickUserAccountSetting}
+onClick={clickUserSmsSetting}
+onClick={clickUserBookingKarma}
+onClick={clickUserBookingHistory}
+4.NavigationSprite added
+5. Navbar
+6.added userMenu scss
+7.UserSmsSettings - page

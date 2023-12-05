@@ -4,6 +4,8 @@ const translateDescription = require("./translateDescription");
 const addPointOnTheMap = require("./addPointOnTheMap");
 const finishVerification = require("./finishVerification");
 const getLocation = require("./getLocation");
+const addYouTubeLink = require("./addYouTubeLink.js");
+const updateDocument = require("./updateDocument.js");
 
 module.exports = {
   startVerification,
@@ -12,4 +14,6 @@ module.exports = {
   addPointOnTheMap,
   finishVerification,
   getLocation,
+  addYouTubeLink,
+  updateDocument,
 };

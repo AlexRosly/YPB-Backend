@@ -1,37 +1,53 @@
-// var googleTransliterate = require("google-transliterate");
-// const { transliterate } = require("@sindresorhus/transliterate");
-// const transliterate = require("transliterate-cyr-to-latin");
-const cyrillicToTranslit = require("cyrillic-to-translit-js");
-// const cyrillicToTranslit = new CyrillicToTranslit();
+const e = require("cors");
+const { Country } = require("../../models");
 
-const test = (req, res) => {
-  // transliterate();
-  const translit = cyrillicToTranslit({ preset: "uk" }).transform(
-    "Печерський район Київ Київська область Україна",
-    "_"
-  );
-  console.log(translit);
-  // console.log(
-  //   googleTransliterate.transliterate(
-  //     "Привет мир",
-  //     "ja-Hira",
-  //     "ja",
-  //     function (err, transliteration) {
-  //       transliteration = [
-  //         ["おあやや", ["お文や", "おあやや", "お彩や", "お綾や", "オアヤヤ"]],
-  //         ["おやに", ["親に", "おやに", "オヤに", "お屋に", "お矢に"]],
-  //         [
-  //           "おあやまり",
-  //           ["お誤り", "お謝り", "おあやまり", "オアヤマリ", "ｵｱﾔﾏﾘ"],
-  //         ],
-  //       ];
-  //     }
-  //   )
-  // );
+const test = async (req, res) => {
+  const { dbLangCode = "en", country } = req.query;
+  const result = await Country.find({ dbLangCode, country }).populate({
+    path: "states",
+    populate: { path: "cities", populate: { path: "districts" } },
+  });
+  if (!result) {
+    return res.json({
+      status: "error",
+    });
+  }
+  // const states = result[0].states;
+  // console.log({ states });
+  // for (const iterator of result) {
+  //   console.log("res", result.states);
+  // }
+  let state = [];
+  let city = [];
+  let district = [];
+  result.forEach((element) => {
+    // console.log("res", element.states);
+    state.push(...element.states);
+  });
+  // result.flatMap((element) => state.push(element.states));
+  // console.log({ state });
+  state.forEach((element) => {
+    console.log("res", element.cities);
+
+    city.push(...element.cities);
+  });
+  console.log({ city });
+
+  city.forEach((element) => {
+    district.push(element.districts);
+  });
+  // const cities = result.states.cities;
+  // console.log({ cities });
+  // const district = result.states.cities.districts;
+  // console.log({ district });
+
   res.json({
     code: 200,
     mess: "ok",
-    // result,
+    result,
+    state,
+    city,
+    district,
   });
 };
 module.exports = test;

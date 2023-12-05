@@ -86,14 +86,14 @@ const hotelsObject = Schema(
       ref: "hotelier",
       requred: true,
     },
-    verification: {
-      phone1: { type: String, default: "without" },
-      phone2: { type: String, default: "without" },
-      nextVerificationDate: {
-        type: String,
-        default: "not required",
-      },
-    },
+    // verification: {
+    //   phone1: { type: String, default: "without" },
+    //   phone2: { type: String, default: "without" },
+    //   nextVerificationDate: {
+    //     type: String,
+    //     default: "not required",
+    //   },
+    // },
     // documents: {
     //   type: String,
     // },

@@ -44,11 +44,11 @@ router.patch(
 );
 
 //update verification data. Add phone and date of next verification
-router.patch(
-  "/add-phone-and-date-for-verification/:id",
-  authHotelier,
-  validation(addPhoneAndDateSchema),
-  ctrlWrapper(ctrl.addPhoneAndDateVerification)
-);
+// router.patch(
+//   "/add-phone-and-date-for-verification/:id",
+//   authHotelier,
+//   validation(addPhoneAndDateSchema),
+//   ctrlWrapper(ctrl.addPhoneAndDateVerification)
+// ); This route change and remove to admin in verification
 
 module.exports = router;

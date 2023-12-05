@@ -8,11 +8,10 @@ const verificationTempFilePath = path.join(
   "temp"
 );
 
-// console.log(verificationVideoPath);
-
 const multerConfig = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, verificationTempFilePath);
+    console.log({ verificationTempFilePath });
   },
   filename: (req, file, cb) => {
     cb(null, file.originalname);
