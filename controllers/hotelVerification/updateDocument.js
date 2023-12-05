@@ -17,93 +17,93 @@ const updateDocument = async (req, res) => {
   let selfies = []; //create array for selfi link
   const date = Date.now(); // add date to files name
 
-  //   //and push in appropriate array
-  //   for (const file of files) {
-  //     if (file.fieldname === "video") {
-  //       try {
-  //         const { path: verificationTempFilePath, originalname } = file;
-  //         const resultUpload = path.join(
-  //           fileDir,
-  //           `${folderName}`,
-  //           `${date}-${originalname}`
-  //         );
-  //         const videoUrl = path.join(
-  //           // "verification",
-  //           `${folderName}`,
-  //           `${date}-${originalname}`
-  //         );
-  //         videos.push(videoUrl);
-  //         await fs.rename(verificationTempFilePath, resultUpload);
-  //       } catch (error) {
-  //         await fs.unlink(verificationTempFilePath);
-  //       }
-  //     } else if (file.fieldname === "documents") {
-  //       try {
-  //         const { path: verificationTempFilePath, originalname } = file;
-  //         const resultUpload = path.join(
-  //           fileDir,
-  //           `${folderName}`,
-  //           `${date}-${originalname}`
-  //         );
-  //         const documentUrl = path.join(
-  //           // "verification",
-  //           `${folderName}`,
-  //           `${date}-${originalname}`
-  //         );
-  //         documentes.push(documentUrl);
-  //         await fs.rename(verificationTempFilePath, resultUpload);
-  //       } catch (error) {
-  //         await fs.unlink(verificationTempFilePath);
-  //       }
-  //     } else {
-  //       try {
-  //         const { path: verificationTempFilePath, originalname } = file;
-  //         const resultUpload = path.join(
-  //           fileDir,
-  //           `${folderName}`,
-  //           `${date}-${originalname}`
-  //         );
-  //         const selfiUrl = path.join(
-  //           // "verification",
-  //           `${folderName}`,
-  //           `${date}-${originalname}`
-  //         );
-  //         selfies.push(selfiUrl);
-  //         await fs.rename(verificationTempFilePath, resultUpload);
-  //       } catch (error) {
-  //         await fs.unlink(verificationTempFilePath);
-  //         return res
-  //           .json({
-  //             code: 404,
-  //             message: "Docments, video and selfie wasn't add to DB. Try again ",
-  //           })
-  //           .end();
-  //       }
-  //     }
-  //   }
-  //   //update in DB
-  //   const result = await Verification.findOneAndUpdate(
-  //     { hotels: hotelsId },
-  //     {
-  //       $push: {
-  //         video: { $each: [...videos] },
-  //         $push: { documentes: { $each: [...documentes] } },
-  //         $push: { selfie: { $each: [...selfies] } },
-  //       },
-  //     },
-  //     {
-  //       new: true,
-  //     }
-  //   );
+  //and push in appropriate array
+  for (const file of files) {
+    if (file.fieldname === "video") {
+      try {
+        const { path: verificationTempFilePath, originalname } = file;
+        const resultUpload = path.join(
+          fileDir,
+          `${folderName}`,
+          `${date}-${originalname}`
+        );
+        const videoUrl = path.join(
+          // "verification",
+          `${folderName}`,
+          `${date}-${originalname}`
+        );
+        videos.push(videoUrl);
+        await fs.rename(verificationTempFilePath, resultUpload);
+      } catch (error) {
+        await fs.unlink(verificationTempFilePath);
+      }
+    } else if (file.fieldname === "documents") {
+      try {
+        const { path: verificationTempFilePath, originalname } = file;
+        const resultUpload = path.join(
+          fileDir,
+          `${folderName}`,
+          `${date}-${originalname}`
+        );
+        const documentUrl = path.join(
+          // "verification",
+          `${folderName}`,
+          `${date}-${originalname}`
+        );
+        documentes.push(documentUrl);
+        await fs.rename(verificationTempFilePath, resultUpload);
+      } catch (error) {
+        await fs.unlink(verificationTempFilePath);
+      }
+    } else {
+      try {
+        const { path: verificationTempFilePath, originalname } = file;
+        const resultUpload = path.join(
+          fileDir,
+          `${folderName}`,
+          `${date}-${originalname}`
+        );
+        const selfiUrl = path.join(
+          // "verification",
+          `${folderName}`,
+          `${date}-${originalname}`
+        );
+        selfies.push(selfiUrl);
+        await fs.rename(verificationTempFilePath, resultUpload);
+      } catch (error) {
+        await fs.unlink(verificationTempFilePath);
+        return res
+          .json({
+            code: 404,
+            message: "Docments, video and selfie wasn't add to DB. Try again ",
+          })
+          .end();
+      }
+    }
+  }
+  //update in DB
+  const result = await Verification.findOneAndUpdate(
+    { hotels: hotelsId },
+    {
+      $push: {
+        video: { $each: [...videos] },
+        $push: { documentes: { $each: [...documentes] } },
+        $push: { selfie: { $each: [...selfies] } },
+      },
+    },
+    {
+      new: true,
+    }
+  );
 
-  //   // if wasn't updated return response
-  //   if (!updateDocument) {
-  //     return res.json({
-  //       code: 404,
-  //       status: "error",
-  //       message: "Document wasn't updated",
-  //     });
-  //   }
+  // if wasn't updated return response
+  if (!updateDocument) {
+    return res.json({
+      code: 404,
+      status: "error",
+      message: "Document wasn't updated",
+    });
+  }
 
   res.json({
     code: 201,
