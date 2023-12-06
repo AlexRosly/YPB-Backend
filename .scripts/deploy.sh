@@ -11,3 +11,7 @@ echo "Installing Dependencies..."
 npm install --yes
 
 echo "Deployment Finished!"
+
+sudo pm2 restart server
+
+echo "Server start"
