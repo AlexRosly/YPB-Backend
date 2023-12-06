@@ -20,6 +20,6 @@ jobs:
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
-          port: ${{ secrets.PORT }}
+          port: ${{ secrets.APP_PORT }}
           key: ${{ secrets.SSHKEY }}
           script: "cd /root/server/YPB-Backend && ./.scripts/deploy.sh"
