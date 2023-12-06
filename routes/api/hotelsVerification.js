@@ -10,7 +10,7 @@ const express = require("express");
 const router = express.Router();
 
 //get document for verifier
-router.get("/get-document", ctrlWrapper(ctrl.getDocumentForHotel)); //add check for login verifier
+// router.get("/get-document", ctrlWrapper(ctrl.getDocumentForHotel)); //add check for login verifier
 
 //get location for verification
 router.get("/get-location", ctrlWrapper(ctrl.getLocation)); //add check for login verifier
