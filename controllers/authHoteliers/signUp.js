@@ -3,7 +3,8 @@ const jwt = require("jsonwebtoken");
 const { SECRET_KEY } = process.env;
 
 const signUp = async (req, res) => {
-  const { email, lastName, firstName, secretCode, language } = req.body;
+  // const { email, lastName, firstName, secretCode, language } = req.body;
+  const { email, secretCode, language } = req.body;
 
   const candidate = await Candidate.findOne({ email });
 
@@ -32,8 +33,8 @@ const signUp = async (req, res) => {
   }
 
   const hotelier = await Hotelier.create({
-    lastName,
-    firstName,
+    // lastName,
+    // firstName,
     email,
     secretCode,
     language: language.toLowerCase(),
@@ -69,8 +70,8 @@ const signUp = async (req, res) => {
         hotelier: {
           id,
           role,
-          firstName,
-          lastName,
+          // firstName,
+          // lastName,
           email,
           language,
           token,

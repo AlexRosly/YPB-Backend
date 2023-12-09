@@ -5,11 +5,11 @@ const candidatesSchema = Schema(
   {
     lastName: {
       type: String,
-      required: true,
+      // required: true,
     },
     firstName: {
       type: String,
-      required: true,
+      // required: true,
     },
     email: {
       type: String,
@@ -39,8 +39,8 @@ const candidatesSchema = Schema(
 );
 
 const joiSchema = Joi.object({
-  lastName: Joi.string().required(),
-  firstName: Joi.string().required(),
+  lastName: Joi.string(),
+  firstName: Joi.string(),
   email: Joi.string().required(),
   language: Joi.string(),
 });

@@ -8,7 +8,9 @@ const signIn = async (req, res) => {
   const hotelier = await Hotelier.findOne({ email });
   //get date
   const date = new Date();
-  const { id, firstName, lastName, language, role, createdAt } = hotelier;
+  // const { id, firstName, lastName, language, role, createdAt } = hotelier;
+  const { id, language, role, createdAt } = hotelier;
+
   //if hotelier don't find return response
   if (!hotelier) {
     return res
@@ -57,8 +59,8 @@ const signIn = async (req, res) => {
         hotelier: {
           id,
           role,
-          firstName,
-          lastName,
+          // firstName,
+          // lastName,
           language,
           email,
           token,

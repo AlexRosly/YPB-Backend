@@ -7,14 +7,14 @@ const hotelierSchema = Schema(
       type: String,
       default: "hotelier",
     },
-    lastName: {
-      type: String,
-      required: true,
-    },
-    firstName: {
-      type: String,
-      required: true,
-    },
+    // lastName: {
+    //   type: String,
+    //   required: true,
+    // },
+    // firstName: {
+    //   type: String,
+    //   required: true,
+    // },
     email: {
       type: String,
       required: true,
@@ -65,8 +65,8 @@ const hotelierSchema = Schema(
 );
 
 const joiSignUpSchema = Joi.object({
-  lastName: Joi.string().required(),
-  firstName: Joi.string().required(),
+  // lastName: Joi.string().required(),
+  // firstName: Joi.string().required(),
   email: Joi.string().required(),
   language: Joi.string().required(),
   secretCode: Joi.string().required(),
