@@ -1,5 +1,5 @@
 const { error } = require("console");
-const { Verification } = require("../../models");
+const { Verification, Hotels } = require("../../models");
 const path = require("path");
 const fs = require("fs").promises;
 
@@ -56,11 +56,7 @@ const startVerification = async (req, res) => {
           `${folderName}`,
           `${date}-${originalname}`
         );
-        const videoUrl = path.join(
-          // "verification",
-          `${folderName}`,
-          `${date}-${originalname}`
-        );
+        const videoUrl = path.join(`${folderName}`, `${date}-${originalname}`);
         videos.push(videoUrl);
         await fs.rename(verificationTempFilePath, resultUpload);
       } catch (error) {
@@ -75,7 +71,6 @@ const startVerification = async (req, res) => {
           `${date}-${originalname}`
         );
         const documentUrl = path.join(
-          // "verification",
           `${folderName}`,
           `${date}-${originalname}`
         );
@@ -92,11 +87,7 @@ const startVerification = async (req, res) => {
           `${folderName}`,
           `${date}-${originalname}`
         );
-        const selfiUrl = path.join(
-          // "verification",
-          `${folderName}`,
-          `${date}-${originalname}`
-        );
+        const selfiUrl = path.join(`${folderName}`, `${date}-${originalname}`);
         selfies.push(selfiUrl);
         await fs.rename(verificationTempFilePath, resultUpload);
       } catch (error) {
@@ -121,11 +112,11 @@ const startVerification = async (req, res) => {
   });
   //if DB don't create document, delete all files from server
   if (!result) {
-    console.log("try to delete");
+    // console.log("try to delete");
     await fs.rmdir(`./verification/${folderName}`, { recursive: true }, (e) => {
       console.log({ e });
     });
-    console.log("Folder Deleted!");
+    // console.log("Folder Deleted!");
 
     return res
       .json({
@@ -134,6 +125,14 @@ const startVerification = async (req, res) => {
       })
       .end();
   }
+
+  const updateStatus = await Hotels.findOneAndUpdate(
+    { _id: hotelsId },
+    { status: "on verification" },
+    {
+      new: true,
+    }
+  );
   //if all ok return response
   res
     .json({
@@ -141,6 +140,7 @@ const startVerification = async (req, res) => {
       status: "success",
       message: "documents was successfully uploaded",
       result,
+      updatedStatus: updateStatus.status,
     })
     .end();
 };

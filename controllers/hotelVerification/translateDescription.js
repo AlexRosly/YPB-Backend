@@ -47,7 +47,7 @@ const translateDescription = async (req, res) => {
   res
     .json({
       code: 200,
-      message: "success",
+      status: "success",
       translate: findHotels.translation,
     })
     .end();

@@ -8,8 +8,8 @@ const hotelsObject = Schema(
     },
     status: {
       type: String,
-      enum: ["on verification", "active", "not active", "deleted"],
-      default: "on verification",
+      enum: ["added", "on verification", "active", "not active", "deleted"],
+      default: "added",
     },
     type: {
       type: Object,

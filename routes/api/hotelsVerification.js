@@ -52,4 +52,10 @@ router.patch("/add-a-translation", ctrlWrapper(ctrl.translateDescription)); // a
 //finish verification
 router.patch("/finish-verification", ctrlWrapper(ctrl.finishVerification)); //add check for login verifier
 
+//delete hotels, documents and virifi object
+router.delete(
+  "/delete-verification",
+  ctrlWrapper(ctrl.deleteObjectAndDocuments)
+); //add check for login verifier
+
 module.exports = router;

@@ -6,6 +6,7 @@ const finishVerification = require("./finishVerification");
 const getLocation = require("./getLocation");
 const addYouTubeLink = require("./addYouTubeLink.js");
 const updateDocument = require("./updateDocument.js");
+const deleteObjectAndDocuments = require("./deleteObjectandDocuments.js");
 
 module.exports = {
   startVerification,
@@ -16,4 +17,5 @@ module.exports = {
   getLocation,
   addYouTubeLink,
   updateDocument,
+  deleteObjectAndDocuments,
 };

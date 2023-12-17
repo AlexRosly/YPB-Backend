@@ -80,4 +80,8 @@ router.get(
 
 //get first object by click
 router.get("/get-earlier-object", ctrlWrapper(ctrl.getFirstObject));
+
+//get first added object by click
+router.get("/get-earlier-added-object", ctrlWrapper(ctrl.getFirstAddedObject));
+
 module.exports = router;
