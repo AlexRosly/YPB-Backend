@@ -31,12 +31,11 @@ router.post(
 router.patch(
   "/add-additional-documents",
   authHotelier,
-  // uploadVideo.fields([
-  //   { name: "video", maxCount: 8 },
-  //   // { name: "documents", maxCount: 8 },
-  //   // { name: "selfi", maxCount: 8 },
-  // ]),
-  uploadVideo.array(),
+  uploadVideo.fields([
+    { name: "video", maxCount: 8 },
+    { name: "documents", maxCount: 8 },
+    { name: "selfi", maxCount: 8 },
+  ]),
   ctrlWrapper(ctrl.updateDocument)
 );
 

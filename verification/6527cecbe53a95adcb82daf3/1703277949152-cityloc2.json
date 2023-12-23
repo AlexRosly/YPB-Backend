@@ -1,0 +1,6421 @@
+[{
+  "_id": {
+    "$oid": "630f97a69e670fb64efb3e0f"
+  },
+  "stateId": "630f94549e670fb64efb3dec",
+  "cityName": "Kyiv",
+  "cityInternational": "Kyiv",
+  "cityCode": "KYIV",
+  "cityPhotoURL": "https://res.cloudinary.com/your-price-booking/image/upload/v1683179297/Photos%20of%20locations/Kyiv/Kyiv_lshapx.png",
+  "langCode": "EN",
+  "dbLangCode": "en",
+  "stateInternational": "Kyiv region",
+  "state": {
+    "$oid": "630f94549e670fb64efb3dec"
+  },
+  "districts": [
+    {
+      "$oid": "6311b8d2d786c73f23acafc6"
+    },
+    {
+      "$oid": "6311b8f1d786c73f23acafe4"
+    },
+    {
+      "$oid": "6311b959d786c73f23acb002"
+    },
+    {
+      "$oid": "631f75413f98e81c918cd6f1"
+    },
+    {
+      "$oid": "6340632445ea2bb77707382e"
+    },
+    {
+      "$oid": "6340634145ea2bb77707384c"
+    },
+    {
+      "$oid": "6340635a45ea2bb77707386a"
+    },
+    {
+      "$oid": "6340638245ea2bb777073888"
+    },
+    {
+      "$oid": "6340639845ea2bb7770738a6"
+    },
+    {
+      "$oid": "634063cc45ea2bb7770738c4"
+    },
+    {
+      "$oid": "634063ed45ea2bb7770738e2"
+    },
+    {
+      "$oid": "6340640645ea2bb777073900"
+    },
+    {
+      "$oid": "6340641e45ea2bb77707391e"
+    },
+    {
+      "$oid": "6342e83360536b17bc10b763"
+    },
+    {
+      "$oid": "6342e89360536b17bc10b781"
+    },
+    {
+      "$oid": "6342e8b660536b17bc10b79f"
+    },
+    {
+      "$oid": "6342e91f60536b17bc10b7c9"
+    },
+    {
+      "$oid": "6342e93c60536b17bc10b7e7"
+    },
+    {
+      "$oid": "6342e95260536b17bc10b805"
+    },
+    {
+      "$oid": "6342e98e60536b17bc10b823"
+    },
+    {
+      "$oid": "6342e9b260536b17bc10b841"
+    },
+    {
+      "$oid": "6342e9de60536b17bc10b85f"
+    },
+    {
+      "$oid": "6342e9f960536b17bc10b87d"
+    },
+    {
+      "$oid": "6342ea2660536b17bc10b89b"
+    },
+    {
+      "$oid": "6342ea4d60536b17bc10b8b9"
+    },
+    {
+      "$oid": "6342ea7960536b17bc10b8d6"
+    },
+    {
+      "$oid": "6342ea9460536b17bc10b8f4"
+    },
+    {
+      "$oid": "6342eaa260536b17bc10b911"
+    },
+    {
+      "$oid": "6342eabf60536b17bc10b92d"
+    },
+    {
+      "$oid": "6342eb3a60536b17bc10b94c"
+    },
+    {
+      "$oid": "6342eb4d60536b17bc10b96a"
+    },
+    {
+      "$oid": "6342eb7060536b17bc10b994"
+    },
+    {
+      "$oid": "6342eb9060536b17bc10b9b0"
+    },
+    {
+      "$oid": "6342ebb760536b17bc10b9cf"
+    },
+    {
+      "$oid": "6342ece960536b17bc10ba01"
+    },
+    {
+      "$oid": "6342ed0e60536b17bc10ba20"
+    },
+    {
+      "$oid": "6342ed2e60536b17bc10ba3e"
+    },
+    {
+      "$oid": "6342ed4760536b17bc10ba5c"
+    },
+    {
+      "$oid": "6342ef7960536b17bc10ba84"
+    },
+    {
+      "$oid": "6342ef9460536b17bc10baa2"
+    },
+    {
+      "$oid": "6342efae60536b17bc10bac1"
+    },
+    {
+      "$oid": "6342efd360536b17bc10badf"
+    },
+    {
+      "$oid": "6342efe360536b17bc10bafd"
+    },
+    {
+      "$oid": "6342eff660536b17bc10bb1b"
+    },
+    {
+      "$oid": "6342f00860536b17bc10bb3a"
+    },
+    {
+      "$oid": "6342f01c60536b17bc10bb58"
+    },
+    {
+      "$oid": "6342f03f60536b17bc10bb76"
+    },
+    {
+      "$oid": "6342f06560536b17bc10bb94"
+    },
+    {
+      "$oid": "6342f07f60536b17bc10bbb3"
+    },
+    {
+      "$oid": "6342f0a560536b17bc10bbd1"
+    },
+    {
+      "$oid": "6342f0c960536b17bc10bbef"
+    },
+    {
+      "$oid": "6342f0e360536b17bc10bc0d"
+    },
+    {
+      "$oid": "6342f1a560536b17bc10bc36"
+    },
+    {
+      "$oid": "6342f1bb60536b17bc10bc53"
+    },
+    {
+      "$oid": "6342f1fe60536b17bc10bc70"
+    },
+    {
+      "$oid": "6342f22060536b17bc10bc8e"
+    },
+    {
+      "$oid": "6342f23460536b17bc10bcac"
+    },
+    {
+      "$oid": "6342f24460536b17bc10bcc8"
+    },
+    {
+      "$oid": "6342f25460536b17bc10bce6"
+    },
+    {
+      "$oid": "6342f2ec60536b17bc10bd0e"
+    },
+    {
+      "$oid": "6342f85560536b17bc10bd37"
+    },
+    {
+      "$oid": "6342f86a60536b17bc10bd54"
+    },
+    {
+      "$oid": "6342f88560536b17bc10bd70"
+    },
+    {
+      "$oid": "6342f8a060536b17bc10bd8d"
+    },
+    {
+      "$oid": "6342f8b560536b17bc10bda8"
+    },
+    {
+      "$oid": "6342f8cf60536b17bc10bdc5"
+    },
+    {
+      "$oid": "6342f94260536b17bc10bdec"
+    },
+    {
+      "$oid": "6342f95360536b17bc10be09"
+    },
+    {
+      "$oid": "6342f96a60536b17bc10be31"
+    },
+    {
+      "$oid": "6342f98360536b17bc10be4f"
+    },
+    {
+      "$oid": "6342f99b60536b17bc10be6d"
+    },
+    {
+      "$oid": "6342f9b660536b17bc10be8a"
+    },
+    {
+      "$oid": "6342f9ca60536b17bc10bea6"
+    },
+    {
+      "$oid": "6342f9e260536b17bc10bec4"
+    },
+    {
+      "$oid": "6342fab360536b17bc10beee"
+    },
+    {
+      "$oid": "6342fae560536b17bc10bf0c"
+    },
+    {
+      "$oid": "6342fdd060536b17bc10bf2a"
+    },
+    {
+      "$oid": "6342fe0160536b17bc10bf48"
+    },
+    {
+      "$oid": "6342fe1c60536b17bc10bf66"
+    },
+    {
+      "$oid": "6343077f60536b17bc10bf94"
+    },
+    {
+      "$oid": "6343079860536b17bc10bfbd"
+    },
+    {
+      "$oid": "634307b560536b17bc10bfdb"
+    },
+    {
+      "$oid": "634307e460536b17bc10bff7"
+    },
+    {
+      "$oid": "6343089660536b17bc10c020"
+    },
+    {
+      "$oid": "634308d060536b17bc10c03e"
+    },
+    {
+      "$oid": "6343091b60536b17bc10c05c"
+    },
+    {
+      "$oid": "63430a2760536b17bc10c07a"
+    },
+    {
+      "$oid": "63430a3960536b17bc10c098"
+    },
+    {
+      "$oid": "63430a4e60536b17bc10c0b5"
+    },
+    {
+      "$oid": "63430a6060536b17bc10c0d0"
+    },
+    {
+      "$oid": "63430a7560536b17bc10c0eb"
+    },
+    {
+      "$oid": "63430a8d60536b17bc10c107"
+    },
+    {
+      "$oid": "63430aa260536b17bc10c124"
+    },
+    {
+      "$oid": "63430ab160536b17bc10c140"
+    },
+    {
+      "$oid": "63430acd60536b17bc10c15e"
+    },
+    {
+      "$oid": "63430add60536b17bc10c179"
+    },
+    {
+      "$oid": "63430b0260536b17bc10c196"
+    },
+    {
+      "$oid": "63430b2b60536b17bc10c1b2"
+    },
+    {
+      "$oid": "63430b4560536b17bc10c1cf"
+    },
+    {
+      "$oid": "63430b5b60536b17bc10c1eb"
+    },
+    {
+      "$oid": "63430b6d60536b17bc10c208"
+    },
+    {
+      "$oid": "63430b7e60536b17bc10c224"
+    },
+    {
+      "$oid": "63430b9760536b17bc10c242"
+    },
+    {
+      "$oid": "63430c9a60536b17bc10c26b"
+    },
+    {
+      "$oid": "63430cac60536b17bc10c288"
+    },
+    {
+      "$oid": "63430cc060536b17bc10c2a3"
+    },
+    {
+      "$oid": "63430cd960536b17bc10c2bf"
+    },
+    {
+      "$oid": "63430cec60536b17bc10c2dc"
+    },
+    {
+      "$oid": "63430cf660536b17bc10c2f7"
+    },
+    {
+      "$oid": "63430d0660536b17bc10c31e"
+    },
+    {
+      "$oid": "63430d2960536b17bc10c33c"
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-08-31T17:17:26.048Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-04T05:48:46.042Z"
+  },
+  "cityPhotoAlt": "Kyiv, Kyiv region, Ukraine"
+},{
+  "_id": {
+    "$oid": "630f97a69e670fb64efb3e13"
+  },
+  "stateId": "630f94549e670fb64efb3df0",
+  "cityName": "Київ",
+  "cityInternational": "Kyiv",
+  "cityCode": "KYIV",
+  "cityPhotoURL": "https://res.cloudinary.com/your-price-booking/image/upload/v1679073205/Photos%20of%20locations/Kyiv/Kyiv_swxofr.png",
+  "langCode": "UA",
+  "dbLangCode": "uk",
+  "stateInternational": "Kyiv region",
+  "state": {
+    "$oid": "630f94549e670fb64efb3df0"
+  },
+  "districts": [
+    {
+      "$oid": "6311b8d2d786c73f23acafca"
+    },
+    {
+      "$oid": "6311b8f1d786c73f23acafe8"
+    },
+    {
+      "$oid": "6311b959d786c73f23acb006"
+    },
+    {
+      "$oid": "631f75413f98e81c918cd6f5"
+    },
+    {
+      "$oid": "6340632545ea2bb777073832"
+    },
+    {
+      "$oid": "6340634145ea2bb777073850"
+    },
+    {
+      "$oid": "6340635a45ea2bb77707386e"
+    },
+    {
+      "$oid": "6340638245ea2bb77707388c"
+    },
+    {
+      "$oid": "6340639845ea2bb7770738aa"
+    },
+    {
+      "$oid": "634063cc45ea2bb7770738c8"
+    },
+    {
+      "$oid": "634063ed45ea2bb7770738e6"
+    },
+    {
+      "$oid": "6340640645ea2bb777073904"
+    },
+    {
+      "$oid": "6340641e45ea2bb777073922"
+    },
+    {
+      "$oid": "6342e83360536b17bc10b767"
+    },
+    {
+      "$oid": "6342e89460536b17bc10b785"
+    },
+    {
+      "$oid": "6342e8b660536b17bc10b7a3"
+    },
+    {
+      "$oid": "6342e91f60536b17bc10b7cd"
+    },
+    {
+      "$oid": "6342e93c60536b17bc10b7eb"
+    },
+    {
+      "$oid": "6342e95260536b17bc10b809"
+    },
+    {
+      "$oid": "6342e98e60536b17bc10b827"
+    },
+    {
+      "$oid": "6342e9b260536b17bc10b845"
+    },
+    {
+      "$oid": "6342e9df60536b17bc10b863"
+    },
+    {
+      "$oid": "6342e9f960536b17bc10b881"
+    },
+    {
+      "$oid": "6342ea2660536b17bc10b89f"
+    },
+    {
+      "$oid": "6342ea4d60536b17bc10b8bd"
+    },
+    {
+      "$oid": "6342ea7960536b17bc10b8da"
+    },
+    {
+      "$oid": "6342ea9460536b17bc10b8f8"
+    },
+    {
+      "$oid": "6342eaa260536b17bc10b915"
+    },
+    {
+      "$oid": "6342eabf60536b17bc10b931"
+    },
+    {
+      "$oid": "6342eb3a60536b17bc10b950"
+    },
+    {
+      "$oid": "6342eb4d60536b17bc10b96e"
+    },
+    {
+      "$oid": "6342eb7060536b17bc10b998"
+    },
+    {
+      "$oid": "6342eb9060536b17bc10b9b4"
+    },
+    {
+      "$oid": "6342ebb760536b17bc10b9d3"
+    },
+    {
+      "$oid": "6342ece960536b17bc10ba05"
+    },
+    {
+      "$oid": "6342ed0e60536b17bc10ba24"
+    },
+    {
+      "$oid": "6342ed2e60536b17bc10ba42"
+    },
+    {
+      "$oid": "6342ed4760536b17bc10ba60"
+    },
+    {
+      "$oid": "6342ef7960536b17bc10ba88"
+    },
+    {
+      "$oid": "6342ef9460536b17bc10baa6"
+    },
+    {
+      "$oid": "6342efae60536b17bc10bac5"
+    },
+    {
+      "$oid": "6342efd360536b17bc10bae3"
+    },
+    {
+      "$oid": "6342efe360536b17bc10bb01"
+    },
+    {
+      "$oid": "6342eff660536b17bc10bb1f"
+    },
+    {
+      "$oid": "6342f00860536b17bc10bb3e"
+    },
+    {
+      "$oid": "6342f01c60536b17bc10bb5c"
+    },
+    {
+      "$oid": "6342f03f60536b17bc10bb7a"
+    },
+    {
+      "$oid": "6342f06560536b17bc10bb98"
+    },
+    {
+      "$oid": "6342f07f60536b17bc10bbb7"
+    },
+    {
+      "$oid": "6342f0a560536b17bc10bbd5"
+    },
+    {
+      "$oid": "6342f0c960536b17bc10bbf3"
+    },
+    {
+      "$oid": "6342f0e360536b17bc10bc11"
+    },
+    {
+      "$oid": "6342f1a560536b17bc10bc3a"
+    },
+    {
+      "$oid": "6342f1bb60536b17bc10bc57"
+    },
+    {
+      "$oid": "6342f1fe60536b17bc10bc74"
+    },
+    {
+      "$oid": "6342f22060536b17bc10bc92"
+    },
+    {
+      "$oid": "6342f23460536b17bc10bcb0"
+    },
+    {
+      "$oid": "6342f24460536b17bc10bccc"
+    },
+    {
+      "$oid": "6342f25460536b17bc10bcea"
+    },
+    {
+      "$oid": "6342f2ec60536b17bc10bd12"
+    },
+    {
+      "$oid": "6342f85560536b17bc10bd3b"
+    },
+    {
+      "$oid": "6342f86a60536b17bc10bd58"
+    },
+    {
+      "$oid": "6342f88560536b17bc10bd74"
+    },
+    {
+      "$oid": "6342f8a060536b17bc10bd91"
+    },
+    {
+      "$oid": "6342f8b560536b17bc10bdac"
+    },
+    {
+      "$oid": "6342f8cf60536b17bc10bdc9"
+    },
+    {
+      "$oid": "6342f94260536b17bc10bdf0"
+    },
+    {
+      "$oid": "6342f95360536b17bc10be0d"
+    },
+    {
+      "$oid": "6342f96a60536b17bc10be35"
+    },
+    {
+      "$oid": "6342f98360536b17bc10be53"
+    },
+    {
+      "$oid": "6342f99b60536b17bc10be71"
+    },
+    {
+      "$oid": "6342f9b660536b17bc10be8e"
+    },
+    {
+      "$oid": "6342f9ca60536b17bc10beaa"
+    },
+    {
+      "$oid": "6342f9e260536b17bc10bec8"
+    },
+    {
+      "$oid": "6342fab360536b17bc10bef2"
+    },
+    {
+      "$oid": "6342fae560536b17bc10bf10"
+    },
+    {
+      "$oid": "6342fdd160536b17bc10bf2e"
+    },
+    {
+      "$oid": "6342fe0160536b17bc10bf4c"
+    },
+    {
+      "$oid": "6342fe1c60536b17bc10bf6a"
+    },
+    {
+      "$oid": "6343077f60536b17bc10bf98"
+    },
+    {
+      "$oid": "6343079860536b17bc10bfc1"
+    },
+    {
+      "$oid": "634307b560536b17bc10bfdf"
+    },
+    {
+      "$oid": "634307e460536b17bc10bffb"
+    },
+    {
+      "$oid": "6343089660536b17bc10c024"
+    },
+    {
+      "$oid": "634308d060536b17bc10c042"
+    },
+    {
+      "$oid": "6343091c60536b17bc10c060"
+    },
+    {
+      "$oid": "63430a2760536b17bc10c07e"
+    },
+    {
+      "$oid": "63430a3960536b17bc10c09c"
+    },
+    {
+      "$oid": "63430a4e60536b17bc10c0b9"
+    },
+    {
+      "$oid": "63430a6160536b17bc10c0d4"
+    },
+    {
+      "$oid": "63430a7560536b17bc10c0ef"
+    },
+    {
+      "$oid": "63430a8d60536b17bc10c10b"
+    },
+    {
+      "$oid": "63430aa260536b17bc10c128"
+    },
+    {
+      "$oid": "63430ab160536b17bc10c144"
+    },
+    {
+      "$oid": "63430acd60536b17bc10c162"
+    },
+    {
+      "$oid": "63430add60536b17bc10c17d"
+    },
+    {
+      "$oid": "63430b0260536b17bc10c19a"
+    },
+    {
+      "$oid": "63430b2b60536b17bc10c1b6"
+    },
+    {
+      "$oid": "63430b4560536b17bc10c1d3"
+    },
+    {
+      "$oid": "63430b5b60536b17bc10c1ef"
+    },
+    {
+      "$oid": "63430b6d60536b17bc10c20c"
+    },
+    {
+      "$oid": "63430b7e60536b17bc10c228"
+    },
+    {
+      "$oid": "63430b9760536b17bc10c246"
+    },
+    {
+      "$oid": "63430c9b60536b17bc10c26f"
+    },
+    {
+      "$oid": "63430cac60536b17bc10c28c"
+    },
+    {
+      "$oid": "63430cc060536b17bc10c2a7"
+    },
+    {
+      "$oid": "63430cd960536b17bc10c2c3"
+    },
+    {
+      "$oid": "63430cec60536b17bc10c2e0"
+    },
+    {
+      "$oid": "63430cf660536b17bc10c2fb"
+    },
+    {
+      "$oid": "63430d0660536b17bc10c322"
+    },
+    {
+      "$oid": "63430d2960536b17bc10c340"
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-08-31T17:17:26.139Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-17T17:14:28.958Z"
+  },
+  "cityPhotoAlt": "Київ, Київська область, Україна"
+},{
+  "_id": {
+    "$oid": "630f97a69e670fb64efb3e15"
+  },
+  "stateId": "630f94549e670fb64efb3df2",
+  "cityName": "Kijów",
+  "cityInternational": "Kyiv",
+  "cityCode": "KYIV",
+  "cityPhotoURL": "https://res.cloudinary.com/your-price-booking/image/upload/v1679073205/Photos%20of%20locations/Kyiv/Kyiv_swxofr.png",
+  "langCode": "PL",
+  "dbLangCode": "pl",
+  "stateInternational": "Kyiv region",
+  "state": {
+    "$oid": "630f94549e670fb64efb3df2"
+  },
+  "districts": [
+    {
+      "$oid": "6311b8d2d786c73f23acafcc"
+    },
+    {
+      "$oid": "6311b8f1d786c73f23acafea"
+    },
+    {
+      "$oid": "6311b959d786c73f23acb008"
+    },
+    {
+      "$oid": "631f75413f98e81c918cd6f7"
+    },
+    {
+      "$oid": "6340632545ea2bb777073834"
+    },
+    {
+      "$oid": "6340634145ea2bb777073852"
+    },
+    {
+      "$oid": "6340635a45ea2bb777073870"
+    },
+    {
+      "$oid": "6340638245ea2bb77707388e"
+    },
+    {
+      "$oid": "6340639845ea2bb7770738ac"
+    },
+    {
+      "$oid": "634063cc45ea2bb7770738ca"
+    },
+    {
+      "$oid": "634063ed45ea2bb7770738e8"
+    },
+    {
+      "$oid": "6340640745ea2bb777073906"
+    },
+    {
+      "$oid": "6340641e45ea2bb777073924"
+    },
+    {
+      "$oid": "6342e83360536b17bc10b769"
+    },
+    {
+      "$oid": "6342e89460536b17bc10b787"
+    },
+    {
+      "$oid": "6342e8b660536b17bc10b7a5"
+    },
+    {
+      "$oid": "6342e91f60536b17bc10b7cf"
+    },
+    {
+      "$oid": "6342e93c60536b17bc10b7ed"
+    },
+    {
+      "$oid": "6342e95260536b17bc10b80b"
+    },
+    {
+      "$oid": "6342e98e60536b17bc10b829"
+    },
+    {
+      "$oid": "6342e9b260536b17bc10b847"
+    },
+    {
+      "$oid": "6342e9df60536b17bc10b865"
+    },
+    {
+      "$oid": "6342e9f960536b17bc10b883"
+    },
+    {
+      "$oid": "6342ea2660536b17bc10b8a1"
+    },
+    {
+      "$oid": "6342ea4d60536b17bc10b8bf"
+    },
+    {
+      "$oid": "6342ea7960536b17bc10b8dc"
+    },
+    {
+      "$oid": "6342ea9460536b17bc10b8fa"
+    },
+    {
+      "$oid": "6342eaa260536b17bc10b917"
+    },
+    {
+      "$oid": "6342eabf60536b17bc10b933"
+    },
+    {
+      "$oid": "6342eb3a60536b17bc10b952"
+    },
+    {
+      "$oid": "6342eb4d60536b17bc10b970"
+    },
+    {
+      "$oid": "6342eb7060536b17bc10b99a"
+    },
+    {
+      "$oid": "6342eb9060536b17bc10b9b6"
+    },
+    {
+      "$oid": "6342ebb760536b17bc10b9d5"
+    },
+    {
+      "$oid": "6342ecea60536b17bc10ba07"
+    },
+    {
+      "$oid": "6342ed0e60536b17bc10ba26"
+    },
+    {
+      "$oid": "6342ed2e60536b17bc10ba44"
+    },
+    {
+      "$oid": "6342ed4760536b17bc10ba62"
+    },
+    {
+      "$oid": "6342ef7960536b17bc10ba8a"
+    },
+    {
+      "$oid": "6342ef9560536b17bc10baa8"
+    },
+    {
+      "$oid": "6342efae60536b17bc10bac7"
+    },
+    {
+      "$oid": "6342efd360536b17bc10bae5"
+    },
+    {
+      "$oid": "6342efe360536b17bc10bb03"
+    },
+    {
+      "$oid": "6342eff660536b17bc10bb21"
+    },
+    {
+      "$oid": "6342f00860536b17bc10bb40"
+    },
+    {
+      "$oid": "6342f01c60536b17bc10bb5e"
+    },
+    {
+      "$oid": "6342f04060536b17bc10bb7c"
+    },
+    {
+      "$oid": "6342f06560536b17bc10bb9a"
+    },
+    {
+      "$oid": "6342f07f60536b17bc10bbb9"
+    },
+    {
+      "$oid": "6342f0a560536b17bc10bbd7"
+    },
+    {
+      "$oid": "6342f0c960536b17bc10bbf5"
+    },
+    {
+      "$oid": "6342f0e360536b17bc10bc13"
+    },
+    {
+      "$oid": "6342f1a560536b17bc10bc3c"
+    },
+    {
+      "$oid": "6342f1bb60536b17bc10bc59"
+    },
+    {
+      "$oid": "6342f1fe60536b17bc10bc76"
+    },
+    {
+      "$oid": "6342f22060536b17bc10bc94"
+    },
+    {
+      "$oid": "6342f23460536b17bc10bcb2"
+    },
+    {
+      "$oid": "6342f24460536b17bc10bcce"
+    },
+    {
+      "$oid": "6342f25460536b17bc10bcec"
+    },
+    {
+      "$oid": "6342f2ec60536b17bc10bd14"
+    },
+    {
+      "$oid": "6342f85560536b17bc10bd3d"
+    },
+    {
+      "$oid": "6342f86a60536b17bc10bd5a"
+    },
+    {
+      "$oid": "6342f88560536b17bc10bd76"
+    },
+    {
+      "$oid": "6342f8a060536b17bc10bd93"
+    },
+    {
+      "$oid": "6342f8b560536b17bc10bdae"
+    },
+    {
+      "$oid": "6342f8cf60536b17bc10bdcb"
+    },
+    {
+      "$oid": "6342f94260536b17bc10bdf2"
+    },
+    {
+      "$oid": "6342f95360536b17bc10be0f"
+    },
+    {
+      "$oid": "6342f96a60536b17bc10be37"
+    },
+    {
+      "$oid": "6342f98360536b17bc10be55"
+    },
+    {
+      "$oid": "6342f99c60536b17bc10be73"
+    },
+    {
+      "$oid": "6342f9b660536b17bc10be90"
+    },
+    {
+      "$oid": "6342f9ca60536b17bc10beac"
+    },
+    {
+      "$oid": "6342f9e260536b17bc10beca"
+    },
+    {
+      "$oid": "6342fab360536b17bc10bef4"
+    },
+    {
+      "$oid": "6342fae560536b17bc10bf12"
+    },
+    {
+      "$oid": "6342fdd160536b17bc10bf30"
+    },
+    {
+      "$oid": "6342fe0160536b17bc10bf4e"
+    },
+    {
+      "$oid": "6342fe1c60536b17bc10bf6c"
+    },
+    {
+      "$oid": "6343077f60536b17bc10bf9a"
+    },
+    {
+      "$oid": "6343079860536b17bc10bfc3"
+    },
+    {
+      "$oid": "634307b660536b17bc10bfe1"
+    },
+    {
+      "$oid": "634307e460536b17bc10bffd"
+    },
+    {
+      "$oid": "6343089660536b17bc10c026"
+    },
+    {
+      "$oid": "634308d160536b17bc10c044"
+    },
+    {
+      "$oid": "6343091c60536b17bc10c062"
+    },
+    {
+      "$oid": "63430a2760536b17bc10c080"
+    },
+    {
+      "$oid": "63430a3960536b17bc10c09e"
+    },
+    {
+      "$oid": "63430a4e60536b17bc10c0bb"
+    },
+    {
+      "$oid": "63430a6160536b17bc10c0d6"
+    },
+    {
+      "$oid": "63430a7560536b17bc10c0f1"
+    },
+    {
+      "$oid": "63430a8d60536b17bc10c10d"
+    },
+    {
+      "$oid": "63430aa360536b17bc10c12a"
+    },
+    {
+      "$oid": "63430ab160536b17bc10c146"
+    },
+    {
+      "$oid": "63430ace60536b17bc10c164"
+    },
+    {
+      "$oid": "63430add60536b17bc10c17f"
+    },
+    {
+      "$oid": "63430b0260536b17bc10c19c"
+    },
+    {
+      "$oid": "63430b2b60536b17bc10c1b8"
+    },
+    {
+      "$oid": "63430b4560536b17bc10c1d5"
+    },
+    {
+      "$oid": "63430b5b60536b17bc10c1f1"
+    },
+    {
+      "$oid": "63430b6d60536b17bc10c20e"
+    },
+    {
+      "$oid": "63430b7e60536b17bc10c22a"
+    },
+    {
+      "$oid": "63430b9760536b17bc10c248"
+    },
+    {
+      "$oid": "63430c9b60536b17bc10c271"
+    },
+    {
+      "$oid": "63430cac60536b17bc10c28e"
+    },
+    {
+      "$oid": "63430cc060536b17bc10c2a9"
+    },
+    {
+      "$oid": "63430cda60536b17bc10c2c5"
+    },
+    {
+      "$oid": "63430cec60536b17bc10c2e2"
+    },
+    {
+      "$oid": "63430cf660536b17bc10c2fd"
+    },
+    {
+      "$oid": "63430d0660536b17bc10c324"
+    },
+    {
+      "$oid": "63430d2960536b17bc10c342"
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-08-31T17:17:26.169Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-17T17:15:13.148Z"
+  },
+  "cityPhotoAlt": "Kijów, Obwód kijowski, Ukraine"
+},{
+  "_id": {
+    "$oid": "630f97a69e670fb64efb3e19"
+  },
+  "stateId": "630f94549e670fb64efb3df6",
+  "cityName": "Киев",
+  "cityInternational": "Kyiv",
+  "cityCode": "KYIV",
+  "cityPhotoURL": "https://res.cloudinary.com/your-price-booking/image/upload/v1679073205/Photos%20of%20locations/Kyiv/Kyiv_swxofr.png",
+  "langCode": "RU",
+  "dbLangCode": "ru",
+  "stateInternational": "Kyiv region",
+  "state": {
+    "$oid": "630f94549e670fb64efb3df6"
+  },
+  "districts": [
+    {
+      "$oid": "6311b8d2d786c73f23acafd0"
+    },
+    {
+      "$oid": "6311b8f2d786c73f23acafee"
+    },
+    {
+      "$oid": "6311b959d786c73f23acb00c"
+    },
+    {
+      "$oid": "631f75413f98e81c918cd6fb"
+    },
+    {
+      "$oid": "6340632545ea2bb777073838"
+    },
+    {
+      "$oid": "6340634145ea2bb777073856"
+    },
+    {
+      "$oid": "6340635a45ea2bb777073874"
+    },
+    {
+      "$oid": "6340638245ea2bb777073892"
+    },
+    {
+      "$oid": "6340639845ea2bb7770738b0"
+    },
+    {
+      "$oid": "634063cc45ea2bb7770738ce"
+    },
+    {
+      "$oid": "634063ed45ea2bb7770738ec"
+    },
+    {
+      "$oid": "6340640745ea2bb77707390a"
+    },
+    {
+      "$oid": "6340641e45ea2bb777073928"
+    },
+    {
+      "$oid": "6342e83360536b17bc10b76d"
+    },
+    {
+      "$oid": "6342e89460536b17bc10b78b"
+    },
+    {
+      "$oid": "6342e8b660536b17bc10b7a9"
+    },
+    {
+      "$oid": "6342e91f60536b17bc10b7d3"
+    },
+    {
+      "$oid": "6342e93c60536b17bc10b7f1"
+    },
+    {
+      "$oid": "6342e95260536b17bc10b80f"
+    },
+    {
+      "$oid": "6342e98e60536b17bc10b82d"
+    },
+    {
+      "$oid": "6342e9b260536b17bc10b84b"
+    },
+    {
+      "$oid": "6342e9df60536b17bc10b869"
+    },
+    {
+      "$oid": "6342e9f960536b17bc10b887"
+    },
+    {
+      "$oid": "6342ea2660536b17bc10b8a5"
+    },
+    {
+      "$oid": "6342ea4d60536b17bc10b8c3"
+    },
+    {
+      "$oid": "6342ea7960536b17bc10b8e0"
+    },
+    {
+      "$oid": "6342ea9460536b17bc10b8fe"
+    },
+    {
+      "$oid": "6342eaa360536b17bc10b91b"
+    },
+    {
+      "$oid": "6342eabf60536b17bc10b936"
+    },
+    {
+      "$oid": "6342eb3a60536b17bc10b956"
+    },
+    {
+      "$oid": "6342eb4d60536b17bc10b973"
+    },
+    {
+      "$oid": "6342eb7060536b17bc10b99e"
+    },
+    {
+      "$oid": "6342eb9060536b17bc10b9b9"
+    },
+    {
+      "$oid": "6342ebb760536b17bc10b9d9"
+    },
+    {
+      "$oid": "6342ecea60536b17bc10ba0b"
+    },
+    {
+      "$oid": "6342ed0e60536b17bc10ba2a"
+    },
+    {
+      "$oid": "6342ed2f60536b17bc10ba48"
+    },
+    {
+      "$oid": "6342ed4760536b17bc10ba66"
+    },
+    {
+      "$oid": "6342ef7960536b17bc10ba8e"
+    },
+    {
+      "$oid": "6342ef9560536b17bc10baac"
+    },
+    {
+      "$oid": "6342efae60536b17bc10bacb"
+    },
+    {
+      "$oid": "6342efd360536b17bc10bae9"
+    },
+    {
+      "$oid": "6342efe360536b17bc10bb07"
+    },
+    {
+      "$oid": "6342eff660536b17bc10bb25"
+    },
+    {
+      "$oid": "6342f00860536b17bc10bb44"
+    },
+    {
+      "$oid": "6342f01c60536b17bc10bb62"
+    },
+    {
+      "$oid": "6342f04060536b17bc10bb81"
+    },
+    {
+      "$oid": "6342f06560536b17bc10bb9e"
+    },
+    {
+      "$oid": "6342f07f60536b17bc10bbbd"
+    },
+    {
+      "$oid": "6342f0a560536b17bc10bbdb"
+    },
+    {
+      "$oid": "6342f0c960536b17bc10bbf9"
+    },
+    {
+      "$oid": "6342f0e360536b17bc10bc17"
+    },
+    {
+      "$oid": "6342f1a560536b17bc10bc40"
+    },
+    {
+      "$oid": "6342f1bb60536b17bc10bc5c"
+    },
+    {
+      "$oid": "6342f1fe60536b17bc10bc7a"
+    },
+    {
+      "$oid": "6342f22060536b17bc10bc97"
+    },
+    {
+      "$oid": "6342f23460536b17bc10bcb6"
+    },
+    {
+      "$oid": "6342f24460536b17bc10bcd2"
+    },
+    {
+      "$oid": "6342f25460536b17bc10bcf0"
+    },
+    {
+      "$oid": "6342f2ec60536b17bc10bd18"
+    },
+    {
+      "$oid": "6342f85560536b17bc10bd41"
+    },
+    {
+      "$oid": "6342f86a60536b17bc10bd5e"
+    },
+    {
+      "$oid": "6342f88560536b17bc10bd7a"
+    },
+    {
+      "$oid": "6342f8a060536b17bc10bd97"
+    },
+    {
+      "$oid": "6342f8b560536b17bc10bdb2"
+    },
+    {
+      "$oid": "6342f8cf60536b17bc10bdcf"
+    },
+    {
+      "$oid": "6342f94260536b17bc10bdf6"
+    },
+    {
+      "$oid": "6342f95360536b17bc10be13"
+    },
+    {
+      "$oid": "6342f96a60536b17bc10be3b"
+    },
+    {
+      "$oid": "6342f98360536b17bc10be59"
+    },
+    {
+      "$oid": "6342f99c60536b17bc10be77"
+    },
+    {
+      "$oid": "6342f9b660536b17bc10be94"
+    },
+    {
+      "$oid": "6342f9ca60536b17bc10beb0"
+    },
+    {
+      "$oid": "6342f9e260536b17bc10bece"
+    },
+    {
+      "$oid": "6342fab360536b17bc10bef8"
+    },
+    {
+      "$oid": "6342fae660536b17bc10bf16"
+    },
+    {
+      "$oid": "6342fdd160536b17bc10bf34"
+    },
+    {
+      "$oid": "6342fe0160536b17bc10bf53"
+    },
+    {
+      "$oid": "6342fe1c60536b17bc10bf70"
+    },
+    {
+      "$oid": "6343077f60536b17bc10bf9e"
+    },
+    {
+      "$oid": "6343079860536b17bc10bfc7"
+    },
+    {
+      "$oid": "634307b660536b17bc10bfe5"
+    },
+    {
+      "$oid": "634307e460536b17bc10c001"
+    },
+    {
+      "$oid": "6343089660536b17bc10c02a"
+    },
+    {
+      "$oid": "634308d160536b17bc10c048"
+    },
+    {
+      "$oid": "6343091c60536b17bc10c066"
+    },
+    {
+      "$oid": "63430a2760536b17bc10c084"
+    },
+    {
+      "$oid": "63430a3960536b17bc10c0a2"
+    },
+    {
+      "$oid": "63430a4e60536b17bc10c0bf"
+    },
+    {
+      "$oid": "63430a6160536b17bc10c0da"
+    },
+    {
+      "$oid": "63430a7560536b17bc10c0f5"
+    },
+    {
+      "$oid": "63430a8d60536b17bc10c111"
+    },
+    {
+      "$oid": "63430aa360536b17bc10c12d"
+    },
+    {
+      "$oid": "63430ab160536b17bc10c14a"
+    },
+    {
+      "$oid": "63430ace60536b17bc10c168"
+    },
+    {
+      "$oid": "63430add60536b17bc10c183"
+    },
+    {
+      "$oid": "63430b0260536b17bc10c1a0"
+    },
+    {
+      "$oid": "63430b2b60536b17bc10c1bc"
+    },
+    {
+      "$oid": "63430b4560536b17bc10c1d9"
+    },
+    {
+      "$oid": "63430b5b60536b17bc10c1f5"
+    },
+    {
+      "$oid": "63430b6d60536b17bc10c211"
+    },
+    {
+      "$oid": "63430b7e60536b17bc10c22f"
+    },
+    {
+      "$oid": "63430b9760536b17bc10c24b"
+    },
+    {
+      "$oid": "63430c9b60536b17bc10c275"
+    },
+    {
+      "$oid": "63430cac60536b17bc10c292"
+    },
+    {
+      "$oid": "63430cc060536b17bc10c2ad"
+    },
+    {
+      "$oid": "63430cda60536b17bc10c2c9"
+    },
+    {
+      "$oid": "63430cec60536b17bc10c2e6"
+    },
+    {
+      "$oid": "63430cf660536b17bc10c301"
+    },
+    {
+      "$oid": "63430d0660536b17bc10c328"
+    },
+    {
+      "$oid": "63430d2960536b17bc10c346"
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-08-31T17:17:26.208Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-17T17:14:51.480Z"
+  },
+  "cityPhotoAlt": "Киев, Киевская область, Украина"
+},{
+  "_id": {
+    "$oid": "630f9a929e670fb64efb3e58"
+  },
+  "stateId": "630f99129e670fb64efb3e31",
+  "cityName": "Warsaw",
+  "cityInternational": "Warsaw",
+  "cityCode": "WARSA",
+  "cityPhotoURL": "https://res.cloudinary.com/your-price-booking/image/upload/v1683179663/Photos%20of%20locations/Warsaw/Warszawa_r2x36n.png",
+  "langCode": "EN",
+  "dbLangCode": "en",
+  "stateInternational": "Masovia",
+  "state": {
+    "$oid": "630f99129e670fb64efb3e31"
+  },
+  "districts": [
+    {
+      "$oid": "63110450e4d1f7e772f01ce7"
+    },
+    {
+      "$oid": "6311061de4d1f7e772f01d0b"
+    },
+    {
+      "$oid": "63110978e4d1f7e772f01d2f"
+    },
+    {
+      "$oid": "63110d7fe4d1f7e772f01d55"
+    },
+    {
+      "$oid": "63110fb3e4d1f7e772f01d7b"
+    },
+    {
+      "$oid": "631112d5e4d1f7e772f01d9f"
+    },
+    {
+      "$oid": "63132d3c32ec3eef9581ebec"
+    },
+    {
+      "$oid": "63132ee632ec3eef9581ec10"
+    },
+    {
+      "$oid": "6313729363c78362053a7422"
+    },
+    {
+      "$oid": "6313731e63c78362053a7446"
+    },
+    {
+      "$oid": "6313747563c78362053a746a"
+    },
+    {
+      "$oid": "6313770763c78362053a749c"
+    },
+    {
+      "$oid": "631391714d11a2ddd3aaa14f"
+    },
+    {
+      "$oid": "631399fa4d11a2ddd3aaa1b1"
+    },
+    {
+      "$oid": "63139b534d11a2ddd3aaa1ed"
+    },
+    {
+      "$oid": "63139c1e4d11a2ddd3aaa211"
+    },
+    {
+      "$oid": "6314a367ab63396ecfbc5a9e"
+    },
+    {
+      "$oid": "6314a8d5ab63396ecfbc5ac2"
+    },
+    {
+      "$oid": "6314aa61ab63396ecfbc5ae8"
+    },
+    {
+      "$oid": "6314adc4ab63396ecfbc5b0e"
+    },
+    {
+      "$oid": "6314b2d3ab63396ecfbc5b32"
+    },
+    {
+      "$oid": "6314b76cab63396ecfbc5b60"
+    },
+    {
+      "$oid": "6314b96fab63396ecfbc5b84"
+    },
+    {
+      "$oid": "6314bb6fab63396ecfbc5ba8"
+    },
+    {
+      "$oid": "6314c120ab63396ecfbc5bd0"
+    },
+    {
+      "$oid": "631608faa6603425d132f0a3"
+    },
+    {
+      "$oid": "63160a20a6603425d132f0c7"
+    },
+    {
+      "$oid": "6319be7d5f62a371729adec4"
+    },
+    {
+      "$oid": "6319c0985f62a371729adeea"
+    },
+    {
+      "$oid": "6319c17a5f62a371729adf0e"
+    },
+    {
+      "$oid": "641d6ea6132203c26eb2c0e2"
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-08-31T17:29:54.385Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-04T05:55:20.202Z"
+  },
+  "cityPhotoAlt": "Warsaw, Masovia, Poland"
+},{
+  "_id": {
+    "$oid": "630f9a929e670fb64efb3e5c"
+  },
+  "stateId": "630f99129e670fb64efb3e35",
+  "cityName": "Варшава",
+  "cityInternational": "Warsaw",
+  "cityCode": "WARSA",
+  "cityPhotoURL": "https://res.cloudinary.com/your-price-booking/image/upload/v1679673582/Photos%20of%20locations/Warsaw/Warszawa_ch0a1v.png",
+  "langCode": "UA",
+  "dbLangCode": "uk",
+  "stateInternational": "Masovia",
+  "state": {
+    "$oid": "630f99129e670fb64efb3e35"
+  },
+  "districts": [
+    {
+      "$oid": "63110450e4d1f7e772f01ceb"
+    },
+    {
+      "$oid": "6311061de4d1f7e772f01d0f"
+    },
+    {
+      "$oid": "63110978e4d1f7e772f01d33"
+    },
+    {
+      "$oid": "63110d7fe4d1f7e772f01d59"
+    },
+    {
+      "$oid": "63110fb3e4d1f7e772f01d7f"
+    },
+    {
+      "$oid": "631112d5e4d1f7e772f01da3"
+    },
+    {
+      "$oid": "63132d3c32ec3eef9581ebf0"
+    },
+    {
+      "$oid": "63132ee632ec3eef9581ec14"
+    },
+    {
+      "$oid": "6313729363c78362053a7426"
+    },
+    {
+      "$oid": "6313731f63c78362053a744a"
+    },
+    {
+      "$oid": "6313747563c78362053a746e"
+    },
+    {
+      "$oid": "6313770763c78362053a74a0"
+    },
+    {
+      "$oid": "631391714d11a2ddd3aaa153"
+    },
+    {
+      "$oid": "631399fa4d11a2ddd3aaa1b5"
+    },
+    {
+      "$oid": "63139b534d11a2ddd3aaa1f1"
+    },
+    {
+      "$oid": "63139c1e4d11a2ddd3aaa215"
+    },
+    {
+      "$oid": "6314a367ab63396ecfbc5aa2"
+    },
+    {
+      "$oid": "6314a8d5ab63396ecfbc5ac6"
+    },
+    {
+      "$oid": "6314aa61ab63396ecfbc5aec"
+    },
+    {
+      "$oid": "6314adc4ab63396ecfbc5b12"
+    },
+    {
+      "$oid": "6314b2d4ab63396ecfbc5b36"
+    },
+    {
+      "$oid": "6314b76cab63396ecfbc5b64"
+    },
+    {
+      "$oid": "6314b96fab63396ecfbc5b88"
+    },
+    {
+      "$oid": "6314bb6fab63396ecfbc5bac"
+    },
+    {
+      "$oid": "6314c120ab63396ecfbc5bd4"
+    },
+    {
+      "$oid": "631608faa6603425d132f0a7"
+    },
+    {
+      "$oid": "63160a20a6603425d132f0cb"
+    },
+    {
+      "$oid": "6319be7e5f62a371729adec8"
+    },
+    {
+      "$oid": "6319c0985f62a371729adeee"
+    },
+    {
+      "$oid": "6319c17a5f62a371729adf12"
+    },
+    {
+      "$oid": "641d6ea7132203c26eb2c0e6"
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-08-31T17:29:54.474Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-24T16:02:37.117Z"
+  },
+  "cityPhotoAlt": "Варшава, Мазовія, Польша"
+},{
+  "_id": {
+    "$oid": "630f9a929e670fb64efb3e5e"
+  },
+  "stateId": "630f99129e670fb64efb3e37",
+  "cityName": "Warszawa",
+  "cityInternational": "Warsaw",
+  "cityCode": "WARSA",
+  "cityPhotoURL": "https://res.cloudinary.com/your-price-booking/image/upload/v1679673582/Photos%20of%20locations/Warsaw/Warszawa_ch0a1v.png",
+  "langCode": "PL",
+  "dbLangCode": "pl",
+  "stateInternational": "Masovia",
+  "state": {
+    "$oid": "630f99129e670fb64efb3e37"
+  },
+  "districts": [
+    {
+      "$oid": "63110450e4d1f7e772f01ced"
+    },
+    {
+      "$oid": "6311061de4d1f7e772f01d11"
+    },
+    {
+      "$oid": "63110978e4d1f7e772f01d35"
+    },
+    {
+      "$oid": "63110d7fe4d1f7e772f01d5b"
+    },
+    {
+      "$oid": "63110fb3e4d1f7e772f01d81"
+    },
+    {
+      "$oid": "631112d5e4d1f7e772f01da5"
+    },
+    {
+      "$oid": "63132d3c32ec3eef9581ebf2"
+    },
+    {
+      "$oid": "63132ee632ec3eef9581ec16"
+    },
+    {
+      "$oid": "6313729363c78362053a7428"
+    },
+    {
+      "$oid": "6313731f63c78362053a744c"
+    },
+    {
+      "$oid": "6313747563c78362053a7470"
+    },
+    {
+      "$oid": "6313770763c78362053a74a2"
+    },
+    {
+      "$oid": "631391714d11a2ddd3aaa155"
+    },
+    {
+      "$oid": "631399fa4d11a2ddd3aaa1b7"
+    },
+    {
+      "$oid": "63139b534d11a2ddd3aaa1f3"
+    },
+    {
+      "$oid": "63139c1e4d11a2ddd3aaa217"
+    },
+    {
+      "$oid": "6314a367ab63396ecfbc5aa4"
+    },
+    {
+      "$oid": "6314a8d5ab63396ecfbc5ac8"
+    },
+    {
+      "$oid": "6314aa61ab63396ecfbc5aee"
+    },
+    {
+      "$oid": "6314adc4ab63396ecfbc5b14"
+    },
+    {
+      "$oid": "6314b2d4ab63396ecfbc5b38"
+    },
+    {
+      "$oid": "6314b76cab63396ecfbc5b66"
+    },
+    {
+      "$oid": "6314b96fab63396ecfbc5b8a"
+    },
+    {
+      "$oid": "6314bb6fab63396ecfbc5bae"
+    },
+    {
+      "$oid": "6314c120ab63396ecfbc5bd6"
+    },
+    {
+      "$oid": "631608faa6603425d132f0a9"
+    },
+    {
+      "$oid": "63160a20a6603425d132f0cd"
+    },
+    {
+      "$oid": "6319be7e5f62a371729adeca"
+    },
+    {
+      "$oid": "6319c0985f62a371729adef0"
+    },
+    {
+      "$oid": "6319c17a5f62a371729adf14"
+    },
+    {
+      "$oid": "641d6ea7132203c26eb2c0e8"
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-08-31T17:29:54.507Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-24T16:01:24.765Z"
+  },
+  "cityPhotoAlt": "Warszawa, mazowieckie, Polska"
+},{
+  "_id": {
+    "$oid": "630f9a929e670fb64efb3e62"
+  },
+  "stateId": "630f99129e670fb64efb3e3b",
+  "cityName": "Варшава",
+  "cityInternational": "Warsaw",
+  "cityCode": "WARSA",
+  "cityPhotoURL": "https://res.cloudinary.com/your-price-booking/image/upload/v1679673582/Photos%20of%20locations/Warsaw/Warszawa_ch0a1v.png",
+  "langCode": "RU",
+  "dbLangCode": "ru",
+  "stateInternational": "Masovia",
+  "state": {
+    "$oid": "630f99129e670fb64efb3e3b"
+  },
+  "districts": [
+    {
+      "$oid": "63110450e4d1f7e772f01cf1"
+    },
+    {
+      "$oid": "6311061de4d1f7e772f01d15"
+    },
+    {
+      "$oid": "63110978e4d1f7e772f01d39"
+    },
+    {
+      "$oid": "63110d7fe4d1f7e772f01d5f"
+    },
+    {
+      "$oid": "63110fb3e4d1f7e772f01d85"
+    },
+    {
+      "$oid": "631112d5e4d1f7e772f01da9"
+    },
+    {
+      "$oid": "63132d3d32ec3eef9581ebf7"
+    },
+    {
+      "$oid": "63132ee632ec3eef9581ec1a"
+    },
+    {
+      "$oid": "6313729363c78362053a742c"
+    },
+    {
+      "$oid": "6313731f63c78362053a7450"
+    },
+    {
+      "$oid": "6313747563c78362053a7474"
+    },
+    {
+      "$oid": "6313770763c78362053a74a6"
+    },
+    {
+      "$oid": "631391714d11a2ddd3aaa159"
+    },
+    {
+      "$oid": "631399fa4d11a2ddd3aaa1bb"
+    },
+    {
+      "$oid": "63139b534d11a2ddd3aaa1f7"
+    },
+    {
+      "$oid": "63139c1e4d11a2ddd3aaa21b"
+    },
+    {
+      "$oid": "6314a367ab63396ecfbc5aa8"
+    },
+    {
+      "$oid": "6314a8d5ab63396ecfbc5acc"
+    },
+    {
+      "$oid": "6314aa61ab63396ecfbc5af2"
+    },
+    {
+      "$oid": "6314adc4ab63396ecfbc5b18"
+    },
+    {
+      "$oid": "6314b2d4ab63396ecfbc5b3c"
+    },
+    {
+      "$oid": "6314b76cab63396ecfbc5b6a"
+    },
+    {
+      "$oid": "6314b96fab63396ecfbc5b8e"
+    },
+    {
+      "$oid": "6314bb6fab63396ecfbc5bb2"
+    },
+    {
+      "$oid": "6314c120ab63396ecfbc5bda"
+    },
+    {
+      "$oid": "631608faa6603425d132f0ad"
+    },
+    {
+      "$oid": "63160a20a6603425d132f0d1"
+    },
+    {
+      "$oid": "6319be7e5f62a371729adece"
+    },
+    {
+      "$oid": "6319c0985f62a371729adef4"
+    },
+    {
+      "$oid": "6319c17a5f62a371729adf18"
+    },
+    {
+      "$oid": "641d6ea7132203c26eb2c0ec"
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-08-31T17:29:54.541Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-24T16:02:17.200Z"
+  },
+  "cityPhotoAlt": "Варшава, Мазовецкое воеводство, Польша"
+},{
+  "_id": {
+    "$oid": "630fb77bcd0b998a401c0b45"
+  },
+  "stateId": "630fab92bf27c9a64940c54f",
+  "cityName": "New York City",
+  "cityInternational": "New York (NYC)",
+  "cityCode": "NEW Y",
+  "cityPhotoURL": "https://res.cloudinary.com/your-price-booking/image/upload/v1683179975/Photos%20of%20locations/NYC/new-york-city_vniikz.png",
+  "langCode": "EN",
+  "dbLangCode": "en",
+  "stateInternational": "New York State",
+  "state": {
+    "$oid": "630fab92bf27c9a64940c54f"
+  },
+  "districts": [
+    {
+      "$oid": "6311b411d786c73f23acaf12"
+    },
+    {
+      "$oid": "6311b445d786c73f23acaf30"
+    },
+    {
+      "$oid": "6311b474d786c73f23acaf4e"
+    },
+    {
+      "$oid": "6311b495d786c73f23acaf6c"
+    },
+    {
+      "$oid": "6311b4c1d786c73f23acaf8a"
+    },
+    {
+      "$oid": "634c191d83d6ab0e2024b700"
+    },
+    {
+      "$oid": "634c193a83d6ab0e2024b71e"
+    },
+    {
+      "$oid": "634c194f83d6ab0e2024b73c"
+    },
+    {
+      "$oid": "634c196583d6ab0e2024b75a"
+    },
+    {
+      "$oid": "634c19f683d6ab0e2024b778"
+    },
+    {
+      "$oid": "634c1a0d83d6ab0e2024b796"
+    },
+    {
+      "$oid": "634c1a2783d6ab0e2024b7b4"
+    },
+    {
+      "$oid": "634c1a3c83d6ab0e2024b7d2"
+    },
+    {
+      "$oid": "634c1a4f83d6ab0e2024b7f0"
+    },
+    {
+      "$oid": "634c1a6883d6ab0e2024b80e"
+    },
+    {
+      "$oid": "634c1a7c83d6ab0e2024b82c"
+    },
+    {
+      "$oid": "634c1a8a83d6ab0e2024b84a"
+    },
+    {
+      "$oid": "634c1aa783d6ab0e2024b868"
+    },
+    {
+      "$oid": "634c1ab383d6ab0e2024b887"
+    },
+    {
+      "$oid": "634c1ac383d6ab0e2024b8a5"
+    },
+    {
+      "$oid": "634c1acf83d6ab0e2024b8c3"
+    },
+    {
+      "$oid": "634c1ae683d6ab0e2024b8e1"
+    },
+    {
+      "$oid": "634c1af883d6ab0e2024b8ff"
+    },
+    {
+      "$oid": "634c1b0583d6ab0e2024b91d"
+    },
+    {
+      "$oid": "634c1b1383d6ab0e2024b93b"
+    },
+    {
+      "$oid": "634c1dfd83d6ab0e2024b959"
+    },
+    {
+      "$oid": "634c1e1083d6ab0e2024b977"
+    },
+    {
+      "$oid": "634c1e2883d6ab0e2024b995"
+    },
+    {
+      "$oid": "634c1e4183d6ab0e2024b9b3"
+    },
+    {
+      "$oid": "634c1e6a83d6ab0e2024b9d3"
+    },
+    {
+      "$oid": "634c223f83d6ab0e2024b9f1"
+    },
+    {
+      "$oid": "634c226183d6ab0e2024ba1b"
+    },
+    {
+      "$oid": "634c227783d6ab0e2024ba39"
+    },
+    {
+      "$oid": "634c228e83d6ab0e2024ba59"
+    },
+    {
+      "$oid": "634c22a783d6ab0e2024ba83"
+    },
+    {
+      "$oid": "634c22c083d6ab0e2024baa1"
+    },
+    {
+      "$oid": "634c22d883d6ab0e2024babf"
+    },
+    {
+      "$oid": "634c22ea83d6ab0e2024badd"
+    },
+    {
+      "$oid": "634c22ff83d6ab0e2024bafb"
+    },
+    {
+      "$oid": "634c231383d6ab0e2024bb19"
+    },
+    {
+      "$oid": "634c232883d6ab0e2024bb37"
+    },
+    {
+      "$oid": "634c233d83d6ab0e2024bb55"
+    },
+    {
+      "$oid": "634c235883d6ab0e2024bb73"
+    },
+    {
+      "$oid": "634c237d83d6ab0e2024bb91"
+    },
+    {
+      "$oid": "634c238883d6ab0e2024bbaf"
+    },
+    {
+      "$oid": "634c239483d6ab0e2024bbcd"
+    },
+    {
+      "$oid": "634c23a683d6ab0e2024bbeb"
+    },
+    {
+      "$oid": "634c23b683d6ab0e2024bc09"
+    },
+    {
+      "$oid": "634c23c583d6ab0e2024bc27"
+    },
+    {
+      "$oid": "634c23d383d6ab0e2024bc45"
+    },
+    {
+      "$oid": "634c23e383d6ab0e2024bc63"
+    },
+    {
+      "$oid": "634c23f283d6ab0e2024bc81"
+    },
+    {
+      "$oid": "634c240b83d6ab0e2024bc9f"
+    },
+    {
+      "$oid": "634c267a83d6ab0e2024bcbd"
+    },
+    {
+      "$oid": "634c268983d6ab0e2024bcdb"
+    },
+    {
+      "$oid": "634c269583d6ab0e2024bcf9"
+    },
+    {
+      "$oid": "634c26a283d6ab0e2024bd17"
+    },
+    {
+      "$oid": "634c26af83d6ab0e2024bd35"
+    },
+    {
+      "$oid": "634c26bf83d6ab0e2024bd53"
+    },
+    {
+      "$oid": "634c26d183d6ab0e2024bd71"
+    },
+    {
+      "$oid": "634c26e083d6ab0e2024bd8f"
+    },
+    {
+      "$oid": "634c270b83d6ab0e2024bdad"
+    },
+    {
+      "$oid": "634c271f83d6ab0e2024bdcb"
+    },
+    {
+      "$oid": "634c272d83d6ab0e2024bde9"
+    },
+    {
+      "$oid": "634c273b83d6ab0e2024be07"
+    },
+    {
+      "$oid": "634c274c83d6ab0e2024be25"
+    },
+    {
+      "$oid": "634c275a83d6ab0e2024be43"
+    },
+    {
+      "$oid": "634c276383d6ab0e2024be6c"
+    },
+    {
+      "$oid": "634c277583d6ab0e2024be88"
+    },
+    {
+      "$oid": "634c278f83d6ab0e2024bea6"
+    },
+    {
+      "$oid": "634c27a983d6ab0e2024bec4"
+    },
+    {
+      "$oid": "634c27c383d6ab0e2024bee2"
+    },
+    {
+      "$oid": "634c27d683d6ab0e2024bf00"
+    },
+    {
+      "$oid": "634c341d4f2fdec94b937f24"
+    },
+    {
+      "$oid": "634c34304f2fdec94b937f42"
+    },
+    {
+      "$oid": "634c34454f2fdec94b937f60"
+    },
+    {
+      "$oid": "634c34584f2fdec94b937f7e"
+    },
+    {
+      "$oid": "634c34694f2fdec94b937f9c"
+    },
+    {
+      "$oid": "634c347e4f2fdec94b937fbb"
+    },
+    {
+      "$oid": "634c349c4f2fdec94b937fd9"
+    },
+    {
+      "$oid": "634c34b64f2fdec94b937ff7"
+    },
+    {
+      "$oid": "634c34c74f2fdec94b938015"
+    },
+    {
+      "$oid": "634c34db4f2fdec94b938033"
+    },
+    {
+      "$oid": "634c34f34f2fdec94b938051"
+    },
+    {
+      "$oid": "634c35114f2fdec94b93806f"
+    },
+    {
+      "$oid": "634c352d4f2fdec94b93808d"
+    },
+    {
+      "$oid": "634c35484f2fdec94b9380ab"
+    },
+    {
+      "$oid": "634c355a4f2fdec94b9380c9"
+    },
+    {
+      "$oid": "634c37844f2fdec94b9380e7"
+    },
+    {
+      "$oid": "634c37954f2fdec94b938105"
+    },
+    {
+      "$oid": "634c37a44f2fdec94b938123"
+    },
+    {
+      "$oid": "634c37c74f2fdec94b938141"
+    },
+    {
+      "$oid": "634c37d64f2fdec94b93815f"
+    },
+    {
+      "$oid": "634c38384f2fdec94b93817d"
+    },
+    {
+      "$oid": "634c38474f2fdec94b93819b"
+    },
+    {
+      "$oid": "634c38574f2fdec94b9381b9"
+    },
+    {
+      "$oid": "634c386a4f2fdec94b9381d8"
+    },
+    {
+      "$oid": "634c387c4f2fdec94b9381f6"
+    },
+    {
+      "$oid": "634c388c4f2fdec94b938214"
+    },
+    {
+      "$oid": "634c389c4f2fdec94b938232"
+    },
+    {
+      "$oid": "634c38af4f2fdec94b938250"
+    },
+    {
+      "$oid": "634c38bf4f2fdec94b93826e"
+    },
+    {
+      "$oid": "634c38d54f2fdec94b93828c"
+    },
+    {
+      "$oid": "634c38ea4f2fdec94b9382aa"
+    },
+    {
+      "$oid": "634c39044f2fdec94b9382d4"
+    },
+    {
+      "$oid": "634c39194f2fdec94b9382f2"
+    },
+    {
+      "$oid": "634c3b2a4f2fdec94b938310"
+    },
+    {
+      "$oid": "634c3b3a4f2fdec94b93832e"
+    },
+    {
+      "$oid": "634c3b504f2fdec94b93834d"
+    },
+    {
+      "$oid": "634c3b694f2fdec94b93836b"
+    },
+    {
+      "$oid": "634c41e94f2fdec94b938389"
+    },
+    {
+      "$oid": "634c42254f2fdec94b9383a8"
+    },
+    {
+      "$oid": "634c4c276e31078128fdb022"
+    },
+    {
+      "$oid": "6351a710e2388ca85d370d7d"
+    },
+    {
+      "$oid": "6351a710e2388ca85d370d7f"
+    },
+    {
+      "$oid": "6351a710e2388ca85d370d81"
+    },
+    {
+      "$oid": "6351a710e2388ca85d370d83"
+    },
+    {
+      "$oid": "6351a710e2388ca85d370d85"
+    },
+    {
+      "$oid": "6351a710e2388ca85d370d87"
+    },
+    {
+      "$oid": "6351a711e2388ca85d370d89"
+    },
+    {
+      "$oid": "6351a711e2388ca85d370d8b"
+    },
+    {
+      "$oid": "6351a711e2388ca85d370d8d"
+    },
+    {
+      "$oid": "6351a711e2388ca85d370d8f"
+    },
+    {
+      "$oid": "6351a711e2388ca85d370d91"
+    },
+    {
+      "$oid": "6351a712e2388ca85d370d93"
+    },
+    {
+      "$oid": "6351a712e2388ca85d370d95"
+    },
+    {
+      "$oid": "6351a712e2388ca85d370d97"
+    },
+    {
+      "$oid": "6351a712e2388ca85d370d99"
+    },
+    {
+      "$oid": "6351a712e2388ca85d370d9b"
+    },
+    {
+      "$oid": "6351a712e2388ca85d370d9d"
+    },
+    {
+      "$oid": "6351a712e2388ca85d370d9f"
+    },
+    {
+      "$oid": "6351a712e2388ca85d370da1"
+    },
+    {
+      "$oid": "6351a712e2388ca85d370da3"
+    },
+    {
+      "$oid": "6351a712e2388ca85d370da5"
+    },
+    {
+      "$oid": "6351a712e2388ca85d370da7"
+    },
+    {
+      "$oid": "6351a713e2388ca85d370da9"
+    },
+    {
+      "$oid": "6351a713e2388ca85d370dab"
+    },
+    {
+      "$oid": "6351a713e2388ca85d370dad"
+    },
+    {
+      "$oid": "6351a713e2388ca85d370daf"
+    },
+    {
+      "$oid": "6351a713e2388ca85d370db1"
+    },
+    {
+      "$oid": "6351a713e2388ca85d370db3"
+    },
+    {
+      "$oid": "6351a713e2388ca85d370db5"
+    },
+    {
+      "$oid": "6351a713e2388ca85d370db7"
+    },
+    {
+      "$oid": "6351a713e2388ca85d370db9"
+    },
+    {
+      "$oid": "6351a713e2388ca85d370dbb"
+    },
+    {
+      "$oid": "6351a713e2388ca85d370dbd"
+    },
+    {
+      "$oid": "6351a713e2388ca85d370dbf"
+    },
+    {
+      "$oid": "6351a713e2388ca85d370dc1"
+    },
+    {
+      "$oid": "6351a713e2388ca85d370dc3"
+    },
+    {
+      "$oid": "6351a713e2388ca85d370dc5"
+    },
+    {
+      "$oid": "6351a713e2388ca85d370dc7"
+    },
+    {
+      "$oid": "6351a714e2388ca85d370dc9"
+    },
+    {
+      "$oid": "6351a714e2388ca85d370dcb"
+    },
+    {
+      "$oid": "6351a714e2388ca85d370dcd"
+    },
+    {
+      "$oid": "6351a714e2388ca85d370dcf"
+    },
+    {
+      "$oid": "6351a714e2388ca85d370dd1"
+    },
+    {
+      "$oid": "6351a714e2388ca85d370dd3"
+    },
+    {
+      "$oid": "6351a714e2388ca85d370dd5"
+    },
+    {
+      "$oid": "6351a714e2388ca85d370dd7"
+    },
+    {
+      "$oid": "6351a714e2388ca85d370dd9"
+    },
+    {
+      "$oid": "6351a714e2388ca85d370ddb"
+    },
+    {
+      "$oid": "6351a714e2388ca85d370ddd"
+    },
+    {
+      "$oid": "6351a714e2388ca85d370ddf"
+    },
+    {
+      "$oid": "6351a715e2388ca85d370de1"
+    },
+    {
+      "$oid": "6351a715e2388ca85d370de3"
+    },
+    {
+      "$oid": "6351a715e2388ca85d370de5"
+    },
+    {
+      "$oid": "6351a715e2388ca85d370de7"
+    },
+    {
+      "$oid": "6351a715e2388ca85d370de9"
+    },
+    {
+      "$oid": "6351a715e2388ca85d370deb"
+    },
+    {
+      "$oid": "6351a715e2388ca85d370ded"
+    },
+    {
+      "$oid": "6351a715e2388ca85d370def"
+    },
+    {
+      "$oid": "6351a715e2388ca85d370df1"
+    },
+    {
+      "$oid": "6351a715e2388ca85d370df3"
+    },
+    {
+      "$oid": "6351a715e2388ca85d370df5"
+    },
+    {
+      "$oid": "6351a715e2388ca85d370df7"
+    },
+    {
+      "$oid": "6351a715e2388ca85d370df9"
+    },
+    {
+      "$oid": "6351a715e2388ca85d370dfb"
+    },
+    {
+      "$oid": "6351a715e2388ca85d370dfd"
+    },
+    {
+      "$oid": "6351a715e2388ca85d370dff"
+    },
+    {
+      "$oid": "6351a716e2388ca85d370e01"
+    },
+    {
+      "$oid": "6351a716e2388ca85d370e03"
+    },
+    {
+      "$oid": "6351a716e2388ca85d370e05"
+    },
+    {
+      "$oid": "6351a716e2388ca85d370e07"
+    },
+    {
+      "$oid": "6351a716e2388ca85d370e09"
+    },
+    {
+      "$oid": "6351a716e2388ca85d370e0b"
+    },
+    {
+      "$oid": "6351a716e2388ca85d370e0d"
+    },
+    {
+      "$oid": "6351a716e2388ca85d370e0f"
+    },
+    {
+      "$oid": "6351a716e2388ca85d370e11"
+    },
+    {
+      "$oid": "6351a716e2388ca85d370e13"
+    },
+    {
+      "$oid": "6351a716e2388ca85d370e15"
+    },
+    {
+      "$oid": "6351a716e2388ca85d370e17"
+    },
+    {
+      "$oid": "6351a716e2388ca85d370e19"
+    },
+    {
+      "$oid": "6351a716e2388ca85d370e1b"
+    },
+    {
+      "$oid": "6351a716e2388ca85d370e1d"
+    },
+    {
+      "$oid": "6351a716e2388ca85d370e1f"
+    },
+    {
+      "$oid": "6351a716e2388ca85d370e21"
+    },
+    {
+      "$oid": "6351a717e2388ca85d370e23"
+    },
+    {
+      "$oid": "6351a717e2388ca85d370e25"
+    },
+    {
+      "$oid": "6351a717e2388ca85d370e27"
+    },
+    {
+      "$oid": "6351a717e2388ca85d370e29"
+    },
+    {
+      "$oid": "6351a717e2388ca85d370e2b"
+    },
+    {
+      "$oid": "6351a717e2388ca85d370e2d"
+    },
+    {
+      "$oid": "6351a717e2388ca85d370e2f"
+    },
+    {
+      "$oid": "6351a717e2388ca85d370e31"
+    },
+    {
+      "$oid": "6351a717e2388ca85d370e33"
+    },
+    {
+      "$oid": "6351a717e2388ca85d370e35"
+    },
+    {
+      "$oid": "6351a717e2388ca85d370e37"
+    },
+    {
+      "$oid": "6351a717e2388ca85d370e39"
+    },
+    {
+      "$oid": "6351a717e2388ca85d370e3b"
+    },
+    {
+      "$oid": "6351a717e2388ca85d370e3d"
+    },
+    {
+      "$oid": "6351a717e2388ca85d370e3f"
+    },
+    {
+      "$oid": "6351a717e2388ca85d370e41"
+    },
+    {
+      "$oid": "6351a717e2388ca85d370e43"
+    },
+    {
+      "$oid": "6351a718e2388ca85d370e45"
+    },
+    {
+      "$oid": "6351a718e2388ca85d370e47"
+    },
+    {
+      "$oid": "6351a718e2388ca85d370e49"
+    },
+    {
+      "$oid": "6351a718e2388ca85d370e4b"
+    },
+    {
+      "$oid": "6351a718e2388ca85d370e4d"
+    },
+    {
+      "$oid": "6351a718e2388ca85d370e4f"
+    },
+    {
+      "$oid": "6351a718e2388ca85d370e51"
+    },
+    {
+      "$oid": "6351a718e2388ca85d370e53"
+    },
+    {
+      "$oid": "6351a718e2388ca85d370e55"
+    },
+    {
+      "$oid": "6351a718e2388ca85d370e57"
+    },
+    {
+      "$oid": "6351a718e2388ca85d370e59"
+    },
+    {
+      "$oid": "6351a718e2388ca85d370e5b"
+    },
+    {
+      "$oid": "6351a718e2388ca85d370e5d"
+    },
+    {
+      "$oid": "6351a719e2388ca85d370e5f"
+    },
+    {
+      "$oid": "6351a719e2388ca85d370e61"
+    },
+    {
+      "$oid": "6351a719e2388ca85d370e63"
+    },
+    {
+      "$oid": "6351a719e2388ca85d370e65"
+    },
+    {
+      "$oid": "6351a71ae2388ca85d370e67"
+    },
+    {
+      "$oid": "6351a71ae2388ca85d370e69"
+    },
+    {
+      "$oid": "6351a71ae2388ca85d370e6b"
+    },
+    {
+      "$oid": "6351a71ae2388ca85d370e6d"
+    },
+    {
+      "$oid": "6351a71ae2388ca85d370e6f"
+    },
+    {
+      "$oid": "6351a71ae2388ca85d370e71"
+    },
+    {
+      "$oid": "6351a71ae2388ca85d370e73"
+    },
+    {
+      "$oid": "6351a71ae2388ca85d370e75"
+    },
+    {
+      "$oid": "6351a71ae2388ca85d370e77"
+    },
+    {
+      "$oid": "6351a71ae2388ca85d370e79"
+    },
+    {
+      "$oid": "6351a71be2388ca85d370e7b"
+    },
+    {
+      "$oid": "6351a71be2388ca85d370e7d"
+    },
+    {
+      "$oid": "6351a71be2388ca85d370e7f"
+    },
+    {
+      "$oid": "6351a71be2388ca85d370e81"
+    },
+    {
+      "$oid": "6351a71be2388ca85d370e83"
+    },
+    {
+      "$oid": "6351a71be2388ca85d370e85"
+    },
+    {
+      "$oid": "6351a71be2388ca85d370e87"
+    },
+    {
+      "$oid": "6351a71be2388ca85d370e89"
+    },
+    {
+      "$oid": "6351a71be2388ca85d370e8b"
+    },
+    {
+      "$oid": "6351a71be2388ca85d370e8d"
+    },
+    {
+      "$oid": "6351a71be2388ca85d370e8f"
+    },
+    {
+      "$oid": "6351a71be2388ca85d370e91"
+    },
+    {
+      "$oid": "6351a71be2388ca85d370e93"
+    },
+    {
+      "$oid": "6351a71be2388ca85d370e95"
+    },
+    {
+      "$oid": "6351a71be2388ca85d370e97"
+    },
+    {
+      "$oid": "6351a71be2388ca85d370e99"
+    },
+    {
+      "$oid": "6351a71ce2388ca85d370e9b"
+    },
+    {
+      "$oid": "6351a71ce2388ca85d370e9d"
+    },
+    {
+      "$oid": "6351a71ce2388ca85d370e9f"
+    },
+    {
+      "$oid": "6351a71ce2388ca85d370ea1"
+    },
+    {
+      "$oid": "6351a71ce2388ca85d370ea3"
+    },
+    {
+      "$oid": "6351a71ce2388ca85d370ea5"
+    },
+    {
+      "$oid": "6351a71ce2388ca85d370ea7"
+    },
+    {
+      "$oid": "6351a71ce2388ca85d370ea9"
+    },
+    {
+      "$oid": "6351a71ce2388ca85d370eab"
+    },
+    {
+      "$oid": "6351a71ce2388ca85d370ead"
+    },
+    {
+      "$oid": "6351a71ce2388ca85d370eaf"
+    },
+    {
+      "$oid": "6351a71ce2388ca85d370eb1"
+    },
+    {
+      "$oid": "6351a71ce2388ca85d370eb3"
+    },
+    {
+      "$oid": "6351a71ce2388ca85d370eb5"
+    },
+    {
+      "$oid": "6351a71de2388ca85d370eb7"
+    },
+    {
+      "$oid": "6351a71de2388ca85d370eb9"
+    },
+    {
+      "$oid": "6351a71de2388ca85d370ebb"
+    },
+    {
+      "$oid": "6351a71de2388ca85d370ebd"
+    },
+    {
+      "$oid": "6351a71ee2388ca85d370ebf"
+    },
+    {
+      "$oid": "6351a71ee2388ca85d370ec1"
+    },
+    {
+      "$oid": "6351a71ee2388ca85d370ec3"
+    },
+    {
+      "$oid": "6351a71ee2388ca85d370ec5"
+    },
+    {
+      "$oid": "6351a71ee2388ca85d370ec7"
+    },
+    {
+      "$oid": "6351a71ee2388ca85d370ec9"
+    },
+    {
+      "$oid": "6351a71ee2388ca85d370ecb"
+    },
+    {
+      "$oid": "6351a71ee2388ca85d370ecd"
+    },
+    {
+      "$oid": "6351a71ee2388ca85d370ecf"
+    },
+    {
+      "$oid": "6351a71ee2388ca85d370ed1"
+    },
+    {
+      "$oid": "6351a71fe2388ca85d370ed3"
+    },
+    {
+      "$oid": "6351a71fe2388ca85d370ed5"
+    },
+    {
+      "$oid": "6351a71fe2388ca85d370ed7"
+    },
+    {
+      "$oid": "6351a71fe2388ca85d370ed9"
+    },
+    {
+      "$oid": "6351a71fe2388ca85d370edb"
+    },
+    {
+      "$oid": "6351a71fe2388ca85d370edd"
+    },
+    {
+      "$oid": "6351a71fe2388ca85d370edf"
+    },
+    {
+      "$oid": "6351a71fe2388ca85d370ee1"
+    },
+    {
+      "$oid": "6351a71fe2388ca85d370ee3"
+    },
+    {
+      "$oid": "6351a71fe2388ca85d370ee5"
+    },
+    {
+      "$oid": "6351a71fe2388ca85d370ee7"
+    },
+    {
+      "$oid": "6351a71fe2388ca85d370ee9"
+    },
+    {
+      "$oid": "6351a71fe2388ca85d370eeb"
+    },
+    {
+      "$oid": "6351a71fe2388ca85d370eed"
+    },
+    {
+      "$oid": "6351a71fe2388ca85d370eef"
+    },
+    {
+      "$oid": "6351a720e2388ca85d370ef1"
+    },
+    {
+      "$oid": "6351a720e2388ca85d370ef3"
+    },
+    {
+      "$oid": "6351a720e2388ca85d370ef5"
+    },
+    {
+      "$oid": "6351a720e2388ca85d370ef7"
+    },
+    {
+      "$oid": "6351a720e2388ca85d370ef9"
+    },
+    {
+      "$oid": "6351a720e2388ca85d370efb"
+    },
+    {
+      "$oid": "6351a720e2388ca85d370efd"
+    },
+    {
+      "$oid": "6351a720e2388ca85d370eff"
+    },
+    {
+      "$oid": "6351a720e2388ca85d370f01"
+    },
+    {
+      "$oid": "6351a720e2388ca85d370f03"
+    },
+    {
+      "$oid": "6351a720e2388ca85d370f05"
+    },
+    {
+      "$oid": "6351a720e2388ca85d370f07"
+    },
+    {
+      "$oid": "6351a720e2388ca85d370f09"
+    },
+    {
+      "$oid": "6351a720e2388ca85d370f0b"
+    },
+    {
+      "$oid": "6351a720e2388ca85d370f0d"
+    },
+    {
+      "$oid": "6351a720e2388ca85d370f0f"
+    },
+    {
+      "$oid": "6351a721e2388ca85d370f11"
+    },
+    {
+      "$oid": "6351a721e2388ca85d370f13"
+    },
+    {
+      "$oid": "6351a721e2388ca85d370f15"
+    },
+    {
+      "$oid": "6351a721e2388ca85d370f17"
+    },
+    {
+      "$oid": "6351a721e2388ca85d370f19"
+    },
+    {
+      "$oid": "6351a721e2388ca85d370f1b"
+    },
+    {
+      "$oid": "6351a721e2388ca85d370f1d"
+    },
+    {
+      "$oid": "6351a721e2388ca85d370f1f"
+    },
+    {
+      "$oid": "6351a721e2388ca85d370f21"
+    },
+    {
+      "$oid": "6351a721e2388ca85d370f23"
+    },
+    {
+      "$oid": "6351a721e2388ca85d370f25"
+    },
+    {
+      "$oid": "6351a721e2388ca85d370f27"
+    },
+    {
+      "$oid": "6351a721e2388ca85d370f29"
+    },
+    {
+      "$oid": "6351a721e2388ca85d370f2b"
+    },
+    {
+      "$oid": "6351a721e2388ca85d370f2d"
+    },
+    {
+      "$oid": "6351a721e2388ca85d370f2f"
+    },
+    {
+      "$oid": "6351a721e2388ca85d370f31"
+    },
+    {
+      "$oid": "635ebb1a50403d5fed481756"
+    },
+    {
+      "$oid": "6361316b6be54bda52529c76"
+    },
+    {
+      "$oid": "63710e4a9169ba1127a68e52"
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-08-31T19:33:15.564Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-04T06:26:19.820Z"
+  },
+  "cityPhotoAlt": "New York City, New York State, USA"
+},{
+  "_id": {
+    "$oid": "630fb77bcd0b998a401c0b49"
+  },
+  "stateId": "630fab92bf27c9a64940c553",
+  "cityName": "місто Нью-Йорк",
+  "cityInternational": "New York (NYC)",
+  "cityCode": "NEW Y",
+  "cityPhotoURL": "https://res.cloudinary.com/your-price-booking/image/upload/v1679825887/Photos%20of%20locations/NYC/new-york-city_kgxm9x.png",
+  "langCode": "UA",
+  "dbLangCode": "uk",
+  "stateInternational": "New York State",
+  "state": {
+    "$oid": "630fab92bf27c9a64940c553"
+  },
+  "districts": [
+    {
+      "$oid": "6311b411d786c73f23acaf16"
+    },
+    {
+      "$oid": "6311b445d786c73f23acaf34"
+    },
+    {
+      "$oid": "6311b474d786c73f23acaf52"
+    },
+    {
+      "$oid": "6311b495d786c73f23acaf70"
+    },
+    {
+      "$oid": "6311b4c1d786c73f23acaf8e"
+    },
+    {
+      "$oid": "634c191d83d6ab0e2024b704"
+    },
+    {
+      "$oid": "634c193a83d6ab0e2024b722"
+    },
+    {
+      "$oid": "634c195083d6ab0e2024b740"
+    },
+    {
+      "$oid": "634c196583d6ab0e2024b75e"
+    },
+    {
+      "$oid": "634c19f683d6ab0e2024b77c"
+    },
+    {
+      "$oid": "634c1a0d83d6ab0e2024b79a"
+    },
+    {
+      "$oid": "634c1a2783d6ab0e2024b7b8"
+    },
+    {
+      "$oid": "634c1a3c83d6ab0e2024b7d6"
+    },
+    {
+      "$oid": "634c1a4f83d6ab0e2024b7f4"
+    },
+    {
+      "$oid": "634c1a6883d6ab0e2024b812"
+    },
+    {
+      "$oid": "634c1a7c83d6ab0e2024b830"
+    },
+    {
+      "$oid": "634c1a8a83d6ab0e2024b84e"
+    },
+    {
+      "$oid": "634c1aa783d6ab0e2024b86c"
+    },
+    {
+      "$oid": "634c1ab383d6ab0e2024b88b"
+    },
+    {
+      "$oid": "634c1ac383d6ab0e2024b8a9"
+    },
+    {
+      "$oid": "634c1acf83d6ab0e2024b8c7"
+    },
+    {
+      "$oid": "634c1ae683d6ab0e2024b8e5"
+    },
+    {
+      "$oid": "634c1af883d6ab0e2024b903"
+    },
+    {
+      "$oid": "634c1b0583d6ab0e2024b921"
+    },
+    {
+      "$oid": "634c1b1383d6ab0e2024b93f"
+    },
+    {
+      "$oid": "634c1dfd83d6ab0e2024b95d"
+    },
+    {
+      "$oid": "634c1e1083d6ab0e2024b97b"
+    },
+    {
+      "$oid": "634c1e2883d6ab0e2024b999"
+    },
+    {
+      "$oid": "634c1e4183d6ab0e2024b9b7"
+    },
+    {
+      "$oid": "634c1e6b83d6ab0e2024b9d7"
+    },
+    {
+      "$oid": "634c224083d6ab0e2024b9f5"
+    },
+    {
+      "$oid": "634c226183d6ab0e2024ba1f"
+    },
+    {
+      "$oid": "634c227783d6ab0e2024ba3d"
+    },
+    {
+      "$oid": "634c228e83d6ab0e2024ba5d"
+    },
+    {
+      "$oid": "634c22a783d6ab0e2024ba87"
+    },
+    {
+      "$oid": "634c22c083d6ab0e2024baa5"
+    },
+    {
+      "$oid": "634c22d883d6ab0e2024bac3"
+    },
+    {
+      "$oid": "634c22ea83d6ab0e2024bae1"
+    },
+    {
+      "$oid": "634c22ff83d6ab0e2024baff"
+    },
+    {
+      "$oid": "634c231383d6ab0e2024bb1d"
+    },
+    {
+      "$oid": "634c232883d6ab0e2024bb3b"
+    },
+    {
+      "$oid": "634c233d83d6ab0e2024bb59"
+    },
+    {
+      "$oid": "634c235883d6ab0e2024bb77"
+    },
+    {
+      "$oid": "634c237d83d6ab0e2024bb95"
+    },
+    {
+      "$oid": "634c238883d6ab0e2024bbb3"
+    },
+    {
+      "$oid": "634c239483d6ab0e2024bbd1"
+    },
+    {
+      "$oid": "634c23a683d6ab0e2024bbef"
+    },
+    {
+      "$oid": "634c23b783d6ab0e2024bc0d"
+    },
+    {
+      "$oid": "634c23c583d6ab0e2024bc2b"
+    },
+    {
+      "$oid": "634c23d383d6ab0e2024bc49"
+    },
+    {
+      "$oid": "634c23e383d6ab0e2024bc67"
+    },
+    {
+      "$oid": "634c23f283d6ab0e2024bc85"
+    },
+    {
+      "$oid": "634c240b83d6ab0e2024bca3"
+    },
+    {
+      "$oid": "634c267a83d6ab0e2024bcc1"
+    },
+    {
+      "$oid": "634c268983d6ab0e2024bcdf"
+    },
+    {
+      "$oid": "634c269583d6ab0e2024bcfd"
+    },
+    {
+      "$oid": "634c26a283d6ab0e2024bd1b"
+    },
+    {
+      "$oid": "634c26af83d6ab0e2024bd39"
+    },
+    {
+      "$oid": "634c26bf83d6ab0e2024bd57"
+    },
+    {
+      "$oid": "634c26d183d6ab0e2024bd75"
+    },
+    {
+      "$oid": "634c26e083d6ab0e2024bd93"
+    },
+    {
+      "$oid": "634c270b83d6ab0e2024bdb1"
+    },
+    {
+      "$oid": "634c271f83d6ab0e2024bdcf"
+    },
+    {
+      "$oid": "634c272d83d6ab0e2024bded"
+    },
+    {
+      "$oid": "634c273b83d6ab0e2024be0b"
+    },
+    {
+      "$oid": "634c274c83d6ab0e2024be29"
+    },
+    {
+      "$oid": "634c275b83d6ab0e2024be47"
+    },
+    {
+      "$oid": "634c276383d6ab0e2024be70"
+    },
+    {
+      "$oid": "634c277583d6ab0e2024be8c"
+    },
+    {
+      "$oid": "634c278f83d6ab0e2024beaa"
+    },
+    {
+      "$oid": "634c27a983d6ab0e2024bec8"
+    },
+    {
+      "$oid": "634c27c483d6ab0e2024bee6"
+    },
+    {
+      "$oid": "634c27d683d6ab0e2024bf04"
+    },
+    {
+      "$oid": "634c341d4f2fdec94b937f28"
+    },
+    {
+      "$oid": "634c34304f2fdec94b937f46"
+    },
+    {
+      "$oid": "634c34454f2fdec94b937f64"
+    },
+    {
+      "$oid": "634c34584f2fdec94b937f82"
+    },
+    {
+      "$oid": "634c34694f2fdec94b937fa0"
+    },
+    {
+      "$oid": "634c347e4f2fdec94b937fbf"
+    },
+    {
+      "$oid": "634c349c4f2fdec94b937fdd"
+    },
+    {
+      "$oid": "634c34b64f2fdec94b937ffb"
+    },
+    {
+      "$oid": "634c34c84f2fdec94b938019"
+    },
+    {
+      "$oid": "634c34db4f2fdec94b938037"
+    },
+    {
+      "$oid": "634c34f44f2fdec94b938055"
+    },
+    {
+      "$oid": "634c35114f2fdec94b938073"
+    },
+    {
+      "$oid": "634c352d4f2fdec94b938091"
+    },
+    {
+      "$oid": "634c35484f2fdec94b9380af"
+    },
+    {
+      "$oid": "634c355a4f2fdec94b9380cd"
+    },
+    {
+      "$oid": "634c37844f2fdec94b9380eb"
+    },
+    {
+      "$oid": "634c37954f2fdec94b938109"
+    },
+    {
+      "$oid": "634c37a44f2fdec94b938127"
+    },
+    {
+      "$oid": "634c37c74f2fdec94b938145"
+    },
+    {
+      "$oid": "634c37d64f2fdec94b938163"
+    },
+    {
+      "$oid": "634c38384f2fdec94b938181"
+    },
+    {
+      "$oid": "634c38474f2fdec94b93819f"
+    },
+    {
+      "$oid": "634c38574f2fdec94b9381bd"
+    },
+    {
+      "$oid": "634c386a4f2fdec94b9381dc"
+    },
+    {
+      "$oid": "634c387c4f2fdec94b9381fa"
+    },
+    {
+      "$oid": "634c388c4f2fdec94b938218"
+    },
+    {
+      "$oid": "634c389c4f2fdec94b938236"
+    },
+    {
+      "$oid": "634c38af4f2fdec94b938254"
+    },
+    {
+      "$oid": "634c38bf4f2fdec94b938272"
+    },
+    {
+      "$oid": "634c38d54f2fdec94b938290"
+    },
+    {
+      "$oid": "634c38ea4f2fdec94b9382ae"
+    },
+    {
+      "$oid": "634c39044f2fdec94b9382d8"
+    },
+    {
+      "$oid": "634c39194f2fdec94b9382f6"
+    },
+    {
+      "$oid": "634c3b2a4f2fdec94b938314"
+    },
+    {
+      "$oid": "634c3b3a4f2fdec94b938332"
+    },
+    {
+      "$oid": "634c3b504f2fdec94b938351"
+    },
+    {
+      "$oid": "634c3b694f2fdec94b93836f"
+    },
+    {
+      "$oid": "634c41e94f2fdec94b93838d"
+    },
+    {
+      "$oid": "634c42254f2fdec94b9383ac"
+    },
+    {
+      "$oid": "634c4c286e31078128fdb026"
+    },
+    {
+      "$oid": "6351a7cee2388ca85d371080"
+    },
+    {
+      "$oid": "6351a7cee2388ca85d371082"
+    },
+    {
+      "$oid": "6351a7cee2388ca85d371084"
+    },
+    {
+      "$oid": "6351a7cee2388ca85d371086"
+    },
+    {
+      "$oid": "6351a7cee2388ca85d371088"
+    },
+    {
+      "$oid": "6351a7cee2388ca85d37108a"
+    },
+    {
+      "$oid": "6351a7cfe2388ca85d37108c"
+    },
+    {
+      "$oid": "6351a7cfe2388ca85d37108e"
+    },
+    {
+      "$oid": "6351a7cfe2388ca85d371090"
+    },
+    {
+      "$oid": "6351a7cfe2388ca85d371092"
+    },
+    {
+      "$oid": "6351a7cfe2388ca85d371094"
+    },
+    {
+      "$oid": "6351a7cfe2388ca85d371096"
+    },
+    {
+      "$oid": "6351a7d0e2388ca85d371098"
+    },
+    {
+      "$oid": "6351a7d0e2388ca85d37109a"
+    },
+    {
+      "$oid": "6351a7d0e2388ca85d37109c"
+    },
+    {
+      "$oid": "6351a7d0e2388ca85d37109e"
+    },
+    {
+      "$oid": "6351a7d0e2388ca85d3710a0"
+    },
+    {
+      "$oid": "6351a7d0e2388ca85d3710a2"
+    },
+    {
+      "$oid": "6351a7d0e2388ca85d3710a4"
+    },
+    {
+      "$oid": "6351a7d0e2388ca85d3710a6"
+    },
+    {
+      "$oid": "6351a7d1e2388ca85d3710a8"
+    },
+    {
+      "$oid": "6351a7d1e2388ca85d3710aa"
+    },
+    {
+      "$oid": "6351a7d1e2388ca85d3710ac"
+    },
+    {
+      "$oid": "6351a7d1e2388ca85d3710ae"
+    },
+    {
+      "$oid": "6351a7d1e2388ca85d3710b0"
+    },
+    {
+      "$oid": "6351a7d1e2388ca85d3710b2"
+    },
+    {
+      "$oid": "6351a7d1e2388ca85d3710b4"
+    },
+    {
+      "$oid": "6351a7d1e2388ca85d3710b6"
+    },
+    {
+      "$oid": "6351a7d1e2388ca85d3710b8"
+    },
+    {
+      "$oid": "6351a7d1e2388ca85d3710ba"
+    },
+    {
+      "$oid": "6351a7d1e2388ca85d3710bc"
+    },
+    {
+      "$oid": "6351a7d1e2388ca85d3710be"
+    },
+    {
+      "$oid": "6351a7d1e2388ca85d3710c0"
+    },
+    {
+      "$oid": "6351a7d1e2388ca85d3710c2"
+    },
+    {
+      "$oid": "6351a7d2e2388ca85d3710c4"
+    },
+    {
+      "$oid": "6351a7d2e2388ca85d3710c6"
+    },
+    {
+      "$oid": "6351a7d2e2388ca85d3710c8"
+    },
+    {
+      "$oid": "6351a7d2e2388ca85d3710ca"
+    },
+    {
+      "$oid": "6351a7d2e2388ca85d3710cc"
+    },
+    {
+      "$oid": "6351a7d2e2388ca85d3710ce"
+    },
+    {
+      "$oid": "6351a7d2e2388ca85d3710d0"
+    },
+    {
+      "$oid": "6351a7d2e2388ca85d3710d2"
+    },
+    {
+      "$oid": "6351a7d2e2388ca85d3710d4"
+    },
+    {
+      "$oid": "6351a7d2e2388ca85d3710d6"
+    },
+    {
+      "$oid": "6351a7d2e2388ca85d3710d8"
+    },
+    {
+      "$oid": "6351a7d2e2388ca85d3710da"
+    },
+    {
+      "$oid": "6351a7d3e2388ca85d3710dc"
+    },
+    {
+      "$oid": "6351a7d3e2388ca85d3710de"
+    },
+    {
+      "$oid": "6351a7d3e2388ca85d3710e0"
+    },
+    {
+      "$oid": "6351a7d3e2388ca85d3710e2"
+    },
+    {
+      "$oid": "6351a7d3e2388ca85d3710e4"
+    },
+    {
+      "$oid": "6351a7d3e2388ca85d3710e6"
+    },
+    {
+      "$oid": "6351a7d3e2388ca85d3710e8"
+    },
+    {
+      "$oid": "6351a7d4e2388ca85d3710ea"
+    },
+    {
+      "$oid": "6351a7d4e2388ca85d3710ec"
+    },
+    {
+      "$oid": "6351a7d4e2388ca85d3710ee"
+    },
+    {
+      "$oid": "6351a7d5e2388ca85d3710f0"
+    },
+    {
+      "$oid": "6351a7d5e2388ca85d3710f2"
+    },
+    {
+      "$oid": "6351a7d5e2388ca85d3710f4"
+    },
+    {
+      "$oid": "6351a7d5e2388ca85d3710f6"
+    },
+    {
+      "$oid": "6351a7d5e2388ca85d3710f8"
+    },
+    {
+      "$oid": "6351a7d5e2388ca85d3710fa"
+    },
+    {
+      "$oid": "6351a7d5e2388ca85d3710fc"
+    },
+    {
+      "$oid": "6351a7d5e2388ca85d3710fe"
+    },
+    {
+      "$oid": "6351a7d5e2388ca85d371100"
+    },
+    {
+      "$oid": "6351a7d5e2388ca85d371102"
+    },
+    {
+      "$oid": "6351a7d5e2388ca85d371104"
+    },
+    {
+      "$oid": "6351a7d5e2388ca85d371106"
+    },
+    {
+      "$oid": "6351a7d5e2388ca85d371108"
+    },
+    {
+      "$oid": "6351a7d5e2388ca85d37110a"
+    },
+    {
+      "$oid": "6351a7d5e2388ca85d37110c"
+    },
+    {
+      "$oid": "6351a7d5e2388ca85d37110e"
+    },
+    {
+      "$oid": "6351a7d6e2388ca85d371110"
+    },
+    {
+      "$oid": "6351a7d6e2388ca85d371112"
+    },
+    {
+      "$oid": "6351a7d6e2388ca85d371114"
+    },
+    {
+      "$oid": "6351a7d6e2388ca85d371116"
+    },
+    {
+      "$oid": "6351a7d6e2388ca85d371118"
+    },
+    {
+      "$oid": "6351a7d6e2388ca85d37111a"
+    },
+    {
+      "$oid": "6351a7d6e2388ca85d37111c"
+    },
+    {
+      "$oid": "6351a7d6e2388ca85d37111e"
+    },
+    {
+      "$oid": "6351a7d6e2388ca85d371120"
+    },
+    {
+      "$oid": "6351a7d6e2388ca85d371122"
+    },
+    {
+      "$oid": "6351a7d6e2388ca85d371124"
+    },
+    {
+      "$oid": "6351a7d6e2388ca85d371126"
+    },
+    {
+      "$oid": "6351a7d6e2388ca85d371128"
+    },
+    {
+      "$oid": "6351a7d6e2388ca85d37112a"
+    },
+    {
+      "$oid": "6351a7d6e2388ca85d37112c"
+    },
+    {
+      "$oid": "6351a7d6e2388ca85d37112e"
+    },
+    {
+      "$oid": "6351a7d6e2388ca85d371130"
+    },
+    {
+      "$oid": "6351a7d7e2388ca85d371132"
+    },
+    {
+      "$oid": "6351a7d7e2388ca85d371134"
+    },
+    {
+      "$oid": "6351a7d7e2388ca85d371136"
+    },
+    {
+      "$oid": "6351a7d7e2388ca85d371138"
+    },
+    {
+      "$oid": "6351a7d7e2388ca85d37113a"
+    },
+    {
+      "$oid": "6351a7d7e2388ca85d37113c"
+    },
+    {
+      "$oid": "6351a7d7e2388ca85d37113e"
+    },
+    {
+      "$oid": "6351a7d7e2388ca85d371140"
+    },
+    {
+      "$oid": "6351a7d7e2388ca85d371142"
+    },
+    {
+      "$oid": "6351a7d7e2388ca85d371144"
+    },
+    {
+      "$oid": "6351a7d7e2388ca85d371146"
+    },
+    {
+      "$oid": "6351a7d7e2388ca85d371148"
+    },
+    {
+      "$oid": "6351a7d7e2388ca85d37114a"
+    },
+    {
+      "$oid": "6351a7d7e2388ca85d37114c"
+    },
+    {
+      "$oid": "6351a7d7e2388ca85d37114e"
+    },
+    {
+      "$oid": "6351a7d7e2388ca85d371150"
+    },
+    {
+      "$oid": "6351a7d7e2388ca85d371152"
+    },
+    {
+      "$oid": "6351a7d7e2388ca85d371154"
+    },
+    {
+      "$oid": "6351a7d8e2388ca85d371156"
+    },
+    {
+      "$oid": "6351a7d8e2388ca85d371158"
+    },
+    {
+      "$oid": "6351a7d8e2388ca85d37115a"
+    },
+    {
+      "$oid": "6351a7d8e2388ca85d37115c"
+    },
+    {
+      "$oid": "6351a7d8e2388ca85d37115e"
+    },
+    {
+      "$oid": "6351a7d8e2388ca85d371160"
+    },
+    {
+      "$oid": "6351a7d8e2388ca85d371162"
+    },
+    {
+      "$oid": "6351a7d8e2388ca85d371164"
+    },
+    {
+      "$oid": "6351a7d8e2388ca85d371166"
+    },
+    {
+      "$oid": "6351a7d8e2388ca85d371168"
+    },
+    {
+      "$oid": "6351a7d8e2388ca85d37116a"
+    },
+    {
+      "$oid": "6351a7d8e2388ca85d37116c"
+    },
+    {
+      "$oid": "6351a7d8e2388ca85d37116e"
+    },
+    {
+      "$oid": "6351a7d8e2388ca85d371170"
+    },
+    {
+      "$oid": "6351a7d8e2388ca85d371172"
+    },
+    {
+      "$oid": "6351a7d8e2388ca85d371174"
+    },
+    {
+      "$oid": "6351a7d9e2388ca85d371176"
+    },
+    {
+      "$oid": "6351a7d9e2388ca85d371178"
+    },
+    {
+      "$oid": "6351a7d9e2388ca85d37117a"
+    },
+    {
+      "$oid": "6351a7d9e2388ca85d37117c"
+    },
+    {
+      "$oid": "6351a7d9e2388ca85d37117e"
+    },
+    {
+      "$oid": "6351a7d9e2388ca85d371180"
+    },
+    {
+      "$oid": "6351a7d9e2388ca85d371182"
+    },
+    {
+      "$oid": "6351a7d9e2388ca85d371184"
+    },
+    {
+      "$oid": "6351a7d9e2388ca85d371186"
+    },
+    {
+      "$oid": "6351a7dae2388ca85d371188"
+    },
+    {
+      "$oid": "6351a7dae2388ca85d37118a"
+    },
+    {
+      "$oid": "6351a7dae2388ca85d37118c"
+    },
+    {
+      "$oid": "6351a7dae2388ca85d37118e"
+    },
+    {
+      "$oid": "6351a7dae2388ca85d371190"
+    },
+    {
+      "$oid": "6351a7dae2388ca85d371192"
+    },
+    {
+      "$oid": "6351a7dae2388ca85d371194"
+    },
+    {
+      "$oid": "6351a7dbe2388ca85d371196"
+    },
+    {
+      "$oid": "6351a7dbe2388ca85d371198"
+    },
+    {
+      "$oid": "6351a7dbe2388ca85d37119a"
+    },
+    {
+      "$oid": "6351a7dfe2388ca85d37119c"
+    },
+    {
+      "$oid": "6351a7dfe2388ca85d37119e"
+    },
+    {
+      "$oid": "6351a7dfe2388ca85d3711a0"
+    },
+    {
+      "$oid": "6351a7dfe2388ca85d3711a2"
+    },
+    {
+      "$oid": "6351a7dfe2388ca85d3711a4"
+    },
+    {
+      "$oid": "6351a7dfe2388ca85d3711a6"
+    },
+    {
+      "$oid": "6351a7dfe2388ca85d3711a8"
+    },
+    {
+      "$oid": "6351a7dfe2388ca85d3711aa"
+    },
+    {
+      "$oid": "6351a7dfe2388ca85d3711ac"
+    },
+    {
+      "$oid": "6351a7dfe2388ca85d3711ae"
+    },
+    {
+      "$oid": "6351a7dfe2388ca85d3711b0"
+    },
+    {
+      "$oid": "6351a7dfe2388ca85d3711b2"
+    },
+    {
+      "$oid": "6351a7dfe2388ca85d3711b4"
+    },
+    {
+      "$oid": "6351a7e0e2388ca85d3711b6"
+    },
+    {
+      "$oid": "6351a7e0e2388ca85d3711b8"
+    },
+    {
+      "$oid": "6351a7e0e2388ca85d3711ba"
+    },
+    {
+      "$oid": "6351a7e0e2388ca85d3711bc"
+    },
+    {
+      "$oid": "6351a7e0e2388ca85d3711be"
+    },
+    {
+      "$oid": "6351a7e0e2388ca85d3711c0"
+    },
+    {
+      "$oid": "6351a7e0e2388ca85d3711c2"
+    },
+    {
+      "$oid": "6351a7e0e2388ca85d3711c4"
+    },
+    {
+      "$oid": "6351a7e0e2388ca85d3711c6"
+    },
+    {
+      "$oid": "6351a7e0e2388ca85d3711c8"
+    },
+    {
+      "$oid": "6351a7e0e2388ca85d3711ca"
+    },
+    {
+      "$oid": "6351a7e0e2388ca85d3711cc"
+    },
+    {
+      "$oid": "6351a7e0e2388ca85d3711ce"
+    },
+    {
+      "$oid": "6351a7e0e2388ca85d3711d0"
+    },
+    {
+      "$oid": "6351a7e0e2388ca85d3711d2"
+    },
+    {
+      "$oid": "6351a7e0e2388ca85d3711d4"
+    },
+    {
+      "$oid": "6351a7e0e2388ca85d3711d6"
+    },
+    {
+      "$oid": "6351a7e1e2388ca85d3711d8"
+    },
+    {
+      "$oid": "6351a7e1e2388ca85d3711da"
+    },
+    {
+      "$oid": "6351a7e1e2388ca85d3711dc"
+    },
+    {
+      "$oid": "6351a7e1e2388ca85d3711de"
+    },
+    {
+      "$oid": "6351a7e1e2388ca85d3711e0"
+    },
+    {
+      "$oid": "6351a7e1e2388ca85d3711e2"
+    },
+    {
+      "$oid": "6351a7e1e2388ca85d3711e4"
+    },
+    {
+      "$oid": "6351a7e1e2388ca85d3711e6"
+    },
+    {
+      "$oid": "6351a7e1e2388ca85d3711e8"
+    },
+    {
+      "$oid": "6351a7e1e2388ca85d3711ea"
+    },
+    {
+      "$oid": "6351a7e1e2388ca85d3711ec"
+    },
+    {
+      "$oid": "6351a7e1e2388ca85d3711ee"
+    },
+    {
+      "$oid": "6351a7e1e2388ca85d3711f0"
+    },
+    {
+      "$oid": "6351a7e1e2388ca85d3711f2"
+    },
+    {
+      "$oid": "6351a7e1e2388ca85d3711f4"
+    },
+    {
+      "$oid": "6351a7e1e2388ca85d3711f6"
+    },
+    {
+      "$oid": "6351a7e1e2388ca85d3711f8"
+    },
+    {
+      "$oid": "6351a7e2e2388ca85d3711fa"
+    },
+    {
+      "$oid": "6351a7e2e2388ca85d3711fc"
+    },
+    {
+      "$oid": "6351a7e2e2388ca85d3711fe"
+    },
+    {
+      "$oid": "6351a7e2e2388ca85d371200"
+    },
+    {
+      "$oid": "6351a7e2e2388ca85d371202"
+    },
+    {
+      "$oid": "6351a7e2e2388ca85d371204"
+    },
+    {
+      "$oid": "6351a7e2e2388ca85d371206"
+    },
+    {
+      "$oid": "6351a7e2e2388ca85d371208"
+    },
+    {
+      "$oid": "6351a7e2e2388ca85d37120a"
+    },
+    {
+      "$oid": "6351a7e2e2388ca85d37120c"
+    },
+    {
+      "$oid": "6351a7e2e2388ca85d37120e"
+    },
+    {
+      "$oid": "6351a7e2e2388ca85d371210"
+    },
+    {
+      "$oid": "6351a7e2e2388ca85d371212"
+    },
+    {
+      "$oid": "6351a7e2e2388ca85d371214"
+    },
+    {
+      "$oid": "6351a7e2e2388ca85d371216"
+    },
+    {
+      "$oid": "6351a7e2e2388ca85d371218"
+    },
+    {
+      "$oid": "6351a7e2e2388ca85d37121a"
+    },
+    {
+      "$oid": "6351a7e3e2388ca85d37121c"
+    },
+    {
+      "$oid": "6351a7e3e2388ca85d37121e"
+    },
+    {
+      "$oid": "6351a7e3e2388ca85d371220"
+    },
+    {
+      "$oid": "6351a7e3e2388ca85d371222"
+    },
+    {
+      "$oid": "6351a7e3e2388ca85d371224"
+    },
+    {
+      "$oid": "6351a7e3e2388ca85d371226"
+    },
+    {
+      "$oid": "6351a7e3e2388ca85d371228"
+    },
+    {
+      "$oid": "6351a7e3e2388ca85d37122a"
+    },
+    {
+      "$oid": "6351a7e3e2388ca85d37122c"
+    },
+    {
+      "$oid": "6351a7e3e2388ca85d37122e"
+    },
+    {
+      "$oid": "6351a7e3e2388ca85d371230"
+    },
+    {
+      "$oid": "6351a7e3e2388ca85d371232"
+    },
+    {
+      "$oid": "6351a7e3e2388ca85d371234"
+    },
+    {
+      "$oid": "635ebb1a50403d5fed48175a"
+    },
+    {
+      "$oid": "6361316b6be54bda52529c7a"
+    },
+    {
+      "$oid": "63710e4a9169ba1127a68e56"
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-08-31T19:33:15.670Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-26T10:19:33.600Z"
+  },
+  "cityPhotoAlt": "місто Нью-Йорк, Штат Нью-Йорк, США"
+},{
+  "_id": {
+    "$oid": "630fb77bcd0b998a401c0b4b"
+  },
+  "stateId": "630fab92bf27c9a64940c555",
+  "cityName": "Nowy Jork",
+  "cityInternational": "New York (NYC)",
+  "cityCode": "NEW Y",
+  "cityPhotoURL": "https://res.cloudinary.com/your-price-booking/image/upload/v1679825887/Photos%20of%20locations/NYC/new-york-city_kgxm9x.png",
+  "langCode": "PL",
+  "dbLangCode": "pl",
+  "stateInternational": "New York State",
+  "state": {
+    "$oid": "630fab92bf27c9a64940c555"
+  },
+  "districts": [
+    {
+      "$oid": "6311b411d786c73f23acaf18"
+    },
+    {
+      "$oid": "6311b445d786c73f23acaf36"
+    },
+    {
+      "$oid": "6311b474d786c73f23acaf54"
+    },
+    {
+      "$oid": "6311b495d786c73f23acaf72"
+    },
+    {
+      "$oid": "6311b4c1d786c73f23acaf90"
+    },
+    {
+      "$oid": "634c191d83d6ab0e2024b706"
+    },
+    {
+      "$oid": "634c193a83d6ab0e2024b724"
+    },
+    {
+      "$oid": "634c195083d6ab0e2024b742"
+    },
+    {
+      "$oid": "634c196583d6ab0e2024b760"
+    },
+    {
+      "$oid": "634c19f683d6ab0e2024b77e"
+    },
+    {
+      "$oid": "634c1a0d83d6ab0e2024b79c"
+    },
+    {
+      "$oid": "634c1a2783d6ab0e2024b7ba"
+    },
+    {
+      "$oid": "634c1a3c83d6ab0e2024b7d8"
+    },
+    {
+      "$oid": "634c1a4f83d6ab0e2024b7f6"
+    },
+    {
+      "$oid": "634c1a6883d6ab0e2024b814"
+    },
+    {
+      "$oid": "634c1a7c83d6ab0e2024b832"
+    },
+    {
+      "$oid": "634c1a8a83d6ab0e2024b850"
+    },
+    {
+      "$oid": "634c1aa783d6ab0e2024b86e"
+    },
+    {
+      "$oid": "634c1ab383d6ab0e2024b88d"
+    },
+    {
+      "$oid": "634c1ac383d6ab0e2024b8ab"
+    },
+    {
+      "$oid": "634c1acf83d6ab0e2024b8c9"
+    },
+    {
+      "$oid": "634c1ae783d6ab0e2024b8e7"
+    },
+    {
+      "$oid": "634c1af883d6ab0e2024b905"
+    },
+    {
+      "$oid": "634c1b0583d6ab0e2024b923"
+    },
+    {
+      "$oid": "634c1b1383d6ab0e2024b941"
+    },
+    {
+      "$oid": "634c1dfd83d6ab0e2024b95f"
+    },
+    {
+      "$oid": "634c1e1183d6ab0e2024b97d"
+    },
+    {
+      "$oid": "634c1e2883d6ab0e2024b99b"
+    },
+    {
+      "$oid": "634c1e4183d6ab0e2024b9b9"
+    },
+    {
+      "$oid": "634c1e6b83d6ab0e2024b9d9"
+    },
+    {
+      "$oid": "634c224083d6ab0e2024b9f7"
+    },
+    {
+      "$oid": "634c226183d6ab0e2024ba21"
+    },
+    {
+      "$oid": "634c227783d6ab0e2024ba3f"
+    },
+    {
+      "$oid": "634c228e83d6ab0e2024ba5f"
+    },
+    {
+      "$oid": "634c22a783d6ab0e2024ba89"
+    },
+    {
+      "$oid": "634c22c083d6ab0e2024baa7"
+    },
+    {
+      "$oid": "634c22d983d6ab0e2024bac5"
+    },
+    {
+      "$oid": "634c22ea83d6ab0e2024bae3"
+    },
+    {
+      "$oid": "634c22ff83d6ab0e2024bb01"
+    },
+    {
+      "$oid": "634c231383d6ab0e2024bb1f"
+    },
+    {
+      "$oid": "634c232883d6ab0e2024bb3d"
+    },
+    {
+      "$oid": "634c233d83d6ab0e2024bb5b"
+    },
+    {
+      "$oid": "634c235883d6ab0e2024bb79"
+    },
+    {
+      "$oid": "634c237d83d6ab0e2024bb97"
+    },
+    {
+      "$oid": "634c238883d6ab0e2024bbb5"
+    },
+    {
+      "$oid": "634c239483d6ab0e2024bbd3"
+    },
+    {
+      "$oid": "634c23a683d6ab0e2024bbf1"
+    },
+    {
+      "$oid": "634c23b783d6ab0e2024bc0f"
+    },
+    {
+      "$oid": "634c23c583d6ab0e2024bc2d"
+    },
+    {
+      "$oid": "634c23d383d6ab0e2024bc4b"
+    },
+    {
+      "$oid": "634c23e383d6ab0e2024bc69"
+    },
+    {
+      "$oid": "634c23f283d6ab0e2024bc87"
+    },
+    {
+      "$oid": "634c240b83d6ab0e2024bca5"
+    },
+    {
+      "$oid": "634c267a83d6ab0e2024bcc3"
+    },
+    {
+      "$oid": "634c268983d6ab0e2024bce1"
+    },
+    {
+      "$oid": "634c269583d6ab0e2024bcff"
+    },
+    {
+      "$oid": "634c26a283d6ab0e2024bd1d"
+    },
+    {
+      "$oid": "634c26af83d6ab0e2024bd3b"
+    },
+    {
+      "$oid": "634c26bf83d6ab0e2024bd59"
+    },
+    {
+      "$oid": "634c26d183d6ab0e2024bd77"
+    },
+    {
+      "$oid": "634c26e083d6ab0e2024bd95"
+    },
+    {
+      "$oid": "634c270b83d6ab0e2024bdb3"
+    },
+    {
+      "$oid": "634c271f83d6ab0e2024bdd1"
+    },
+    {
+      "$oid": "634c272d83d6ab0e2024bdef"
+    },
+    {
+      "$oid": "634c273b83d6ab0e2024be0d"
+    },
+    {
+      "$oid": "634c274c83d6ab0e2024be2b"
+    },
+    {
+      "$oid": "634c275b83d6ab0e2024be49"
+    },
+    {
+      "$oid": "634c276383d6ab0e2024be72"
+    },
+    {
+      "$oid": "634c277583d6ab0e2024be8e"
+    },
+    {
+      "$oid": "634c278f83d6ab0e2024beac"
+    },
+    {
+      "$oid": "634c27a983d6ab0e2024beca"
+    },
+    {
+      "$oid": "634c27c483d6ab0e2024bee8"
+    },
+    {
+      "$oid": "634c27d683d6ab0e2024bf06"
+    },
+    {
+      "$oid": "634c341d4f2fdec94b937f2a"
+    },
+    {
+      "$oid": "634c34304f2fdec94b937f48"
+    },
+    {
+      "$oid": "634c34454f2fdec94b937f66"
+    },
+    {
+      "$oid": "634c34584f2fdec94b937f84"
+    },
+    {
+      "$oid": "634c34694f2fdec94b937fa2"
+    },
+    {
+      "$oid": "634c347e4f2fdec94b937fc1"
+    },
+    {
+      "$oid": "634c349c4f2fdec94b937fdf"
+    },
+    {
+      "$oid": "634c34b64f2fdec94b937ffd"
+    },
+    {
+      "$oid": "634c34c84f2fdec94b93801b"
+    },
+    {
+      "$oid": "634c34db4f2fdec94b938039"
+    },
+    {
+      "$oid": "634c34f44f2fdec94b938057"
+    },
+    {
+      "$oid": "634c35114f2fdec94b938075"
+    },
+    {
+      "$oid": "634c352d4f2fdec94b938093"
+    },
+    {
+      "$oid": "634c35484f2fdec94b9380b1"
+    },
+    {
+      "$oid": "634c355a4f2fdec94b9380cf"
+    },
+    {
+      "$oid": "634c37844f2fdec94b9380ed"
+    },
+    {
+      "$oid": "634c37954f2fdec94b93810b"
+    },
+    {
+      "$oid": "634c37a44f2fdec94b938129"
+    },
+    {
+      "$oid": "634c37c74f2fdec94b938147"
+    },
+    {
+      "$oid": "634c37d64f2fdec94b938165"
+    },
+    {
+      "$oid": "634c38384f2fdec94b938183"
+    },
+    {
+      "$oid": "634c38474f2fdec94b9381a1"
+    },
+    {
+      "$oid": "634c38574f2fdec94b9381bf"
+    },
+    {
+      "$oid": "634c386a4f2fdec94b9381de"
+    },
+    {
+      "$oid": "634c387c4f2fdec94b9381fc"
+    },
+    {
+      "$oid": "634c388c4f2fdec94b93821a"
+    },
+    {
+      "$oid": "634c389c4f2fdec94b938238"
+    },
+    {
+      "$oid": "634c38af4f2fdec94b938256"
+    },
+    {
+      "$oid": "634c38bf4f2fdec94b938274"
+    },
+    {
+      "$oid": "634c38d54f2fdec94b938292"
+    },
+    {
+      "$oid": "634c38ea4f2fdec94b9382b0"
+    },
+    {
+      "$oid": "634c39044f2fdec94b9382da"
+    },
+    {
+      "$oid": "634c39194f2fdec94b9382f8"
+    },
+    {
+      "$oid": "634c3b2a4f2fdec94b938316"
+    },
+    {
+      "$oid": "634c3b3a4f2fdec94b938334"
+    },
+    {
+      "$oid": "634c3b504f2fdec94b938353"
+    },
+    {
+      "$oid": "634c3b694f2fdec94b938371"
+    },
+    {
+      "$oid": "634c41e94f2fdec94b93838f"
+    },
+    {
+      "$oid": "634c42254f2fdec94b9383ae"
+    },
+    {
+      "$oid": "634c4c286e31078128fdb028"
+    },
+    {
+      "$oid": "6351a874e2388ca85d371383"
+    },
+    {
+      "$oid": "6351a875e2388ca85d371385"
+    },
+    {
+      "$oid": "6351a875e2388ca85d371387"
+    },
+    {
+      "$oid": "6351a875e2388ca85d371389"
+    },
+    {
+      "$oid": "6351a875e2388ca85d37138b"
+    },
+    {
+      "$oid": "6351a875e2388ca85d37138d"
+    },
+    {
+      "$oid": "6351a875e2388ca85d37138f"
+    },
+    {
+      "$oid": "6351a875e2388ca85d371391"
+    },
+    {
+      "$oid": "6351a875e2388ca85d371393"
+    },
+    {
+      "$oid": "6351a875e2388ca85d371395"
+    },
+    {
+      "$oid": "6351a875e2388ca85d371397"
+    },
+    {
+      "$oid": "6351a875e2388ca85d371399"
+    },
+    {
+      "$oid": "6351a875e2388ca85d37139b"
+    },
+    {
+      "$oid": "6351a875e2388ca85d37139d"
+    },
+    {
+      "$oid": "6351a875e2388ca85d37139f"
+    },
+    {
+      "$oid": "6351a875e2388ca85d3713a1"
+    },
+    {
+      "$oid": "6351a875e2388ca85d3713a3"
+    },
+    {
+      "$oid": "6351a875e2388ca85d3713a5"
+    },
+    {
+      "$oid": "6351a875e2388ca85d3713a7"
+    },
+    {
+      "$oid": "6351a876e2388ca85d3713a9"
+    },
+    {
+      "$oid": "6351a876e2388ca85d3713ab"
+    },
+    {
+      "$oid": "6351a876e2388ca85d3713ad"
+    },
+    {
+      "$oid": "6351a876e2388ca85d3713af"
+    },
+    {
+      "$oid": "6351a876e2388ca85d3713b1"
+    },
+    {
+      "$oid": "6351a876e2388ca85d3713b3"
+    },
+    {
+      "$oid": "6351a876e2388ca85d3713b5"
+    },
+    {
+      "$oid": "6351a876e2388ca85d3713b7"
+    },
+    {
+      "$oid": "6351a876e2388ca85d3713b9"
+    },
+    {
+      "$oid": "6351a876e2388ca85d3713bb"
+    },
+    {
+      "$oid": "6351a876e2388ca85d3713bd"
+    },
+    {
+      "$oid": "6351a876e2388ca85d3713bf"
+    },
+    {
+      "$oid": "6351a876e2388ca85d3713c1"
+    },
+    {
+      "$oid": "6351a876e2388ca85d3713c3"
+    },
+    {
+      "$oid": "6351a876e2388ca85d3713c5"
+    },
+    {
+      "$oid": "6351a876e2388ca85d3713c7"
+    },
+    {
+      "$oid": "6351a876e2388ca85d3713c9"
+    },
+    {
+      "$oid": "6351a877e2388ca85d3713cb"
+    },
+    {
+      "$oid": "6351a877e2388ca85d3713cd"
+    },
+    {
+      "$oid": "6351a877e2388ca85d3713cf"
+    },
+    {
+      "$oid": "6351a877e2388ca85d3713d1"
+    },
+    {
+      "$oid": "6351a877e2388ca85d3713d3"
+    },
+    {
+      "$oid": "6351a877e2388ca85d3713d5"
+    },
+    {
+      "$oid": "6351a877e2388ca85d3713d7"
+    },
+    {
+      "$oid": "6351a877e2388ca85d3713d9"
+    },
+    {
+      "$oid": "6351a877e2388ca85d3713db"
+    },
+    {
+      "$oid": "6351a877e2388ca85d3713dd"
+    },
+    {
+      "$oid": "6351a877e2388ca85d3713df"
+    },
+    {
+      "$oid": "6351a877e2388ca85d3713e1"
+    },
+    {
+      "$oid": "6351a877e2388ca85d3713e3"
+    },
+    {
+      "$oid": "6351a877e2388ca85d3713e5"
+    },
+    {
+      "$oid": "6351a877e2388ca85d3713e7"
+    },
+    {
+      "$oid": "6351a877e2388ca85d3713e9"
+    },
+    {
+      "$oid": "6351a877e2388ca85d3713eb"
+    },
+    {
+      "$oid": "6351a878e2388ca85d3713ed"
+    },
+    {
+      "$oid": "6351a878e2388ca85d3713ef"
+    },
+    {
+      "$oid": "6351a878e2388ca85d3713f1"
+    },
+    {
+      "$oid": "6351a878e2388ca85d3713f3"
+    },
+    {
+      "$oid": "6351a878e2388ca85d3713f5"
+    },
+    {
+      "$oid": "6351a878e2388ca85d3713f7"
+    },
+    {
+      "$oid": "6351a878e2388ca85d3713f9"
+    },
+    {
+      "$oid": "6351a878e2388ca85d3713fb"
+    },
+    {
+      "$oid": "6351a878e2388ca85d3713fd"
+    },
+    {
+      "$oid": "6351a878e2388ca85d3713ff"
+    },
+    {
+      "$oid": "6351a878e2388ca85d371401"
+    },
+    {
+      "$oid": "6351a878e2388ca85d371403"
+    },
+    {
+      "$oid": "6351a878e2388ca85d371405"
+    },
+    {
+      "$oid": "6351a878e2388ca85d371407"
+    },
+    {
+      "$oid": "6351a878e2388ca85d371409"
+    },
+    {
+      "$oid": "6351a878e2388ca85d37140b"
+    },
+    {
+      "$oid": "6351a878e2388ca85d37140d"
+    },
+    {
+      "$oid": "6351a878e2388ca85d37140f"
+    },
+    {
+      "$oid": "6351a879e2388ca85d371411"
+    },
+    {
+      "$oid": "6351a879e2388ca85d371413"
+    },
+    {
+      "$oid": "6351a879e2388ca85d371415"
+    },
+    {
+      "$oid": "6351a879e2388ca85d371417"
+    },
+    {
+      "$oid": "6351a879e2388ca85d371419"
+    },
+    {
+      "$oid": "6351a879e2388ca85d37141b"
+    },
+    {
+      "$oid": "6351a879e2388ca85d37141d"
+    },
+    {
+      "$oid": "6351a879e2388ca85d37141f"
+    },
+    {
+      "$oid": "6351a879e2388ca85d371421"
+    },
+    {
+      "$oid": "6351a879e2388ca85d371423"
+    },
+    {
+      "$oid": "6351a879e2388ca85d371425"
+    },
+    {
+      "$oid": "6351a879e2388ca85d371427"
+    },
+    {
+      "$oid": "6351a879e2388ca85d371429"
+    },
+    {
+      "$oid": "6351a879e2388ca85d37142b"
+    },
+    {
+      "$oid": "6351a879e2388ca85d37142d"
+    },
+    {
+      "$oid": "6351a879e2388ca85d37142f"
+    },
+    {
+      "$oid": "6351a879e2388ca85d371431"
+    },
+    {
+      "$oid": "6351a87ae2388ca85d371433"
+    },
+    {
+      "$oid": "6351a87ae2388ca85d371435"
+    },
+    {
+      "$oid": "6351a87ae2388ca85d371437"
+    },
+    {
+      "$oid": "6351a87ae2388ca85d371439"
+    },
+    {
+      "$oid": "6351a87ae2388ca85d37143b"
+    },
+    {
+      "$oid": "6351a87ae2388ca85d37143d"
+    },
+    {
+      "$oid": "6351a87ae2388ca85d37143f"
+    },
+    {
+      "$oid": "6351a87ae2388ca85d371441"
+    },
+    {
+      "$oid": "6351a87ae2388ca85d371443"
+    },
+    {
+      "$oid": "6351a87ae2388ca85d371445"
+    },
+    {
+      "$oid": "6351a87ae2388ca85d371447"
+    },
+    {
+      "$oid": "6351a87ae2388ca85d371449"
+    },
+    {
+      "$oid": "6351a87ae2388ca85d37144b"
+    },
+    {
+      "$oid": "6351a87ae2388ca85d37144d"
+    },
+    {
+      "$oid": "6351a87ae2388ca85d37144f"
+    },
+    {
+      "$oid": "6351a87ae2388ca85d371451"
+    },
+    {
+      "$oid": "6351a87ae2388ca85d371453"
+    },
+    {
+      "$oid": "6351a87ae2388ca85d371455"
+    },
+    {
+      "$oid": "6351a87be2388ca85d371457"
+    },
+    {
+      "$oid": "6351a87be2388ca85d371459"
+    },
+    {
+      "$oid": "6351a87be2388ca85d37145b"
+    },
+    {
+      "$oid": "6351a87be2388ca85d37145d"
+    },
+    {
+      "$oid": "6351a87be2388ca85d37145f"
+    },
+    {
+      "$oid": "6351a87be2388ca85d371461"
+    },
+    {
+      "$oid": "6351a87be2388ca85d371463"
+    },
+    {
+      "$oid": "6351a87be2388ca85d371465"
+    },
+    {
+      "$oid": "6351a87be2388ca85d371467"
+    },
+    {
+      "$oid": "6351a87be2388ca85d371469"
+    },
+    {
+      "$oid": "6351a87be2388ca85d37146b"
+    },
+    {
+      "$oid": "6351a87be2388ca85d37146d"
+    },
+    {
+      "$oid": "6351a87be2388ca85d37146f"
+    },
+    {
+      "$oid": "6351a87be2388ca85d371471"
+    },
+    {
+      "$oid": "6351a87be2388ca85d371473"
+    },
+    {
+      "$oid": "6351a87be2388ca85d371475"
+    },
+    {
+      "$oid": "6351a87ce2388ca85d371477"
+    },
+    {
+      "$oid": "6351a87ce2388ca85d371479"
+    },
+    {
+      "$oid": "6351a87ce2388ca85d37147b"
+    },
+    {
+      "$oid": "6351a87ce2388ca85d37147d"
+    },
+    {
+      "$oid": "6351a87ce2388ca85d37147f"
+    },
+    {
+      "$oid": "6351a87ce2388ca85d371481"
+    },
+    {
+      "$oid": "6351a87ce2388ca85d371483"
+    },
+    {
+      "$oid": "6351a87ce2388ca85d371485"
+    },
+    {
+      "$oid": "6351a87ce2388ca85d371487"
+    },
+    {
+      "$oid": "6351a87ce2388ca85d371489"
+    },
+    {
+      "$oid": "6351a87ce2388ca85d37148b"
+    },
+    {
+      "$oid": "6351a87ce2388ca85d37148d"
+    },
+    {
+      "$oid": "6351a87ce2388ca85d37148f"
+    },
+    {
+      "$oid": "6351a87ce2388ca85d371491"
+    },
+    {
+      "$oid": "6351a87ce2388ca85d371493"
+    },
+    {
+      "$oid": "6351a87de2388ca85d371495"
+    },
+    {
+      "$oid": "6351a87de2388ca85d371497"
+    },
+    {
+      "$oid": "6351a87de2388ca85d371499"
+    },
+    {
+      "$oid": "6351a87de2388ca85d37149b"
+    },
+    {
+      "$oid": "6351a87de2388ca85d37149d"
+    },
+    {
+      "$oid": "6351a87de2388ca85d37149f"
+    },
+    {
+      "$oid": "6351a87de2388ca85d3714a1"
+    },
+    {
+      "$oid": "6351a87de2388ca85d3714a3"
+    },
+    {
+      "$oid": "6351a87de2388ca85d3714a5"
+    },
+    {
+      "$oid": "6351a87de2388ca85d3714a7"
+    },
+    {
+      "$oid": "6351a87de2388ca85d3714a9"
+    },
+    {
+      "$oid": "6351a87de2388ca85d3714ab"
+    },
+    {
+      "$oid": "6351a87de2388ca85d3714ad"
+    },
+    {
+      "$oid": "6351a87de2388ca85d3714af"
+    },
+    {
+      "$oid": "6351a87de2388ca85d3714b1"
+    },
+    {
+      "$oid": "6351a87de2388ca85d3714b3"
+    },
+    {
+      "$oid": "6351a87ee2388ca85d3714b5"
+    },
+    {
+      "$oid": "6351a87ee2388ca85d3714b7"
+    },
+    {
+      "$oid": "6351a87ee2388ca85d3714b9"
+    },
+    {
+      "$oid": "6351a87ee2388ca85d3714bb"
+    },
+    {
+      "$oid": "6351a87ee2388ca85d3714bd"
+    },
+    {
+      "$oid": "6351a87ee2388ca85d3714bf"
+    },
+    {
+      "$oid": "6351a87ee2388ca85d3714c1"
+    },
+    {
+      "$oid": "6351a87ee2388ca85d3714c3"
+    },
+    {
+      "$oid": "6351a87ee2388ca85d3714c5"
+    },
+    {
+      "$oid": "6351a87ee2388ca85d3714c7"
+    },
+    {
+      "$oid": "6351a87ee2388ca85d3714c9"
+    },
+    {
+      "$oid": "6351a87ee2388ca85d3714cb"
+    },
+    {
+      "$oid": "6351a87ee2388ca85d3714cd"
+    },
+    {
+      "$oid": "6351a87ee2388ca85d3714cf"
+    },
+    {
+      "$oid": "6351a87ee2388ca85d3714d1"
+    },
+    {
+      "$oid": "6351a87ee2388ca85d3714d3"
+    },
+    {
+      "$oid": "6351a87ee2388ca85d3714d5"
+    },
+    {
+      "$oid": "6351a87fe2388ca85d3714d7"
+    },
+    {
+      "$oid": "6351a87fe2388ca85d3714d9"
+    },
+    {
+      "$oid": "6351a87fe2388ca85d3714db"
+    },
+    {
+      "$oid": "6351a87fe2388ca85d3714dd"
+    },
+    {
+      "$oid": "6351a87fe2388ca85d3714df"
+    },
+    {
+      "$oid": "6351a87fe2388ca85d3714e1"
+    },
+    {
+      "$oid": "6351a87fe2388ca85d3714e3"
+    },
+    {
+      "$oid": "6351a87fe2388ca85d3714e5"
+    },
+    {
+      "$oid": "6351a87fe2388ca85d3714e7"
+    },
+    {
+      "$oid": "6351a87fe2388ca85d3714e9"
+    },
+    {
+      "$oid": "6351a87fe2388ca85d3714eb"
+    },
+    {
+      "$oid": "6351a87fe2388ca85d3714ed"
+    },
+    {
+      "$oid": "6351a87fe2388ca85d3714ef"
+    },
+    {
+      "$oid": "6351a87fe2388ca85d3714f1"
+    },
+    {
+      "$oid": "6351a87fe2388ca85d3714f3"
+    },
+    {
+      "$oid": "6351a87fe2388ca85d3714f5"
+    },
+    {
+      "$oid": "6351a87fe2388ca85d3714f7"
+    },
+    {
+      "$oid": "6351a880e2388ca85d3714f9"
+    },
+    {
+      "$oid": "6351a880e2388ca85d3714fb"
+    },
+    {
+      "$oid": "6351a880e2388ca85d3714fd"
+    },
+    {
+      "$oid": "6351a880e2388ca85d3714ff"
+    },
+    {
+      "$oid": "6351a880e2388ca85d371501"
+    },
+    {
+      "$oid": "6351a880e2388ca85d371503"
+    },
+    {
+      "$oid": "6351a880e2388ca85d371505"
+    },
+    {
+      "$oid": "6351a880e2388ca85d371507"
+    },
+    {
+      "$oid": "6351a880e2388ca85d371509"
+    },
+    {
+      "$oid": "6351a880e2388ca85d37150b"
+    },
+    {
+      "$oid": "6351a880e2388ca85d37150d"
+    },
+    {
+      "$oid": "6351a880e2388ca85d37150f"
+    },
+    {
+      "$oid": "6351a880e2388ca85d371511"
+    },
+    {
+      "$oid": "6351a880e2388ca85d371513"
+    },
+    {
+      "$oid": "6351a880e2388ca85d371515"
+    },
+    {
+      "$oid": "6351a880e2388ca85d371517"
+    },
+    {
+      "$oid": "6351a880e2388ca85d371519"
+    },
+    {
+      "$oid": "6351a881e2388ca85d37151b"
+    },
+    {
+      "$oid": "6351a881e2388ca85d37151d"
+    },
+    {
+      "$oid": "6351a881e2388ca85d37151f"
+    },
+    {
+      "$oid": "6351a881e2388ca85d371521"
+    },
+    {
+      "$oid": "6351a881e2388ca85d371523"
+    },
+    {
+      "$oid": "6351a881e2388ca85d371525"
+    },
+    {
+      "$oid": "6351a881e2388ca85d371527"
+    },
+    {
+      "$oid": "6351a881e2388ca85d371529"
+    },
+    {
+      "$oid": "6351a881e2388ca85d37152b"
+    },
+    {
+      "$oid": "6351a881e2388ca85d37152d"
+    },
+    {
+      "$oid": "6351a881e2388ca85d37152f"
+    },
+    {
+      "$oid": "6351a881e2388ca85d371531"
+    },
+    {
+      "$oid": "6351a881e2388ca85d371533"
+    },
+    {
+      "$oid": "6351a881e2388ca85d371535"
+    },
+    {
+      "$oid": "6351a881e2388ca85d371537"
+    },
+    {
+      "$oid": "635ebb1a50403d5fed48175c"
+    },
+    {
+      "$oid": "6361316b6be54bda52529c7c"
+    },
+    {
+      "$oid": "63710e4a9169ba1127a68e58"
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-08-31T19:33:15.705Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-26T10:20:03.270Z"
+  },
+  "cityPhotoAlt": "Nowy Jork, New York State, USA"
+},{
+  "_id": {
+    "$oid": "630fb77bcd0b998a401c0b4f"
+  },
+  "stateId": "630fab92bf27c9a64940c559",
+  "cityName": "Нью-Йорк город",
+  "cityInternational": "New York (NYC)",
+  "cityCode": "NEW Y",
+  "cityPhotoURL": "https://res.cloudinary.com/your-price-booking/image/upload/v1679825887/Photos%20of%20locations/NYC/new-york-city_kgxm9x.png",
+  "langCode": "RU",
+  "dbLangCode": "ru",
+  "stateInternational": "New York State",
+  "state": {
+    "$oid": "630fab92bf27c9a64940c559"
+  },
+  "districts": [
+    {
+      "$oid": "6311b411d786c73f23acaf1c"
+    },
+    {
+      "$oid": "6311b445d786c73f23acaf3a"
+    },
+    {
+      "$oid": "6311b474d786c73f23acaf58"
+    },
+    {
+      "$oid": "6311b495d786c73f23acaf76"
+    },
+    {
+      "$oid": "6311b4c1d786c73f23acaf94"
+    },
+    {
+      "$oid": "634c191d83d6ab0e2024b70a"
+    },
+    {
+      "$oid": "634c193a83d6ab0e2024b728"
+    },
+    {
+      "$oid": "634c195083d6ab0e2024b746"
+    },
+    {
+      "$oid": "634c196583d6ab0e2024b764"
+    },
+    {
+      "$oid": "634c19f683d6ab0e2024b782"
+    },
+    {
+      "$oid": "634c1a0d83d6ab0e2024b7a0"
+    },
+    {
+      "$oid": "634c1a2783d6ab0e2024b7be"
+    },
+    {
+      "$oid": "634c1a3c83d6ab0e2024b7dc"
+    },
+    {
+      "$oid": "634c1a4f83d6ab0e2024b7fa"
+    },
+    {
+      "$oid": "634c1a6883d6ab0e2024b818"
+    },
+    {
+      "$oid": "634c1a7c83d6ab0e2024b836"
+    },
+    {
+      "$oid": "634c1a8a83d6ab0e2024b854"
+    },
+    {
+      "$oid": "634c1aa783d6ab0e2024b872"
+    },
+    {
+      "$oid": "634c1ab383d6ab0e2024b891"
+    },
+    {
+      "$oid": "634c1ac383d6ab0e2024b8af"
+    },
+    {
+      "$oid": "634c1acf83d6ab0e2024b8cd"
+    },
+    {
+      "$oid": "634c1ae783d6ab0e2024b8eb"
+    },
+    {
+      "$oid": "634c1af883d6ab0e2024b909"
+    },
+    {
+      "$oid": "634c1b0583d6ab0e2024b927"
+    },
+    {
+      "$oid": "634c1b1383d6ab0e2024b945"
+    },
+    {
+      "$oid": "634c1dfd83d6ab0e2024b963"
+    },
+    {
+      "$oid": "634c1e1183d6ab0e2024b981"
+    },
+    {
+      "$oid": "634c1e2883d6ab0e2024b99f"
+    },
+    {
+      "$oid": "634c1e4183d6ab0e2024b9bd"
+    },
+    {
+      "$oid": "634c1e6b83d6ab0e2024b9dd"
+    },
+    {
+      "$oid": "634c224083d6ab0e2024b9fb"
+    },
+    {
+      "$oid": "634c226183d6ab0e2024ba25"
+    },
+    {
+      "$oid": "634c227783d6ab0e2024ba43"
+    },
+    {
+      "$oid": "634c228e83d6ab0e2024ba63"
+    },
+    {
+      "$oid": "634c22a783d6ab0e2024ba8d"
+    },
+    {
+      "$oid": "634c22c083d6ab0e2024baab"
+    },
+    {
+      "$oid": "634c22d983d6ab0e2024bac9"
+    },
+    {
+      "$oid": "634c22ea83d6ab0e2024bae7"
+    },
+    {
+      "$oid": "634c22ff83d6ab0e2024bb05"
+    },
+    {
+      "$oid": "634c231383d6ab0e2024bb23"
+    },
+    {
+      "$oid": "634c232983d6ab0e2024bb41"
+    },
+    {
+      "$oid": "634c233d83d6ab0e2024bb5f"
+    },
+    {
+      "$oid": "634c235883d6ab0e2024bb7d"
+    },
+    {
+      "$oid": "634c237d83d6ab0e2024bb9b"
+    },
+    {
+      "$oid": "634c238883d6ab0e2024bbb9"
+    },
+    {
+      "$oid": "634c239483d6ab0e2024bbd7"
+    },
+    {
+      "$oid": "634c23a683d6ab0e2024bbf5"
+    },
+    {
+      "$oid": "634c23b783d6ab0e2024bc13"
+    },
+    {
+      "$oid": "634c23c583d6ab0e2024bc31"
+    },
+    {
+      "$oid": "634c23d383d6ab0e2024bc4f"
+    },
+    {
+      "$oid": "634c23e383d6ab0e2024bc6d"
+    },
+    {
+      "$oid": "634c23f283d6ab0e2024bc8b"
+    },
+    {
+      "$oid": "634c240b83d6ab0e2024bca9"
+    },
+    {
+      "$oid": "634c267a83d6ab0e2024bcc7"
+    },
+    {
+      "$oid": "634c268983d6ab0e2024bce5"
+    },
+    {
+      "$oid": "634c269583d6ab0e2024bd03"
+    },
+    {
+      "$oid": "634c26a283d6ab0e2024bd21"
+    },
+    {
+      "$oid": "634c26af83d6ab0e2024bd3f"
+    },
+    {
+      "$oid": "634c26bf83d6ab0e2024bd5d"
+    },
+    {
+      "$oid": "634c26d183d6ab0e2024bd7b"
+    },
+    {
+      "$oid": "634c26e083d6ab0e2024bd99"
+    },
+    {
+      "$oid": "634c270b83d6ab0e2024bdb7"
+    },
+    {
+      "$oid": "634c271f83d6ab0e2024bdd5"
+    },
+    {
+      "$oid": "634c272d83d6ab0e2024bdf3"
+    },
+    {
+      "$oid": "634c273b83d6ab0e2024be11"
+    },
+    {
+      "$oid": "634c274c83d6ab0e2024be2f"
+    },
+    {
+      "$oid": "634c275b83d6ab0e2024be4d"
+    },
+    {
+      "$oid": "634c276383d6ab0e2024be76"
+    },
+    {
+      "$oid": "634c277583d6ab0e2024be92"
+    },
+    {
+      "$oid": "634c278f83d6ab0e2024beb0"
+    },
+    {
+      "$oid": "634c27a983d6ab0e2024bece"
+    },
+    {
+      "$oid": "634c27c483d6ab0e2024beec"
+    },
+    {
+      "$oid": "634c27d683d6ab0e2024bf0a"
+    },
+    {
+      "$oid": "634c341d4f2fdec94b937f2e"
+    },
+    {
+      "$oid": "634c34304f2fdec94b937f4c"
+    },
+    {
+      "$oid": "634c34454f2fdec94b937f6a"
+    },
+    {
+      "$oid": "634c34584f2fdec94b937f88"
+    },
+    {
+      "$oid": "634c34694f2fdec94b937fa6"
+    },
+    {
+      "$oid": "634c347e4f2fdec94b937fc5"
+    },
+    {
+      "$oid": "634c349c4f2fdec94b937fe3"
+    },
+    {
+      "$oid": "634c34b64f2fdec94b938001"
+    },
+    {
+      "$oid": "634c34c84f2fdec94b93801f"
+    },
+    {
+      "$oid": "634c34db4f2fdec94b93803d"
+    },
+    {
+      "$oid": "634c34f44f2fdec94b93805b"
+    },
+    {
+      "$oid": "634c35114f2fdec94b938079"
+    },
+    {
+      "$oid": "634c352d4f2fdec94b938097"
+    },
+    {
+      "$oid": "634c35484f2fdec94b9380b5"
+    },
+    {
+      "$oid": "634c355a4f2fdec94b9380d3"
+    },
+    {
+      "$oid": "634c37844f2fdec94b9380f1"
+    },
+    {
+      "$oid": "634c37954f2fdec94b93810f"
+    },
+    {
+      "$oid": "634c37a44f2fdec94b93812d"
+    },
+    {
+      "$oid": "634c37c74f2fdec94b93814b"
+    },
+    {
+      "$oid": "634c37d64f2fdec94b938169"
+    },
+    {
+      "$oid": "634c38384f2fdec94b938187"
+    },
+    {
+      "$oid": "634c38474f2fdec94b9381a5"
+    },
+    {
+      "$oid": "634c38574f2fdec94b9381c3"
+    },
+    {
+      "$oid": "634c386a4f2fdec94b9381e2"
+    },
+    {
+      "$oid": "634c387c4f2fdec94b938200"
+    },
+    {
+      "$oid": "634c388c4f2fdec94b93821e"
+    },
+    {
+      "$oid": "634c389c4f2fdec94b93823c"
+    },
+    {
+      "$oid": "634c38af4f2fdec94b93825a"
+    },
+    {
+      "$oid": "634c38bf4f2fdec94b938278"
+    },
+    {
+      "$oid": "634c38d54f2fdec94b938296"
+    },
+    {
+      "$oid": "634c38eb4f2fdec94b9382b4"
+    },
+    {
+      "$oid": "634c39044f2fdec94b9382de"
+    },
+    {
+      "$oid": "634c39194f2fdec94b9382fc"
+    },
+    {
+      "$oid": "634c3b2a4f2fdec94b93831a"
+    },
+    {
+      "$oid": "634c3b3a4f2fdec94b938337"
+    },
+    {
+      "$oid": "634c3b504f2fdec94b938357"
+    },
+    {
+      "$oid": "634c3b694f2fdec94b938375"
+    },
+    {
+      "$oid": "634c41e94f2fdec94b938393"
+    },
+    {
+      "$oid": "634c42254f2fdec94b9383b2"
+    },
+    {
+      "$oid": "634c4c286e31078128fdb02c"
+    },
+    {
+      "$oid": "6351a943e2388ca85d371686"
+    },
+    {
+      "$oid": "6351a943e2388ca85d371688"
+    },
+    {
+      "$oid": "6351a944e2388ca85d37168a"
+    },
+    {
+      "$oid": "6351a944e2388ca85d37168c"
+    },
+    {
+      "$oid": "6351a944e2388ca85d37168e"
+    },
+    {
+      "$oid": "6351a944e2388ca85d371690"
+    },
+    {
+      "$oid": "6351a944e2388ca85d371692"
+    },
+    {
+      "$oid": "6351a944e2388ca85d371694"
+    },
+    {
+      "$oid": "6351a944e2388ca85d371696"
+    },
+    {
+      "$oid": "6351a944e2388ca85d371698"
+    },
+    {
+      "$oid": "6351a944e2388ca85d37169a"
+    },
+    {
+      "$oid": "6351a944e2388ca85d37169c"
+    },
+    {
+      "$oid": "6351a944e2388ca85d37169e"
+    },
+    {
+      "$oid": "6351a944e2388ca85d3716a0"
+    },
+    {
+      "$oid": "6351a944e2388ca85d3716a2"
+    },
+    {
+      "$oid": "6351a945e2388ca85d3716a4"
+    },
+    {
+      "$oid": "6351a945e2388ca85d3716a6"
+    },
+    {
+      "$oid": "6351a945e2388ca85d3716a8"
+    },
+    {
+      "$oid": "6351a945e2388ca85d3716aa"
+    },
+    {
+      "$oid": "6351a945e2388ca85d3716ac"
+    },
+    {
+      "$oid": "6351a945e2388ca85d3716ae"
+    },
+    {
+      "$oid": "6351a945e2388ca85d3716b0"
+    },
+    {
+      "$oid": "6351a945e2388ca85d3716b2"
+    },
+    {
+      "$oid": "6351a945e2388ca85d3716b4"
+    },
+    {
+      "$oid": "6351a945e2388ca85d3716b6"
+    },
+    {
+      "$oid": "6351a945e2388ca85d3716b8"
+    },
+    {
+      "$oid": "6351a945e2388ca85d3716ba"
+    },
+    {
+      "$oid": "6351a945e2388ca85d3716bc"
+    },
+    {
+      "$oid": "6351a945e2388ca85d3716be"
+    },
+    {
+      "$oid": "6351a945e2388ca85d3716c0"
+    },
+    {
+      "$oid": "6351a945e2388ca85d3716c2"
+    },
+    {
+      "$oid": "6351a945e2388ca85d3716c4"
+    },
+    {
+      "$oid": "6351a946e2388ca85d3716c6"
+    },
+    {
+      "$oid": "6351a946e2388ca85d3716c8"
+    },
+    {
+      "$oid": "6351a946e2388ca85d3716ca"
+    },
+    {
+      "$oid": "6351a946e2388ca85d3716cc"
+    },
+    {
+      "$oid": "6351a946e2388ca85d3716ce"
+    },
+    {
+      "$oid": "6351a946e2388ca85d3716d0"
+    },
+    {
+      "$oid": "6351a946e2388ca85d3716d2"
+    },
+    {
+      "$oid": "6351a946e2388ca85d3716d4"
+    },
+    {
+      "$oid": "6351a946e2388ca85d3716d6"
+    },
+    {
+      "$oid": "6351a946e2388ca85d3716d8"
+    },
+    {
+      "$oid": "6351a946e2388ca85d3716da"
+    },
+    {
+      "$oid": "6351a946e2388ca85d3716dc"
+    },
+    {
+      "$oid": "6351a946e2388ca85d3716de"
+    },
+    {
+      "$oid": "6351a946e2388ca85d3716e0"
+    },
+    {
+      "$oid": "6351a946e2388ca85d3716e2"
+    },
+    {
+      "$oid": "6351a946e2388ca85d3716e4"
+    },
+    {
+      "$oid": "6351a946e2388ca85d3716e6"
+    },
+    {
+      "$oid": "6351a946e2388ca85d3716e8"
+    },
+    {
+      "$oid": "6351a947e2388ca85d3716ea"
+    },
+    {
+      "$oid": "6351a947e2388ca85d3716ec"
+    },
+    {
+      "$oid": "6351a947e2388ca85d3716ee"
+    },
+    {
+      "$oid": "6351a947e2388ca85d3716f0"
+    },
+    {
+      "$oid": "6351a947e2388ca85d3716f2"
+    },
+    {
+      "$oid": "6351a947e2388ca85d3716f4"
+    },
+    {
+      "$oid": "6351a947e2388ca85d3716f6"
+    },
+    {
+      "$oid": "6351a947e2388ca85d3716f8"
+    },
+    {
+      "$oid": "6351a947e2388ca85d3716fa"
+    },
+    {
+      "$oid": "6351a947e2388ca85d3716fc"
+    },
+    {
+      "$oid": "6351a947e2388ca85d3716fe"
+    },
+    {
+      "$oid": "6351a947e2388ca85d371700"
+    },
+    {
+      "$oid": "6351a947e2388ca85d371702"
+    },
+    {
+      "$oid": "6351a947e2388ca85d371704"
+    },
+    {
+      "$oid": "6351a947e2388ca85d371706"
+    },
+    {
+      "$oid": "6351a947e2388ca85d371708"
+    },
+    {
+      "$oid": "6351a947e2388ca85d37170a"
+    },
+    {
+      "$oid": "6351a947e2388ca85d37170c"
+    },
+    {
+      "$oid": "6351a948e2388ca85d37170e"
+    },
+    {
+      "$oid": "6351a948e2388ca85d371710"
+    },
+    {
+      "$oid": "6351a948e2388ca85d371712"
+    },
+    {
+      "$oid": "6351a948e2388ca85d371714"
+    },
+    {
+      "$oid": "6351a948e2388ca85d371716"
+    },
+    {
+      "$oid": "6351a948e2388ca85d371718"
+    },
+    {
+      "$oid": "6351a948e2388ca85d37171a"
+    },
+    {
+      "$oid": "6351a948e2388ca85d37171c"
+    },
+    {
+      "$oid": "6351a948e2388ca85d37171e"
+    },
+    {
+      "$oid": "6351a948e2388ca85d371720"
+    },
+    {
+      "$oid": "6351a948e2388ca85d371722"
+    },
+    {
+      "$oid": "6351a948e2388ca85d371724"
+    },
+    {
+      "$oid": "6351a948e2388ca85d371726"
+    },
+    {
+      "$oid": "6351a948e2388ca85d371728"
+    },
+    {
+      "$oid": "6351a948e2388ca85d37172a"
+    },
+    {
+      "$oid": "6351a948e2388ca85d37172c"
+    },
+    {
+      "$oid": "6351a948e2388ca85d37172e"
+    },
+    {
+      "$oid": "6351a949e2388ca85d371730"
+    },
+    {
+      "$oid": "6351a949e2388ca85d371732"
+    },
+    {
+      "$oid": "6351a949e2388ca85d371734"
+    },
+    {
+      "$oid": "6351a949e2388ca85d371736"
+    },
+    {
+      "$oid": "6351a949e2388ca85d371738"
+    },
+    {
+      "$oid": "6351a949e2388ca85d37173a"
+    },
+    {
+      "$oid": "6351a949e2388ca85d37173c"
+    },
+    {
+      "$oid": "6351a949e2388ca85d37173e"
+    },
+    {
+      "$oid": "6351a949e2388ca85d371740"
+    },
+    {
+      "$oid": "6351a949e2388ca85d371742"
+    },
+    {
+      "$oid": "6351a949e2388ca85d371744"
+    },
+    {
+      "$oid": "6351a949e2388ca85d371746"
+    },
+    {
+      "$oid": "6351a949e2388ca85d371748"
+    },
+    {
+      "$oid": "6351a949e2388ca85d37174a"
+    },
+    {
+      "$oid": "6351a949e2388ca85d37174c"
+    },
+    {
+      "$oid": "6351a949e2388ca85d37174e"
+    },
+    {
+      "$oid": "6351a949e2388ca85d371750"
+    },
+    {
+      "$oid": "6351a949e2388ca85d371752"
+    },
+    {
+      "$oid": "6351a94ae2388ca85d371754"
+    },
+    {
+      "$oid": "6351a94ae2388ca85d371756"
+    },
+    {
+      "$oid": "6351a94ae2388ca85d371758"
+    },
+    {
+      "$oid": "6351a94ae2388ca85d37175a"
+    },
+    {
+      "$oid": "6351a94ae2388ca85d37175c"
+    },
+    {
+      "$oid": "6351a94ae2388ca85d37175e"
+    },
+    {
+      "$oid": "6351a94ae2388ca85d371760"
+    },
+    {
+      "$oid": "6351a94ae2388ca85d371762"
+    },
+    {
+      "$oid": "6351a94ae2388ca85d371764"
+    },
+    {
+      "$oid": "6351a94ae2388ca85d371766"
+    },
+    {
+      "$oid": "6351a94ae2388ca85d371768"
+    },
+    {
+      "$oid": "6351a94ae2388ca85d37176a"
+    },
+    {
+      "$oid": "6351a94ae2388ca85d37176c"
+    },
+    {
+      "$oid": "6351a94ae2388ca85d37176e"
+    },
+    {
+      "$oid": "6351a94ae2388ca85d371770"
+    },
+    {
+      "$oid": "6351a94ae2388ca85d371772"
+    },
+    {
+      "$oid": "6351a94ae2388ca85d371774"
+    },
+    {
+      "$oid": "6351a94ae2388ca85d371776"
+    },
+    {
+      "$oid": "6351a94be2388ca85d371778"
+    },
+    {
+      "$oid": "6351a94be2388ca85d37177a"
+    },
+    {
+      "$oid": "6351a94be2388ca85d37177c"
+    },
+    {
+      "$oid": "6351a94be2388ca85d37177e"
+    },
+    {
+      "$oid": "6351a94be2388ca85d371780"
+    },
+    {
+      "$oid": "6351a94be2388ca85d371782"
+    },
+    {
+      "$oid": "6351a94be2388ca85d371784"
+    },
+    {
+      "$oid": "6351a94be2388ca85d371786"
+    },
+    {
+      "$oid": "6351a94be2388ca85d371788"
+    },
+    {
+      "$oid": "6351a94be2388ca85d37178a"
+    },
+    {
+      "$oid": "6351a94be2388ca85d37178c"
+    },
+    {
+      "$oid": "6351a94be2388ca85d37178e"
+    },
+    {
+      "$oid": "6351a94be2388ca85d371790"
+    },
+    {
+      "$oid": "6351a94be2388ca85d371792"
+    },
+    {
+      "$oid": "6351a94be2388ca85d371794"
+    },
+    {
+      "$oid": "6351a94be2388ca85d371796"
+    },
+    {
+      "$oid": "6351a94be2388ca85d371798"
+    },
+    {
+      "$oid": "6351a94be2388ca85d37179a"
+    },
+    {
+      "$oid": "6351a94ce2388ca85d37179c"
+    },
+    {
+      "$oid": "6351a94ce2388ca85d37179e"
+    },
+    {
+      "$oid": "6351a94ce2388ca85d3717a0"
+    },
+    {
+      "$oid": "6351a94ce2388ca85d3717a2"
+    },
+    {
+      "$oid": "6351a94ce2388ca85d3717a4"
+    },
+    {
+      "$oid": "6351a94ce2388ca85d3717a6"
+    },
+    {
+      "$oid": "6351a94ce2388ca85d3717a8"
+    },
+    {
+      "$oid": "6351a94ce2388ca85d3717aa"
+    },
+    {
+      "$oid": "6351a94ce2388ca85d3717ac"
+    },
+    {
+      "$oid": "6351a94ce2388ca85d3717ae"
+    },
+    {
+      "$oid": "6351a94ce2388ca85d3717b0"
+    },
+    {
+      "$oid": "6351a94ce2388ca85d3717b2"
+    },
+    {
+      "$oid": "6351a94ce2388ca85d3717b4"
+    },
+    {
+      "$oid": "6351a94ce2388ca85d3717b6"
+    },
+    {
+      "$oid": "6351a94ce2388ca85d3717b8"
+    },
+    {
+      "$oid": "6351a94ce2388ca85d3717ba"
+    },
+    {
+      "$oid": "6351a94ce2388ca85d3717bc"
+    },
+    {
+      "$oid": "6351a94de2388ca85d3717be"
+    },
+    {
+      "$oid": "6351a94de2388ca85d3717c0"
+    },
+    {
+      "$oid": "6351a94de2388ca85d3717c2"
+    },
+    {
+      "$oid": "6351a94de2388ca85d3717c4"
+    },
+    {
+      "$oid": "6351a94de2388ca85d3717c6"
+    },
+    {
+      "$oid": "6351a94de2388ca85d3717c8"
+    },
+    {
+      "$oid": "6351a94de2388ca85d3717ca"
+    },
+    {
+      "$oid": "6351a94de2388ca85d3717cc"
+    },
+    {
+      "$oid": "6351a94de2388ca85d3717ce"
+    },
+    {
+      "$oid": "6351a94de2388ca85d3717d0"
+    },
+    {
+      "$oid": "6351a94de2388ca85d3717d2"
+    },
+    {
+      "$oid": "6351a94de2388ca85d3717d4"
+    },
+    {
+      "$oid": "6351a94de2388ca85d3717d6"
+    },
+    {
+      "$oid": "6351a94de2388ca85d3717d8"
+    },
+    {
+      "$oid": "6351a94de2388ca85d3717da"
+    },
+    {
+      "$oid": "6351a94de2388ca85d3717dc"
+    },
+    {
+      "$oid": "6351a94ee2388ca85d3717de"
+    },
+    {
+      "$oid": "6351a94ee2388ca85d3717e0"
+    },
+    {
+      "$oid": "6351a94ee2388ca85d3717e2"
+    },
+    {
+      "$oid": "6351a94ee2388ca85d3717e4"
+    },
+    {
+      "$oid": "6351a94ee2388ca85d3717e6"
+    },
+    {
+      "$oid": "6351a94ee2388ca85d3717e8"
+    },
+    {
+      "$oid": "6351a94ee2388ca85d3717ea"
+    },
+    {
+      "$oid": "6351a94ee2388ca85d3717ec"
+    },
+    {
+      "$oid": "6351a94ee2388ca85d3717ee"
+    },
+    {
+      "$oid": "6351a94ee2388ca85d3717f0"
+    },
+    {
+      "$oid": "6351a94ee2388ca85d3717f2"
+    },
+    {
+      "$oid": "6351a94ee2388ca85d3717f4"
+    },
+    {
+      "$oid": "6351a94ee2388ca85d3717f6"
+    },
+    {
+      "$oid": "6351a94ee2388ca85d3717f8"
+    },
+    {
+      "$oid": "6351a94ee2388ca85d3717fa"
+    },
+    {
+      "$oid": "6351a94ee2388ca85d3717fc"
+    },
+    {
+      "$oid": "6351a94fe2388ca85d3717fe"
+    },
+    {
+      "$oid": "6351a94fe2388ca85d371800"
+    },
+    {
+      "$oid": "6351a94fe2388ca85d371802"
+    },
+    {
+      "$oid": "6351a94fe2388ca85d371804"
+    },
+    {
+      "$oid": "6351a94fe2388ca85d371806"
+    },
+    {
+      "$oid": "6351a94fe2388ca85d371808"
+    },
+    {
+      "$oid": "6351a94fe2388ca85d37180a"
+    },
+    {
+      "$oid": "6351a94fe2388ca85d37180c"
+    },
+    {
+      "$oid": "6351a94fe2388ca85d37180e"
+    },
+    {
+      "$oid": "6351a94fe2388ca85d371810"
+    },
+    {
+      "$oid": "6351a94fe2388ca85d371812"
+    },
+    {
+      "$oid": "6351a94fe2388ca85d371814"
+    },
+    {
+      "$oid": "6351a94fe2388ca85d371816"
+    },
+    {
+      "$oid": "6351a94fe2388ca85d371818"
+    },
+    {
+      "$oid": "6351a94fe2388ca85d37181a"
+    },
+    {
+      "$oid": "6351a94fe2388ca85d37181c"
+    },
+    {
+      "$oid": "6351a950e2388ca85d37181e"
+    },
+    {
+      "$oid": "6351a950e2388ca85d371820"
+    },
+    {
+      "$oid": "6351a950e2388ca85d371822"
+    },
+    {
+      "$oid": "6351a950e2388ca85d371824"
+    },
+    {
+      "$oid": "6351a950e2388ca85d371826"
+    },
+    {
+      "$oid": "6351a950e2388ca85d371828"
+    },
+    {
+      "$oid": "6351a950e2388ca85d37182a"
+    },
+    {
+      "$oid": "6351a950e2388ca85d37182c"
+    },
+    {
+      "$oid": "6351a950e2388ca85d37182e"
+    },
+    {
+      "$oid": "6351a950e2388ca85d371830"
+    },
+    {
+      "$oid": "6351a950e2388ca85d371832"
+    },
+    {
+      "$oid": "6351a950e2388ca85d371834"
+    },
+    {
+      "$oid": "6351a950e2388ca85d371836"
+    },
+    {
+      "$oid": "6351a950e2388ca85d371838"
+    },
+    {
+      "$oid": "6351a950e2388ca85d37183a"
+    },
+    {
+      "$oid": "635ebb1a50403d5fed481760"
+    },
+    {
+      "$oid": "6361316b6be54bda52529c80"
+    },
+    {
+      "$oid": "63710e4a9169ba1127a68e5c"
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-08-31T19:33:15.742Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-26T10:20:35.203Z"
+  },
+  "cityPhotoAlt": "Нью-Йорк город, штат Нью-Йорк, США"
+},{
+  "_id": {
+    "$oid": "63106090c59d34230938bbb7"
+  },
+  "stateId": "63105a45c59d34230938bb8b",
+  "cityName": "Odesa",
+  "cityInternational": "Odesa",
+  "cityCode": "ODESA",
+  "cityPhotoURL": "https://res.cloudinary.com/your-price-booking/image/upload/v1678965218/Photos%20of%20locations/Odesa/odesa_vjpzjf.png",
+  "langCode": "EN",
+  "dbLangCode": "en",
+  "stateInternational": "Odesa Region",
+  "state": {
+    "$oid": "63105a45c59d34230938bb8b"
+  },
+  "districts": [
+    {
+      "$oid": "6311c42325f2989ff559ce01"
+    },
+    {
+      "$oid": "6311c46c25f2989ff559ce1f"
+    },
+    {
+      "$oid": "6311c48f25f2989ff559ce3d"
+    },
+    {
+      "$oid": "6311c4a025f2989ff559ce5b"
+    },
+    {
+      "$oid": "6311c50a25f2989ff559ce79"
+    },
+    {
+      "$oid": "633d72c2c99248ea78cbda6f"
+    },
+    {
+      "$oid": "633d72fac99248ea78cbda8d"
+    },
+    {
+      "$oid": "633d730fc99248ea78cbdaab"
+    },
+    {
+      "$oid": "633d7321c99248ea78cbdac9"
+    },
+    {
+      "$oid": "633d733ec99248ea78cbdae7"
+    },
+    {
+      "$oid": "633d7353c99248ea78cbdb05"
+    },
+    {
+      "$oid": "633d7366c99248ea78cbdb23"
+    },
+    {
+      "$oid": "633d7385c99248ea78cbdb41"
+    },
+    {
+      "$oid": "633d739ec99248ea78cbdb5f"
+    },
+    {
+      "$oid": "633d73b1c99248ea78cbdb7d"
+    },
+    {
+      "$oid": "633d73c8c99248ea78cbdb9b"
+    },
+    {
+      "$oid": "633d73ecc99248ea78cbdbb9"
+    },
+    {
+      "$oid": "633d740dc99248ea78cbdbd7"
+    },
+    {
+      "$oid": "633d741fc99248ea78cbdbf5"
+    },
+    {
+      "$oid": "633d742ec99248ea78cbdc13"
+    },
+    {
+      "$oid": "633d7445c99248ea78cbdc31"
+    },
+    {
+      "$oid": "633d74b2c99248ea78cbdc51"
+    },
+    {
+      "$oid": "633d74cbc99248ea78cbdc6f"
+    },
+    {
+      "$oid": "633d74e0c99248ea78cbdc8d"
+    },
+    {
+      "$oid": "633d74fcc99248ea78cbdcab"
+    },
+    {
+      "$oid": "633d7552c99248ea78cbdccf"
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-09-01T07:34:40.463Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-16T12:23:29.782Z"
+  },
+  "cityPhotoAlt": "Odesa, Odesa Region, Ukraine"
+},{
+  "_id": {
+    "$oid": "63106090c59d34230938bbbb"
+  },
+  "stateId": "63105a45c59d34230938bb8f",
+  "cityName": "Одеса",
+  "cityInternational": "Odesa",
+  "cityCode": "ODESA",
+  "cityPhotoURL": "https://res.cloudinary.com/your-price-booking/image/upload/v1678965218/Photos%20of%20locations/Odesa/odesa_vjpzjf.png",
+  "langCode": "UA",
+  "dbLangCode": "uk",
+  "stateInternational": "Odesa Region",
+  "state": {
+    "$oid": "63105a45c59d34230938bb8f"
+  },
+  "districts": [
+    {
+      "$oid": "6311c42425f2989ff559ce05"
+    },
+    {
+      "$oid": "6311c46c25f2989ff559ce23"
+    },
+    {
+      "$oid": "6311c49025f2989ff559ce41"
+    },
+    {
+      "$oid": "6311c4a025f2989ff559ce5f"
+    },
+    {
+      "$oid": "6311c50a25f2989ff559ce7d"
+    },
+    {
+      "$oid": "633d72c2c99248ea78cbda73"
+    },
+    {
+      "$oid": "633d72fac99248ea78cbda91"
+    },
+    {
+      "$oid": "633d730fc99248ea78cbdaaf"
+    },
+    {
+      "$oid": "633d7321c99248ea78cbdacd"
+    },
+    {
+      "$oid": "633d733ec99248ea78cbdaeb"
+    },
+    {
+      "$oid": "633d7353c99248ea78cbdb09"
+    },
+    {
+      "$oid": "633d7366c99248ea78cbdb27"
+    },
+    {
+      "$oid": "633d7385c99248ea78cbdb45"
+    },
+    {
+      "$oid": "633d739ec99248ea78cbdb63"
+    },
+    {
+      "$oid": "633d73b2c99248ea78cbdb81"
+    },
+    {
+      "$oid": "633d73c8c99248ea78cbdb9f"
+    },
+    {
+      "$oid": "633d73ecc99248ea78cbdbbd"
+    },
+    {
+      "$oid": "633d740dc99248ea78cbdbdb"
+    },
+    {
+      "$oid": "633d741fc99248ea78cbdbf9"
+    },
+    {
+      "$oid": "633d742ec99248ea78cbdc17"
+    },
+    {
+      "$oid": "633d7445c99248ea78cbdc35"
+    },
+    {
+      "$oid": "633d74b2c99248ea78cbdc55"
+    },
+    {
+      "$oid": "633d74cbc99248ea78cbdc73"
+    },
+    {
+      "$oid": "633d74e1c99248ea78cbdc91"
+    },
+    {
+      "$oid": "633d74fcc99248ea78cbdcaf"
+    },
+    {
+      "$oid": "633d7552c99248ea78cbdcd3"
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-09-01T07:34:40.571Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-16T11:13:52.757Z"
+  },
+  "cityPhotoAlt": "Одеса, Одеська область, Україна"
+},{
+  "_id": {
+    "$oid": "63106090c59d34230938bbbd"
+  },
+  "stateId": "63105a45c59d34230938bb91",
+  "cityName": "Odessa",
+  "cityInternational": "Odesa",
+  "cityCode": "ODESA",
+  "cityPhotoURL": "https://res.cloudinary.com/your-price-booking/image/upload/v1678965218/Photos%20of%20locations/Odesa/odesa_vjpzjf.png",
+  "langCode": "PL",
+  "dbLangCode": "pl",
+  "stateInternational": "Odesa Region",
+  "state": {
+    "$oid": "63105a45c59d34230938bb91"
+  },
+  "districts": [
+    {
+      "$oid": "6311c42425f2989ff559ce07"
+    },
+    {
+      "$oid": "6311c46c25f2989ff559ce25"
+    },
+    {
+      "$oid": "6311c49025f2989ff559ce43"
+    },
+    {
+      "$oid": "6311c4a025f2989ff559ce61"
+    },
+    {
+      "$oid": "6311c50a25f2989ff559ce7f"
+    },
+    {
+      "$oid": "633d72c2c99248ea78cbda75"
+    },
+    {
+      "$oid": "633d72fac99248ea78cbda93"
+    },
+    {
+      "$oid": "633d730fc99248ea78cbdab1"
+    },
+    {
+      "$oid": "633d7321c99248ea78cbdacf"
+    },
+    {
+      "$oid": "633d733ec99248ea78cbdaed"
+    },
+    {
+      "$oid": "633d7353c99248ea78cbdb0b"
+    },
+    {
+      "$oid": "633d7366c99248ea78cbdb29"
+    },
+    {
+      "$oid": "633d7385c99248ea78cbdb47"
+    },
+    {
+      "$oid": "633d739ec99248ea78cbdb65"
+    },
+    {
+      "$oid": "633d73b2c99248ea78cbdb83"
+    },
+    {
+      "$oid": "633d73c8c99248ea78cbdba1"
+    },
+    {
+      "$oid": "633d73ecc99248ea78cbdbbf"
+    },
+    {
+      "$oid": "633d740dc99248ea78cbdbdd"
+    },
+    {
+      "$oid": "633d741fc99248ea78cbdbfb"
+    },
+    {
+      "$oid": "633d742ec99248ea78cbdc19"
+    },
+    {
+      "$oid": "633d7445c99248ea78cbdc37"
+    },
+    {
+      "$oid": "633d74b2c99248ea78cbdc57"
+    },
+    {
+      "$oid": "633d74cbc99248ea78cbdc75"
+    },
+    {
+      "$oid": "633d74e1c99248ea78cbdc93"
+    },
+    {
+      "$oid": "633d74fcc99248ea78cbdcb1"
+    },
+    {
+      "$oid": "633d7552c99248ea78cbdcd5"
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-09-01T07:34:40.615Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-17T07:29:37.520Z"
+  },
+  "cityPhotoAlt": "Odessa, Obwód odeski, Ukraine"
+},{
+  "_id": {
+    "$oid": "63106090c59d34230938bbc1"
+  },
+  "stateId": "63105a45c59d34230938bb95",
+  "cityName": "Одесса",
+  "cityInternational": "Odesa",
+  "cityCode": "ODESA",
+  "cityPhotoURL": "https://res.cloudinary.com/your-price-booking/image/upload/v1678965218/Photos%20of%20locations/Odesa/odesa_vjpzjf.png",
+  "langCode": "RU",
+  "dbLangCode": "ru",
+  "stateInternational": "Odesa Region",
+  "state": {
+    "$oid": "63105a45c59d34230938bb95"
+  },
+  "districts": [
+    {
+      "$oid": "6311c42425f2989ff559ce0b"
+    },
+    {
+      "$oid": "6311c46c25f2989ff559ce29"
+    },
+    {
+      "$oid": "6311c49025f2989ff559ce47"
+    },
+    {
+      "$oid": "6311c4a025f2989ff559ce65"
+    },
+    {
+      "$oid": "6311c50a25f2989ff559ce83"
+    },
+    {
+      "$oid": "633d72c2c99248ea78cbda79"
+    },
+    {
+      "$oid": "633d72fac99248ea78cbda97"
+    },
+    {
+      "$oid": "633d730fc99248ea78cbdab5"
+    },
+    {
+      "$oid": "633d7321c99248ea78cbdad3"
+    },
+    {
+      "$oid": "633d733ec99248ea78cbdaf1"
+    },
+    {
+      "$oid": "633d7353c99248ea78cbdb0f"
+    },
+    {
+      "$oid": "633d7366c99248ea78cbdb2d"
+    },
+    {
+      "$oid": "633d7385c99248ea78cbdb4b"
+    },
+    {
+      "$oid": "633d739ec99248ea78cbdb69"
+    },
+    {
+      "$oid": "633d73b2c99248ea78cbdb87"
+    },
+    {
+      "$oid": "633d73c9c99248ea78cbdba5"
+    },
+    {
+      "$oid": "633d73ecc99248ea78cbdbc3"
+    },
+    {
+      "$oid": "633d740dc99248ea78cbdbe1"
+    },
+    {
+      "$oid": "633d741fc99248ea78cbdbff"
+    },
+    {
+      "$oid": "633d742ec99248ea78cbdc1d"
+    },
+    {
+      "$oid": "633d7445c99248ea78cbdc3b"
+    },
+    {
+      "$oid": "633d74b2c99248ea78cbdc5b"
+    },
+    {
+      "$oid": "633d74cbc99248ea78cbdc79"
+    },
+    {
+      "$oid": "633d74e1c99248ea78cbdc97"
+    },
+    {
+      "$oid": "633d74fcc99248ea78cbdcb5"
+    },
+    {
+      "$oid": "633d7552c99248ea78cbdcd9"
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-09-01T07:34:40.659Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-17T07:27:22.477Z"
+  },
+  "cityPhotoAlt": "Одесса, Одесска область, Украина"
+}]

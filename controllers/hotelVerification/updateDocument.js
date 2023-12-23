@@ -3,11 +3,8 @@ const path = require("path");
 const fs = require("fs").promises;
 
 const fileDir = path.join(__dirname, "../../", "verification");
-// const tempFolder = path.join(__dirname, "../../", "verification", "temp");
 
 const updateDocument = async (req, res) => {
-  console.log("start");
-  //   const { _id } = req.hotelier; // get hoteliers id
   const { hotelsId } = req.body; // get hotels id
   const { video, documents, selfi } = req.files; // Destructuring files from uploader
   const files = [...video, ...documents, ...selfi]; //craete array of files
@@ -87,8 +84,8 @@ const updateDocument = async (req, res) => {
     {
       $push: {
         video: { $each: [...videos] },
-        $push: { documentes: { $each: [...documentes] } },
-        $push: { selfie: { $each: [...selfies] } },
+        documents: { $each: [...documentes] },
+        selfie: { $each: [...selfies] },
       },
     },
     {
@@ -97,7 +94,7 @@ const updateDocument = async (req, res) => {
   );
 
   // if wasn't updated return response
-  if (!updateDocument) {
+  if (!result) {
     return res.json({
       code: 404,
       status: "error",
@@ -107,8 +104,8 @@ const updateDocument = async (req, res) => {
 
   res.json({
     code: 201,
-    message: "rout work",
-    // result,
+    status: "success",
+    result,
   });
 };
 
