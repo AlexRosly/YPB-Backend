@@ -7,7 +7,7 @@ const getDocumentForHotel = async (req, res) => {
     populate: { path: "owner" },
   });
 
-  if (!result) {
+  if (result.length === 0) {
     return res
       .json({
         code: 404,
