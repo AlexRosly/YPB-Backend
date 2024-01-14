@@ -12,11 +12,13 @@ const getAllHoteilerPages = async ({ query: { language } }, res) => {
       const getAllUkPages = await UaCatalogForHotelier.find({ language });
       if (!getAllUkPages) {
         return res
-          .status(406)
+          .status(200)
           .json({
-            status: "error",
-            message: `page not found`,
-            code: 406,
+            // status: "error",
+            // message: `page not found`,
+            // code: 406,
+            status: "success",
+            pages: "false",
           })
           .end();
       }
@@ -27,7 +29,8 @@ const getAllHoteilerPages = async ({ query: { language } }, res) => {
           .json({
             status: "success",
             code: 200,
-            getAllPages,
+            pages: "true",
+            // getAllPages,
           })
           .end();
       break;
@@ -37,11 +40,13 @@ const getAllHoteilerPages = async ({ query: { language } }, res) => {
 
       if (!getAllRuPages) {
         return res
-          .status(406)
+          .status(200)
           .json({
-            status: "error",
-            message: `page not found`,
-            code: 406,
+            // status: "error",
+            // message: `page not found`,
+            // code: 406,
+            status: "success",
+            pages: "false",
           })
           .end();
       }
@@ -52,7 +57,8 @@ const getAllHoteilerPages = async ({ query: { language } }, res) => {
           .json({
             status: "success",
             code: 200,
-            getAllPages,
+            pages: "true",
+            // getAllPages,
           })
           .end();
 
@@ -63,11 +69,13 @@ const getAllHoteilerPages = async ({ query: { language } }, res) => {
 
       if (!getAllPlPages) {
         return res
-          .status(406)
+          .status(200)
           .json({
-            status: "error",
-            message: `page not found`,
-            code: 406,
+            // status: "error",
+            // message: `page not found`,
+            // code: 406,
+            status: "success",
+            pages: "false",
           })
           .end();
       }
@@ -78,7 +86,8 @@ const getAllHoteilerPages = async ({ query: { language } }, res) => {
           .json({
             status: "success",
             code: 200,
-            getAllPages,
+            pages: "true",
+            // getAllPages,
           })
           .end();
 
@@ -88,11 +97,13 @@ const getAllHoteilerPages = async ({ query: { language } }, res) => {
 
       if (!getAllEnPages) {
         return res
-          .status(406)
+          .status(200)
           .json({
-            status: "error",
-            message: `page not found`,
-            code: 406,
+            // status: "error",
+            // message: `page not found`,
+            // code: 406,
+            status: "success",
+            pages: "false",
           })
           .end();
       }
@@ -103,7 +114,8 @@ const getAllHoteilerPages = async ({ query: { language } }, res) => {
           .json({
             status: "success",
             code: 200,
-            getAllPages,
+            pages: "true",
+            // getAllPages,
           })
           .end();
 

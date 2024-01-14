@@ -2,40 +2,59 @@ const e = require("cors");
 const { Country } = require("../../models");
 
 const test = async (req, res) => {
-  const { dbLangCode = "en", country } = req.query;
-  const result = await Country.find({ dbLangCode, country }).populate({
-    path: "states",
-    populate: { path: "cities", populate: { path: "districts" } },
-  });
-  if (!result) {
-    return res.json({
-      status: "error",
-    });
-  }
-  // const states = result[0].states;
-  // console.log({ states });
-  // for (const iterator of result) {
-  //   console.log("res", result.states);
+  // console.log({ req });
+  // console.log("ID", req.sessionID);
+  // console.log("remoteIP", req._remoteAddress);
+
+  // const ip_1 =
+  //   req.headers["x-forwarded-for"] ||
+  //   req.connection.remoteAddress ||
+  //   req.socket.remoteAddress ||
+  //   req.connection.socket.remoteAddress;
+  // console.log({ ip_1 });
+
+  let ip_adress =
+    (req.headers["x-forwarded-for"] || "").split(",").pop() ||
+    req.headers["x-real-ip"] ||
+    req.connection.remoteAddress ||
+    req.socket.remoteAddress ||
+    req.connection.socket.remoteAddress;
+  console.log({ ip_adress });
+
+  // const { dbLangCode = "en", country } = req.query;
+  // const result = await Country.find({ dbLangCode, country }).populate({
+  //   path: "states",
+  //   populate: { path: "cities", populate: { path: "districts" } },
+  // });
+  // if (!result) {
+  //   return res.json({
+  //     status: "error",
+  //   });
   // }
-  let state = [];
-  let city = [];
-  let district = [];
-  result.forEach((element) => {
-    // console.log("res", element.states);
-    state.push(...element.states);
-  });
-  // result.flatMap((element) => state.push(element.states));
-  // console.log({ state });
-  state.forEach((element) => {
-    console.log("res", element.cities);
+  // // const states = result[0].states;
+  // // console.log({ states });
+  // // for (const iterator of result) {
+  // //   console.log("res", result.states);
+  // // }
+  // let state = [];
+  // let city = [];
+  // let district = [];
+  // result.forEach((element) => {
+  //   // console.log("res", element.states);
+  //   state.push(...element.states);
+  // });
+  // // result.flatMap((element) => state.push(element.states));
+  // // console.log({ state });
+  // state.forEach((element) => {
+  //   console.log("res", element.cities);
 
-    city.push(...element.cities);
-  });
-  console.log({ city });
+  //   city.push(...element.cities);
+  // });
+  // console.log({ city });
 
-  city.forEach((element) => {
-    district.push(element.districts);
-  });
+  // city.forEach((element) => {
+  //   district.push(element.districts);
+  // });
   // const cities = result.states.cities;
   // console.log({ cities });
   // const district = result.states.cities.districts;
@@ -44,10 +63,10 @@ const test = async (req, res) => {
   res.json({
     code: 200,
     mess: "ok",
-    result,
-    state,
-    city,
-    district,
+    // result,
+    // state,
+    // city,
+    // district,
   });
 };
 module.exports = test;
