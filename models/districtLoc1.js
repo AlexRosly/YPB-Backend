@@ -43,7 +43,7 @@ const districtLoc1Schema = Schema(
     dbLangCode: {
       type: String,
     },
-    page: { type: String, default: false },
+    page: { type: Boolean, default: false },
   },
   { versionKey: false, timestamps: true }
 );
