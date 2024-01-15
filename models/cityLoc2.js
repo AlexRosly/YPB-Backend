@@ -51,7 +51,7 @@ const cityLoc2Schema = Schema(
         ref: "districtLoc1",
       },
     ],
-    page: { type: String, default: false },
+    page: { type: Boolean, default: false },
   },
   { versionKey: false, timestamps: true }
 );
