@@ -3,6 +3,8 @@ const {
   RuCatalogForHotelier,
   PlCatalogForHotelier,
   EnCatalogForHotelier,
+  City,
+  District,
 } = require("../../models");
 const { createPageObject } = require("../../utils");
 const standardInEnglish = require("./standardInEnglish");
@@ -104,6 +106,20 @@ const createNewPages = async (req, res) => {
         }
       }
 
+      if (district) {
+        await District.findByIdAndUpdate(
+          { _id: idLocation },
+          { page: true },
+          { new: true }
+        );
+      } else {
+        await City.findByIdAndUpdate(
+          { _id: idLocation },
+          { page: true },
+          { new: true }
+        );
+      }
+
       const uaPages = await UaCatalogForHotelier.find({
         idLocation,
       });
@@ -184,6 +200,20 @@ const createNewPages = async (req, res) => {
             });
           }
         }
+      }
+
+      if (district) {
+        await District.findByIdAndUpdate(
+          { _id: idLocation },
+          { page: true },
+          { new: true }
+        );
+      } else {
+        await City.findByIdAndUpdate(
+          { _id: idLocation },
+          { page: true },
+          { new: true }
+        );
       }
 
       const ruPages = await RuCatalogForHotelier.find({
@@ -268,6 +298,20 @@ const createNewPages = async (req, res) => {
         }
       }
 
+      if (district) {
+        await District.findByIdAndUpdate(
+          { _id: idLocation },
+          { page: true },
+          { new: true }
+        );
+      } else {
+        await City.findByIdAndUpdate(
+          { _id: idLocation },
+          { page: true },
+          { new: true }
+        );
+      }
+
       const plPages = await PlCatalogForHotelier.find({
         idLocation,
       });
@@ -347,6 +391,20 @@ const createNewPages = async (req, res) => {
             });
           }
         }
+      }
+
+      if (district) {
+        await District.findByIdAndUpdate(
+          { _id: idLocation },
+          { page: true },
+          { new: true }
+        );
+      } else {
+        await City.findByIdAndUpdate(
+          { _id: idLocation },
+          { page: true },
+          { new: true }
+        );
       }
 
       const enPages = await EnCatalogForHotelier.find({
