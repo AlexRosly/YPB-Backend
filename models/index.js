@@ -24,6 +24,8 @@ const { Currency } = require("./currency");
 const { BookingOptionHsBed } = require("./bookingOptionHsBed");
 const { BookingOptionBed } = require("./bookingOptionBed");
 const { Verification } = require("./hotelsVerification");
+const { VerifierProfile } = require("./verifierProfile");
+const { VerifyObjectHistory } = require("./verifyObjectHistory");
 
 module.exports = {
   Language,
@@ -52,4 +54,6 @@ module.exports = {
   BookingOptionHsBed,
   BookingOptionBed,
   Verification,
+  VerifierProfile,
+  VerifyObjectHistory,
 };
