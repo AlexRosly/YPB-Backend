@@ -1,0 +1,305 @@
+[{
+  "_id": {
+    "$oid": "6335e6147b5bc0d47c2aaf50"
+  },
+  "langCode": "ru",
+  "payments": [
+    {
+      "id": "1",
+      "type": "Оплата на месте наличными",
+      "_id": {
+        "$oid": "6335e6147b5bc0d47c2aaf51"
+      }
+    },
+    {
+      "id": "2",
+      "type": "Оплата на месте картой Visa",
+      "_id": {
+        "$oid": "6335e6147b5bc0d47c2aaf52"
+      }
+    },
+    {
+      "id": "3",
+      "type": "Оплата на месте картой Mastercard",
+      "_id": {
+        "$oid": "6335e6147b5bc0d47c2aaf53"
+      }
+    },
+    {
+      "id": "4",
+      "type": "Оплата на месте картой UnionPay",
+      "_id": {
+        "$oid": "6335e6147b5bc0d47c2aaf54"
+      }
+    },
+    {
+      "id": "5",
+      "type": "Оплата на месте картой JCB",
+      "_id": {
+        "$oid": "6335e6147b5bc0d47c2aaf55"
+      }
+    },
+    {
+      "id": "6",
+      "type": "Оплата на месте картой American Express",
+      "_id": {
+        "$oid": "6335e6147b5bc0d47c2aaf56"
+      }
+    },
+    {
+      "id": "7",
+      "type": "Оплата картой онлайн",
+      "_id": {
+        "$oid": "6335e6147b5bc0d47c2aaf57"
+      }
+    },
+    {
+      "id": "8",
+      "type": "PayPal",
+      "_id": {
+        "$oid": "6335e6147b5bc0d47c2aaf58"
+      }
+    },
+    {
+      "id": "9",
+      "type": "Bitcoin",
+      "_id": {
+        "$oid": "6335e6147b5bc0d47c2aaf59"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-09-29T18:38:12.349Z"
+  },
+  "updatedAt": {
+    "$date": "2022-09-29T18:38:12.349Z"
+  }
+},{
+  "_id": {
+    "$oid": "6335e811387ca8d9aed72585"
+  },
+  "langCode": "uk",
+  "payments": [
+    {
+      "id": "1",
+      "type": "Оплата на місці готівкою",
+      "_id": {
+        "$oid": "6335e811387ca8d9aed72586"
+      }
+    },
+    {
+      "id": "2",
+      "type": "Оплата на місці картою Visa",
+      "_id": {
+        "$oid": "6335e811387ca8d9aed72587"
+      }
+    },
+    {
+      "id": "3",
+      "type": "Оплата на місці картою Mastercard",
+      "_id": {
+        "$oid": "6335e811387ca8d9aed72588"
+      }
+    },
+    {
+      "id": "4",
+      "type": "Оплата на місці картою UnionPay",
+      "_id": {
+        "$oid": "6335e811387ca8d9aed72589"
+      }
+    },
+    {
+      "id": "5",
+      "type": "Оплата на місці картою JCB",
+      "_id": {
+        "$oid": "6335e811387ca8d9aed7258a"
+      }
+    },
+    {
+      "id": "6",
+      "type": "Оплата на місці картою American Express",
+      "_id": {
+        "$oid": "6335e811387ca8d9aed7258b"
+      }
+    },
+    {
+      "id": "7",
+      "type": "Оплата картою онлайн",
+      "_id": {
+        "$oid": "6335e811387ca8d9aed7258c"
+      }
+    },
+    {
+      "id": "8",
+      "type": "PayPal",
+      "_id": {
+        "$oid": "6335e811387ca8d9aed7258d"
+      }
+    },
+    {
+      "id": "9",
+      "type": "Bitcoin",
+      "_id": {
+        "$oid": "6335e811387ca8d9aed7258e"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-09-29T18:46:41.419Z"
+  },
+  "updatedAt": {
+    "$date": "2022-09-29T18:46:41.419Z"
+  }
+},{
+  "_id": {
+    "$oid": "6335e88b53ac782d44a6f566"
+  },
+  "langCode": "en",
+  "payments": [
+    {
+      "id": "1",
+      "type": "Payment on the spot in cash",
+      "_id": {
+        "$oid": "6335e88b53ac782d44a6f567"
+      }
+    },
+    {
+      "id": "2",
+      "type": "Payment on the spot with a Visa card",
+      "_id": {
+        "$oid": "6335e88b53ac782d44a6f568"
+      }
+    },
+    {
+      "id": "3",
+      "type": "Pay on the spot with Mastercard",
+      "_id": {
+        "$oid": "6335e88b53ac782d44a6f569"
+      }
+    },
+    {
+      "id": "4",
+      "type": "Payment on the spot with UnionPay card",
+      "_id": {
+        "$oid": "6335e88b53ac782d44a6f56a"
+      }
+    },
+    {
+      "id": "5",
+      "type": "Pay on the spot with JCB card",
+      "_id": {
+        "$oid": "6335e88b53ac782d44a6f56b"
+      }
+    },
+    {
+      "id": "6",
+      "type": "Pay on the spot with American Express",
+      "_id": {
+        "$oid": "6335e88b53ac782d44a6f56c"
+      }
+    },
+    {
+      "id": "7",
+      "type": "Pay by card online",
+      "_id": {
+        "$oid": "6335e88b53ac782d44a6f56d"
+      }
+    },
+    {
+      "id": "8",
+      "type": "PayPal",
+      "_id": {
+        "$oid": "6335e88b53ac782d44a6f56e"
+      }
+    },
+    {
+      "id": "9",
+      "type": "Bitcoin",
+      "_id": {
+        "$oid": "6335e88b53ac782d44a6f56f"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-09-29T18:48:43.589Z"
+  },
+  "updatedAt": {
+    "$date": "2022-09-29T18:48:43.589Z"
+  }
+},{
+  "_id": {
+    "$oid": "6335e8f9df5f2aadd440d4b3"
+  },
+  "langCode": "pl",
+  "payments": [
+    {
+      "id": "1",
+      "type": "Płatność na miejscu gotówką",
+      "_id": {
+        "$oid": "6335e8f9df5f2aadd440d4b4"
+      }
+    },
+    {
+      "id": "2",
+      "type": "Płatność na miejscu kartą Visa",
+      "_id": {
+        "$oid": "6335e8f9df5f2aadd440d4b5"
+      }
+    },
+    {
+      "id": "3",
+      "type": "Płać na miejscu kartą Mastercard",
+      "_id": {
+        "$oid": "6335e8f9df5f2aadd440d4b6"
+      }
+    },
+    {
+      "id": "4",
+      "type": "Płatność na miejscu kartą UnionPay",
+      "_id": {
+        "$oid": "6335e8f9df5f2aadd440d4b7"
+      }
+    },
+    {
+      "id": "5",
+      "type": "Płać na miejscu kartą JCB",
+      "_id": {
+        "$oid": "6335e8f9df5f2aadd440d4b8"
+      }
+    },
+    {
+      "id": "6",
+      "type": "Płać na miejscu z American Express",
+      "_id": {
+        "$oid": "6335e8f9df5f2aadd440d4b9"
+      }
+    },
+    {
+      "id": "7",
+      "type": "Zapłać kartą online",
+      "_id": {
+        "$oid": "6335e8f9df5f2aadd440d4ba"
+      }
+    },
+    {
+      "id": "8",
+      "type": "PayPal",
+      "_id": {
+        "$oid": "6335e8f9df5f2aadd440d4bb"
+      }
+    },
+    {
+      "id": "9",
+      "type": "Bitcoin",
+      "_id": {
+        "$oid": "6335e8f9df5f2aadd440d4bc"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-09-29T18:50:33.959Z"
+  },
+  "updatedAt": {
+    "$date": "2022-09-29T18:50:33.959Z"
+  }
+}]

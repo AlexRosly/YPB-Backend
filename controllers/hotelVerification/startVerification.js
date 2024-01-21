@@ -15,8 +15,6 @@ const startVerification = async (req, res) => {
   let videos = []; //create array for video link
   let documentes = []; //create array for documents link
   let selfies = []; //create array for selfi link
-  console.log({ _id });
-  console.log({ hotelsId });
 
   //create new folder with `${folderName}` in Verification folder
   try {
