@@ -8,18 +8,22 @@ const tempFolder = path.join(__dirname, "../../", "verifierProfiles", "temp");
 const createVerifierProfile = async (req, res) => {
   // get verifier id
   const _id = req.admin;
-  const { id } = req.superAdmin;
+  const id = req.superAdmin;
 
   const { email } = req.body;
   const files = req.files;
 
-  const profileId = _id || id;
-  const folderName = profileId; // will appoint name for new folder with hotels id
-  let photos = []; //create array for documents link
+  let verifierId;
 
-  //   console.log({ profileId });
-  //   console.log({ files });
-  //   console.log({ folderName });
+  //get id for verifierId (admin or super admin)
+  if (_id) {
+    verifierId = _id._id;
+  } else {
+    verifierId = id._id;
+  }
+
+  const folderName = verifierId; // will appoint name for new folder with hotels id
+  let photos = []; //create array for documents link
 
   //create new folder with `${folderName}` in Verification folder
   try {
@@ -45,16 +49,16 @@ const createVerifierProfile = async (req, res) => {
     return res
       .json({
         code: 404,
-        message: `DB has document for hotel with id ${profileId}`,
+        message: `DB has document for verifier with id ${verifierId}`,
       })
       .end();
   }
+  const date = Date.now(); // add date to files name
   //remove files from temp folder to new folder with name `${folderName}`
   //and push in appropriate array
   for (const file of files) {
+    const { path: verifierTempFilePath, originalname } = file;
     try {
-      const { path: verifierTempFilePath, originalname } = file;
-      console.log({ verifierTempFilePath });
       const resultUpload = path.join(
         fileDir,
         `${folderName}`,
@@ -62,14 +66,13 @@ const createVerifierProfile = async (req, res) => {
       );
       const photoUrl = path.join(`${folderName}`, `${date}-${originalname}`);
       photos.push(photoUrl);
-      console.log("work");
       await fs.rename(verifierTempFilePath, resultUpload);
     } catch (error) {
       await fs.unlink(verifierTempFilePath);
     }
   }
   //add info to DB
-  const result = await VerifierProfile.create({ profileId, email, photos });
+  const result = await VerifierProfile.create({ verifierId, email, photos });
   //if DB don't create document, delete all files from server
   if (!result) {
     await fs.rmdir(
@@ -80,18 +83,23 @@ const createVerifierProfile = async (req, res) => {
       }
     );
 
-    return res.json({
-      status: "error",
-      code: 404,
-      message: "Docments, video and selfie wasn't add to DB. Try again ",
-    });
+    return res
+      .json({
+        status: "error",
+        code: 404,
+        message: "Docments, video and selfie wasn't add to DB. Try again ",
+      })
+      .end();
   }
 
-  res.status(201).json({
-    status: "success",
-    code: 201,
-    result,
-  });
+  res
+    .status(201)
+    .json({
+      status: "success",
+      code: 201,
+      result,
+    })
+    .end();
 };
 
 module.exports = createVerifierProfile;

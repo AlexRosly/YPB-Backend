@@ -1,0 +1,1850 @@
+[{
+  "_id": {
+    "$oid": "635ed02e65fd13e1dcccb37a"
+  },
+  "typeOfObject": "hotels",
+  "roomServices": [],
+  "animals": [],
+  "description": "544444",
+  "uniqueNumber": "111555",
+  "totalSquiere": 111,
+  "smoking": true,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/mkxizp1at1qwdxqpg97f",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1667158061/bookingOptionHotel/mkxizp1at1qwdxqpg97f.jpg",
+      "_id": {
+        "$oid": "635ed02e65fd13e1dcccb37b"
+      }
+    },
+    {
+      "id": "bookingOptionHotel/roaisbufv6hzcjkulizw",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1667158062/bookingOptionHotel/roaisbufv6hzcjkulizw.jpg",
+      "_id": {
+        "$oid": "635ed02e65fd13e1dcccb37c"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-10-30T19:27:42.779Z"
+  },
+  "updatedAt": {
+    "$date": "2022-10-30T19:27:42.779Z"
+  }
+},{
+  "_id": {
+    "$oid": "635ed08265fd13e1dcccb37e"
+  },
+  "typeOfObject": "hotels",
+  "roomServices": [],
+  "animals": [],
+  "description": "544444",
+  "uniqueNumber": "111555",
+  "totalSquiere": 111,
+  "smoking": true,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/milgjpmajkfocxkhqfmd",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1667158146/bookingOptionHotel/milgjpmajkfocxkhqfmd.png",
+      "_id": {
+        "$oid": "635ed08265fd13e1dcccb37f"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-10-30T19:29:06.124Z"
+  },
+  "updatedAt": {
+    "$date": "2022-10-30T19:29:06.124Z"
+  }
+},{
+  "_id": {
+    "$oid": "63616f51e6066038f9cf20f0"
+  },
+  "typeOfObject": "hotels",
+  "roomServices": [],
+  "animals": [],
+  "description": "544444",
+  "uniqueNumber": "111555",
+  "totalSquiere": 111,
+  "smoking": true,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/dcezhkm5vhtnyev9xpt8",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1667329873/bookingOptionHotel/dcezhkm5vhtnyev9xpt8.png",
+      "_id": {
+        "$oid": "63616f51e6066038f9cf20f1"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-11-01T19:11:13.527Z"
+  },
+  "updatedAt": {
+    "$date": "2022-11-01T19:11:13.527Z"
+  }
+},{
+  "_id": {
+    "$oid": "63616fcbe6066038f9cf20f3"
+  },
+  "typeOfObject": "hotels",
+  "roomServices": [],
+  "animals": [],
+  "description": "544444",
+  "uniqueNumber": "111555",
+  "totalSquiere": 111,
+  "smoking": true,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/rmjzye0vz70ggggmjyrl",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1667329993/bookingOptionHotel/rmjzye0vz70ggggmjyrl.png",
+      "_id": {
+        "$oid": "63616fcbe6066038f9cf20f4"
+      }
+    },
+    {
+      "id": "bookingOptionHotel/mg1jc7zocpjqg1avmasu",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1667329994/bookingOptionHotel/mg1jc7zocpjqg1avmasu.png",
+      "_id": {
+        "$oid": "63616fcbe6066038f9cf20f5"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-11-01T19:13:15.236Z"
+  },
+  "updatedAt": {
+    "$date": "2022-11-01T19:13:15.236Z"
+  }
+},{
+  "_id": {
+    "$oid": "636c067b76c70a8119465998"
+  },
+  "typeOfObject": "hotels",
+  "roomServices": [],
+  "animals": [],
+  "description": "544444",
+  "uniqueNumber": "111555",
+  "totalSquiere": 111,
+  "smoking": true,
+  "photos": [],
+  "createdAt": {
+    "$date": "2022-11-09T19:58:51.750Z"
+  },
+  "updatedAt": {
+    "$date": "2022-11-09T19:58:51.750Z"
+  }
+},{
+  "_id": {
+    "$oid": "636d5aa5e6c4ed63543c8a48"
+  },
+  "type": "hotel",
+  "bedrooms": 1,
+  "detailedBedrooms": {
+    "firstBedroom": {
+      "doubleBed": 1,
+      "singleBed": 1
+    }
+  },
+  "roomServices": [
+    "KLLLL",
+    "kkk"
+  ],
+  "animals": [
+    "cat",
+    "dog"
+  ],
+  "description": "kmlmlm",
+  "uniqueNumber": "kkoko",
+  "totalSquare": 111,
+  "smoking": true,
+  "photos": [],
+  "createdAt": {
+    "$date": "2022-11-10T20:10:13.287Z"
+  },
+  "updatedAt": {
+    "$date": "2022-11-10T20:10:13.287Z"
+  }
+},{
+  "_id": {
+    "$oid": "636d5ce527fdd822fb387d75"
+  },
+  "type": "hotels",
+  "bedrooms": 1,
+  "roomServices": [],
+  "animals": [],
+  "description": "544444",
+  "uniqueNumber": "111555",
+  "totalSquare": 111,
+  "smoking": true,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/xoburbneaqspq5sptwdt",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1668111587/bookingOptionHotel/xoburbneaqspq5sptwdt.png",
+      "_id": {
+        "$oid": "636d5ce527fdd822fb387d76"
+      }
+    },
+    {
+      "id": "bookingOptionHotel/gwja0c2uve8x46mqebhm",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1668111589/bookingOptionHotel/gwja0c2uve8x46mqebhm.png",
+      "_id": {
+        "$oid": "636d5ce527fdd822fb387d77"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-11-10T20:19:49.517Z"
+  },
+  "updatedAt": {
+    "$date": "2022-11-10T20:19:49.517Z"
+  }
+},{
+  "_id": {
+    "$oid": "636d5dc080b38464836dcd84"
+  },
+  "type": "hotels",
+  "bedrooms": 1,
+  "roomServices": [],
+  "animals": [],
+  "description": "544444",
+  "uniqueNumber": "111555",
+  "totalSquare": 111,
+  "smoking": true,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/ylecdemdmnyz5wkkfvyq",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1668111807/bookingOptionHotel/ylecdemdmnyz5wkkfvyq.png",
+      "_id": {
+        "$oid": "636d5dc080b38464836dcd85"
+      }
+    },
+    {
+      "id": "bookingOptionHotel/ys4jezgvfdu3gosrdjmh",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1668111808/bookingOptionHotel/ys4jezgvfdu3gosrdjmh.png",
+      "_id": {
+        "$oid": "636d5dc080b38464836dcd86"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-11-10T20:23:28.768Z"
+  },
+  "updatedAt": {
+    "$date": "2022-11-10T20:23:28.768Z"
+  }
+},{
+  "_id": {
+    "$oid": "636d63e3ae9f1eb8f636ea7c"
+  },
+  "type": "hotel",
+  "bedrooms": 1,
+  "detailedBedrooms": {
+    "firstBedroom": {
+      "doubleBed": 1,
+      "singleBed": 1
+    }
+  },
+  "roomServices": [
+    "KLLLL",
+    "kkk"
+  ],
+  "animals": {
+    "smallDogSelected": true,
+    "bigDogSelected": true
+  },
+  "description": "kmlmlm",
+  "uniqueNumber": "kkoko",
+  "totalSquare": 111,
+  "smoking": true,
+  "photos": [],
+  "createdAt": {
+    "$date": "2022-11-10T20:49:39.915Z"
+  },
+  "updatedAt": {
+    "$date": "2022-11-10T20:49:39.915Z"
+  }
+},{
+  "_id": {
+    "$oid": "638338c66a053f482f0760d9"
+  },
+  "type": "hotel",
+  "bedrooms": 1,
+  "detailedBedrooms": {
+    "firstBedroom": {
+      "doubleBed": 1,
+      "singleBed": 1
+    }
+  },
+  "roomServices": [
+    {
+      "id": "1",
+      "type": "Холодильник"
+    },
+    {
+      "id": "2",
+      "type": "Телевизор"
+    }
+  ],
+  "animals": {
+    "smallDogSelected": "true",
+    "bigDogSelected": "true"
+  },
+  "description": "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
+  "uniqueNumber": "7777E",
+  "totalSquare": 12,
+  "smoking": false,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/douajny6rr7vtivvwxp3",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1669544135/bookingOptionHotel/douajny6rr7vtivvwxp3.png",
+      "_id": {
+        "$oid": "638338c66a053f482f0760da"
+      }
+    },
+    {
+      "id": "bookingOptionHotel/di15o37l2zzmdplj8cn6",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1669544137/bookingOptionHotel/di15o37l2zzmdplj8cn6.png",
+      "_id": {
+        "$oid": "638338c66a053f482f0760db"
+      }
+    },
+    {
+      "id": "bookingOptionHotel/bc4fyxqczktswosjh7pr",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1669544140/bookingOptionHotel/bc4fyxqczktswosjh7pr.png",
+      "_id": {
+        "$oid": "638338c66a053f482f0760dc"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-11-27T10:15:34.545Z"
+  },
+  "updatedAt": {
+    "$date": "2022-11-27T10:15:34.545Z"
+  }
+},{
+  "_id": {
+    "$oid": "638613b523bc5f2f48c1fe63"
+  },
+  "type": "hotel",
+  "bedrooms": 1,
+  "detailedBedrooms": {
+    "firstBedroom": {
+      "doubleBed": 1
+    }
+  },
+  "roomServices": [
+    {
+      "id": "19",
+      "type": "Кофеварка"
+    }
+  ],
+  "animals": {
+    "mediumDogSelected": "true"
+  },
+  "description": "checking front\r\nchecking frontchecking front\r\nchecking frontchecking front\r\nchecking frontchecking front\r\nchecking frontchecking front\r\nchecking frontchecking front\r\nchecking frontchecking front\r\nchecking frontchecking front\r\nchecking frontchecking front\r\nchecking frontchecking front\r\nchecking frontchecking front\r\nchecking frontchecking front\r\ncheck",
+  "uniqueNumber": "67",
+  "totalSquare": 67,
+  "smoking": true,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/hnedpwrzjrnacm1mirbt",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1669731253/bookingOptionHotel/hnedpwrzjrnacm1mirbt.jpg",
+      "_id": {
+        "$oid": "638613b523bc5f2f48c1fe64"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-11-29T14:14:13.800Z"
+  },
+  "updatedAt": {
+    "$date": "2022-11-29T14:14:13.800Z"
+  }
+},{
+  "_id": {
+    "$oid": "6386147223bc5f2f48c1fede"
+  },
+  "type": "hotel",
+  "bedrooms": 1,
+  "detailedBedrooms": {
+    "firstBedroom": {
+      "doubleBed": 1,
+      "singleBed": 2
+    }
+  },
+  "roomServices": [
+    {
+      "id": "18",
+      "type": "Туалет вне номера"
+    },
+    {
+      "id": "20",
+      "type": "Чайник"
+    },
+    {
+      "id": "23",
+      "type": "Общая кухня"
+    }
+  ],
+  "animals": {
+    "raccoonSelected": "true",
+    "anotherAnimalSelected": "true"
+  },
+  "description": "      // console.log(animal, animals[animal]);\r\n      // console.log(animal, animals[animal]);\r\n      // console.log(animal, animals[animal]);\r\n      // console.log(animal, animals[animal]);\r\n      // console.log(animal, animals[animal]);\r\n      // console.log(animal, animals[animal]);\r\n      // console.log(animal, animals[animal]);\r\n",
+  "uniqueNumber": "866",
+  "totalSquare": 68,
+  "smoking": true,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/xuxepbmjxqzo5eovbbx8",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1669731441/bookingOptionHotel/xuxepbmjxqzo5eovbbx8.png",
+      "_id": {
+        "$oid": "6386147223bc5f2f48c1fedf"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-11-29T14:17:22.529Z"
+  },
+  "updatedAt": {
+    "$date": "2022-11-29T14:17:22.529Z"
+  }
+},{
+  "_id": {
+    "$oid": "6386156523bc5f2f48c1ff4a"
+  },
+  "type": "hotel",
+  "bedrooms": 1,
+  "detailedBedrooms": {
+    "firstBedroom": {
+      "doubleBed": 3
+    }
+  },
+  "roomServices": [
+    {
+      "id": "17",
+      "type": "Туалет в номере"
+    },
+    {
+      "id": "26",
+      "type": "Звукоизоляция"
+    },
+    {
+      "id": "25",
+      "type": "Ванна"
+    }
+  ],
+  "animals": {
+    "bigDogSelected": "true",
+    "catSelected": "true",
+    "raccoonSelected": "true"
+  },
+  "description": " providesTags: (_, __, id) => tag(id, 'BookingHotel'), providesTags: (_, __, id) => tag(id, 'BookingHotel'), providesTags: (_, __, id) => tag(id, 'BookingHotel'), providesTags: (_, __, id) => tag(id, 'BookingHotel'), providesTags: (_, __, id) => tag(id, 'BookingHotel'), providesTags: (_, __, id) => tag(id, 'BookingHotel'), providesTags: (_, __, id) => tag(id, 'BookingHotel'), providesTags: (_, __, id) => tag(id, 'BookingHotel'), providesTags: (_, __, id) => tag(id, 'BookingHotel'),",
+  "uniqueNumber": "5ev",
+  "totalSquare": 56,
+  "smoking": false,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/ewzr09xt3nrtd34v4hod",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1669731685/bookingOptionHotel/ewzr09xt3nrtd34v4hod.png",
+      "_id": {
+        "$oid": "6386156523bc5f2f48c1ff4b"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-11-29T14:21:25.873Z"
+  },
+  "updatedAt": {
+    "$date": "2022-11-29T14:21:25.873Z"
+  }
+},{
+  "_id": {
+    "$oid": "6386161e23bc5f2f48c1ffb6"
+  },
+  "type": "hotel",
+  "bedrooms": 1,
+  "detailedBedrooms": {
+    "firstBedroom": {
+      "singleBed": 3
+    }
+  },
+  "roomServices": [
+    {
+      "id": "17",
+      "type": "Туалет в номере"
+    },
+    {
+      "id": "19",
+      "type": "Кофеварка"
+    }
+  ],
+  "animals": {
+    "bigDogSelected": "true"
+  },
+  "description": "BookingOption/OptionsComponents/OptionSeven/OptionSeven.jsx\r\n  Line 18:3:   'setBookingHotelPhotos' is defined but never used    no-unused-vars\r\n  Line 21:3:   'deleteBookingHotelPhoto' is defined but never used  no-unused-vars\r\n  Line 59:9:   'photos' is assigned a value but never used          no-unused-vars\r\n  Line 69:9:   'status' is assigned a value but never used          no-unused-vars\r\n  Line 71:29:  'isLoading' is assigned a value but never used  ",
+  "uniqueNumber": "564cg",
+  "totalSquare": 76,
+  "smoking": true,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/n4auynu0hz4hv3mr5dtl",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1669731869/bookingOptionHotel/n4auynu0hz4hv3mr5dtl.png",
+      "_id": {
+        "$oid": "6386161e23bc5f2f48c1ffb7"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-11-29T14:24:30.639Z"
+  },
+  "updatedAt": {
+    "$date": "2022-11-29T14:24:30.639Z"
+  }
+},{
+  "_id": {
+    "$oid": "638617ec23bc5f2f48c20022"
+  },
+  "type": "hotel",
+  "bedrooms": 2,
+  "detailedBedrooms": {
+    "firstBedroom": {
+      "doubleBed": 3
+    },
+    "secondBedroom": {
+      "doubleBed": 2,
+      "singleBed": 1
+    }
+  },
+  "roomServices": [
+    {
+      "id": "20",
+      "type": "Чайник"
+    },
+    {
+      "id": "22",
+      "type": "Стиральная машина"
+    }
+  ],
+  "animals": {
+    "smallDogSelected": "true",
+    "mediumDogSelected": "true"
+  },
+  "description": "newHotelnewHotelnewHotelnewHotelnewHotelnewHotelnewHotelnewHotelnewHotelnewHotelnewHotelnewHotelnewHotelnewHotelnewHotelnewHotelnewHotelnewHotelnewHotelnewHotelnewHotelnewHotelnewHotelnewHotelnewHotelnewHotelnewHotelnewHotelnewHotelnewHotelnewHotelnewHotelnewHotelnewHotelnewHotelnewHotelnewHotelnewHotelnewHotel",
+  "uniqueNumber": "67",
+  "totalSquare": 67,
+  "smoking": false,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/vfnjv55bpdeg9lmqepeq",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1669732331/bookingOptionHotel/vfnjv55bpdeg9lmqepeq.png",
+      "_id": {
+        "$oid": "638617ec23bc5f2f48c20023"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-11-29T14:32:12.183Z"
+  },
+  "updatedAt": {
+    "$date": "2022-11-29T14:32:12.183Z"
+  }
+},{
+  "_id": {
+    "$oid": "63861c9a23bc5f2f48c2008e"
+  },
+  "type": "hotel",
+  "bedrooms": 1,
+  "detailedBedrooms": {
+    "firstBedroom": {
+      "doubleBed": 1,
+      "singleBed": 1
+    }
+  },
+  "roomServices": [
+    {
+      "id": "18",
+      "type": "Туалет вне номера"
+    },
+    {
+      "id": "20",
+      "type": "Чайник"
+    }
+  ],
+  "animals": {
+    "catSelected": "true",
+    "raccoonSelected": "true"
+  },
+  "description": " git add. git add. git add. git add. git add. git add. git add. git add. git add. git add. git add. git add. git add. git add. git add. git add. git add. git add. git add. git add. git add. git add. git add. git add. git add. git add. git add. git add. git add. git add. git add. git add. git add. git add.",
+  "uniqueNumber": "dg8",
+  "totalSquare": 67,
+  "smoking": true,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/ienytkwnhf6zhfeqxmnv",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1669733530/bookingOptionHotel/ienytkwnhf6zhfeqxmnv.png",
+      "_id": {
+        "$oid": "63861c9a23bc5f2f48c2008f"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-11-29T14:52:10.621Z"
+  },
+  "updatedAt": {
+    "$date": "2022-11-29T14:52:10.621Z"
+  }
+},{
+  "_id": {
+    "$oid": "638626b83029fd164e613d61"
+  },
+  "type": "hotel",
+  "bedrooms": 4,
+  "detailedBedrooms": {
+    "firstBedroom": {
+      "doubleBed": 1
+    },
+    "secondBedroom": {
+      "doubleBed": 1
+    },
+    "thirdBedroom": {
+      "doubleBed": 1
+    },
+    "fourthBedroom": {
+      "doubleBed": 1
+    }
+  },
+  "roomServices": [
+    {
+      "id": "14",
+      "type": "Сейф"
+    },
+    {
+      "id": "17",
+      "type": "Туалет в номере"
+    },
+    {
+      "id": "20",
+      "type": "Чайник"
+    },
+    {
+      "id": "8",
+      "type": "Туалетная бумага"
+    },
+    {
+      "id": "12",
+      "type": "Гардероб"
+    }
+  ],
+  "animals": {
+    "smallDogSelected": "true",
+    "catSelected": "true"
+  },
+  "description": "fdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdf",
+  "uniqueNumber": "fdvfv",
+  "totalSquare": 55,
+  "smoking": true,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/riq3z2t0qcqxg3i5dwnk",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1669736117/bookingOptionHotel/riq3z2t0qcqxg3i5dwnk.png",
+      "_id": {
+        "$oid": "638626b83029fd164e613d62"
+      }
+    },
+    {
+      "id": "bookingOptionHotel/bljpydoc4cbbi1wlmwxs",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1669736118/bookingOptionHotel/bljpydoc4cbbi1wlmwxs.jpg",
+      "_id": {
+        "$oid": "638626b83029fd164e613d63"
+      }
+    },
+    {
+      "id": "bookingOptionHotel/ztdipsvntugztzqgkcqi",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1669736119/bookingOptionHotel/ztdipsvntugztzqgkcqi.jpg",
+      "_id": {
+        "$oid": "638626b83029fd164e613d64"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-11-29T15:35:20.506Z"
+  },
+  "updatedAt": {
+    "$date": "2022-11-29T15:35:20.506Z"
+  }
+},{
+  "_id": {
+    "$oid": "63862d543029fd164e613e3b"
+  },
+  "type": "hotel",
+  "bedrooms": 3,
+  "detailedBedrooms": {
+    "firstBedroom": {
+      "doubleBed": 1
+    },
+    "secondBedroom": {
+      "doubleBed": 1
+    },
+    "thirdBedroom": {
+      "doubleBed": 1
+    }
+  },
+  "roomServices": [
+    {
+      "id": "6",
+      "type": "Белье"
+    },
+    {
+      "id": "19",
+      "type": "Кофеварка"
+    },
+    {
+      "id": "15",
+      "type": "Душ вне номера"
+    },
+    {
+      "id": "4",
+      "type": "Кондиционер"
+    }
+  ],
+  "animals": {
+    "smallDogSelected": "true",
+    "mediumDogSelected": "true"
+  },
+  "description": "fdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdf",
+  "uniqueNumber": "fdvfv",
+  "totalSquare": 45,
+  "smoking": true,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/van209cfiujlovon8qyz",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1669737812/bookingOptionHotel/van209cfiujlovon8qyz.jpg",
+      "_id": {
+        "$oid": "63862d543029fd164e613e3c"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-11-29T16:03:32.529Z"
+  },
+  "updatedAt": {
+    "$date": "2022-11-29T16:03:32.529Z"
+  }
+},{
+  "_id": {
+    "$oid": "63862e1f3029fd164e613eaa"
+  },
+  "type": "hotel",
+  "bedrooms": 1,
+  "detailedBedrooms": {
+    "firstBedroom": {
+      "doubleBed": 1
+    }
+  },
+  "roomServices": [
+    {
+      "id": "19",
+      "type": "Кофеварка"
+    }
+  ],
+  "animals": {
+    "catSelected": "true"
+  },
+  "description": "fdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdffdvfvdfavbdsbdafvdf",
+  "uniqueNumber": "fdvfv",
+  "totalSquare": 4,
+  "smoking": true,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/t8nn1c7ztvwiztotygb6",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1669738015/bookingOptionHotel/t8nn1c7ztvwiztotygb6.jpg",
+      "_id": {
+        "$oid": "63862e1f3029fd164e613eab"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-11-29T16:06:55.582Z"
+  },
+  "updatedAt": {
+    "$date": "2022-11-29T16:06:55.582Z"
+  }
+},{
+  "_id": {
+    "$oid": "638630173029fd164e613f82"
+  },
+  "type": "hotel",
+  "bedrooms": 4,
+  "detailedBedrooms": {
+    "firstBedroom": {
+      "doubleBed": 1
+    },
+    "secondBedroom": {
+      "doubleBed": 1
+    },
+    "thirdBedroom": {
+      "doubleBed": 1
+    },
+    "fourthBedroom": {
+      "doubleBed": 1
+    }
+  },
+  "roomServices": [
+    {
+      "id": "20",
+      "type": "Чайник"
+    }
+  ],
+  "animals": {
+    "smallDogSelected": "true"
+  },
+  "description": "dshjdkuilkujyhtrgefgrdhtsfydgujh,k.ll.jg,hnfbdshjdkuilkujyhtrgefgrdhtsfydgujh,k.ll.jg,hnfbdshjdkuilkujyhtrgefgrdhtsfydgujh,k.ll.jg,hnfbdshjdkuilkujyhtrgefgrdhtsfydgujh,k.ll.jg,hnfbdshjdkuilkujyhtrgefgrdhtsfydgujh,k.ll.jg,hnfbdshjdkuilkujyhtrgefgrdhtsfydgujh,k.ll.jg,hnfbdshjdkuilkujyhtrgefgrdhtsfydgujh,k.ll.jg,hnfbdshjdkuilkujyhtrgefgrdhtsfydgujh,k.ll.jg,hnfbdshjdkuilkujyhtrgefgrdhtsfydgujh,k.ll.jg,hnfbdshjdkuilkujyhtrgefgrdhtsfydgujh,k.ll.jg,hnfbdshjdkuilkujyhtrgefgrdhtsfydgujh,k.ll.jg,hnfbdshjd",
+  "uniqueNumber": "dshjd",
+  "totalSquare": 4,
+  "smoking": true,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/krywvzkoksqbg5b5i939",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1669738519/bookingOptionHotel/krywvzkoksqbg5b5i939.jpg",
+      "_id": {
+        "$oid": "638630173029fd164e613f83"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-11-29T16:15:19.511Z"
+  },
+  "updatedAt": {
+    "$date": "2022-11-29T16:15:19.511Z"
+  }
+},{
+  "_id": {
+    "$oid": "63863ab13029fd164e6140c0"
+  },
+  "type": "hotel",
+  "bedrooms": 1,
+  "detailedBedrooms": {
+    "firstBedroom": {
+      "doubleBed": 1
+    }
+  },
+  "roomServices": [
+    {
+      "id": "15",
+      "type": "Душ вне номера"
+    },
+    {
+      "id": "22",
+      "type": "Стиральная машина"
+    }
+  ],
+  "animals": {
+    "mediumDogSelected": "true",
+    "catSelected": "true"
+  },
+  "description": "Такой номер уже есть в этом объектеТакой номер уже есть в этом объектеТакой номер уже есть в этом объектеТакой номер уже есть в этом объектеТакой номер уже есть в этом объектеТакой номер уже есть в этом объектеТакой номер уже есть в этом объектеТакой номер уже есть в этом объектеТакой номер уже есть в этом объектеТакой номер уже есть в этом объектеТакой номер уже есть в этом объектеТакой номер уже есть в этом объектеТакой номер уже есть в этом объектеТакой номер уже есть в этом объекте",
+  "uniqueNumber": "Такой",
+  "totalSquare": 4332434,
+  "smoking": true,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/mkofbxrud8kpzbwccrsb",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1669741232/bookingOptionHotel/mkofbxrud8kpzbwccrsb.png",
+      "_id": {
+        "$oid": "63863ab13029fd164e6140c1"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-11-29T17:00:33.268Z"
+  },
+  "updatedAt": {
+    "$date": "2022-11-29T17:00:33.268Z"
+  }
+},{
+  "_id": {
+    "$oid": "638940f5f4ca7c4c5d0f8b7c"
+  },
+  "type": "hotel",
+  "bedrooms": 1,
+  "detailedBedrooms": {
+    "firstBedroom": {
+      "doubleBed": 1
+    }
+  },
+  "roomServices": [
+    {
+      "id": "3",
+      "type": "Вай фай"
+    }
+  ],
+  "animals": {
+    "smallDogSelected": "true",
+    "catSelected": "true"
+  },
+  "description": "Добавьте описание этого варианта бронирования\r\nДобавьте описание этого варианта бронирования\r\nДобавьте описание этого варианта бронирования\r\nДобавьте описание этого варианта бронирования\r\nДобавьте описание этого варианта бронирования\r\nДобавьте описание этого варианта бронирования\r\nДобавьте описание этого варианта бронирования\r\n",
+  "uniqueNumber": "55",
+  "totalSquare": 80,
+  "smoking": true,
+  "photos": [],
+  "createdAt": {
+    "$date": "2022-12-02T00:04:05.979Z"
+  },
+  "updatedAt": {
+    "$date": "2022-12-02T00:04:05.979Z"
+  }
+},{
+  "_id": {
+    "$oid": "6389419ef4ca7c4c5d0f8b7e"
+  },
+  "type": "hotel",
+  "bedrooms": 1,
+  "detailedBedrooms": {
+    "firstBedroom": {
+      "doubleBed": 1,
+      "singleBed": 1
+    }
+  },
+  "roomServices": [
+    {
+      "id": "25",
+      "type": "Ванна"
+    }
+  ],
+  "animals": {
+    "anotherAnimalSelected": "true"
+  },
+  "description": "Добавьте описание этого варианта бронирования\r\nДобавьте описание этого варианта бронирования\r\nДобавьте описание этого варианта бронирования\r\nДобавьте описание этого варианта бронирования\r\nДобавьте описание этого варианта бронирования\r\nДобавьте описание этого варианта бронирования\r\nДобавьте описание этого варианта бронирования\r\n",
+  "uniqueNumber": "1",
+  "totalSquare": 12,
+  "smoking": false,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/k8ibqdggzuqd3pdbybha",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1669939614/bookingOptionHotel/k8ibqdggzuqd3pdbybha.png",
+      "_id": {
+        "$oid": "6389419ef4ca7c4c5d0f8b7f"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-12-02T00:06:54.868Z"
+  },
+  "updatedAt": {
+    "$date": "2022-12-02T00:06:54.868Z"
+  }
+},{
+  "_id": {
+    "$oid": "639f26acc80460e39e1023ef"
+  },
+  "type": "hotel",
+  "bedrooms": 1,
+  "detailedBedrooms": {
+    "firstBedroom": {
+      "doubleBed": 3
+    }
+  },
+  "roomServices": [
+    {
+      "id": "5",
+      "type": "Полотенца"
+    },
+    {
+      "id": "10",
+      "type": "Утюг"
+    }
+  ],
+  "animals": {
+    "smallDogSelected": "true"
+  },
+  "description": "https://server-your-price-booking.onrender.com/api/https://server-your-price-booking.onrender.com/api/https://server-your-price-booking.onrender.com/api/https://server-your-price-booking.onrender.com/api/https://server-your-price-booking.onrender.com/api/https://server-your-price-booking.onrender.com/api/https://server-your-price-booking.onrender.com/api/https://server-your-price-booking.onrender.com/api/https://server-your-price-booking.onrender.com/api/https://server-your-price-booking.onrende",
+  "uniqueNumber": "67j",
+  "totalSquare": 67,
+  "smoking": true,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/mvlkuni3jqptwamn8v7e",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1671374507/bookingOptionHotel/mvlkuni3jqptwamn8v7e.png",
+      "_id": {
+        "$oid": "639f26acc80460e39e1023f0"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-12-18T14:41:48.301Z"
+  },
+  "updatedAt": {
+    "$date": "2022-12-18T14:41:48.301Z"
+  }
+},{
+  "_id": {
+    "$oid": "639f26d8c80460e39e1023f2"
+  },
+  "type": "hotel",
+  "bedrooms": 1,
+  "detailedBedrooms": {
+    "firstBedroom": {
+      "doubleBed": 1
+    }
+  },
+  "roomServices": [
+    {
+      "id": "8",
+      "type": "Туалетная бумага"
+    },
+    {
+      "id": "10",
+      "type": "Утюг"
+    }
+  ],
+  "animals": {
+    "catSelected": "true"
+  },
+  "description": "https://server-your-price-booking.onrender.com/api/https://server-your-price-booking.onrender.com/api/https://server-your-price-booking.onrender.com/api/https://server-your-price-booking.onrender.com/api/https://server-your-price-booking.onrender.com/api/https://server-your-price-booking.onrender.com/api/https://server-your-price-booking.onrender.com/api/https://server-your-price-booking.onrender.com/api/https://server-your-price-booking.onrender.com/api/",
+  "uniqueNumber": "467",
+  "totalSquare": 56,
+  "smoking": true,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/so1dsamqvrdf4ytitv9q",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1671374552/bookingOptionHotel/so1dsamqvrdf4ytitv9q.png",
+      "_id": {
+        "$oid": "639f26d8c80460e39e1023f3"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-12-18T14:42:32.844Z"
+  },
+  "updatedAt": {
+    "$date": "2022-12-18T14:42:32.844Z"
+  }
+},{
+  "_id": {
+    "$oid": "63c42b0ee3b5b2d43d3498ba"
+  },
+  "type": "hotel",
+  "bedrooms": 1,
+  "detailedBedrooms": {
+    "firstBedroom": {
+      "doubleBed": 1
+    }
+  },
+  "roomServices": [
+    {
+      "id": "17",
+      "type": "Туалет в номере"
+    },
+    {
+      "id": "19",
+      "type": "Кофеварка"
+    },
+    {
+      "id": "22",
+      "type": "Стиральная машина"
+    },
+    {
+      "id": "24",
+      "type": "Джакузи"
+    },
+    {
+      "id": "4",
+      "type": "Кондиционер"
+    }
+  ],
+  "animals": {
+    "raccoonSelected": "true"
+  },
+  "description": "${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}",
+  "uniqueNumber": "456",
+  "totalSquare": 35,
+  "smoking": true,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/jo0t9cb7zkk9iyosyddk",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1673800462/bookingOptionHotel/jo0t9cb7zkk9iyosyddk.png",
+      "_id": {
+        "$oid": "63c42b0ee3b5b2d43d3498bb"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-01-15T16:34:22.558Z"
+  },
+  "updatedAt": {
+    "$date": "2023-01-15T16:34:22.558Z"
+  }
+},{
+  "_id": {
+    "$oid": "63c42c10e3b5b2d43d3498dc"
+  },
+  "type": "hotel",
+  "bedrooms": 4,
+  "detailedBedrooms": {
+    "firstBedroom": {
+      "doubleBed": 1,
+      "singleBed": 1
+    },
+    "secondBedroom": {
+      "singleBed": 1
+    },
+    "thirdBedroom": {
+      "doubleBed": 1
+    },
+    "fourthBedroom": {
+      "doubleBed": 1
+    }
+  },
+  "roomServices": [
+    {
+      "id": "17",
+      "type": "Туалет в номере"
+    },
+    {
+      "id": "19",
+      "type": "Кофеварка"
+    },
+    {
+      "id": "22",
+      "type": "Стиральная машина"
+    },
+    {
+      "id": "24",
+      "type": "Джакузи"
+    },
+    {
+      "id": "4",
+      "type": "Кондиционер"
+    }
+  ],
+  "animals": {
+    "raccoonSelected": "true"
+  },
+  "description": "${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}${[active]}",
+  "uniqueNumber": "4565",
+  "totalSquare": 435,
+  "smoking": true,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/l89najlplrydpmbszjfg",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1673800719/bookingOptionHotel/l89najlplrydpmbszjfg.png",
+      "_id": {
+        "$oid": "63c42c10e3b5b2d43d3498dd"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-01-15T16:38:40.397Z"
+  },
+  "updatedAt": {
+    "$date": "2023-01-15T16:38:40.397Z"
+  }
+},{
+  "_id": {
+    "$oid": "63c46b0743203bac6164f0d1"
+  },
+  "type": "hotel",
+  "bedrooms": 1,
+  "detailedBedrooms": {
+    "firstBedroom": {
+      "doubleBed": 1
+    }
+  },
+  "roomServices": [
+    {
+      "id": "23",
+      "type": "Общая кухня"
+    }
+  ],
+  "animals": {
+    "mediumDogSelected": "true"
+  },
+  "description": "import dot from '../../img/dot.png';import dot from '../../img/dot.png';import dot from '../../img/dot.png';import dot from '../../img/dot.png';import dot from '../../img/dot.png';import dot from '../../img/dot.png';import dot from '../../img/dot.png';import dot from '../../img/dot.png';import dot from '../../img/dot.png';import dot from '../../img/dot.png';",
+  "uniqueNumber": "45",
+  "totalSquare": 0,
+  "smoking": false,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/ohzbldknwfurcv5btyay",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1673816837/bookingOptionHotel/ohzbldknwfurcv5btyay.png",
+      "_id": {
+        "$oid": "63c46b0743203bac6164f0d2"
+      }
+    },
+    {
+      "id": "bookingOptionHotel/uois8hpnnbjo7h3mheya",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1673816839/bookingOptionHotel/uois8hpnnbjo7h3mheya.png",
+      "_id": {
+        "$oid": "63c46b0743203bac6164f0d3"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-01-15T21:07:19.743Z"
+  },
+  "updatedAt": {
+    "$date": "2023-01-15T21:07:19.743Z"
+  }
+},{
+  "_id": {
+    "$oid": "63c46cc143203bac6164f1a7"
+  },
+  "type": "hotel",
+  "bedrooms": 1,
+  "detailedBedrooms": {
+    "firstBedroom": {
+      "doubleBed": 1
+    }
+  },
+  "roomServices": [
+    {
+      "id": "26",
+      "type": "Звукоизоляция"
+    }
+  ],
+  "animals": {
+    "bigDogSelected": "true"
+  },
+  "description": "bookingName !== '' && totalSquare >= 1bookingName !== '' && totalSquare >= 1bookingName !== '' && totalSquare >= 1bookingName !== '' && totalSquare >= 1bookingName !== '' && totalSquare >= 1bookingName !== '' && totalSquare >= 1bookingName !== '' && totalSquare >= 1bookingName !== '' && totalSquare >= 1bookingName !== '' && totalSquare >= 1",
+  "uniqueNumber": "45",
+  "totalSquare": 56,
+  "smoking": false,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/fdbfc5jofm9akf5x0gje",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1673817281/bookingOptionHotel/fdbfc5jofm9akf5x0gje.png",
+      "_id": {
+        "$oid": "63c46cc143203bac6164f1a8"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-01-15T21:14:41.986Z"
+  },
+  "updatedAt": {
+    "$date": "2023-01-15T21:14:41.986Z"
+  }
+},{
+  "_id": {
+    "$oid": "63c475ec43203bac6164f8a9"
+  },
+  "type": "hotel",
+  "bedrooms": 1,
+  "detailedBedrooms": {
+    "firstBedroom": {
+      "doubleBed": 1
+    }
+  },
+  "roomServices": [
+    {
+      "id": "20",
+      "type": "Чайник"
+    }
+  ],
+  "animals": {
+    "smallDogSelected": "true"
+  },
+  "description": "  // const photos = useAppSelector(selectHostelPhotosFilesOrUrls);\r\n  // const photos = useAppSelector(selectHostelPhotosFilesOrUrls);\r\n  // const photos = useAppSelector(selectHostelPhotosFilesOrUrls);\r\n  // const photos = useAppSelector(selectHostelPhotosFilesOrUrls);\r\n  // const photos = useAppSelector(selectHostelPhotosFilesOrUrls);\r\n  // const photos = useAppSelector(selectHostelPhotosFilesOrUrls);\r\n",
+  "uniqueNumber": "453e",
+  "totalSquare": 34,
+  "smoking": true,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/kgocbaqiisehaknxkg4q",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1673819628/bookingOptionHotel/kgocbaqiisehaknxkg4q.png",
+      "_id": {
+        "$oid": "63c475ec43203bac6164f8aa"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-01-15T21:53:48.544Z"
+  },
+  "updatedAt": {
+    "$date": "2023-01-15T21:53:48.544Z"
+  }
+},{
+  "_id": {
+    "$oid": "63c4787343203bac6164f915"
+  },
+  "type": "hotel",
+  "bedrooms": 1,
+  "detailedBedrooms": {
+    "firstBedroom": {
+      "doubleBed": 1
+    }
+  },
+  "roomServices": [
+    {
+      "id": "20",
+      "type": "Чайник"
+    }
+  ],
+  "animals": {
+    "smallDogSelected": "true"
+  },
+  "description": "git add.git add.git add.git add.git add.git add.git add.git add.git add.git add.git add.git add.git add.git add.git add.git add.git add.git add.git add.git add.git add.git add.git add.git add.git add.git add.git add.git add.git add.git add.git add.git add.git add.git add.git add.git add.git add.git add.git add.git add.git add.git add.git add.",
+  "uniqueNumber": "0003",
+  "totalSquare": 45,
+  "smoking": false,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/pgxgm59yk2nzijnk5pxr",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1673820274/bookingOptionHotel/pgxgm59yk2nzijnk5pxr.png",
+      "_id": {
+        "$oid": "63c4787343203bac6164f916"
+      }
+    },
+    {
+      "id": "bookingOptionHotel/xiwt2nu1sujyu3cimwte",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1673820275/bookingOptionHotel/xiwt2nu1sujyu3cimwte.png",
+      "_id": {
+        "$oid": "63c4787343203bac6164f917"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-01-15T22:04:35.931Z"
+  },
+  "updatedAt": {
+    "$date": "2023-01-15T22:04:35.931Z"
+  }
+},{
+  "_id": {
+    "$oid": "63c58ab4208a5d824ac953b3"
+  },
+  "type": "hotel",
+  "bedrooms": 1,
+  "detailedBedrooms": {
+    "firstBedroom": {
+      "doubleBed": 1
+    }
+  },
+  "roomServices": [
+    {
+      "id": "21",
+      "type": "Фен"
+    }
+  ],
+  "animals": {
+    "smallDogSelected": "true"
+  },
+  "description": "By adding a description, you give us the right to correct grammatical errors without changing the meaning and translate the description into other languages.By adding a description, you give us the right to correct grammatical errors without changing the meaning and translate the description into other languages.By adding a description, you give us the right to correct grammatical errors without changing the meaning and translate the description into other languages.",
+  "uniqueNumber": "hbu7",
+  "totalSquare": 76,
+  "smoking": true,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/ux1hdqddyqt9b9obbbwc",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1673890484/bookingOptionHotel/ux1hdqddyqt9b9obbbwc.png",
+      "_id": {
+        "$oid": "63c58ab4208a5d824ac953b4"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-01-16T17:34:44.699Z"
+  },
+  "updatedAt": {
+    "$date": "2023-01-16T17:34:44.699Z"
+  }
+},{
+  "_id": {
+    "$oid": "63c6f0cd4fdf657619800af4"
+  },
+  "type": "hotel",
+  "bedrooms": 1,
+  "detailedBedrooms": {
+    "firstBedroom": {
+      "doubleBed": 1,
+      "singleBed": 1
+    }
+  },
+  "roomServices": [
+    {
+      "id": "4",
+      "type": "Кондиционер"
+    },
+    {
+      "id": "17",
+      "type": "Туалет в номере"
+    }
+  ],
+  "animals": {
+    "smallDogSelected": "true"
+  },
+  "description": "Добавьте описание этого варианта бронированияДобавьте описание этого варианта бронированияДобавьте описание этого варианта бронированияДобавьте описание этого варианта бронированияДобавьте описание этого варианта бронированияДобавьте описание этого варианта бронированияДобавьте описание этого варианта бронирования",
+  "uniqueNumber": "f44",
+  "totalSquare": 10,
+  "smoking": false,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/ptbx4yb4mvszscsxnbex",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1673982154/bookingOptionHotel/ptbx4yb4mvszscsxnbex.png",
+      "_id": {
+        "$oid": "63c6f0cd4fdf657619800af5"
+      }
+    },
+    {
+      "id": "bookingOptionHotel/qq8j1ovxpyg9w7ygujwi",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1673982155/bookingOptionHotel/qq8j1ovxpyg9w7ygujwi.png",
+      "_id": {
+        "$oid": "63c6f0cd4fdf657619800af6"
+      }
+    },
+    {
+      "id": "bookingOptionHotel/le9eimb1elanms8h17ls",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1673982156/bookingOptionHotel/le9eimb1elanms8h17ls.png",
+      "_id": {
+        "$oid": "63c6f0cd4fdf657619800af7"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-01-17T19:02:37.209Z"
+  },
+  "updatedAt": {
+    "$date": "2023-01-17T19:02:37.209Z"
+  }
+},{
+  "_id": {
+    "$oid": "63c6f11a4fdf657619800af9"
+  },
+  "type": "hotel",
+  "bedrooms": 1,
+  "detailedBedrooms": {
+    "firstBedroom": {
+      "doubleBed": 1
+    }
+  },
+  "roomServices": [
+    {
+      "id": "2",
+      "type": "Телевизор"
+    },
+    {
+      "id": "15",
+      "type": "Душ вне номера"
+    }
+  ],
+  "animals": {
+    "raccoonSelected": "true",
+    "anotherAnimalSelected": "true"
+  },
+  "description": "Добавьте описание этого варианта бронированияДобавьте описание этого варианта бронированияДобавьте описание этого варианта бронированияДобавьте описание этого варианта бронированияДобавьте описание этого варианта бронированияДобавьте описание этого варианта бронированияДобавьте описание этого варианта бронирования",
+  "uniqueNumber": "dd4",
+  "totalSquare": 10,
+  "smoking": true,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/bqce7ujvjnhcat5swvyt",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1673982234/bookingOptionHotel/bqce7ujvjnhcat5swvyt.png",
+      "_id": {
+        "$oid": "63c6f11a4fdf657619800afa"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-01-17T19:03:54.726Z"
+  },
+  "updatedAt": {
+    "$date": "2023-01-17T19:03:54.726Z"
+  }
+},{
+  "_id": {
+    "$oid": "63d1980b7cbb381f03cfe185"
+  },
+  "type": "hotel",
+  "bedrooms": 1,
+  "detailedBedrooms": {
+    "firstBedroom": {
+      "doubleBed": 1
+    }
+  },
+  "roomServices": [],
+  "animals": {
+    "anotherAnimalSelected": "true"
+  },
+  "description": "явмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиа",
+  "uniqueNumber": "м",
+  "totalSquare": 65,
+  "smoking": true,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/xnd7n4n0if0wxcxkrcv4",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1674680331/bookingOptionHotel/xnd7n4n0if0wxcxkrcv4.jpg",
+      "_id": {
+        "$oid": "63d1980b7cbb381f03cfe186"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-01-25T20:58:51.958Z"
+  },
+  "updatedAt": {
+    "$date": "2023-01-25T20:58:51.958Z"
+  }
+},{
+  "_id": {
+    "$oid": "63d1982e7cbb381f03cfe188"
+  },
+  "type": "hotel",
+  "bedrooms": 1,
+  "detailedBedrooms": {
+    "firstBedroom": {
+      "doubleBed": 1
+    }
+  },
+  "roomServices": [],
+  "animals": {
+    "anotherAnimalSelected": "true"
+  },
+  "description": "явмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиа",
+  "uniqueNumber": "явмаи",
+  "totalSquare": 45,
+  "smoking": false,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/ft5f4mieeayuddaiy5hn",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1674680365/bookingOptionHotel/ft5f4mieeayuddaiy5hn.jpg",
+      "_id": {
+        "$oid": "63d1982e7cbb381f03cfe189"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-01-25T20:59:26.100Z"
+  },
+  "updatedAt": {
+    "$date": "2023-01-25T20:59:26.100Z"
+  }
+},{
+  "_id": {
+    "$oid": "63d198587cbb381f03cfe18b"
+  },
+  "type": "hotel",
+  "bedrooms": 1,
+  "detailedBedrooms": {
+    "firstBedroom": {
+      "doubleBed": 1
+    }
+  },
+  "roomServices": [],
+  "animals": {
+    "catSelected": "true"
+  },
+  "description": "Мявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиа",
+  "uniqueNumber": "м",
+  "totalSquare": 3,
+  "smoking": true,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/jpbvg59n7mm2f61fz1bj",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1674680408/bookingOptionHotel/jpbvg59n7mm2f61fz1bj.jpg",
+      "_id": {
+        "$oid": "63d198587cbb381f03cfe18c"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-01-25T21:00:08.890Z"
+  },
+  "updatedAt": {
+    "$date": "2023-01-25T21:00:08.890Z"
+  }
+},{
+  "_id": {
+    "$oid": "63d198877cbb381f03cfe18e"
+  },
+  "type": "hotel",
+  "bedrooms": 3,
+  "detailedBedrooms": {
+    "firstBedroom": {
+      "doubleBed": 1
+    },
+    "secondBedroom": {
+      "doubleBed": 1
+    },
+    "thirdBedroom": {
+      "doubleBed": 1,
+      "singleBed": 1
+    }
+  },
+  "roomServices": [],
+  "animals": {
+    "anotherAnimalSelected": "true"
+  },
+  "description": "явмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиамявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиа",
+  "uniqueNumber": "явмаи",
+  "totalSquare": 4,
+  "smoking": true,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/snj6vajppl7xun689elo",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1674680455/bookingOptionHotel/snj6vajppl7xun689elo.jpg",
+      "_id": {
+        "$oid": "63d198877cbb381f03cfe18f"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-01-25T21:00:55.568Z"
+  },
+  "updatedAt": {
+    "$date": "2023-01-25T21:00:55.568Z"
+  }
+},{
+  "_id": {
+    "$oid": "63d198ab7cbb381f03cfe191"
+  },
+  "type": "hotel",
+  "bedrooms": 1,
+  "detailedBedrooms": {
+    "firstBedroom": {
+      "doubleBed": 1
+    }
+  },
+  "roomServices": [],
+  "animals": {
+    "anotherAnimalSelected": "true"
+  },
+  "description": "явмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиа",
+  "uniqueNumber": "явмаи",
+  "totalSquare": 3,
+  "smoking": false,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/l3hd0kcyxs6uz4y3dje0",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1674680491/bookingOptionHotel/l3hd0kcyxs6uz4y3dje0.jpg",
+      "_id": {
+        "$oid": "63d198ab7cbb381f03cfe192"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-01-25T21:01:31.361Z"
+  },
+  "updatedAt": {
+    "$date": "2023-01-25T21:01:31.361Z"
+  }
+},{
+  "_id": {
+    "$oid": "63d19a0d7cbb381f03cfe269"
+  },
+  "type": "hotel",
+  "bedrooms": 1,
+  "detailedBedrooms": {
+    "firstBedroom": {
+      "doubleBed": 1
+    }
+  },
+  "roomServices": [],
+  "animals": {
+    "anotherAnimalSelected": "true"
+  },
+  "description": "явмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиаявмаиптачролдлбортпиа",
+  "uniqueNumber": "явмаи",
+  "totalSquare": 5,
+  "smoking": true,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/tdueywduwlu0iq9diae8",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1674680845/bookingOptionHotel/tdueywduwlu0iq9diae8.jpg",
+      "_id": {
+        "$oid": "63d19a0d7cbb381f03cfe26a"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-01-25T21:07:25.939Z"
+  },
+  "updatedAt": {
+    "$date": "2023-01-25T21:07:25.939Z"
+  }
+},{
+  "_id": {
+    "$oid": "6449865ba59180afbf518fc4"
+  },
+  "type": "hotel",
+  "bedrooms": 4,
+  "detailedBedrooms": {
+    "firstBedroom": {
+      "doubleBed": 3
+    },
+    "secondBedroom": {
+      "singleBed": 3
+    },
+    "thirdBedroom": {
+      "doubleBed": 3
+    },
+    "fourthBedroom": {
+      "singleBed": 3
+    }
+  },
+  "roomServices": [],
+  "animals": {
+    "smallDogSelected": "true",
+    "mediumDogSelected": "true",
+    "bigDogSelected": "true",
+    "catSelected": "true",
+    "raccoonSelected": "true",
+    "anotherAnimalSelected": "true"
+  },
+  "description": "123123!@#!----                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ",
+  "uniqueNumber": "qwert",
+  "totalSquare": 2,
+  "smoking": true,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/ukjis7pwat5aitiqktqt",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1682540122/bookingOptionHotel/ukjis7pwat5aitiqktqt.png",
+      "_id": {
+        "$oid": "6449865ba59180afbf518fc5"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-04-26T20:15:23.296Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-26T20:15:23.296Z"
+  }
+},{
+  "_id": {
+    "$oid": "6449892ba59180afbf518fc7"
+  },
+  "type": "hotel",
+  "bedrooms": 1,
+  "detailedBedrooms": {
+    "firstBedroom": {
+      "singleBed": 1
+    }
+  },
+  "roomServices": [],
+  "description": "                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ",
+  "uniqueNumber": "1",
+  "totalSquare": 1,
+  "smoking": true,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/jfjtfmz61wafsxx69v9l",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1682540843/bookingOptionHotel/jfjtfmz61wafsxx69v9l.png",
+      "_id": {
+        "$oid": "6449892ba59180afbf518fc8"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-04-26T20:27:23.400Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-26T20:27:23.400Z"
+  }
+},{
+  "_id": {
+    "$oid": "64b9900353e8122476f13ce6"
+  },
+  "type": "hotel",
+  "bedrooms": 1,
+  "detailedBedrooms": {
+    "firstBedroom": {
+      "doubleBed": 1,
+      "singleBed": 1
+    }
+  },
+  "roomServices": [
+    {
+      "id": "1",
+      "type": "Холодильник"
+    },
+    {
+      "id": "2",
+      "type": "Телевизор"
+    }
+  ],
+  "animals": {
+    "smallDogSelected": "true",
+    "bigDogSelected": "true"
+  },
+  "description": "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
+  "uniqueNumber": "7777E",
+  "totalSquare": 12,
+  "smoking": false,
+  "photos": [],
+  "owner": {
+    "$oid": "64b0531d6e4c6c49fa13a748"
+  },
+  "objectId": "648e0f268de5e697139f9883",
+  "createdAt": {
+    "$date": "2023-07-20T19:50:27.228Z"
+  },
+  "updatedAt": {
+    "$date": "2023-07-20T19:50:27.228Z"
+  }
+},{
+  "_id": {
+    "$oid": "64b9906853e8122476f13ce9"
+  },
+  "type": "TEST",
+  "bedrooms": 1,
+  "detailedBedrooms": {
+    "firstBedroom": {
+      "doubleBed": 5,
+      "singleBed": 5
+    }
+  },
+  "roomServices": [
+    {
+      "id": "1",
+      "type": "Холодильник"
+    },
+    {
+      "id": "2",
+      "type": "Телевизор"
+    }
+  ],
+  "animals": {
+    "smallDogSelected": "true",
+    "bigDogSelected": "true"
+  },
+  "description": "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
+  "uniqueNumber": "7777E",
+  "totalSquare": 12,
+  "smoking": false,
+  "photos": [
+    {
+      "id": "bookingOptionHotel/gyt92mlsrzhmdvrgtsx8",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1689882725/bookingOptionHotel/gyt92mlsrzhmdvrgtsx8.png",
+      "_id": {
+        "$oid": "64b9906853e8122476f13cea"
+      }
+    },
+    {
+      "id": "bookingOptionHotel/diiwraop4f82vy7nn04q",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1689882726/bookingOptionHotel/diiwraop4f82vy7nn04q.png",
+      "_id": {
+        "$oid": "64b9906853e8122476f13ceb"
+      }
+    },
+    {
+      "id": "bookingOptionHotel/f1h6dews9ottksutamlr",
+      "url": "http://res.cloudinary.com/your-price-booking/image/upload/v1689882728/bookingOptionHotel/f1h6dews9ottksutamlr.png",
+      "_id": {
+        "$oid": "64b9906853e8122476f13cec"
+      }
+    }
+  ],
+  "owner": {
+    "$oid": "64b0531d6e4c6c49fa13a748"
+  },
+  "objectId": "648e0f268de5e697139f9883",
+  "createdAt": {
+    "$date": "2023-07-20T19:52:08.475Z"
+  },
+  "updatedAt": {
+    "$date": "2023-10-09T19:06:02.477Z"
+  }
+}]

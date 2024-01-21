@@ -3,7 +3,7 @@ const Joi = require("joi");
 
 const verifyobjecthistory = Schema(
   {
-    objectId: {
+    hotels: {
       type: Schema.Types.ObjectId,
       ref: "hotels",
     },
@@ -11,12 +11,14 @@ const verifyobjecthistory = Schema(
       type: String,
     },
     dateOfDecision: {
-      type: String,
+      type: Date,
+    },
+    getToVerify: {
+      type: Date,
     },
     decision: { type: String, default: "in working" },
-    verifierID: {
-      type: Schema.Types.ObjectId,
-      ref: "verifierprofile",
+    verifierId: {
+      type: String,
     },
   },
   { versionKey: false, timestamps: true }

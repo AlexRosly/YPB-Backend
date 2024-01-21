@@ -20,4 +20,6 @@ router.post(
   ctrlWrapper(ctrl.createVerifierProfile)
 );
 
+router.post("/get-to-verify", authAdmin, ctrlWrapper(ctrl.objectOnWork));
+
 module.exports = router;

@@ -1,4 +1,4 @@
-const { Hotels, Verification } = require("../../models");
+const { Hotels, Verification, VerifyObjectHistory } = require("../../models");
 
 const finishVerification = async (req, res) => {
   const {
@@ -7,6 +7,17 @@ const finishVerification = async (req, res) => {
     phone2 = "without",
     nextVerificationDate = "not required",
   } = req.body;
+
+  const adminId = req.admin; // get id of verify
+  const superAdminId = req.superAdmin; // get id of verify
+  let verifierId;
+
+  //get id for profileId (admin or super admin)
+  if (adminId) {
+    verifierId = adminId._id;
+  } else {
+    verifierId = superAdminId._id;
+  }
 
   let result = []; //create array for response
 
@@ -54,6 +65,19 @@ const finishVerification = async (req, res) => {
       message: "Try update later",
     });
   }
+
+  //change statys on history
+  const dateOfDecision = new Date();
+  const filter1 = { hotels: id };
+  const update1 = { decision: "verify", dateOfDecision };
+  const objectHistory = await VerifyObjectHistory.findOneAndUpdate(
+    filter1,
+    update1,
+    {
+      new: true,
+    }
+  );
+  console.log({ objectHistory });
   //get updated hotel
   const getUpdatedHotel = await Hotels.find({ _id: id }, { status: 1 });
   //if don't updated return response

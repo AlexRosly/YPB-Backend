@@ -2,6 +2,11 @@ const e = require("cors");
 const { Country } = require("../../models");
 
 const test = async (req, res) => {
+  const date1 = Date.now();
+  console.log({ date1 });
+  const date = Date.now() + 1;
+  console.log({ date });
+
   // console.log({ req });
   // console.log("ID", req.sessionID);
   // console.log("remoteIP", req._remoteAddress);
@@ -13,13 +18,13 @@ const test = async (req, res) => {
   //   req.connection.socket.remoteAddress;
   // console.log({ ip_1 });
 
-  let ip_adress =
-    (req.headers["x-forwarded-for"] || "").split(",").pop() ||
-    req.headers["x-real-ip"] ||
-    req.connection.remoteAddress ||
-    req.socket.remoteAddress ||
-    req.connection.socket.remoteAddress;
-  console.log({ ip_adress });
+  // let ip_adress =
+  //   (req.headers["x-forwarded-for"] || "").split(",").pop() ||
+  //   req.headers["x-real-ip"] ||
+  //   req.connection.remoteAddress ||
+  //   req.socket.remoteAddress ||
+  //   req.connection.socket.remoteAddress;
+  // console.log({ ip_adress });
 
   // const { dbLangCode = "en", country } = req.query;
   // const result = await Country.find({ dbLangCode, country }).populate({

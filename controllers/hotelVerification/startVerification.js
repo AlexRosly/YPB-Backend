@@ -48,48 +48,48 @@ const startVerification = async (req, res) => {
   //remove files from temp folder to new folder with name `${folderName}`
   //and push in appropriate array
   for (const file of files) {
+    const { path: verificationTempFilePath, originalname } = file;
     if (file.fieldname === "video") {
       try {
-        const { path: verificationTempFilePath, originalname } = file;
         const resultUpload = path.join(
           fileDir,
           `${folderName}`,
           `${date}-${originalname}`
         );
+        await fs.rename(verificationTempFilePath, resultUpload);
         const videoUrl = path.join(`${folderName}`, `${date}-${originalname}`);
         videos.push(videoUrl);
-        await fs.rename(verificationTempFilePath, resultUpload);
       } catch (error) {
         await fs.unlink(verificationTempFilePath);
+        throw error;
       }
     } else if (file.fieldname === "documents") {
       try {
-        const { path: verificationTempFilePath, originalname } = file;
         const resultUpload = path.join(
           fileDir,
           `${folderName}`,
           `${date}-${originalname}`
         );
+        await fs.rename(verificationTempFilePath, resultUpload);
         const documentUrl = path.join(
           `${folderName}`,
           `${date}-${originalname}`
         );
         documentes.push(documentUrl);
-        await fs.rename(verificationTempFilePath, resultUpload);
       } catch (error) {
         await fs.unlink(verificationTempFilePath);
+        throw error;
       }
     } else {
       try {
-        const { path: verificationTempFilePath, originalname } = file;
         const resultUpload = path.join(
           fileDir,
           `${folderName}`,
           `${date}-${originalname}`
         );
+        await fs.rename(verificationTempFilePath, resultUpload);
         const selfiUrl = path.join(`${folderName}`, `${date}-${originalname}`);
         selfies.push(selfiUrl);
-        await fs.rename(verificationTempFilePath, resultUpload);
       } catch (error) {
         await fs.unlink(verificationTempFilePath);
         return res
@@ -112,11 +112,9 @@ const startVerification = async (req, res) => {
   });
   //if DB don't create document, delete all files from server
   if (!result) {
-    // console.log("try to delete");
     await fs.rmdir(`./verification/${folderName}`, { recursive: true }, (e) => {
       console.log({ e });
     });
-    // console.log("Folder Deleted!");
 
     return res
       .json({

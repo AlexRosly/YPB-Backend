@@ -3,11 +3,9 @@ const Joi = require("joi");
 
 const verifierprofile = Schema(
   {
-    profileId: {
+    verifierId: {
       // id of user from DB access to admin
-      type: Schema.Types.ObjectId,
-      ref: "acsessToAdmin",
-      required: [true, "profileId must be exist"],
+      type: String,
     },
     email: {
       type: String,
