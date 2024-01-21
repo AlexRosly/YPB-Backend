@@ -2,6 +2,7 @@ const validation = require("./validation");
 const ctrlWrapper = require("./ctrlWrapper");
 const upload = require("./upload");
 const uploadVideo = require("./verificationVideo");
+const uploadVerifierPhoto = require("./verifierPhoto");
 const createRegistrationCode = require("./createRegistrationCode");
 const createSignInCode = require("./createSignInCode");
 const auth = require("./auth");
@@ -16,6 +17,7 @@ module.exports = {
   ctrlWrapper,
   upload,
   uploadVideo,
+  uploadVerifierPhoto,
   createRegistrationCode,
   createSignInCode,
   auth,

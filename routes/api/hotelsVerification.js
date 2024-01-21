@@ -4,6 +4,7 @@ const {
   ctrlWrapper,
   uploadVideo,
   authHotelier,
+  authAdmin,
 } = require("../../middlewares");
 // const { joiSchema } = require("../../models/hotelsObject");
 const express = require("express");
@@ -40,24 +41,37 @@ router.patch(
 );
 
 //add point on the map by verifier
-router.patch("/add-point-on-the-map", ctrlWrapper(ctrl.addPointOnTheMap)); //add check for login verifier
+router.patch(
+  "/add-point-on-the-map",
+  authAdmin,
+  ctrlWrapper(ctrl.addPointOnTheMap)
+); //add check for login verifier
 
 //add link on youTube
-router.patch("/add-you-tube-link", ctrlWrapper(ctrl.addYouTubeLink)); // add check for login verifier
+router.patch("/add-you-tube-link", authAdmin, ctrlWrapper(ctrl.addYouTubeLink)); // add check for login verifier
 
 //add a translation
-router.patch("/add-a-translation", ctrlWrapper(ctrl.translateDescription)); // add check for login verifier
+router.patch(
+  "/add-a-translation",
+  authAdmin,
+  ctrlWrapper(ctrl.translateDescription)
+); // add check for login verifier
 
 //finish verification
-router.patch("/finish-verification", ctrlWrapper(ctrl.finishVerification)); //add check for login verifier
+router.patch(
+  "/finish-verification",
+  authAdmin,
+  ctrlWrapper(ctrl.finishVerification)
+); //add check for login verifier
 
 //delete hotels, documents and virify object
 router.delete(
   "/delete-verification",
+  authAdmin,
   ctrlWrapper(ctrl.deleteObjectAndDocuments)
 ); //add check for login verifier
 
 //delete hotels
-router.delete("/delete-object", ctrlWrapper(ctrl.deleteAddedObject)); //add check for login verifier
+router.delete("/delete-object", authAdmin, ctrlWrapper(ctrl.deleteAddedObject)); //add check for login verifier
 
 module.exports = router;

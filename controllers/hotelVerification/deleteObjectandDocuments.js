@@ -1,29 +1,46 @@
-const { Hotels, Verification } = require("../../models");
+const { Hotels, Verification, VerifyObjectHistory } = require("../../models");
 const { NotFound } = require("http-errors");
 const fs = require("fs").promises;
 
 const deleteObjectAndDocuments = async (req, res) => {
   const { id } = req.query; // get hotels id
   const folderName = id; // will appoint name for new folder with hotels id
-  console.log({ id });
-  console.log({ folderName });
+
+  const adminId = req.admin; // get id of verify
+  const superAdminId = req.superAdmin; // get id of verify
+  let verifierId;
+
+  //get id for profileId (admin or super admin)
+  if (adminId) {
+    verifierId = adminId._id;
+  } else {
+    verifierId = superAdminId._id;
+  }
 
   try {
-    console.log("findFolder");
-
     //delete folder with documents
     await fs.rmdir(`./verification/${folderName}`, { recursive: true }, (e) => {
       console.log({ e });
     });
 
     //delete info from DB
-    console.log("findVerifiDocuments");
     const findVerifiDocuments = await Verification.deleteOne({ hotels: id });
     if (!findVerifiDocuments) {
       throw new NotFound("Not found");
     }
+    //change statys on history
+    const dateOfDecision = new Date();
+    const filter1 = { hotels: id };
+    const update1 = { decision: "not verify", dateOfDecision };
+    const objectHistory = await VerifyObjectHistory.findOneAndUpdate(
+      filter1,
+      update1,
+      {
+        new: true,
+      }
+    );
+
     //delete object from DB
-    console.log("findHotel");
 
     const findHotel = await Hotels.findByIdAndRemove(id);
     if (!findHotel) {

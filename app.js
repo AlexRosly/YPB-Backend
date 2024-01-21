@@ -36,6 +36,7 @@ const authHoteliers = require("./routes/api/authHoteliers");
 const catalogForHotelier = require("./routes/api/catalogForHotelier");
 const acsessToAdmin = require("./routes/api/acsessToAdmin");
 const currency = require("./routes/api/currency");
+const verifierProfile = require("./routes/api/verifierProfile");
 const test = require("./routes/api/test");
 
 const app = express();
@@ -61,6 +62,7 @@ app.use(
 );
 app.use(express.json());
 app.use(express.static("verification"));
+app.use(express.static("verifierProfiles"));
 app.use(bodyParser.json());
 app.use(cookieParser(SECRET_COOKIE));
 app.use(
@@ -100,6 +102,7 @@ app.use("/api/auth-users", authUsers);
 app.use("/api/catalogForHotelier", catalogForHotelier);
 app.use("/api/acsess-to-admin", acsessToAdmin);
 app.use("/api/currency", currency);
+app.use("/api/verifier", verifierProfile);
 app.use("/api/test", test);
 
 app.use((req, res) => {
