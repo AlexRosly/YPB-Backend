@@ -7,7 +7,7 @@ const getFirstAddedObject = async (req, res) => {
       status: "added",
       "location.international": country,
     },
-    { id: 1, type: 1, objectName: 1, photos: 1, address: 1 }
+    { id: 1, type: 1, objectName: 1, photos: 1, address: 1, location: 1 }
   ).sort({
     createdAt: 1,
   });
