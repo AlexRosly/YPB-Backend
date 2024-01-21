@@ -1,7 +1,7 @@
 const { VerifyObjectHistory, Hotels } = require("../../models");
 
 const objectOnWork = async (req, res) => {
-  const { objectId, objectName } = req.body;
+  const { hotels, objectName } = req.body;
   const _id = req.admin; // get id of verify
   const id = req.superAdmin; // get id of verify
   let verifierId;
@@ -22,32 +22,36 @@ const objectOnWork = async (req, res) => {
   // create history
   try {
     history = await VerifyObjectHistory.create({
-      objectId,
+      hotels,
       objectName,
       verifierId,
       getToVerify,
     });
 
     hotel = await Hotels.findByIdAndUpdate(
-      { _id: objectId },
+      { _id: hotels },
       { status: "in working", verifierId },
       {
         new: true,
       }
     );
   } catch (error) {
-    return res.json({
-      code: 404,
-      status: "error",
-      message: "object not assigned for verifier",
-    });
+    return res
+      .json({
+        code: 404,
+        status: "error",
+        message: "object not assigned for verifier",
+      })
+      .end();
   }
 
-  res.json({
-    code: 201,
-    status: "success",
-    message: `verifier with id ${verifierId} take object with id ${objectId}`,
-  });
+  res
+    .json({
+      code: 201,
+      status: "success",
+      message: `verifier with id ${verifierId} take object with id ${hotels}`,
+    })
+    .end();
 };
 
 module.exports = objectOnWork;

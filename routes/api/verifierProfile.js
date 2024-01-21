@@ -9,8 +9,16 @@ const { joiSchema } = require("../../models/verifierProfile");
 
 const express = require("express");
 const router = express.Router();
-
+//get verifier profile
 router.get("/", authAdmin, ctrlWrapper(ctrl.getVerifierProfile));
+
+//get verify object history
+router.get(
+  "/get-history-by-verifier-id",
+  authAdmin,
+  ctrlWrapper(ctrl.getVerifyObjectHistory)
+);
+
 // create profile of verificator
 router.post(
   "/",
