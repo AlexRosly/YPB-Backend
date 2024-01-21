@@ -39,7 +39,6 @@ const deleteObjectAndDocuments = async (req, res) => {
         new: true,
       }
     );
-    console.log({ objectHistory });
 
     //delete object from DB
 
