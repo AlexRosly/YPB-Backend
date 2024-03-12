@@ -56,6 +56,8 @@ app.use(
       "https://xaeycpio.yourpricebooking.com",
       "https://catalog-for-hoteliers-next13.vercel.app",
       "https://beta-cyan.vercel.app",
+      "https://www.yourpricebooking.com",
+      "https://yourpricebooking.com",
     ],
     credentials: true,
   })
