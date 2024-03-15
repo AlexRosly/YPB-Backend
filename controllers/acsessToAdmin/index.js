@@ -13,6 +13,7 @@ const getAllUsers = require("./getAllUsers");
 const getAmountObjectInCountry = require("./getAmountObjectInCountry");
 const getFirstObject = require("./getFirstObject");
 const getFirstAddedObject = require("./getFirstAddedObject");
+const getAllTitleAndDescription = require("./getAllTitleAndDescription");
 
 module.exports = {
   checkAdmin,
@@ -30,4 +31,5 @@ module.exports = {
   getAmountObjectInCountry,
   getFirstObject,
   getFirstAddedObject,
+  getAllTitleAndDescription,
 };
