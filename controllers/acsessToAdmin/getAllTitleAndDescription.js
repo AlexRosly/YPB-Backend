@@ -11,6 +11,7 @@ const getAllTitleAndDescription = async (req, res) => {
     {
       title: 1,
       description: 1,
+      url: 1,
     }
   );
 
@@ -19,6 +20,7 @@ const getAllTitleAndDescription = async (req, res) => {
     {
       title: 1,
       description: 1,
+      url: 1,
     }
   );
 
@@ -27,6 +29,7 @@ const getAllTitleAndDescription = async (req, res) => {
     {
       title: 1,
       description: 1,
+      url: 1,
     }
   );
 
@@ -35,6 +38,7 @@ const getAllTitleAndDescription = async (req, res) => {
     {
       title: 1,
       description: 1,
+      url: 1,
     }
   );
 
