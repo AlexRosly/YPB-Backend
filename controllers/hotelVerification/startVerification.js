@@ -37,7 +37,7 @@ const startVerification = async (req, res) => {
       });
     }
     //return response that files won't added
-    return res
+    res
       .json({
         code: 404,
         message: `DB has document for hotel with id ${hotelsId}`,
