@@ -23,7 +23,7 @@ router.post(
   uploadVideo.fields([
     { name: "video", maxCount: 8 },
     { name: "documents", maxCount: 8 },
-    { name: "selfi", maxCount: 8 },
+    { name: "selfie", maxCount: 8 },
   ]),
   ctrlWrapper(ctrl.startVerification)
 );
