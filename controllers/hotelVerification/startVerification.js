@@ -36,7 +36,7 @@ const startVerification = async (req, res) => {
         );
       });
     }
-    //return response that files won't added
+    //return response that files won't added//
     res
       .json({
         code: 404,
