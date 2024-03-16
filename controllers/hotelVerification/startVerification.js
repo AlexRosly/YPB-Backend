@@ -8,7 +8,8 @@ const tempFolder = path.join(__dirname, "../../", "verification", "temp");
 
 const startVerification = async (req, res) => {
   const { _id } = req.hotelier; // get hoteliers id
-  const { hotelsId } = req.body; // get hotels id
+  // const { hotelsId } = req.body; // get hotels id
+  const { hotelsId } = req.query; // get hotels id
   const { video, documents, selfie } = req.files; // Destructuring files from uploader
   const files = [...video, ...documents, ...selfie]; //craete array of files
   const folderName = hotelsId; // will appoint name for new folder with hotels id
