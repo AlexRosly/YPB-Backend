@@ -58,6 +58,8 @@ app.use(
       "https://beta-cyan.vercel.app",
       "https://www.yourpricebooking.com",
       "https://yourpricebooking.com",
+      "https://admin2-alpha.vercel.app",
+      "http://localhost:3000/",
     ],
     credentials: true,
   })
