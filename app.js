@@ -67,22 +67,22 @@ app.use(express.static("verification"));
 app.use(express.static("verifierProfiles"));
 app.use(bodyParser.json());
 app.use(cookieParser(SECRET_COOKIE));
-app.use(
-  session({
-    secret: SECRET_COOKIE,
-    // key: "session-key",
-    cookie: {
-      path: "/",
-      httpOnly: true,
-      maxAge: null,
-      // SameSite: "None",
-      // Secure: true,
-    },
-    saveUninitialized: false, //change to => false
-    resave: false,
-    // store: new RedisStore({ client: redisClient }),
-  })
-);
+// app.use(
+//   session({
+//     secret: SECRET_COOKIE,
+//     // key: "session-key",
+//     cookie: {
+//       path: "/",
+//       httpOnly: true,
+//       maxAge: null,
+//       // SameSite: "None",
+//       // Secure: true,
+//     },
+//     saveUninitialized: false, //change to => false
+//     resave: false,
+//     // store: new RedisStore({ client: redisClient }),
+//   })
+// );
 app.use("/api/languages", languagesRouter);
 app.use("/api/countries", countriesRouter);
 app.use("/api/location-state", regionLoc3Router);
